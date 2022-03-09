@@ -10,7 +10,7 @@ class Animator {
   add(fn: any) {
     this.tasks.push(fn);
   }
-  animate() {
+  update() {
     this.base.renderer.setAnimationLoop((time: number) => {
       this.tasks.forEach((task) => {
         task(time);

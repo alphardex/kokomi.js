@@ -15,7 +15,7 @@ class OrbitControls extends Component {
     this.controls = controls;
     controls.enableDamping = true;
   }
-  animate(time: number): void {
+  update(time: number): void {
     this.controls.update();
   }
 }

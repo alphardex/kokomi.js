@@ -14,7 +14,7 @@ class Stats extends Component {
 
     this.base.container.appendChild(this.stats.dom);
   }
-  animate(time: number): void {
+  update(time: number): void {
     this.stats.update();
   }
 }

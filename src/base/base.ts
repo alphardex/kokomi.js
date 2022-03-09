@@ -52,15 +52,15 @@ class Base {
       this.onResize();
     });
   }
-  animate(fn: any) {
+  update(fn: any) {
     this.animator.add(fn);
   }
   init() {
-    this.animate(() => {
+    this.update(() => {
       this.interactionManager.update();
     });
 
-    this.animator.animate();
+    this.animator.update();
   }
   onResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
