@@ -11,6 +11,7 @@ class Base {
   animator: Animator;
   interactionManager: InteractionManager;
   composer: EffectComposer | null;
+  clock: THREE.Clock;
   constructor(sel = "#sketch") {
     const camera = new THREE.PerspectiveCamera(
       70,
@@ -45,6 +46,9 @@ class Base {
     this.interactionManager = interactionManager;
 
     this.composer = null;
+
+    const clock = new THREE.Clock();
+    this.clock = clock;
 
     this.init();
 
