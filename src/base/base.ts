@@ -16,7 +16,7 @@ class Base {
       70,
       window.innerWidth / window.innerHeight,
       0.01,
-      10
+      100
     );
     camera.position.z = 1;
     this.camera = camera;
