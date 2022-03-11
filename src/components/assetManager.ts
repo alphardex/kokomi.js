@@ -81,7 +81,7 @@ class AssetManager extends Component {
     }
   }
   // 加载进度
-  get progress() {
+  get loadProgress() {
     return this.loaded / this.toLoad;
   }
   // 是否加载完毕
