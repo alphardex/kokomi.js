@@ -76,9 +76,17 @@ class AssetManager extends Component {
   resourceLoaded(resource: ResourceItem, file: any) {
     this.items[resource.name] = file;
     this.loaded += 1;
-    if (this.loaded === this.toLoad) {
+    if (this.isLoaded) {
       this.emitter.emit("ready");
     }
+  }
+  // 加载进度
+  get progress() {
+    return this.loaded / this.toLoad;
+  }
+  // 是否加载完毕
+  get isLoaded() {
+    return this.loaded === this.toLoad;
   }
 }
 
