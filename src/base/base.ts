@@ -4,7 +4,7 @@ import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
 
 class Base {
-  camera: THREE.PerspectiveCamera;
+  camera: THREE.PerspectiveCamera | THREE.OrthographicCamera;
   scene: THREE.Scene;
   renderer: THREE.WebGLRenderer;
   container: HTMLElement;
@@ -67,10 +67,15 @@ class Base {
     this.animator.update();
   }
   onResize() {
-    this.camera.aspect = window.innerWidth / window.innerHeight;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+    if (this.camera instanceof THREE.PerspectiveCamera) {
+      this.camera.aspect = this.aspect;
+      this.camera.updateProjectionMatrix();
+      this.renderer.setSize(window.innerWidth, window.innerHeight);
+      this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+    }
+  }
+  get aspect() {
+    return window.innerWidth / window.innerHeight;
   }
 }
 
