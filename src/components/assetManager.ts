@@ -5,7 +5,7 @@ import mitt, { type Emitter } from "mitt";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
-export type ResoureType = "gltfModel" | "texture" | "cubeTexture";
+export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font";
 
 export interface ResourceItem {
   name: string;
@@ -19,6 +19,7 @@ interface Loaders {
   gltfLoader: STDLIB.GLTFLoader;
   textureLoader: THREE.TextureLoader;
   cubeTextureLoader: THREE.CubeTextureLoader;
+  fontLoader: STDLIB.FontLoader;
 }
 
 class AssetManager extends Component {
@@ -50,6 +51,7 @@ class AssetManager extends Component {
     this.loaders.gltfLoader = new STDLIB.GLTFLoader();
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
+    this.loaders.fontLoader = new STDLIB.FontLoader();
   }
   // 开始加载
   startLoading() {
@@ -69,6 +71,10 @@ class AssetManager extends Component {
             this.resourceLoaded(resource, file);
           }
         );
+      } else if (resource.type === "font") {
+        this.loaders.fontLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
       }
     }
   }
