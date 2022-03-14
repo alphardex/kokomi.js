@@ -43,7 +43,7 @@ class AssetManager extends Component {
     super(base);
 
     const {
-      useDracoLoader = true,
+      useDracoLoader = false,
       dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
     } = config;
     this.config = { useDracoLoader, dracoDecoderPath };
