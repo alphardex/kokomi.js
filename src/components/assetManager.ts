@@ -24,7 +24,7 @@ interface Loaders {
 
 export interface AssetManagerConfig {
   useDracoLoader: boolean;
-  dracoLoaderPath: string;
+  dracoDecoderPath: string;
 }
 
 class AssetManager extends Component {
@@ -44,9 +44,9 @@ class AssetManager extends Component {
 
     const {
       useDracoLoader = true,
-      dracoLoaderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
+      dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
     } = config;
-    this.config = { useDracoLoader, dracoLoaderPath };
+    this.config = { useDracoLoader, dracoDecoderPath };
 
     const emitter = mitt();
     this.emitter = emitter;
@@ -75,7 +75,7 @@ class AssetManager extends Component {
   // 设置draco加载器
   setDracoLoader() {
     const dracoLoader = new STDLIB.DRACOLoader();
-    dracoLoader.setDecoderPath(this.config.dracoLoaderPath);
+    dracoLoader.setDecoderPath(this.config.dracoDecoderPath);
     this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
   }
   // 开始加载
