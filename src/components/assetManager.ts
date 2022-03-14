@@ -22,15 +22,31 @@ interface Loaders {
   fontLoader: STDLIB.FontLoader;
 }
 
+export interface AssetManagerConfig {
+  useDracoLoader: boolean;
+  dracoLoaderPath: string;
+}
+
 class AssetManager extends Component {
+  config: AssetManagerConfig;
   emitter: Emitter<any>;
   resourceList: ResoureList;
   items: any;
   toLoad: number;
   loaded: number;
   loaders: Partial<Loaders>;
-  constructor(base: Base, list: ResoureList) {
+  constructor(
+    base: Base,
+    list: ResoureList,
+    config: Partial<AssetManagerConfig> = {}
+  ) {
     super(base);
+
+    const {
+      useDracoLoader = true,
+      dracoLoaderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
+    } = config;
+    this.config = { useDracoLoader, dracoLoaderPath };
 
     const emitter = mitt();
     this.emitter = emitter;
@@ -43,6 +59,9 @@ class AssetManager extends Component {
 
     this.loaders = {};
     this.setLoaders();
+    if (useDracoLoader) {
+      this.setDracoLoader();
+    }
 
     this.startLoading();
   }
@@ -52,6 +71,12 @@ class AssetManager extends Component {
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
     this.loaders.fontLoader = new STDLIB.FontLoader();
+  }
+  // 设置draco加载器
+  setDracoLoader() {
+    const dracoLoader = new STDLIB.DRACOLoader();
+    dracoLoader.setDecoderPath(this.config.dracoLoaderPath);
+    this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
   }
   // 开始加载
   startLoading() {
