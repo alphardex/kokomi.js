@@ -19,7 +19,7 @@ const iterateBuffer = (
     const y = axis + 1;
     const z = axis + 2;
     const w = axis + 3;
-    fn(buffer, { x, y, z, w });
+    fn(buffer, { x, y, z, w }, i);
   }
 };
 
