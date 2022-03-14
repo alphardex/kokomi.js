@@ -10,4 +10,4 @@ const enableRealisticRender = (renderer: THREE.WebGLRenderer) => {
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 };
 
-export default { enableRealisticRender };
+export { enableRealisticRender };
