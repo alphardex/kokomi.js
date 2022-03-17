@@ -135,6 +135,9 @@ createSketch();
                     <li>
                         <a href="#box">Box</a>
                     </li>
+                    <li>
+                        <a href="#screenquad">ScreenQuad</a>
+                    </li>
                 </ul>
             </ul>
             <ul>
@@ -314,6 +317,23 @@ class Sketch extends kokomi.Base {
   create() {
     const box = new kokomi.Box(this);
     box.addExisting();
+  }
+}
+```
+
+### ScreenQuad
+
+A fullsceen plane with which you can create fullscreen effects such as raymarching. By default, it has 3 uniforms: `uTime`, `uResolution`, `uMouse`
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    const screenQuad = new kokomi.ScreenQuad(this, {
+      vertexShader: `your vertex shader here`,
+      fragmentShader: `your fragment shader here`,
+      uniforms: {},
+    });
+    screenQuad.addExisting();
   }
 }
 ```
