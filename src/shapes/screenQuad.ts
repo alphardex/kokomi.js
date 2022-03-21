@@ -24,7 +24,7 @@ void main(){
 const defaultFragmentShader = `
 uniform float iTime;
 uniform vec3 iResolution;
-uniform vec2 iMouse;
+uniform vec4 iMouse;
 
 varying vec2 vUv;
 
@@ -38,7 +38,7 @@ void main(){
 const shadertoyPrepend = `
 uniform float iTime;
 uniform vec2 iResolution;
-uniform vec2 iMouse;
+uniform vec4 iMouse;
 
 uniform sampler2D iChannel0;
 uniform sampler2D iChannel1;
@@ -88,7 +88,7 @@ class ScreenQuad extends Component {
             value: new THREE.Vector3(window.innerWidth, window.innerHeight, 1),
           },
           iMouse: {
-            value: new THREE.Vector2(0, 0),
+            value: new THREE.Vector4(0, 0, 0, 0),
           },
         },
         ...uniforms,
@@ -111,7 +111,8 @@ class ScreenQuad extends Component {
       window.innerHeight,
       1
     );
-    uniforms.iMouse.value = this.base.interactionManager.mouse;
+    const { x, y } = this.base.interactionManager.mouse;
+    uniforms.iMouse.value = new THREE.Vector4(x, y, 0, 0);
   }
 }
 
