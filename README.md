@@ -323,7 +323,7 @@ class Sketch extends kokomi.Base {
 
 ### ScreenQuad
 
-A fullsceen plane with which you can create fullscreen effects such as raymarching. By default, it has 3 uniforms: `uTime`, `uResolution`, `uMouse`
+A fullsceen plane with which you can create fullscreen effects such as raymarching. By default, it has 3 uniforms: `iTime`, `iResolution`, `iMouse`
 
 ```ts
 class Sketch extends kokomi.Base {

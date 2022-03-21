@@ -21,9 +21,9 @@ void main(){
 `;
 
 const defaultFragmentShader = `
-uniform float uTime;
-uniform vec2 uResolution;
-uniform vec2 uMouse;
+uniform float iTime;
+uniform vec3 iResolution;
+uniform vec2 iMouse;
 
 varying vec2 vUv;
 
@@ -52,13 +52,13 @@ class ScreenQuad extends Component {
       fragmentShader,
       uniforms: {
         ...{
-          uTime: {
+          iTime: {
             value: 0,
           },
-          uResolution: {
-            value: new THREE.Vector2(window.innerWidth, window.innerHeight),
+          iResolution: {
+            value: new THREE.Vector3(window.innerWidth, window.innerHeight, 1),
           },
-          uMouse: {
+          iMouse: {
             value: new THREE.Vector2(0, 0),
           },
         },
@@ -76,8 +76,13 @@ class ScreenQuad extends Component {
   }
   update(time: number): void {
     const uniforms = this.material.uniforms;
-    uniforms.uTime.value = time / 1000;
-    uniforms.uMouse.value = this.base.interactionManager.mouse;
+    uniforms.iTime.value = time / 1000;
+    uniforms.iResolution.value = new THREE.Vector3(
+      window.innerWidth,
+      window.innerHeight,
+      1
+    );
+    uniforms.iMouse.value = this.base.interactionManager.mouse;
   }
 }
 
