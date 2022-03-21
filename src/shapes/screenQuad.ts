@@ -7,6 +7,7 @@ interface PlaneConfig {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
+  shadertoyMode: boolean;
 }
 
 const defaultVertexShader = `
@@ -34,6 +35,25 @@ void main(){
 }
 `;
 
+const shadertoyPrepend = `
+uniform float iTime;
+uniform vec2 iResolution;
+uniform vec2 iMouse;
+
+uniform sampler2D iChannel0;
+uniform sampler2D iChannel1;
+uniform sampler2D iChannel2;
+uniform sampler2D iChannel3;
+`;
+
+const shadertoyAppend = `
+varying vec2 vUv;
+
+void main(){
+    mainImage(gl_FragColor,vUv*iResolution.xy);
+}
+`;
+
 class ScreenQuad extends Component {
   material: THREE.ShaderMaterial;
   mesh: THREE.Mesh;
@@ -44,12 +64,21 @@ class ScreenQuad extends Component {
       vertexShader = defaultVertexShader,
       fragmentShader = defaultFragmentShader,
       uniforms = {},
+      shadertoyMode = false,
     } = config;
+
+    const finalFragmentShader = shadertoyMode
+      ? `
+    ${shadertoyPrepend}
+    ${fragmentShader}
+    ${shadertoyAppend}
+    `
+      : fragmentShader;
 
     const geometry = new THREE.PlaneGeometry(2, 2);
     const material = new THREE.ShaderMaterial({
       vertexShader,
-      fragmentShader,
+      fragmentShader: finalFragmentShader,
       uniforms: {
         ...{
           iTime: {
