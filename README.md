@@ -68,6 +68,13 @@ Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starte
 - Integrated with [three.interactive](https://github.com/markuslerner/THREE.Interactive), which can handle mouse and touch interactions easily.
 - Almost every class and function have online demo.
 
+## Previews
+
+![1](./assets/previews/1.gif)
+![2](./assets/previews/2.gif)
+![3](./assets/previews/3.gif)
+![4](./assets/previews/4.gif)
+
 ## Index
 
 <table>
