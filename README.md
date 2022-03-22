@@ -70,10 +70,23 @@ Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starte
 
 ## Previews
 
+### Basic Scene
+
 ![1](./assets/previews/1.gif)
+
+### Asset Manage
+
 ![2](./assets/previews/2.gif)
+
+### Util Geometry
+
 ![3](./assets/previews/3.gif)
+
+### Shadertoy Integration
+
 ![4](./assets/previews/4.gif)
+
+Credit: https://www.shadertoy.com/view/XtyXzW
 
 ## Index
 
