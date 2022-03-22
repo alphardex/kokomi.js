@@ -23,6 +23,8 @@ npm i kokomi.js
 
 ## Hello world
 
+With just several lines, you can make a most basic 3D scene :d
+
 index.html
 
 ```html
@@ -56,12 +58,15 @@ const createSketch = () => {
 createSketch();
 ```
 
+Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
+
 ## Features
 
 - You can simply extend `kokomi.Base` class to kickstart a simple scene without writing any boilerplate codes.
 - Either you can write all your three.js code in a single file, or encapsulate your code into individual classes in a large project. By extending `kokomi.Component`, you can make your components keep their own state and animation.
 - `kokomi.AssetManager` can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple json file to config your assets without caring about various loaders.
 - Integrated with [three.interactive](https://github.com/markuslerner/THREE.Interactive), which can handle mouse and touch interactions easily.
+- Almost every class and function have online demo.
 
 ## Index
 
@@ -176,6 +181,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
+
 ## Camera
 
 ### ScreenCamera
@@ -190,6 +197,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ## Components
 
@@ -323,7 +332,7 @@ class Sketch extends kokomi.Base {
 
 ### ScreenQuad
 
-A fullsceen plane with which you can create fullscreen effects such as raymarching. 
+A fullsceen plane with which you can create fullscreen effects such as raymarching.
 
 By default, it has almost all the uniforms that [shadertoy](https://www.shadertoy.com/) has: `iTime`, `iResolution`, `iMouse`, etc
 
