@@ -235,6 +235,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
+
 ### Component
 
 By extending this class, you can make your components keep their own state and animation.
@@ -257,6 +259,8 @@ class MyBox extends kokomi.Component {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-component-wi812m?file=/src/app.ts
+
 ### Stats
 
 A drop-in fps meter powered by [stats.js](https://github.com/mrdoob/stats.js)
@@ -268,6 +272,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-stats-zwhev9?file=/src/app.ts
 
 ## Controls
 
@@ -282,6 +288,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
 ## Geometries
 
@@ -300,6 +308,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-geometry-hyperbolichelicoid-so35fy?file=/src/app.ts
+
 ### Sphube
 
 A [Sphube](https://arxiv.org/pdf/1604.02174.pdf) geometry
@@ -315,6 +325,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
+
 ## Shapes
 
 ### Box
@@ -329,6 +341,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
 ### ScreenQuad
 
@@ -350,6 +364,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/magical-scott-gkxfxd?file=/src/app.ts
 
 ## Utils
 
