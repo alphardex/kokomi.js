@@ -403,6 +403,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
+
 ### GL
 
 #### makeBuffer
@@ -423,6 +425,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-makebuffer-11975d?file=/src/app.ts
+
 #### iterateBuffer
 
 A shortcut function to iterate through a Float32Array buffer
@@ -430,22 +434,26 @@ A shortcut function to iterate through a Float32Array buffer
 ```ts
 class Sketch extends kokomi.Base {
   create() {
+    const geometry = new THREE.BufferGeometry();
     const count = 20000;
-    const positions = kokomi.makeBuffer(
+    const buffer = kokomi.makeBuffer(
       count,
       () => THREE.MathUtils.randFloat(-0.5, 0.5) * 10
     );
 
     kokomi.iterateBuffer(
-      positions,
+      buffer,
       count,
       (arr: number[], axis: THREE.Vector3) => {
         arr[axis.y] = Math.sin(arr[axis.x]);
       }
     );
+    geometry.setAttribute("position", new THREE.BufferAttribute(buffer, 3));
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-iteratebuffer-hycutz?file=/src/app.ts
 
 ### Misc
 
@@ -460,6 +468,8 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
+
+Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
 
 # End
 
