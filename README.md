@@ -211,7 +211,7 @@ Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ### AssetManager
 
-This class can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple json file to config your assets without caring about various loaders.
+This class can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js file to config your assets without caring about various loaders.
 
 ```ts
 import foxModel from "/models/Fox/glTF/Fox.gltf";
