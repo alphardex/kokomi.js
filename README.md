@@ -365,7 +365,7 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/magical-scott-gkxfxd?file=/src/app.ts
+Demo: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
 
 ## Utils
 
