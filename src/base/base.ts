@@ -12,6 +12,7 @@ class Base {
   interactionManager: InteractionManager;
   composer: EffectComposer | null;
   clock: THREE.Clock;
+  iMouse: THREE.Vector2;
   constructor(sel = "#sketch") {
     const camera = new THREE.PerspectiveCamera(
       70,
@@ -50,10 +51,40 @@ class Base {
     const clock = new THREE.Clock();
     this.clock = clock;
 
+    const iMouse = new THREE.Vector2(0, 0);
+    this.iMouse = iMouse;
+
     this.init();
 
+    this.addEventListeners();
+  }
+  addEventListeners() {
+    // resize
     window.addEventListener("resize", () => {
       this.onResize();
+    });
+
+    // mouse
+    window.addEventListener("mousemove", (e) => {
+      const iMouseNew = new THREE.Vector2(
+        e.clientX,
+        window.innerHeight - e.clientY
+      );
+      this.iMouse = iMouseNew;
+    });
+    window.addEventListener("touchstart", (e) => {
+      const iMouseNew = new THREE.Vector2(
+        e.touches[0].clientX,
+        window.innerHeight - e.touches[0].clientY
+      );
+      this.iMouse = iMouseNew;
+    });
+    window.addEventListener("touchmove", (e) => {
+      const iMouseNew = new THREE.Vector2(
+        e.touches[0].clientX,
+        window.innerHeight - e.touches[0].clientY
+      );
+      this.iMouse = iMouseNew;
     });
   }
   update(fn: any) {

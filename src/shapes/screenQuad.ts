@@ -147,7 +147,7 @@ class ScreenQuad extends Component {
       window.innerHeight,
       1
     );
-    const { x, y } = this.base.interactionManager.mouse;
+    const { x, y } = this.base.iMouse;
     uniforms.iMouse.value = new THREE.Vector4(x, y, 0, 0);
     uniforms.iDate.value = new THREE.Vector4(
       new Date().getFullYear(),
