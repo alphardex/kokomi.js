@@ -385,7 +385,9 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
+Demo (Also template): https://codesandbox.io/s/kokomi-js-screenquad-254wl8?file=/src/app.ts
+
+Shadertoy: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
 
 ## Utils
 
