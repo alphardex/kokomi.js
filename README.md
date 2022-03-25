@@ -125,6 +125,9 @@ Credit: https://www.shadertoy.com/view/XtyXzW
                         <a href="#component">Component</a>
                     </li>
                     <li>
+                        <a href="#physics">Physics</a>
+                    </li>
+                    <li>
                         <a href="#stats">Stats</a>
                     </li>
                 </ul>
@@ -280,6 +283,49 @@ class MyBox extends kokomi.Component {
 ```
 
 Demo: https://codesandbox.io/s/kokomi-js-component-wi812m?file=/src/app.ts
+
+### Physics
+
+kokomi.js uses [cannon.js](https://github.com/pmndrs/cannon-es) for physics. Just create mesh and body, and add it to base's physics!
+
+```ts
+import * as THREE from "three";
+import * as kokomi from "kokomi.js";
+import * as CANNON from "cannon-es";
+
+class Box extends kokomi.Component {
+  mesh: THREE.Mesh;
+  body: CANNON.Body;
+  constructor(base: kokomi.Base) {
+    super(base);
+
+    const geometry = new THREE.BoxGeometry(2, 2, 0.5);
+    const material = new THREE.MeshStandardMaterial({
+      metalness: 0.3,
+      roughness: 0.4,
+    });
+    const mesh = new THREE.Mesh(geometry, material);
+    this.mesh = mesh;
+
+    const shape = new CANNON.Box(new CANNON.Vec3(1, 1, 0.25));
+    const body = new CANNON.Body({
+      mass: 1,
+      shape,
+      position: new CANNON.Vec3(0, 1, 0),
+    });
+    this.body = body;
+  }
+  addExisting(): void {
+    const { base, mesh, body } = this;
+    const { scene, physics } = base;
+
+    scene.add(mesh);
+    physics.add({ mesh, body });
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-physics-tffxge?file=/src/app.ts
 
 ### Stats
 
