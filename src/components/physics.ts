@@ -20,13 +20,14 @@ class Physics extends Component {
     this.meshPhysicsObjects = [];
   }
   // 添加物体
-  addObj({
+  add({
     mesh,
     body,
     copyPosition = true,
     copyQuaternion = true,
   }: MeshPhysicsObjectParams) {
     const obj = new MeshPhysicsObject(mesh, body, copyPosition, copyQuaternion);
+    this.base.physics.world.addBody(body);
     this.meshPhysicsObjects.push(obj);
   }
   // 帧
