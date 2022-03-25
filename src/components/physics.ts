@@ -76,8 +76,8 @@ class MeshPhysicsObject {
 export interface MeshPhysicsObjectParams {
   mesh: THREE.Mesh | THREE.Object3D;
   body: CANNON.Body;
-  copyPosition: boolean;
-  copyQuaternion: boolean;
+  copyPosition?: boolean;
+  copyQuaternion?: boolean;
 }
 
 export { Physics, MeshPhysicsObject };
