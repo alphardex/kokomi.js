@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,6 +10,7 @@
   "author": "alphardex",
   "license": "MIT",
   "dependencies": {
+    "cannon-es": "^0.19.0",
     "imagesloaded": "^5.0.0",
     "maku.js": "^1.0.3",
     "mitt": "^3.0.0",

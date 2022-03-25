@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { Animator } from "../components/animator";
 import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
+import { Physics } from "../components/physics";
 
 class Base {
   camera: THREE.PerspectiveCamera | THREE.OrthographicCamera;
@@ -13,6 +14,7 @@ class Base {
   composer: EffectComposer | null;
   clock: THREE.Clock;
   iMouse: THREE.Vector2;
+  physics: Physics;
   constructor(sel = "#sketch") {
     const camera = new THREE.PerspectiveCamera(
       70,
@@ -53,6 +55,9 @@ class Base {
 
     const iMouse = new THREE.Vector2(0, 0);
     this.iMouse = iMouse;
+
+    const physics = new Physics(this);
+    this.physics = physics;
 
     this.init();
 
