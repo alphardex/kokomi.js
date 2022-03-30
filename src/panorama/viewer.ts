@@ -44,6 +44,9 @@ class Viewer extends Component {
     this.currentPanorama = panorama;
   }
   setPanorama(panorama: BasicPanorama, duration = 0.5) {
+    if (panorama === this.currentPanorama) {
+      return;
+    }
     this.currentPanorama?.fadeOut(duration);
     panorama?.fadeIn(duration);
     this.currentPanorama = panorama;
