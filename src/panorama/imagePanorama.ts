@@ -1,18 +1,14 @@
 import * as THREE from "three";
 
 import type { Base } from "../base/base";
-import { Component } from "../components/component";
 
-import mitt, { type Emitter } from "mitt";
+import { BasicPanorama } from "./basicPanorama";
 
 export interface ImagePanoramaConfig {
   radius: number;
 }
 
-class ImagePanorama extends Component {
-  material: THREE.MeshBasicMaterial;
-  mesh: THREE.Mesh;
-  emitter: Emitter<any>;
+class ImagePanorama extends BasicPanorama {
   constructor(
     base: Base,
     texture: THREE.Texture,
@@ -32,33 +28,6 @@ class ImagePanorama extends Component {
     this.material = material;
     const mesh = new THREE.Mesh(geometry, material);
     this.mesh = mesh;
-
-    this.emitter = mitt();
-
-    this.onClick();
-  }
-  addExisting(): void {
-    const { base, mesh } = this;
-    const { scene } = base;
-
-    scene.add(mesh);
-  }
-  onClick() {
-    window.addEventListener("click", (event) => {
-      const intersects = this.base.interactionManager.raycaster.intersectObject(
-        this.mesh,
-        true
-      );
-      const point = intersects[0].point.clone();
-      const position = {
-        x: point.x.toFixed(2),
-        y: point.y.toFixed(2),
-        z: point.z.toFixed(2),
-      };
-      const message = `${position.x}, ${position.y}, ${position.z}`;
-      console.log(message);
-      this.emitter.emit("click", point);
-    });
   }
 }
 

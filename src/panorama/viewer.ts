@@ -5,6 +5,8 @@ import { Component } from "../components/component";
 
 import { OrbitControls } from "../controls";
 
+import { BasicPanorama } from "./basicPanorama";
+
 export interface ViewerConfig {
   fov: number;
 }
@@ -12,6 +14,8 @@ export interface ViewerConfig {
 class Viewer extends Component {
   camera: THREE.PerspectiveCamera;
   orbitControls: OrbitControls;
+  panoramas: BasicPanorama[];
+  currentPanorama: BasicPanorama | null;
   constructor(base: Base, config: Partial<ViewerConfig> = {}) {
     super(base);
 
@@ -30,6 +34,22 @@ class Viewer extends Component {
 
     const orbitControls = new OrbitControls(base);
     this.orbitControls = orbitControls;
+
+    this.panoramas = [];
+    this.currentPanorama = null;
+  }
+  add(panorama: BasicPanorama) {
+    panorama.addExisting();
+    this.panoramas.push(panorama);
+    this.setPanorama(panorama);
+  }
+  setPanorama(panorama: BasicPanorama) {
+    this.currentPanorama = panorama;
+  }
+  goto(panorama: BasicPanorama, duration = 0.5) {
+    this.currentPanorama?.fadeOut(duration);
+    panorama?.fadeIn(duration);
+    this.setPanorama(panorama);
   }
 }
 

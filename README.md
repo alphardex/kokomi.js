@@ -409,7 +409,7 @@ Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
 
 First you should add `kokomi.Viewer`, which automatically adds proper camera and orbitControls to your scene.
 
-Then load your image asset with `kokomi.AssetManager`, and after this, you can use `kokomi.ImagePanorama` to get the panorama scene.
+Then load your image asset with `kokomi.AssetManager`. After this, you can use `kokomi.ImagePanorama` to get the panorama scene and add it to the viewer.
 
 ```ts
 import panoramaImage from "./assets/textures/field.jpg?url";
@@ -429,9 +429,8 @@ class Sketch extends kokomi.Base {
     const assetManager = new kokomi.AssetManager(this, resourceList);
     assetManager.emitter.on("ready", () => {
       const panoramaImage = assetManager.items.panoramaImage;
-
       const panorama = new kokomi.ImagePanorama(this, panoramaImage);
-      panorama.addExisting();
+      viewer.add(panorama);
     });
   }
 }
