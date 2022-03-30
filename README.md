@@ -437,6 +437,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://codesandbox.io/s/kokomi-js-image-panorama-qyxqff?file=/src/app.ts
+
 ## Shapes
 
 ### Box
