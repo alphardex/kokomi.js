@@ -157,6 +157,16 @@ Credit: https://www.shadertoy.com/view/XtyXzW
             </ul>
             <ul>
                 <li>
+                    <a href="#panorama">Panorama</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#imagepanorama">Image Panorama</a>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li>
                     <a href="#shapes">Shapes</a>
                 </li>
                 <ul>
@@ -392,6 +402,40 @@ class Sketch extends kokomi.Base {
 ```
 
 Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
+
+## Panorama
+
+### Image Panorama
+
+First you should add `kokomi.Viewer`, which automatically adds proper camera and orbitControls to your scene.
+
+Then load your image asset with `kokomi.AssetManager`, and after this, you can use `kokomi.ImagePanorama` to get the panorama scene.
+
+```ts
+import panoramaImage from "./assets/textures/field.jpg?url";
+
+const resourceList: kokomi.ResourceItem[] = [
+  {
+    name: "panoramaImage",
+    type: "texture",
+    path: panoramaImage,
+  },
+];
+
+class Sketch extends kokomi.Base {
+  create() {
+    const viewer = new kokomi.Viewer(this);
+
+    const assetManager = new kokomi.AssetManager(this, resourceList);
+    assetManager.emitter.on("ready", () => {
+      const panoramaImage = assetManager.items.panoramaImage;
+
+      const panorama = new kokomi.ImagePanorama(this, panoramaImage);
+      panorama.addExisting();
+    });
+  }
+}
+```
 
 ## Shapes
 
