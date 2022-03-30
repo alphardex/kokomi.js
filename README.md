@@ -405,7 +405,7 @@ Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
 
 ## Panorama
 
-### Image Panorama
+### ImagePanorama
 
 First you should add `kokomi.Viewer`, which automatically adds proper camera and orbitControls to your scene.
 
