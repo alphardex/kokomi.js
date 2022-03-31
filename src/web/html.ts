@@ -94,7 +94,6 @@ class Html extends Component {
     this.visibleToggle = false;
   }
   update(time: number): void {
-    this.syncPosition();
     if (this.visible) {
       this.show();
     } else {

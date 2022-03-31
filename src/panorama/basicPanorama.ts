@@ -117,6 +117,8 @@ class BasicPanorama extends Component {
       if (!this.active) {
         infospot.makeInvisible();
       } else {
+        infospot.syncPosition();
+
         if (this.isInfospotVisible) {
           infospot.makeVisible();
         } else {
