@@ -7,3 +7,4 @@ export * from "./maths";
 export * from "./panorama";
 export * from "./shapes";
 export * from "./utils";
+export * from "./web";

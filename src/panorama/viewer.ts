@@ -41,14 +41,15 @@ class Viewer extends Component {
   add(panorama: BasicPanorama) {
     panorama.addExisting();
     this.panoramas.push(panorama);
+    panorama.onEnter(0);
     this.currentPanorama = panorama;
   }
   setPanorama(panorama: BasicPanorama, duration = 0.5) {
     if (panorama === this.currentPanorama) {
       return;
     }
-    this.currentPanorama?.fadeOut(duration);
-    panorama?.fadeIn(duration);
+    this.currentPanorama?.onLeave(duration);
+    panorama?.onEnter(duration);
     this.currentPanorama = panorama;
   }
 }

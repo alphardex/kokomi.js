@@ -7,6 +7,8 @@ import mitt, { type Emitter } from "mitt";
 
 import gsap from "gsap";
 
+import { Html } from "../web";
+
 export interface BasicPanoramaConfig {
   radius: number;
 }
@@ -15,6 +17,9 @@ class BasicPanorama extends Component {
   material: THREE.MeshBasicMaterial;
   mesh: THREE.Mesh;
   emitter: Emitter<any>;
+  infospots: Html[];
+  isInfospotVisible: boolean;
+  active: boolean;
   constructor(base: Base, config: Partial<BasicPanoramaConfig> = {}) {
     super(base);
 
@@ -31,6 +36,10 @@ class BasicPanorama extends Component {
     this.mesh = mesh;
 
     this.emitter = mitt();
+
+    this.infospots = [];
+    this.isInfospotVisible = false;
+    this.active = false;
   }
   addExisting(): void {
     const { base, mesh } = this;
@@ -94,6 +103,50 @@ class BasicPanorama extends Component {
         }
       );
     });
+  }
+  add(infospot: Html) {
+    this.infospots.push(infospot);
+  }
+  addGroup(infospots: Html[]) {
+    for (const infospot of infospots) {
+      this.add(infospot);
+    }
+  }
+  update(time: number): void {
+    for (const infospot of this.infospots) {
+      if (!this.active) {
+        infospot.hide();
+        return;
+      }
+
+      if (infospot.el) {
+        infospot.syncPosition();
+
+        if (this.isInfospotVisible && !infospot.isBehindCamera) {
+          infospot.show();
+        } else {
+          infospot.hide();
+        }
+      }
+    }
+  }
+  toggleInfospotVisibility(isVisible: boolean | undefined = undefined) {
+    const visible = isVisible
+      ? isVisible
+      : this.isInfospotVisible
+      ? false
+      : true;
+    this.isInfospotVisible = visible;
+  }
+  onEnter(duration = 0.5) {
+    this.active = true;
+    this.toggleInfospotVisibility(true);
+    this.fadeIn(duration);
+  }
+  onLeave(duration = 0.5) {
+    this.active = false;
+    this.toggleInfospotVisibility(false);
+    this.fadeOut(duration);
   }
 }
 
