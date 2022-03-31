@@ -22,4 +22,22 @@ const isObjectBehindCamera = (
   return deltaCamObj.angleTo(camDir) > Math.PI / 2;
 };
 
-export { getScreenVector, isObjectBehindCamera };
+const isObjectVisible = (
+  elPos: THREE.Vector3,
+  camera: THREE.Camera,
+  raycaster: THREE.Raycaster,
+  occlude: THREE.Object3D[]
+) => {
+  const screenPos = elPos.clone();
+  screenPos.project(camera);
+  raycaster.setFromCamera(screenPos, camera);
+  const intersects = raycaster.intersectObjects(occlude, true);
+  if (intersects.length) {
+    const intersectionDistance = intersects[0].distance;
+    const pointDistance = elPos.distanceTo(raycaster.ray.origin);
+    return pointDistance < intersectionDistance;
+  }
+  return true;
+};
+
+export { getScreenVector, isObjectBehindCamera, isObjectVisible };
