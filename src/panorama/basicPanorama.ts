@@ -116,16 +116,15 @@ class BasicPanorama extends Component {
     for (const infospot of this.infospots) {
       if (!this.active) {
         infospot.hide();
-        return;
-      }
+      } else {
+        if (infospot.el) {
+          infospot.syncPosition();
 
-      if (infospot.el) {
-        infospot.syncPosition();
-
-        if (this.isInfospotVisible && !infospot.isBehindCamera) {
-          infospot.show();
-        } else {
-          infospot.hide();
+          if (this.isInfospotVisible && !infospot.isBehindCamera) {
+            infospot.show();
+          } else {
+            infospot.hide();
+          }
         }
       }
     }
