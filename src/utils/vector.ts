@@ -1,16 +1,14 @@
 import * as THREE from "three";
 
-const getScreenVector = (worldVector: THREE.Vector3, camera: THREE.Camera) => {
-  const vector = worldVector.clone();
-  vector.project(camera);
-
+const calcObjectPosition = (objectPos: THREE.Vector3, camera: THREE.Camera) => {
+  const screenPos = objectPos.clone();
+  screenPos.project(camera);
   const widthHalf = window.innerWidth / 2;
   const heightHalf = window.innerHeight / 2;
-  vector.x = vector.x * widthHalf + widthHalf;
-  vector.y = -(vector.y * heightHalf) + heightHalf;
-  vector.z = 0;
-
-  return vector;
+  const x = screenPos.x * widthHalf + widthHalf;
+  const y = -(screenPos.y * heightHalf) + heightHalf;
+  const pos = new THREE.Vector2(x, y);
+  return pos;
 };
 
 const isObjectBehindCamera = (
@@ -40,4 +38,4 @@ const isObjectVisible = (
   return true;
 };
 
-export { getScreenVector, isObjectBehindCamera, isObjectVisible };
+export { calcObjectPosition, isObjectBehindCamera, isObjectVisible };

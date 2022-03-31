@@ -4,7 +4,7 @@ import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
 import {
-  getScreenVector,
+  calcObjectPosition,
   isObjectBehindCamera,
   isObjectVisible,
 } from "../utils";
@@ -24,6 +24,7 @@ class Html extends Component {
   yPropertyName: string;
   raycaster: THREE.Raycaster;
   occlude: THREE.Object3D[];
+  visibleToggle: boolean;
   constructor(
     base: Base,
     el: HTMLElement,
@@ -46,10 +47,11 @@ class Html extends Component {
 
     this.raycaster = new THREE.Raycaster();
     this.occlude = occlude;
+
+    this.visibleToggle = true;
   }
   get domPosition() {
-    const screenVector = getScreenVector(this.position, this.base.camera);
-    return { x: screenVector.x, y: screenVector.y };
+    return calcObjectPosition(this.position, this.base.camera);
   }
   get isBehindCamera() {
     return isObjectBehindCamera(this.position, this.base.camera);
@@ -63,6 +65,9 @@ class Html extends Component {
     );
   }
   get visible() {
+    if (!this.visibleToggle) {
+      return false;
+    }
     if (this.occlude.length === 0) {
       return !this.isBehindCamera;
     } else {
@@ -82,8 +87,17 @@ class Html extends Component {
   syncPosition() {
     this.translate(this.domPosition);
   }
+  makeVisible() {
+    this.visibleToggle = true;
+  }
+  makeInvisible() {
+    this.visibleToggle = false;
+  }
   update(time: number): void {
-    if (!this.visible) {
+    this.syncPosition();
+    if (this.visible) {
+      this.show();
+    } else {
       this.hide();
     }
   }

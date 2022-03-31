@@ -115,14 +115,12 @@ class BasicPanorama extends Component {
   update(time: number): void {
     for (const infospot of this.infospots) {
       if (!this.active) {
-        infospot.hide();
+        infospot.makeInvisible();
       } else {
-        infospot.syncPosition();
-
         if (this.isInfospotVisible) {
-          infospot.show();
+          infospot.makeVisible();
         } else {
-          infospot.hide();
+          infospot.makeInvisible();
         }
       }
     }
