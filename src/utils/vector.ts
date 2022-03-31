@@ -15,7 +15,7 @@ const isObjectBehindCamera = (
   objectPos: THREE.Vector3,
   camera: THREE.Camera
 ) => {
-  const deltaCamObj = objectPos.sub(camera.position);
+  const deltaCamObj = objectPos.clone().sub(camera.position);
   const camDir = camera.getWorldDirection(new THREE.Vector3());
   return deltaCamObj.angleTo(camDir) > Math.PI / 2;
 };
