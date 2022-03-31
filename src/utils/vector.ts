@@ -1,9 +1,6 @@
 import * as THREE from "three";
 
-const getScreenVector = (
-  worldVector: THREE.Vector3,
-  camera: THREE.PerspectiveCamera | THREE.OrthographicCamera
-) => {
+const getScreenVector = (worldVector: THREE.Vector3, camera: THREE.Camera) => {
   const vector = worldVector.clone();
   vector.project(camera);
 
