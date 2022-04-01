@@ -27,11 +27,20 @@ const iterateBuffer = (
 
 // 将bufferAttribute转为向量
 const convertBufferAttributeToVector = (
-  bufferAttribute: THREE.BufferAttribute
+  bufferAttribute: THREE.BufferAttribute | THREE.InterleavedBufferAttribute,
+  dimension = 3
 ) => {
+  const vectorDimensionMap = {
+    2: new THREE.Vector2(),
+    3: new THREE.Vector3(),
+    4: new THREE.Vector4(),
+  };
   const vectors = Array.from(
-    { length: bufferAttribute.array.length / 3 },
-    (v, k) => new THREE.Vector3().fromBufferAttribute(bufferAttribute, k)
+    { length: bufferAttribute.array.length / dimension },
+    (v, k) => {
+      const vector = (vectorDimensionMap as any)[dimension].clone();
+      return vector.fromBufferAttribute(bufferAttribute, k);
+    }
   );
   return vectors;
 };
