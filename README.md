@@ -597,7 +597,7 @@ Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
 
 ### Html
 
-It can help you merge HTML elements into the WebGL world by converting 3D positions to 2D positions. If element is visible, it will have a `visible` CSS class (can be customized), also it will have 2 CSS variables `--x` and `--y` (can be customized too)
+It can help you merge HTML elements into the WebGL world by converting 3D positions to 2D positions. If element is visible, it will have a `visible` CSS class (can be customized), and for 2D position it will have 2 CSS variables `--x` and `--y` (can be customized too)
 
 ```html
 <div id="sketch" class="bg-black w-screen h-screen overflow-hidden"></div>
