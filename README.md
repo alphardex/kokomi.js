@@ -608,21 +608,21 @@ It can help you merge HTML elements into the WebGL world by converting 3D positi
 </div>
 ```
 
-```scss
+```css
 .point {
   position: absolute;
   top: 0;
   left: 0;
   pointer-events: auto;
   transform: translate(var(--x), var(--y));
+}
 
-  .label {
-    position: absolute;
-    color: white;
-    transform: translate(-50%, -50%);
-    user-select: none;
-    white-space: nowrap;
-  }
+.point .label {
+  position: absolute;
+  color: white;
+  transform: translate(-50%, -50%);
+  user-select: none;
+  white-space: nowrap;
 }
 ```
 
