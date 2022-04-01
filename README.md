@@ -194,6 +194,16 @@ Credit: https://www.shadertoy.com/view/XtyXzW
                     </li>
                 </ul>
             </ul>
+            <ul>
+                <li>
+                    <a href="#web">Web</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#html">Html</a>
+                    </li>
+                </ul>
+            </ul>
         </td>
     </tr>
 </table>
@@ -582,6 +592,60 @@ class Sketch extends kokomi.Base {
 ```
 
 Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
+
+## Web
+
+### Html
+
+It can help you merge HTML elements into the WebGL world by converting 3D positions to 2D positions. If element is visible, it will have a `visible` CSS class (can be customized), also it will have 2 CSS variables `--x` and `--y` (can be customized too)
+
+```html
+<div id="sketch" class="bg-black w-screen h-screen overflow-hidden"></div>
+<div class="absolute cover overflow-hidden pointer-events-none">
+  <div class="point point-1">
+    <div class="label">This is a box.</div>
+  </div>
+</div>
+```
+
+```scss
+.point {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: auto;
+  transform: translate(var(--x), var(--y));
+
+  .label {
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    white-space: nowrap;
+  }
+}
+```
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    new kokomi.OrbitControls(this);
+
+    const box = new kokomi.Box(this);
+    box.addExisting();
+
+    const html = new kokomi.Html(
+      this,
+      document.querySelector(".point-1") as HTMLElement,
+      box.mesh.position.clone().add(new THREE.Vector3(0, 0.2, 0))
+    );
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-html-usqwus?file=/src/app.ts
+
+Sphere Word Cloud Demo: https://codesandbox.io/s/kokomi-js-html-w0qfmr?file=/src/app.ts
 
 # End
 
