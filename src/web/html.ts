@@ -93,7 +93,7 @@ class Html extends Component {
     this.el?.style.setProperty(this.yPropertyName, `${y}px`);
   }
   setZIndex(zIndex = 0) {
-    this.el?.style.setProperty(this.zIndexPropertyName, `${zIndex.toFixed(0)}`);
+    this.el?.style.setProperty(this.zIndexPropertyName, `${zIndex}`);
   }
   syncPosition() {
     this.translate(this.domPosition);
