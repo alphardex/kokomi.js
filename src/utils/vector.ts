@@ -38,4 +38,27 @@ const isObjectVisible = (
   return true;
 };
 
-export { calcObjectPosition, isObjectBehindCamera, isObjectVisible };
+const objectZIndex = (
+  objectPos: THREE.Vector3,
+  camera: THREE.Camera,
+  zIndexRange = [16777271, 0]
+) => {
+  if (
+    camera instanceof THREE.PerspectiveCamera ||
+    camera instanceof THREE.OrthographicCamera
+  ) {
+    const cameraPos = camera.position;
+    const dist = objectPos.distanceTo(cameraPos);
+    const A = (zIndexRange[1] - zIndexRange[0]) / (camera.far - camera.near);
+    const B = zIndexRange[1] - A * camera.far;
+    return Math.round(A * dist + B);
+  }
+  return undefined;
+};
+
+export {
+  calcObjectPosition,
+  isObjectBehindCamera,
+  isObjectVisible,
+  objectZIndex,
+};

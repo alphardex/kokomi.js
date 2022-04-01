@@ -5,7 +5,15 @@ import mitt, { type Emitter } from "mitt";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
-export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font";
+export type ResoureType =
+  | "gltfModel"
+  | "texture"
+  | "cubeTexture"
+  | "font"
+  | "fbxModel"
+  | "audio"
+  | "objModel"
+  | "hdrTexture";
 
 export interface ResourceItem {
   name: string;
@@ -20,6 +28,10 @@ interface Loaders {
   textureLoader: THREE.TextureLoader;
   cubeTextureLoader: THREE.CubeTextureLoader;
   fontLoader: STDLIB.FontLoader;
+  fbxLoader: STDLIB.FBXLoader;
+  audioLoader: THREE.AudioLoader;
+  objLoader: STDLIB.OBJLoader;
+  hdrTextureLoader: STDLIB.RGBELoader;
 }
 
 export interface AssetManagerConfig {
@@ -71,6 +83,10 @@ class AssetManager extends Component {
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
     this.loaders.fontLoader = new STDLIB.FontLoader();
+    this.loaders.fbxLoader = new STDLIB.FBXLoader();
+    this.loaders.audioLoader = new THREE.AudioLoader();
+    this.loaders.objLoader = new STDLIB.OBJLoader();
+    this.loaders.hdrTextureLoader = new STDLIB.RGBELoader();
   }
   // 设置draco加载器
   setDracoLoader() {
@@ -98,6 +114,22 @@ class AssetManager extends Component {
         );
       } else if (resource.type === "font") {
         this.loaders.fontLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "fbxModel") {
+        this.loaders.fbxLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "audio") {
+        this.loaders.audioLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "objModel") {
+        this.loaders.objLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "hdrTexture") {
+        this.loaders.hdrTextureLoader?.load(resource.path as string, (file) => {
           this.resourceLoaded(resource, file);
         });
       }

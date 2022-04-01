@@ -7,12 +7,14 @@ import {
   calcObjectPosition,
   isObjectBehindCamera,
   isObjectVisible,
+  objectZIndex,
 } from "../utils";
 
 export interface HtmlConfig {
   visibleClassName: string;
   xPropertyName: string;
   yPropertyName: string;
+  zIndexPropertyName: string;
   occlude: THREE.Object3D[];
 }
 
@@ -22,6 +24,7 @@ class Html extends Component {
   visibleClassName: string;
   xPropertyName: string;
   yPropertyName: string;
+  zIndexPropertyName: string;
   raycaster: THREE.Raycaster;
   occlude: THREE.Object3D[];
   visibleToggle: boolean;
@@ -39,11 +42,13 @@ class Html extends Component {
       visibleClassName = "visible",
       xPropertyName = "--x",
       yPropertyName = "--y",
+      zIndexPropertyName = "--z-index",
       occlude = [],
     } = config;
     this.visibleClassName = visibleClassName;
     this.xPropertyName = xPropertyName;
     this.yPropertyName = yPropertyName;
+    this.zIndexPropertyName = zIndexPropertyName;
 
     this.raycaster = new THREE.Raycaster();
     this.occlude = occlude;
@@ -52,6 +57,9 @@ class Html extends Component {
   }
   get domPosition() {
     return calcObjectPosition(this.position, this.base.camera);
+  }
+  get zIndex() {
+    return objectZIndex(this.position, this.base.camera);
   }
   get isBehindCamera() {
     return isObjectBehindCamera(this.position, this.base.camera);
@@ -84,8 +92,15 @@ class Html extends Component {
     this.el?.style.setProperty(this.xPropertyName, `${x}px`);
     this.el?.style.setProperty(this.yPropertyName, `${y}px`);
   }
+  setZIndex(zIndex = 0) {
+    this.el?.style.setProperty(this.zIndexPropertyName, `${zIndex.toFixed(0)}`);
+  }
   syncPosition() {
     this.translate(this.domPosition);
+
+    if (this.zIndex) {
+      this.setZIndex(this.zIndex);
+    }
   }
   makeVisible() {
     this.visibleToggle = true;
