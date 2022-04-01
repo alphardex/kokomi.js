@@ -546,7 +546,26 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-iteratebuffer-hycutz?file=/src/app.ts
+#### convertBufferAttributeToVector
+
+It's useful when you want to get the position vectors of a geometry
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    const geometry = new THREE.SphereGeometry(0.5, 8, 8);
+    const material = new THREE.PointsMaterial({
+      size: 0.01,
+    });
+    const points = new THREE.Points(geometry, material);
+    const positionAttribute = points.geometry.attributes.position;
+    const positions = kokomi.convertBufferAttributeToVector(positionAttribute);
+    console.log(positions);
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-html-w0qfmr?file=/src/app.ts
 
 ### Misc
 
