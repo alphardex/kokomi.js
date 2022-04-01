@@ -17,7 +17,7 @@ export interface HtmlConfig {
 }
 
 class Html extends Component {
-  el: HTMLElement | null;
+  el: HTMLElement;
   position: THREE.Vector3;
   visibleClassName: string;
   xPropertyName: string;

@@ -1,8 +1,10 @@
 import * as THREE from "three";
-import { Animator } from "../components/animator";
 import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
-import { Physics } from "../components/physics";
+import { Animator } from "../components";
+import { Physics } from "../components";
+import { Resizer } from "../components";
+import { IMouse } from "../components";
 
 class Base {
   camera: THREE.PerspectiveCamera | THREE.OrthographicCamera;
@@ -13,8 +15,9 @@ class Base {
   interactionManager: InteractionManager;
   composer: EffectComposer | null;
   clock: THREE.Clock;
-  iMouse: THREE.Vector2;
+  iMouse: IMouse;
   physics: Physics;
+  resizer: Resizer;
   constructor(sel = "#sketch") {
     const camera = new THREE.PerspectiveCamera(
       70,
@@ -53,11 +56,14 @@ class Base {
     const clock = new THREE.Clock();
     this.clock = clock;
 
-    const iMouse = new THREE.Vector2(0, 0);
+    const iMouse = new IMouse(this);
     this.iMouse = iMouse;
 
     const physics = new Physics(this);
     this.physics = physics;
+
+    const resizer = new Resizer(this);
+    this.resizer = resizer;
 
     this.init();
 
@@ -65,32 +71,10 @@ class Base {
   }
   addEventListeners() {
     // resize
-    window.addEventListener("resize", () => {
-      this.onResize();
-    });
+    this.resizer.listenForResize();
 
     // mouse
-    window.addEventListener("mousemove", (e) => {
-      const iMouseNew = new THREE.Vector2(
-        e.clientX,
-        window.innerHeight - e.clientY
-      );
-      this.iMouse = iMouseNew;
-    });
-    window.addEventListener("touchstart", (e) => {
-      const iMouseNew = new THREE.Vector2(
-        e.touches[0].clientX,
-        window.innerHeight - e.touches[0].clientY
-      );
-      this.iMouse = iMouseNew;
-    });
-    window.addEventListener("touchmove", (e) => {
-      const iMouseNew = new THREE.Vector2(
-        e.touches[0].clientX,
-        window.innerHeight - e.touches[0].clientY
-      );
-      this.iMouse = iMouseNew;
-    });
+    this.iMouse.listenForMouse();
   }
   update(fn: any) {
     this.animator.add(fn);
@@ -101,17 +85,6 @@ class Base {
     });
 
     this.animator.update();
-  }
-  onResize() {
-    if (this.camera instanceof THREE.PerspectiveCamera) {
-      this.camera.aspect = this.aspect;
-      this.camera.updateProjectionMatrix();
-      this.renderer.setSize(window.innerWidth, window.innerHeight);
-      this.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-    }
-  }
-  get aspect() {
-    return window.innerWidth / window.innerHeight;
   }
 }
 
