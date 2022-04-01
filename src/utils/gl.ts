@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 // 制作buffer
 const makeBuffer = (count = 100, fn: any, dimension = 3) => {
   const buffer = Float32Array.from({ length: count * dimension }, (v, k) => {
@@ -23,4 +25,15 @@ const iterateBuffer = (
   }
 };
 
-export { makeBuffer, iterateBuffer };
+// 将bufferAttribute转为向量
+const convertBufferAttributeToVector = (
+  bufferAttribute: THREE.BufferAttribute
+) => {
+  const vectors = Array.from(
+    { length: bufferAttribute.array.length / 3 },
+    (v, k) => new THREE.Vector3().fromBufferAttribute(bufferAttribute, k)
+  );
+  return vectors;
+};
+
+export { makeBuffer, iterateBuffer, convertBufferAttributeToVector };
