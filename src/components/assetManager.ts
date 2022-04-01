@@ -13,7 +13,8 @@ export type ResoureType =
   | "fbxModel"
   | "audio"
   | "objModel"
-  | "hdrTexture";
+  | "hdrTexture"
+  | "svg";
 
 export interface ResourceItem {
   name: string;
@@ -32,6 +33,7 @@ interface Loaders {
   audioLoader: THREE.AudioLoader;
   objLoader: STDLIB.OBJLoader;
   hdrTextureLoader: STDLIB.RGBELoader;
+  svgLoader: STDLIB.SVGLoader;
 }
 
 export interface AssetManagerConfig {
@@ -87,6 +89,7 @@ class AssetManager extends Component {
     this.loaders.audioLoader = new THREE.AudioLoader();
     this.loaders.objLoader = new STDLIB.OBJLoader();
     this.loaders.hdrTextureLoader = new STDLIB.RGBELoader();
+    this.loaders.svgLoader = new STDLIB.SVGLoader();
   }
   // 设置draco加载器
   setDracoLoader() {
@@ -130,6 +133,10 @@ class AssetManager extends Component {
         });
       } else if (resource.type === "hdrTexture") {
         this.loaders.hdrTextureLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "svg") {
+        this.loaders.svgLoader?.load(resource.path as string, (file) => {
           this.resourceLoaded(resource, file);
         });
       }
