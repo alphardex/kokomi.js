@@ -6,7 +6,6 @@ import { Base } from "../base/base";
 
 class Physics extends Component {
   world: CANNON.World;
-  oldElapsedTime: number;
   meshPhysicsObjects: MeshPhysicsObject[];
   constructor(base: Base) {
     super(base);
@@ -14,8 +13,6 @@ class Physics extends Component {
     const world = new CANNON.World();
     world.gravity.set(0, -9.82, 0);
     this.world = world;
-
-    this.oldElapsedTime = 0;
 
     this.meshPhysicsObjects = [];
   }
@@ -33,9 +30,7 @@ class Physics extends Component {
   // 帧
   tick() {
     const world = this.world;
-    const elapsedTime = this.base.clock.getElapsedTime();
-    const deltaTime = elapsedTime - this.oldElapsedTime;
-    this.oldElapsedTime = elapsedTime;
+    const deltaTime = this.base.clock.deltaTime;
     world.step(1 / 60, deltaTime, 3);
   }
   // 同步物理和渲染

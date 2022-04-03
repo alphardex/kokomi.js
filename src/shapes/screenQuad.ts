@@ -137,10 +137,10 @@ class ScreenQuad extends Component {
   }
   update(time: number): void {
     const uniforms = this.material.uniforms;
-    const t = this.base.clock.getElapsedTime();
+    const t = this.base.clock.elapsedTime;
     uniforms.iGlobalTime.value = t;
     uniforms.iTime.value = t;
-    const delta = this.base.clock.getDelta();
+    const delta = this.base.clock.deltaTime;
     uniforms.iTimeDelta.value = delta;
     uniforms.iResolution.value = new THREE.Vector3(
       window.innerWidth,

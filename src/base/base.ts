@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
 import { Animator } from "../components";
+import { Clock } from "../components";
 import { Physics } from "../components";
 import { Resizer } from "../components";
 import { IMouse } from "../components";
@@ -14,7 +15,7 @@ class Base {
   animator: Animator;
   interactionManager: InteractionManager;
   composer: EffectComposer | null;
-  clock: THREE.Clock;
+  clock: Clock;
   iMouse: IMouse;
   physics: Physics;
   resizer: Resizer;
@@ -53,7 +54,7 @@ class Base {
 
     this.composer = null;
 
-    const clock = new THREE.Clock();
+    const clock = new Clock(this);
     this.clock = clock;
 
     const iMouse = new IMouse(this);
