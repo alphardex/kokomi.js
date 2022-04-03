@@ -5,7 +5,7 @@ import * as STDLIB from "three-stdlib";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-export interface CustomPassConfig {
+export interface CustomEffectConfig {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
@@ -42,10 +42,10 @@ void main(){
 }
 `;
 
-class CustomPass extends Component {
+class CustomEffect extends Component {
   composer: STDLIB.EffectComposer;
   customPass: STDLIB.ShaderPass;
-  constructor(base: Base, config: Partial<CustomPassConfig> = {}) {
+  constructor(base: Base, config: Partial<CustomEffectConfig> = {}) {
     super(base);
 
     const {
@@ -99,4 +99,4 @@ class CustomPass extends Component {
   }
 }
 
-export { CustomPass };
+export { CustomEffect };

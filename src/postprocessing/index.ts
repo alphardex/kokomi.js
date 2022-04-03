@@ -1,1 +1,1 @@
-export * from "./customPass";
+export * from "./customEffect";
