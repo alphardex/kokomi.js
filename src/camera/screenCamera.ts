@@ -4,7 +4,7 @@ import { getScreenFov } from "maku.js";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-interface ScreenCameraConfig {
+export interface ScreenCameraConfig {
   position: THREE.Vector3;
   near: number;
   far: number;

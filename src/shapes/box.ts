@@ -3,7 +3,7 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-interface BoxConfig {
+export interface BoxConfig {
   width: number;
   height: number;
   depth: number;

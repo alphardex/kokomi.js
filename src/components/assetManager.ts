@@ -24,7 +24,7 @@ export interface ResourceItem {
 
 export type ResoureList = ResourceItem[];
 
-interface Loaders {
+export interface Loaders {
   gltfLoader: STDLIB.GLTFLoader;
   textureLoader: THREE.TextureLoader;
   cubeTextureLoader: THREE.CubeTextureLoader;

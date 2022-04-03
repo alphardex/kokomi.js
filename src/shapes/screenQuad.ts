@@ -3,7 +3,7 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-interface PlaneConfig {
+export interface PlaneConfig {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
