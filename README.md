@@ -157,11 +157,31 @@ Credit: https://www.shadertoy.com/view/XtyXzW
             </ul>
             <ul>
                 <li>
+                    <a href="#materials">Materials</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#glassmaterial">GlassMaterial</a>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li>
                     <a href="#panorama">Panorama</a>
                 </li>
                 <ul>
                     <li>
-                        <a href="#imagepanorama">Image Panorama</a>
+                        <a href="#imagepanorama">ImagePanorama</a>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#postprocessing">Postprocessing</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#customeffect">CustomEffect</a>
                     </li>
                 </ul>
             </ul>
@@ -199,6 +219,9 @@ Credit: https://www.shadertoy.com/view/XtyXzW
                     <a href="#web">Web</a>
                 </li>
                 <ul>
+                    <li>
+                        <a href="#gallery">Gallery</a>
+                    </li>
                     <li>
                         <a href="#html">Html</a>
                     </li>
@@ -413,6 +436,28 @@ class Sketch extends kokomi.Base {
 
 Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
 
+## Materials
+
+### GlassMaterial
+
+A material that produces a glass-like effect.
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    new kokomi.OrbitControls(this);
+
+    const material = new kokomi.GlassMaterial({});
+    const box = new kokomi.Box(this, {
+      material,
+    });
+    box.addExisting();
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-glass-material-kjlhwl?file=/src/app.ts
+
 ## Panorama
 
 ### ImagePanorama
@@ -447,6 +492,29 @@ class Sketch extends kokomi.Base {
 ```
 
 Demo: https://codesandbox.io/s/kokomi-js-image-panorama-qyxqff?file=/src/app.ts
+
+## Postprocessing
+
+### CustomEffect
+
+With this, you can just provide your vertex and fragment shader to make a customized postprocessing effect.
+
+```ts
+import postprocessingVertexShader from "./shaders/postprocessing/vertex.glsl";
+import postprocessingFragmentShader from "./shaders/postprocessing/fragment.glsl";
+
+class Sketch extends kokomi.Base {
+  create() {
+    const customEffect = new kokomi.CustomEffect(this, {
+      vertexShader: postprocessingVertexShader,
+      fragmentShader: postprocessingFragmentShader,
+    });
+    customEffect.addExisting();
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ## Shapes
 
@@ -594,6 +662,30 @@ class Sketch extends kokomi.Base {
 Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
 
 ## Web
+
+### Gallery
+
+It's just an encapsuled class for [maku.js](https://github.com/alphardex/maku.js), which is a powerful bridge between HTML and WebGL.
+
+```ts
+import mainVertexShader from "./shaders/main/vertex.glsl";
+import mainFragmentShader from "./shaders/main/fragment.glsl";
+
+class Sketch extends kokomi.Base {
+  async create() {
+    const screenCamera = new kokomi.ScreenCamera(this);
+    screenCamera.addExisting();
+
+    const gallary = new kokomi.Gallery(this, {
+      vertexShader: mainVertexShader,
+      fragmentShader: mainFragmentShader,
+    });
+    await gallary.addExisting();
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ### Html
 
