@@ -1,3 +1,4 @@
+export * from "./cannon";
 export * from "./dom";
 export * from "./gl";
 export * from "./misc";
