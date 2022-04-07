@@ -1,4 +1,4 @@
-import { ParametricGeometry } from "three/examples/jsm/geometries/ParametricGeometry";
+import { ParametricGeometry } from "three/examples/jsm/geometries/ParametricGeometry.js";
 
 import { hyperbolicHelicoidFunction } from "../maths";
 
