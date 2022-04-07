@@ -31,10 +31,8 @@ export default [
     input: "src/index.ts",
     plugins: [
       typescript(), // so Rollup can convert TypeScript to JavaScript
+      terser(), // so Rollup can minify js code
     ],
-    output: [
-      { file: pkg.main, format: "cjs" },
-      { file: pkg.module, format: "es" },
-    ],
+    output: [{ file: pkg.module, format: "es" }],
   },
 ];
