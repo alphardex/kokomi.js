@@ -5,6 +5,7 @@ import type { Base } from "../base/base";
 import { BasicPanorama } from "./basicPanorama";
 
 export interface ImagePanoramaConfig {
+  id: string;
   radius: number;
 }
 
@@ -16,7 +17,9 @@ class ImagePanorama extends BasicPanorama {
   ) {
     super(base);
 
-    const { radius = 5000 } = config;
+    const { id = "", radius = 5000 } = config;
+
+    this.id = id;
 
     const geometry = new THREE.SphereGeometry(radius, 60, 40);
     const material = new THREE.MeshBasicMaterial({

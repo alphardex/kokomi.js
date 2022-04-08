@@ -10,10 +10,12 @@ import gsap from "gsap";
 import { Html } from "../web";
 
 export interface BasicPanoramaConfig {
+  id: string;
   radius: number;
 }
 
 class BasicPanorama extends Component {
+  id: string;
   material: THREE.MeshBasicMaterial;
   mesh: THREE.Mesh;
   emitter: Emitter<any>;
@@ -23,7 +25,9 @@ class BasicPanorama extends Component {
   constructor(base: Base, config: Partial<BasicPanoramaConfig> = {}) {
     super(base);
 
-    const { radius = 5000 } = config;
+    const { id = "", radius = 5000 } = config;
+
+    this.id = id;
 
     const geometry = new THREE.SphereGeometry(radius, 60, 40);
     const material = new THREE.MeshBasicMaterial({

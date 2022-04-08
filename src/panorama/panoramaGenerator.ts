@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import mitt, { type Emitter } from "mitt";
 
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
@@ -36,6 +37,7 @@ class PanoramaGenerator extends Component {
   assetManager: AssetManager | null;
   viewer: Viewer | null;
   panoramas: ImagePanorama[];
+  emitter: Emitter<any>;
   constructor(base: Base, config: PanoramaConfig | null = null) {
     super(base);
 
@@ -43,6 +45,7 @@ class PanoramaGenerator extends Component {
     this.assetManager = null;
     this.viewer = null;
     this.panoramas = [];
+    this.emitter = mitt();
 
     if (config) {
       this.setConfig(config);
@@ -58,7 +61,7 @@ class PanoramaGenerator extends Component {
     const el = document.querySelector(`.${className}`) as HTMLElement;
     return el;
   }
-  // 生成所有全景图
+  // 加载素材并生成全景图
   generate() {
     const { config } = this;
     if (!config) {
@@ -78,61 +81,129 @@ class PanoramaGenerator extends Component {
       const viewer = new Viewer(this.base);
       this.viewer = viewer;
 
-      const panoramas = config.map((item) => {
-        // 全景图本体
-        const image = this.assetManager!.items[item.name];
-        const panorama = new ImagePanorama(this.base, image);
-        (panorama as any).id = item.id;
-        viewer.add(panorama);
-
-        // 信息点
-        if (item.infospots) {
-          const points = item.infospots.map((infospot) => {
-            const el = this.getInfospotElByConfig(infospot);
-            const html = new Html(
-              this.base,
-              el,
-              new THREE.Vector3(
-                infospot.point.x,
-                infospot.point.y,
-                infospot.point.z
-              )
-            );
-            return html;
-          });
-          panorama.addGroup(points);
-        }
-
-        return panorama;
-      });
-      this.panoramas = panoramas;
+      // 全景图
+      this.generatePanoramas();
       // 默认显示第一个全景图
-      viewer.setPanorama(panoramas[0], 0);
+      viewer.setPanorama(this.panoramas[0], 0);
 
-      // 场景跳转
-      config.forEach((item) => {
-        if (item.infospots) {
-          item.infospots.forEach((infospot) => {
-            if (infospot.jump) {
-              const targetPanorama = panoramas.find(
-                (pa) => (pa as any).id === infospot.jump
-              );
-              if (targetPanorama) {
-                const el = this.getInfospotElByConfig(infospot);
-                el.addEventListener("click", () => {
-                  viewer.setPanorama(targetPanorama);
-                });
-              }
-            }
-          });
-        }
-      });
+      this.emitter.emit("generate", this);
     });
   }
   // 根据配置生成所有全景图
   generateByConfig(config: PanoramaConfig) {
     this.setConfig(config);
     this.generate();
+  }
+  // 生成全景图
+  generatePanoramas() {
+    const { config } = this;
+    if (!config) {
+      return;
+    }
+    const panoramas = config.map((item) => {
+      // 全景图本体
+      const image = this.assetManager?.items[item.name];
+      const panorama = new ImagePanorama(this.base, image);
+      panorama.id = item.id;
+      const { viewer } = this;
+      viewer?.add(panorama);
+      return panorama;
+    });
+    this.panoramas = panoramas;
+    return panoramas;
+  }
+  // 生成信息点
+  generateInfospots() {
+    const { config } = this;
+    if (!config) {
+      return;
+    }
+    config.forEach((item) => {
+      // 信息点
+      if (item.infospots) {
+        const points = item.infospots.map((infospot) => {
+          const el = this.getInfospotElByConfig(infospot);
+          const html = new Html(
+            this.base,
+            el,
+            new THREE.Vector3(
+              infospot.point.x,
+              infospot.point.y,
+              infospot.point.z
+            )
+          );
+          return html;
+        });
+        const { panoramas } = this;
+        const targetPanorama = panoramas.find((pa) => pa.id === item.id);
+        if (targetPanorama) {
+          targetPanorama.infospots = [];
+          targetPanorama.addGroup(points);
+        }
+      }
+    });
+  }
+  // 生成场景跳转
+  generateSceneJump() {
+    const { config } = this;
+    if (!config) {
+      return;
+    }
+    config.forEach((item) => {
+      if (item.infospots) {
+        item.infospots.forEach((infospot) => {
+          if (infospot.jump) {
+            const { panoramas, viewer } = this;
+            const targetPanorama = panoramas.find(
+              (pa) => pa.id === infospot.jump
+            );
+            if (targetPanorama) {
+              const el = this.getInfospotElByConfig(infospot);
+              el.addEventListener("click", () => {
+                viewer?.setPanorama(targetPanorama);
+              });
+            }
+          }
+        });
+      }
+    });
+  }
+  // 生成带跳转的信息点
+  generateInfospotsWithSceneJump() {
+    this.generateInfospots();
+    this.generateSceneJump();
+  }
+  // 所有点的配置
+  get allInfospotConfig(): InfospotConfig[] {
+    if (!this.config) {
+      return [];
+    }
+    return this.config
+      .map((scene) => {
+        if (!scene.infospots) {
+          return [];
+        }
+        const infospots = scene.infospots?.map((infospot) => {
+          return {
+            id: infospot.id,
+            name: infospot.name || infospot.id,
+            point: infospot.point,
+          };
+        });
+        return infospots;
+      })
+      .flat()
+      .filter((item) => item);
+  }
+  // 输出当前场景的信息
+  outputCurrentScenePosition() {
+    this.viewer?.currentPanorama?.outputPosition();
+    this.viewer?.currentPanorama?.emitter.on(
+      "click",
+      (point: THREE.Vector3) => {
+        this.emitter.emit("click-scene", point);
+      }
+    );
   }
 }
 
