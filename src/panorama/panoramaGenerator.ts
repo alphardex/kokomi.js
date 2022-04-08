@@ -168,6 +168,13 @@ class PanoramaGenerator extends Component {
                 viewer?.setPanorama(targetPanorama);
               };
             }
+          } else {
+            const el = this.getInfospotElByConfig(infospot);
+            el.onclick = () => {
+              if (!this.isSceneJumpEnabled) {
+                return;
+              }
+            };
           }
         });
       }
