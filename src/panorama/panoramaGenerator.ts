@@ -38,6 +38,7 @@ class PanoramaGenerator extends Component {
   viewer: Viewer | null;
   panoramas: ImagePanorama[];
   emitter: Emitter<any>;
+  isSceneJumpEnabled: boolean;
   constructor(base: Base, config: PanoramaConfig | null = null) {
     super(base);
 
@@ -46,6 +47,7 @@ class PanoramaGenerator extends Component {
     this.viewer = null;
     this.panoramas = [];
     this.emitter = mitt();
+    this.isSceneJumpEnabled = true;
 
     if (config) {
       this.setConfig(config);
@@ -160,6 +162,9 @@ class PanoramaGenerator extends Component {
             if (targetPanorama) {
               const el = this.getInfospotElByConfig(infospot);
               el.addEventListener("click", () => {
+                if (!this.isSceneJumpEnabled) {
+                  return;
+                }
                 viewer?.setPanorama(targetPanorama);
               });
             }
@@ -205,6 +210,14 @@ class PanoramaGenerator extends Component {
         this.emitter.emit("click-scene", point);
       }
     );
+  }
+  // 允许跳转场景
+  enableSceneJump() {
+    this.isSceneJumpEnabled = true;
+  }
+  // 禁止跳转场景
+  disableSceneJump() {
+    this.isSceneJumpEnabled = false;
   }
 }
 
