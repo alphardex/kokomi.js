@@ -52,7 +52,8 @@ class BasicPanorama extends Component {
     scene.add(mesh);
   }
   outputPosition() {
-    window.addEventListener("click", (event) => {
+    const container = this.base.container || window;
+    container.addEventListener("click", (event) => {
       const intersects = this.base.interactionManager.raycaster.intersectObject(
         this.mesh,
         true
