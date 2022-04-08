@@ -32,25 +32,17 @@ export interface InfospotConfig {
 }
 
 class PanoramaGenerator extends Component {
-  config: PanoramaConfig;
+  config: PanoramaConfig | null;
   assetManager: AssetManager | null;
   viewer: Viewer | null;
   panoramas: ImagePanorama[];
-  constructor(base: Base, config: PanoramaConfig) {
+  constructor(base: Base, config: PanoramaConfig | null = null) {
     super(base);
 
     this.config = config;
     this.assetManager = null;
     this.viewer = null;
     this.panoramas = [];
-  }
-  // 资源列表
-  get resourceList() {
-    return this.config.map((item) => ({
-      name: item.name,
-      type: "texture" as ResoureType,
-      path: item.url,
-    }));
   }
   // 通过配置获取信息点元素
   getInfospotElByConfig(config: InfospotConfig) {
@@ -60,7 +52,17 @@ class PanoramaGenerator extends Component {
   }
   // 根据配置生成所有全景图
   generate(config = this.config) {
-    const assetManager = new AssetManager(this.base, this.resourceList);
+    if (!config) {
+      return;
+    }
+
+    const resourceList = config.map((item) => ({
+      name: item.name,
+      type: "texture" as ResoureType,
+      path: item.url,
+    }));
+
+    const assetManager = new AssetManager(this.base, resourceList);
     this.assetManager = assetManager;
 
     this.assetManager.emitter.on("ready", () => {
