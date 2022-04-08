@@ -188,6 +188,7 @@ class PanoramaGenerator extends Component {
             id: infospot.id,
             name: infospot.name || infospot.id,
             point: infospot.point,
+            jump: infospot.jump,
           };
         });
         return infospots;
