@@ -39,10 +39,18 @@ class PanoramaGenerator extends Component {
   constructor(base: Base, config: PanoramaConfig | null = null) {
     super(base);
 
-    this.config = config;
+    this.config = null;
     this.assetManager = null;
     this.viewer = null;
     this.panoramas = [];
+
+    if (config) {
+      this.setConfig(config);
+    }
+  }
+  // 设置配置
+  setConfig(config: PanoramaConfig) {
+    this.config = config;
   }
   // 通过配置获取信息点元素
   getInfospotElByConfig(config: InfospotConfig) {
@@ -50,8 +58,9 @@ class PanoramaGenerator extends Component {
     const el = document.querySelector(`.${className}`) as HTMLElement;
     return el;
   }
-  // 根据配置生成所有全景图
-  generate(config = this.config) {
+  // 生成所有全景图
+  generate() {
+    const { config } = this;
     if (!config) {
       return;
     }
@@ -119,6 +128,11 @@ class PanoramaGenerator extends Component {
         }
       });
     });
+  }
+  // 根据配置生成所有全景图
+  generateByConfig(config: PanoramaConfig) {
+    this.setConfig(config);
+    this.generate();
   }
 }
 
