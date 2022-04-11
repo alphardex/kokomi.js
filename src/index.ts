@@ -7,6 +7,7 @@ export * from "./materials";
 export * from "./maths";
 export * from "./panorama";
 export * from "./postprocessing";
+export * from "./raymarching";
 export * from "./shapes";
 export * from "./utils";
 export * from "./web";

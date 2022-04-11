@@ -22,6 +22,7 @@ export interface SceneConfig {
   url: string;
   name: string;
   infospots?: InfospotConfig[];
+  [key: string]: any;
 }
 
 export interface InfospotConfig {
@@ -30,6 +31,7 @@ export interface InfospotConfig {
   name?: string;
   jump?: string;
   className?: string;
+  [key: string]: any;
 }
 
 class PanoramaGenerator extends Component {
@@ -201,6 +203,7 @@ class PanoramaGenerator extends Component {
             name: infospot.name || infospot.id,
             point: infospot.point,
             jump: infospot.jump,
+            className: infospot.className,
           };
         });
         return infospots;
