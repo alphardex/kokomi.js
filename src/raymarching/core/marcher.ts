@@ -191,7 +191,7 @@ vec3 getRayDirection(vec2 p,vec3 ro,vec3 ta,float fl){
 // lighting
 // https://learnopengl.com/Lighting/Basic-Lighting
 
-float saturate_1(float a){
+float saturate_0(float a){
     return clamp(a,0.,1.);
 }
 
@@ -208,12 +208,12 @@ float diffuse(vec3 n,vec3 l){
 
 // https://learnopengl.com/Lighting/Basic-Lighting
 
-float saturate_0(float a){
+float saturate_1(float a){
     return clamp(a,0.,1.);
 }
 
 float specular(vec3 n,vec3 l,float shininess){
-    float spec=pow(saturate_0(dot(n,l)),shininess);
+    float spec=pow(saturate_1(dot(n,l)),shininess);
     return spec;
 }
 
@@ -254,6 +254,51 @@ vec2 rotate(vec2 v,float angle){
 
 vec3 rotate(vec3 v,vec3 axis,float angle){
     return(rotation3d(axis,angle)*vec4(v,1.)).xyz;
+}
+
+mat3 rotation3dX(float angle){
+    float s=sin(angle);
+    float c=cos(angle);
+    
+    return mat3(
+        1.,0.,0.,
+        0.,c,s,
+        0.,-s,c
+    );
+}
+
+vec3 rotateX(vec3 v,float angle){
+    return rotation3dX(angle)*v;
+}
+
+mat3 rotation3dY(float angle){
+    float s=sin(angle);
+    float c=cos(angle);
+    
+    return mat3(
+        c,0.,-s,
+        0.,1.,0.,
+        s,0.,c
+    );
+}
+
+vec3 rotateY(vec3 v,float angle){
+    return rotation3dY(angle)*v;
+}
+
+mat3 rotation3dZ(float angle){
+    float s=sin(angle);
+    float c=cos(angle);
+    
+    return mat3(
+        c,s,0.,
+        -s,c,0.,
+        0.,0.,1.
+    );
+}
+
+vec3 rotateZ(vec3 v,float angle){
+    return rotation3dZ(angle)*v;
 }
 
 // gamma
@@ -437,21 +482,11 @@ void mainImage(out vec4 fragColor,in vec2 fragCoord){
 }
 `;
 
-export interface MarcherConfig {
-  debug: boolean;
-}
-
 class Marcher extends Component {
   screenQuad: ScreenQuad | null;
   mapFunction: SDFMapFunction | null;
-  constructor(base: Base, config: Partial<MarcherConfig> = {}) {
+  constructor(base: Base) {
     super(base);
-
-    const { debug = false } = config;
-
-    if (debug) {
-      console.log(this.fragmentShader);
-    }
 
     this.screenQuad = null;
 

@@ -21,7 +21,7 @@ class BoxSDF extends PrimitiveSDF {
     this.depth = depth;
   }
   get shader() {
-    return `float ${this.sdfVarName}=sdBox(${this.pointVarName},vec3(${this.width},${this.height},${this.depth}));`;
+    return `float ${this.sdfVarName}=sdBox(${this.pointVarName}/${this.scaleValue},vec3(${this.width},${this.height},${this.depth}))*${this.scaleValue};`;
   }
 }
 
