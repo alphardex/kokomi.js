@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.6.9",
+  "version": "1.7.0",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,11 +14,11 @@
     "gsap": "^3.10.0",
     "imagesloaded": "^5.0.0",
     "maku.js": "^1.0.3",
-    "marcher.js": "^1.0.0",
+    "marcher.js": "^1.0.1",
     "mitt": "^3.0.0",
     "stats.js": "^0.17.0",
     "three": "^0.139.0",
-    "three-stdlib": "^2.8.11",
+    "three-stdlib": "^2.9.1",
     "three.interactive": "^1.2.1"
   },
   "devDependencies": {
