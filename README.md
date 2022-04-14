@@ -196,6 +196,9 @@ Credit: https://www.shadertoy.com/view/XtyXzW
                     <li>
                         <a href="#screenquad">ScreenQuad</a>
                     </li>
+                    <li>
+                        <a href="#raymarchingquad">RayMarchingQuad</a>
+                    </li>
                 </ul>
             </ul>
             <ul>
@@ -557,6 +560,45 @@ class Sketch extends kokomi.Base {
 Demo (Also template): https://codesandbox.io/s/kokomi-js-screenquad-254wl8?file=/src/app.ts
 
 Shadertoy: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
+
+## RayMarchingQuad
+
+Also a screenQuad, but for Raymarching.
+
+It's used with [marcher.js](https://github.com/alphardex/marcher.js)——a Raymarching code generator library.
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    new kokomi.OrbitControls(this);
+
+    const mar = new marcher.Marcher({
+      antialias: false,
+    });
+
+    const map = new marcher.SDFMapFunction();
+
+    {
+      const layer = new marcher.SDFLayer();
+
+      const box = new marcher.BoxSDF({
+        sdfVarName: "d1",
+      });
+      box.round(0.1);
+      layer.addPrimitive(box);
+
+      map.addLayer(layer);
+    }
+
+    mar.setMapFunction(map);
+
+    const rayMarchingQuad = new kokomi.RayMarchingQuad(this, mar);
+    rayMarchingQuad.render();
+  }
+}
+```
+
+Demo (Also template): https://codesandbox.io/s/kokomi-js-raymarching-starter-lk17vs?file=/src/app.ts
 
 ## Utils
 
