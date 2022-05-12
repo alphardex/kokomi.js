@@ -88,6 +88,10 @@ Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starte
 
 Credit: https://www.shadertoy.com/view/XtyXzW
 
+### Persistence Effect
+
+![4](./assets/previews/5.gif)
+
 ## Index
 
 <table>
@@ -139,6 +143,16 @@ Credit: https://www.shadertoy.com/view/XtyXzW
                 <ul>
                     <li>
                         <a href="#orbitcontrols">OrbitControls</a>
+                    </li>
+                </ul>
+            </ul>
+            <ul>
+                <li>
+                    <a href="#effects">Effects</a>
+                </li>
+                <ul>
+                    <li>
+                        <a href="#persistenceeffect">PersistenceEffect</a>
                     </li>
                 </ul>
             </ul>
@@ -402,6 +416,23 @@ class Sketch extends kokomi.Base {
 ```
 
 Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
+
+## Effects
+
+### PersistenceEffect
+
+A drop-in Persistence Effect
+
+```ts
+class Sketch extends kokomi.Base {
+  create() {
+    const persistenceEffect = new kokomi.PersistenceEffect(this);
+    persistenceEffect.addExisting();
+  }
+}
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-persistence-effect-6jyqcu?file=/src/app.ts
 
 ## Geometries
 
