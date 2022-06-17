@@ -76,6 +76,8 @@ class ShaderToyElement extends HTMLElement {
   createContainer() {
     const container = document.createElement("div");
     container.id = this.containerId;
+    container.style.width = "100%";
+    container.style.height = "100%";
     this.appendChild(container);
     this.container = container;
   }
