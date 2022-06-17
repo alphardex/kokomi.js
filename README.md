@@ -592,6 +592,26 @@ Demo (Also template): https://codesandbox.io/s/kokomi-js-screenquad-254wl8?file=
 
 Shadertoy: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
 
+#### shader-toy tag
+
+Also, you can use `<shader-toy></shader-toy>` tag to setup a shadertoy environment in html with just few lines of code!
+
+```html
+<shader-toy>
+  <script type="frag">
+    your awesome shader here
+  </script>
+</shader-toy>
+```
+
+```ts
+import * as kokomi from "kokomi.js";
+
+kokomi.ShaderToyElement.register();
+```
+
+Demo: https://codesandbox.io/s/kokomi-js-shader-toy-element-i2cbe5?file=/index.html
+
 ## RayMarchingQuad
 
 Also a screenQuad, but for Raymarching.
