@@ -1,6 +1,10 @@
+import * as THREE from "three";
+
 import { Base } from "../base/base";
 
 import { ScreenQuad } from "../shapes";
+
+import { loadTextureFromImg } from "./utils";
 
 const defaultFragmentShader = `
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
@@ -22,18 +26,19 @@ class Sketch extends Base {
 
     this.resizer.disable();
   }
-  create(fragmentShader: string) {
+  create(fragmentShader: string, uniforms = {}) {
     const screenQuad = new ScreenQuad(this, {
       shadertoyMode: true,
       fragmentShader,
+      uniforms,
     });
     screenQuad.addExisting();
   }
 }
 
-const createSketch = (id = "sketch", fragmentShader: string) => {
+const createSketch = (id = "sketch", fragmentShader: string, uniforms = {}) => {
   const sketch = new Sketch(`#${id}`);
-  sketch.create(fragmentShader);
+  sketch.create(fragmentShader, uniforms);
   return sketch;
 };
 
@@ -60,18 +65,26 @@ class ShaderToyElement extends HTMLElement {
   get containerId() {
     return `${this.elId}-container`;
   }
-  create() {
-    this.createContainer();
-    const fragmentShader = this.fragShader;
-    const sketch = createSketch(this.containerId, fragmentShader);
-    const canvas = sketch.renderer.domElement;
-    canvas.style.width = "100%";
-    canvas.style.height = "100%";
-    this.sketch = sketch;
-  }
   get fragShader() {
     const fragScript = this.querySelector("[type=frag]");
     return fragScript?.textContent || defaultFragmentShader;
+  }
+  getTextureUniform(name: string) {
+    const texture = loadTextureFromImg(this.querySelector(`[name=${name}]`));
+    const uniform = texture
+      ? {
+          [name]: texture,
+        }
+      : {};
+    return uniform;
+  }
+  get uniforms() {
+    return {
+      ...this.getTextureUniform("iChannel0"),
+      ...this.getTextureUniform("iChannel1"),
+      ...this.getTextureUniform("iChannel2"),
+      ...this.getTextureUniform("iChannel3"),
+    };
   }
   createContainer() {
     const container = document.createElement("div");
@@ -80,6 +93,16 @@ class ShaderToyElement extends HTMLElement {
     container.style.height = "100%";
     this.appendChild(container);
     this.container = container;
+  }
+  create() {
+    this.createContainer();
+    const fragmentShader = this.fragShader;
+    const uniforms = this.uniforms;
+    const sketch = createSketch(this.containerId, fragmentShader, uniforms);
+    const canvas = sketch.renderer.domElement;
+    canvas.style.width = "100%";
+    canvas.style.height = "100%";
+    this.sketch = sketch;
   }
 }
 
