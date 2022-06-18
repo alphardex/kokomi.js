@@ -4,7 +4,7 @@ import { Base } from "../base/base";
 
 import { ScreenQuad } from "../shapes";
 
-import { loadTextureFromImg } from "./utils";
+import { getUniformFromImg, loadTextureFromImg } from "./utils";
 
 const defaultFragmentShader = `
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
@@ -70,13 +70,8 @@ class ShaderToyElement extends HTMLElement {
     return fragScript?.textContent || defaultFragmentShader;
   }
   getTextureUniform(name: string) {
-    const texture = loadTextureFromImg(this.querySelector(`[name=${name}]`));
-    const uniform = texture
-      ? {
-          [name]: texture,
-        }
-      : {};
-    return uniform;
+    const img = this.querySelector(`[name=${name}]`) as HTMLImageElement;
+    return getUniformFromImg(img, name);
   }
   get uniforms() {
     return {

@@ -25,4 +25,19 @@ const loadTextureFromImg = (el: HTMLImageElement | null) => {
   return texture;
 };
 
-export { loadTextureFromImg };
+const getUniformFromImg = (el: HTMLImageElement | null, name: string) => {
+  if (!el) {
+    return {};
+  }
+  const texture = loadTextureFromImg(el);
+  const uniform = texture
+    ? {
+        [name]: {
+          value: texture,
+        },
+      }
+    : {};
+  return uniform;
+};
+
+export { loadTextureFromImg, getUniformFromImg };
