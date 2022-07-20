@@ -30,9 +30,15 @@ const getUniformFromImg = (el: HTMLImageElement | null, name: string) => {
     return {};
   }
   const texture = loadTextureFromImg(el);
+  const type = el.getAttribute("type") || "2d";
+  const uniformName =
+    {
+      "2d": name,
+      cube: `${name}Cube`,
+    }[type] || name;
   const uniform = texture
     ? {
-        [name]: {
+        [uniformName]: {
           value: texture,
         },
       }

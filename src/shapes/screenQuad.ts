@@ -49,6 +49,10 @@ uniform sampler2D iChannel0;
 uniform sampler2D iChannel1;
 uniform sampler2D iChannel2;
 uniform sampler2D iChannel3;
+uniform samplerCube iChannel0Cube;
+uniform samplerCube iChannel1Cube;
+uniform samplerCube iChannel2Cube;
+uniform samplerCube iChannel3Cube;
 
 uniform float iChannelTime[4];
 `;
