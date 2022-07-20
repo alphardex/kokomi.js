@@ -71,7 +71,7 @@ class ShaderToyElement extends HTMLElement {
   }
   getTextureUniform(name: string) {
     const img = this.querySelector(`[name=${name}]`) as HTMLImageElement;
-    return getUniformFromImg(img, name);
+    return getUniformFromImg(img, name, this);
   }
   get uniforms() {
     return {
