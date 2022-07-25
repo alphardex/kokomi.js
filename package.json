@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.30",
+  "version": "1.9.31",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -17,8 +17,9 @@
     "marcher.js": "^1.4.3",
     "mitt": "^3.0.0",
     "stats.js": "^0.17.0",
-    "three": "^0.139.0",
-    "three-stdlib": "^2.9.1",
+    "three": "^0.142.0",
+    "three-custom-shader-material": "^3.5.0",
+    "three-stdlib": "^2.12.1",
     "three.interactive": "^1.2.1"
   },
   "devDependencies": {
@@ -27,7 +28,7 @@
     "@rollup/plugin-typescript": "^8.3.1",
     "@types/imagesloaded": "^4.1.2",
     "@types/stats.js": "^0.17.0",
-    "@types/three": "^0.139.0",
+    "@types/three": "^0.142.0",
     "rollup": "^2.70.1",
     "rollup-plugin-terser": "^7.0.2"
   }
