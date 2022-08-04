@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 import { Maku, MakuGroup, Scroller } from "maku.js";
-import { HTMLIVCElement } from "maku.js/types/types";
+import { HTMLIVCElement, MakuConfig } from "maku.js/types/types";
 
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
@@ -13,6 +13,8 @@ export interface GalleryConfig {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
+  makuConfig: MakuConfig;
+  isScrollPositionSync: boolean;
 }
 
 const defaultVertexShader = `
@@ -51,6 +53,8 @@ class Gallery extends Component {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
+  makuConfig: MakuConfig;
+  isScrollPositionSync: boolean;
   makuMaterial: THREE.ShaderMaterial | null;
   makuGroup: MakuGroup | null;
   scroller: Scroller | null;
@@ -62,12 +66,16 @@ class Gallery extends Component {
       vertexShader = defaultVertexShader,
       fragmentShader = defaultFragmentShader,
       uniforms = {},
+      makuConfig = {},
+      isScrollPositionSync = true,
     } = config;
 
     this.elList = elList;
     this.vertexShader = vertexShader;
     this.fragmentShader = fragmentShader;
     this.uniforms = uniforms;
+    this.makuConfig = makuConfig;
+    this.isScrollPositionSync = isScrollPositionSync;
 
     this.makuMaterial = null;
     this.makuGroup = null;
@@ -106,7 +114,7 @@ class Gallery extends Component {
     const makuGroup = new MakuGroup();
     this.makuGroup = makuGroup;
     const makus = this.elList.map(
-      (el) => new Maku(el, makuMaterial, this.base.scene)
+      (el) => new Maku(el, makuMaterial, this.base.scene, this.makuConfig)
     );
     makuGroup.addMultiple(makus);
 
@@ -123,7 +131,10 @@ class Gallery extends Component {
     const scroller = this.scroller;
 
     scroller?.syncScroll();
-    makuGroup?.setPositions(scroller?.scroll.current);
+
+    if (this.isScrollPositionSync) {
+      makuGroup?.setPositions(scroller?.scroll.current);
+    }
 
     makuGroup?.makus.forEach((maku) => {
       const material = maku.mesh.material as THREE.ShaderMaterial;
