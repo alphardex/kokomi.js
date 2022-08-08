@@ -3,7 +3,10 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-import CustomShaderMaterial from "three-custom-shader-material/vanilla";
+import CustomShaderMaterial, {
+  AllMaterialParams,
+  CSMPatchMap,
+} from "../lib/customShaderMaterial/vanilla";
 
 export interface CustomMeshConfig {
   geometry: THREE.BufferGeometry;
@@ -11,6 +14,8 @@ export interface CustomMeshConfig {
   vertexShader: string;
   fragmentShader: string;
   uniforms: { [uniform: string]: THREE.IUniform<any> };
+  patchMap: CSMPatchMap;
+  materialParams: AllMaterialParams;
 }
 
 const defaultVertexShader = `
@@ -56,6 +61,8 @@ class CustomMesh extends Component {
       vertexShader = defaultVertexShader,
       fragmentShader = defaultFragmentShader,
       uniforms = {},
+      patchMap = {},
+      materialParams = {},
     } = config;
 
     const material = new CustomShaderMaterial({
@@ -99,6 +106,8 @@ class CustomMesh extends Component {
         },
         ...uniforms,
       },
+      patchMap,
+      ...materialParams,
     });
     this.material = material;
 
