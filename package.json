@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.36",
+  "version": "1.9.37",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,7 +21,8 @@
     "three": "^0.142.0",
     "three-custom-shader-material": "^3.5.0",
     "three-stdlib": "^2.12.1",
-    "three.interactive": "^1.2.1"
+    "three.interactive": "^1.2.1",
+    "troika-three-text": "^0.46.4"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.3",
