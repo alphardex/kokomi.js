@@ -36,6 +36,12 @@ class RaycastSelector extends Component {
     const object = intersect.object;
     return target === object ? intersect : null;
   }
+  // 选中物包含某个点击物时
+  onChooseInclude(target: THREE.Object3D) {
+    const targets = this.getInterSects();
+    const includedTarget = targets.find((item) => item.object === target);
+    return includedTarget ? includedTarget : null;
+  }
 }
 
 export { RaycastSelector };

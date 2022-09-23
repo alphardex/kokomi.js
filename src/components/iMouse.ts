@@ -10,6 +10,7 @@ class IMouse extends Component {
   prevMouseDOM: THREE.Vector2;
   isMouseMoving: boolean;
   mouseMoveOffset: number;
+  mouseDOMDelta: THREE.Vector2;
   constructor(base: Base) {
     super(base);
 
@@ -25,6 +26,7 @@ class IMouse extends Component {
     this.prevMouseDOM = new THREE.Vector2(0, 0);
     this.isMouseMoving = false;
     this.mouseMoveOffset = 4;
+    this.mouseDOMDelta = new THREE.Vector2(0, 0);
   }
   getMouse(x: number, y: number) {
     const mouse = new THREE.Vector2(x, window.innerHeight - y);
@@ -97,15 +99,22 @@ class IMouse extends Component {
   }
   judgeIsMouseMoving() {
     if (
-      Math.abs(this.mouseDOM.x - this.prevMouseDOM.x) < this.mouseMoveOffset &&
-      Math.abs(this.mouseDOM.y - this.prevMouseDOM.y) < this.mouseMoveOffset
+      Math.abs(this.mouseDOMDelta.x) < this.mouseMoveOffset &&
+      Math.abs(this.mouseDOMDelta.y) < this.mouseMoveOffset
     ) {
       this.isMouseMoving = false;
     } else {
       this.isMouseMoving = true;
     }
   }
+  getMouseDOMDelta() {
+    const x = this.mouseDOM.x - this.prevMouseDOM.x;
+    const y = this.mouseDOM.y - this.prevMouseDOM.y;
+    const mouseDOMDelta = new THREE.Vector2(x, y);
+    this.mouseDOMDelta = mouseDOMDelta;
+  }
   update(time: number): void {
+    this.getMouseDOMDelta();
     this.judgeIsMouseMoving();
     this.syncMouseDOM();
   }

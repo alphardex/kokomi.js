@@ -11,7 +11,7 @@ const convertGeometryToShape = (geometry: THREE.BufferGeometry) => {
         width = 1,
         height = 1,
         depth = 1,
-      } = (geometry as THREE.BoxBufferGeometry).parameters;
+      } = (geometry as THREE.BoxGeometry).parameters;
 
       const halfExtents = new CANNON.Vec3(width / 2, height / 2, depth / 2);
       return new CANNON.Box(halfExtents);
