@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
+import { UniformInjector } from "../components/uniformInjector";
 export interface PlaneConfig {
     vertexShader: string;
     fragmentShader: string;
@@ -12,6 +13,7 @@ export interface PlaneConfig {
 declare class ScreenQuad extends Component {
     material: THREE.ShaderMaterial;
     mesh: THREE.Mesh;
+    uniformInjector: UniformInjector;
     constructor(base: Base, config?: Partial<PlaneConfig>);
     addExisting(): void;
     update(time: number): void;

@@ -10,7 +10,7 @@ import CustomShaderMaterial, {
 
 import { UniformInjector } from "../components/uniformInjector";
 
-export interface CustomMeshConfig {
+export interface CustomPointsConfig {
   geometry: THREE.BufferGeometry;
   baseMaterial: THREE.Material;
   vertexShader: string;
@@ -27,9 +27,13 @@ uniform vec2 iMouse;
 
 varying vec2 vUv;
 
+uniform float uPointSize;
+
 void main(){
     vec3 p=position;
     csm_Position=p;
+
+    gl_PointSize=uPointSize;
     
     vUv=uv;
 }
@@ -51,11 +55,11 @@ void main(){
 
 `;
 
-class CustomMesh extends Component {
+class CustomPoints extends Component {
   material: CustomShaderMaterial;
-  mesh: THREE.Mesh;
+  points: THREE.Points;
   uniformInjector: UniformInjector;
-  constructor(base: Base, config: Partial<CustomMeshConfig> = {}) {
+  constructor(base: Base, config: Partial<CustomPointsConfig> = {}) {
     super(base);
 
     const {
@@ -77,6 +81,11 @@ class CustomMesh extends Component {
       fragmentShader,
       uniforms: {
         ...uniformInjector.shadertoyUniforms,
+        ...{
+          uPointSize: {
+            value: 10,
+          },
+        },
         ...uniforms,
       },
       patchMap,
@@ -84,11 +93,11 @@ class CustomMesh extends Component {
     });
     this.material = material;
 
-    const mesh = new THREE.Mesh(geometry, material);
-    this.mesh = mesh;
+    const points = new THREE.Points(geometry, material);
+    this.points = points;
   }
   addExisting(): void {
-    this.base.scene.add(this.mesh);
+    this.base.scene.add(this.points);
   }
   update(time: number): void {
     const uniforms = this.material.uniforms;
@@ -96,4 +105,4 @@ class CustomMesh extends Component {
   }
 }
 
-export { CustomMesh };
+export { CustomPoints };

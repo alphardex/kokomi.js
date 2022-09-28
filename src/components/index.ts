@@ -7,3 +7,4 @@ export * from "./physics";
 export * from "./raycastSelector";
 export * from "./resizer";
 export * from "./stats";
+export * from "./uniformInjector";
