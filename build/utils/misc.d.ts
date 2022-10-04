@@ -10,4 +10,5 @@ declare const getViewport: (camera: THREE.Camera) => {
     width: number;
     height: number;
 };
-export { optimizeModelRender, enableRealisticRender, getEnvmapFromHDRTexture, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, };
+declare const getPositionCentroids: (geometry: THREE.BufferGeometry, attrName?: string, centroidName?: string) => Float32Array;
+export { optimizeModelRender, enableRealisticRender, getEnvmapFromHDRTexture, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, };
