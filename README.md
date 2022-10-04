@@ -60,7 +60,7 @@ createSketch();
 
 Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
-See more examples in [examples folder](./examples/)
+See more examples: https://kokomi-playground.vercel.app
 
 ## Features
 
