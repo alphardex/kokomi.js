@@ -5,6 +5,8 @@ import * as STDLIB from "three-stdlib";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
+import { UniformInjector } from "../components/uniformInjector";
+
 export interface CustomEffectConfig {
   vertexShader: string;
   fragmentShader: string;
@@ -45,6 +47,7 @@ void main(){
 class CustomEffect extends Component {
   composer: STDLIB.EffectComposer;
   customPass: STDLIB.ShaderPass;
+  uniformInjector: UniformInjector;
   constructor(base: Base, config: Partial<CustomEffectConfig> = {}) {
     super(base);
 
@@ -60,6 +63,9 @@ class CustomEffect extends Component {
     const renderPass = new STDLIB.RenderPass(base.scene, base.camera);
     composer.addPass(renderPass);
 
+    const uniformInjector = new UniformInjector(base);
+    this.uniformInjector = uniformInjector;
+
     const customPass = new STDLIB.ShaderPass({
       vertexShader,
       fragmentShader,
@@ -68,16 +74,8 @@ class CustomEffect extends Component {
           tDiffuse: {
             value: null,
           },
-          iTime: {
-            value: 0,
-          },
-          iResolution: {
-            value: new THREE.Vector2(window.innerWidth, window.innerHeight),
-          },
-          iMouse: {
-            value: new THREE.Vector2(0, 0),
-          },
         },
+        ...uniformInjector.shadertoyUniforms,
         ...uniforms,
       },
     });
@@ -90,12 +88,7 @@ class CustomEffect extends Component {
   }
   update(time: number): void {
     const uniforms = this.customPass.uniforms;
-    uniforms.iTime.value = time / 1000;
-    uniforms.iResolution.value = new THREE.Vector2(
-      window.innerWidth,
-      window.innerHeight
-    );
-    uniforms.iMouse.value = this.base.interactionManager.mouse;
+    this.uniformInjector.injectShadertoyUniforms(uniforms);
   }
 }
 

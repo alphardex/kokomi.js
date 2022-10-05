@@ -1,0 +1,140 @@
+<style>
+    body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+
+    .shiny-border {
+        --shiny-border-grad: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+        --shiny-border-border-width: 0.5rem;
+        --shiny-border-radius: 0.5rem;
+        --shiny-border-content-width: 15rem;
+        --shiny-border-content-height: 20rem;
+        position: relative;
+        width: var(--shiny-border-content-width);
+        height: var(--shiny-border-content-height);
+        padding: var(--shiny-border-border-width);
+        border-radius: var(--shiny-border-radius);
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        .shiny-border {
+            --shiny-border-content-width: 40vw;
+            --shiny-border-content-height: 60vw;
+        }
+    }
+
+    .shiny-border-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+    }
+
+    .shiny-border-line::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: var(--shiny-border-grad);
+        -webkit-animation: spin-1 1.5s linear infinite;
+        animation: spin-1 1.5s linear infinite;
+    }
+
+    .shiny-border-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+        z-index: -1;
+        filter: blur(calc(var(--shiny-border-content-height) / 6));
+    }
+
+    .shiny-border-shadow::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        background: var(--shiny-border-grad);
+        -webkit-animation: spin-2 1.5s linear infinite;
+        animation: spin-2 1.5s linear infinite;
+    }
+
+    .shiny-border-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        overflow: hidden;
+        position: relative;
+    }
+
+    @-webkit-keyframes spin-1 {
+        from {
+            transform: scale(2.2) rotate(0);
+        }
+
+        to {
+            transform: scale(2.2) rotate(1turn);
+        }
+    }
+
+    @keyframes spin-1 {
+        from {
+            transform: scale(2.2) rotate(0);
+        }
+
+        to {
+            transform: scale(2.2) rotate(1turn);
+        }
+    }
+
+    @-webkit-keyframes spin-2 {
+        from {
+            transform: scale(1.8) rotate(0);
+        }
+
+        to {
+            transform: scale(1.8) rotate(1turn);
+        }
+    }
+
+    @keyframes spin-2 {
+        from {
+            transform: scale(1.8) rotate(0);
+        }
+
+        to {
+            transform: scale(1.8) rotate(1turn);
+        }
+    }
+
+    /*# sourceMappingURL=style.css.map */
+</style>
+<div class="absolute z-1 hv-center">
+    <div class="shiny-border">
+        <div class="shiny-border-line"></div>
+        <div class="shiny-border-shadow"></div>
+        <div class="shiny-border-shadow"></div>
+        <div class="shiny-border-content">
+            <img src="https://s2.loli.net/2022/08/30/lWfvjRit1ZkoAO2.jpg" class="w-full h-full block object-cover"
+                alt="" />
+        </div>
+    </div>
+</div>

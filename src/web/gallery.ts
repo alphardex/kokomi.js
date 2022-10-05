@@ -8,6 +8,8 @@ import { Component } from "../components/component";
 
 import { preloadImages } from "../utils";
 
+import { UniformInjector } from "../components/uniformInjector";
+
 export interface GalleryConfig {
   elList: HTMLIVCElement[];
   vertexShader: string;
@@ -58,6 +60,7 @@ class Gallery extends Component {
   makuMaterial: THREE.ShaderMaterial | null;
   makuGroup: MakuGroup | null;
   scroller: Scroller | null;
+  uniformInjector: UniformInjector;
   constructor(base: Base, config: Partial<GalleryConfig> = {}) {
     super(base);
 
@@ -80,10 +83,15 @@ class Gallery extends Component {
     this.makuMaterial = null;
     this.makuGroup = null;
     this.scroller = null;
+
+    const uniformInjector = new UniformInjector(base);
+    this.uniformInjector = uniformInjector;
   }
   async addExisting(): Promise<void> {
     // Load all the images
     await preloadImages();
+
+    const { uniformInjector } = this;
 
     // Create a ShaderMaterial
     const makuMaterial = new THREE.ShaderMaterial({
@@ -95,16 +103,8 @@ class Gallery extends Component {
           uTexture: {
             value: null,
           },
-          iTime: {
-            value: 0,
-          },
-          iResolution: {
-            value: new THREE.Vector2(window.innerWidth, window.innerHeight),
-          },
-          iMouse: {
-            value: new THREE.Vector2(0, 0),
-          },
         },
+        ...uniformInjector.shadertoyUniforms,
         ...this.uniforms,
       },
     });
@@ -139,12 +139,7 @@ class Gallery extends Component {
     makuGroup?.makus.forEach((maku) => {
       const material = maku.mesh.material as THREE.ShaderMaterial;
       const uniforms = material.uniforms;
-      uniforms.iTime.value = time / 1000;
-      uniforms.iResolution.value = new THREE.Vector2(
-        window.innerWidth,
-        window.innerHeight
-      );
-      uniforms.iMouse.value = this.base.interactionManager.mouse;
+      this.uniformInjector.injectShadertoyUniforms(uniforms);
     });
   }
 }

@@ -3,6 +3,7 @@ import { MakuGroup, Scroller } from "maku.js";
 import { HTMLIVCElement, MakuConfig } from "maku.js/types/types";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
+import { UniformInjector } from "../components/uniformInjector";
 export interface GalleryConfig {
     elList: HTMLIVCElement[];
     vertexShader: string;
@@ -25,6 +26,7 @@ declare class Gallery extends Component {
     makuMaterial: THREE.ShaderMaterial | null;
     makuGroup: MakuGroup | null;
     scroller: Scroller | null;
+    uniformInjector: UniformInjector;
     constructor(base: Base, config?: Partial<GalleryConfig>);
     addExisting(): Promise<void>;
     update(time: number): void;
