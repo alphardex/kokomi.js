@@ -3,7 +3,7 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-import { mapNumberRange } from "../maths/functions";
+import { mapNumberRange } from "../utils/math";
 
 export interface PersistenceEffectConfig {
   clearColor: number;

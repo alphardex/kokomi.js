@@ -1,159 +1,3 @@
-# Index
-
-<table>
-    <tr>
-        <td valign="top">
-            <ul>
-                <li>
-                    <a href="#base">Base</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#base">Base</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#camera">Camera</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#screencamera">ScreenCamera</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#components">Components</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#assetmanager">AssetManager</a>
-                    </li>
-                    <li>
-                        <a href="#component">Component</a>
-                    </li>
-                    <li>
-                        <a href="#physics">Physics</a>
-                    </li>
-                    <li>
-                        <a href="#stats">Stats</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#controls">Controls</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#orbitcontrols">OrbitControls</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#effects">Effects</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#persistenceeffect">PersistenceEffect</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#geometries">Geometries</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#hyperbolichelicoid">HyperbolicHelicoid</a>
-                    </li>
-                    <li>
-                        <a href="#sphube">Sphube</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#materials">Materials</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#glassmaterial">GlassMaterial</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#panorama">Panorama</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#imagepanorama">ImagePanorama</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#postprocessing">Postprocessing</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#customeffect">CustomEffect</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#shapes">Shapes</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#box">Box</a>
-                    </li>
-                    <li>
-                        <a href="#screenquad">ScreenQuad</a>
-                    </li>
-                    <li>
-                        <a href="#raymarchingquad">RayMarchingQuad</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#utils">Utils</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#dom">DOM</a>
-                    </li>
-                    <li>
-                        <a href="#gl">GL</a>
-                    </li>
-                    <li>
-                        <a href="#misc">Misc</a>
-                    </li>
-                </ul>
-            </ul>
-            <ul>
-                <li>
-                    <a href="#web">Web</a>
-                </li>
-                <ul>
-                    <li>
-                        <a href="#gallery">Gallery</a>
-                    </li>
-                    <li>
-                        <a href="#html">Html</a>
-                    </li>
-                </ul>
-            </ul>
-        </td>
-    </tr>
-</table>
-
 # API
 
 ## Base
@@ -170,8 +14,6 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
-
 ## Camera
 
 ### ScreenCamera
@@ -186,8 +28,6 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
-
-Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ## Components
 
@@ -224,7 +64,9 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
+### Clock
+
+TODO
 
 ### Component
 
@@ -248,7 +90,10 @@ class MyBox extends kokomi.Component {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-component-wi812m?file=/src/app.ts
+### IMouse
+
+TODO
+
 
 ### Physics
 
@@ -291,7 +136,10 @@ class Box extends kokomi.Component {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-physics-tffxge?file=/src/app.ts
+### RaycastSelector
+
+TODO
+
 
 ### Stats
 
@@ -305,7 +153,10 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-stats-zwhev9?file=/src/app.ts
+### UniformInjector
+
+TODO
+
 
 ## Controls
 
@@ -321,8 +172,6 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
-
 ## Effects
 
 ### PersistenceEffect
@@ -337,8 +186,6 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
-
-Demo: https://codesandbox.io/s/kokomi-js-persistence-effect-6jyqcu?file=/src/app.ts
 
 ## Geometries
 
@@ -357,8 +204,6 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-geometry-hyperbolichelicoid-so35fy?file=/src/app.ts
-
 ### Sphube
 
 A [Sphube](https://arxiv.org/pdf/1604.02174.pdf) geometry
@@ -373,8 +218,6 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
-
-Demo: https://codesandbox.io/s/kokomi-js-geometry-sphube-57x9k6?file=/src/app.ts
 
 ## Materials
 
@@ -396,7 +239,9 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-glass-material-kjlhwl?file=/src/app.ts
+### ThinFilmFresnelMap
+
+TODO
 
 ## Panorama
 
@@ -431,7 +276,14 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-image-panorama-qyxqff?file=/src/app.ts
+### PanoramaGenerator
+
+TODO
+
+### Viewer
+
+TODO
+
 
 ## Postprocessing
 
@@ -454,7 +306,12 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
+## RenderTargets
+
+### RenderTexture
+
+TODO
+
 
 ## Shapes
 
@@ -471,7 +328,14 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
+### CustomMesh
+
+TODO
+
+### CustomPoints
+
+TODO
+
 
 ### ScreenQuad
 
@@ -494,10 +358,6 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo (Also template): https://codesandbox.io/s/kokomi-js-screenquad-254wl8?file=/src/app.ts
-
-Shadertoy: https://codesandbox.io/s/kokomi-js-shape-screenquad-gkxfxd?file=/src/app.ts
-
 #### shader-toy tag
 
 Also, you can use `<shader-toy></shader-toy>` tag to setup a shadertoy environment in html with just few lines of code!
@@ -516,9 +376,7 @@ import * as kokomi from "kokomi.js";
 kokomi.ShaderToyElement.register();
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-shader-toy-element-i2cbe5?file=/index.html
-
-## RayMarchingQuad
+### RayMarchingQuad
 
 Also a screenQuad, but for Raymarching.
 
@@ -555,110 +413,21 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo (Also template): https://codesandbox.io/s/kokomi-js-raymarching-starter-lk17vs?file=/src/app.ts
+### CubemapQuad
+
+TODO
+
+### Text3D
+
+TODO
+
+### TextMesh
+
+TODO
 
 ## Utils
 
-### DOM
-
-#### preloadImages
-
-preload all the img element, powered by [imagesloaded](https://github.com/desandro/imagesloaded)
-
-```ts
-class Sketch extends kokomi.Base {
-  async create() {
-    await kokomi.preloadImages();
-  }
-}
-```
-
-Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
-
-### GL
-
-#### makeBuffer
-
-A shortcut function to make a Float32Array buffer
-
-```ts
-class Sketch extends kokomi.Base {
-  create() {
-    const geometry = new THREE.BufferGeometry();
-    const buffer = kokomi.makeBuffer(
-      50,
-      () => THREE.MathUtils.randFloat(-0.5, 0.5) * 4
-    );
-    geometry.setAttribute("position", new THREE.BufferAttribute(buffer, 3));
-    // produced 50 random position triangles
-  }
-}
-```
-
-Demo: https://codesandbox.io/s/kokomi-js-makebuffer-11975d?file=/src/app.ts
-
-#### iterateBuffer
-
-A shortcut function to iterate through a Float32Array buffer
-
-```ts
-class Sketch extends kokomi.Base {
-  create() {
-    const geometry = new THREE.BufferGeometry();
-    const count = 20000;
-    const buffer = kokomi.makeBuffer(
-      count,
-      () => THREE.MathUtils.randFloat(-0.5, 0.5) * 10
-    );
-
-    kokomi.iterateBuffer(
-      buffer,
-      count,
-      (arr: number[], axis: THREE.Vector3) => {
-        arr[axis.y] = Math.sin(arr[axis.x]);
-      }
-    );
-    geometry.setAttribute("position", new THREE.BufferAttribute(buffer, 3));
-  }
-}
-```
-
-#### convertBufferAttributeToVector
-
-It's useful when you want to get the position vectors of a geometry
-
-```ts
-class Sketch extends kokomi.Base {
-  create() {
-    const geometry = new THREE.SphereGeometry(0.5, 8, 8);
-    const material = new THREE.PointsMaterial({
-      size: 0.01,
-    });
-    const points = new THREE.Points(geometry, material);
-    const positionAttribute = points.geometry.attributes.position;
-    const positions = kokomi.convertBufferAttributeToVector(positionAttribute);
-    console.log(positions);
-  }
-}
-```
-
-Demo: https://codesandbox.io/s/kokomi-js-html-w0qfmr?file=/src/app.ts
-
-### Misc
-
-#### enableRealisticRender
-
-Give the three.js renderer some default parameters so that it can produce a realistic effect
-
-```ts
-class Sketch extends kokomi.Base {
-  create() {
-    kokomi.enableRealisticRender(this.renderer);
-  }
-}
-```
-
-Demo: https://codesandbox.io/s/kokomi-js-asset-manager-13008e?file=/src/app.ts
+TODO
 
 ## Web
 
@@ -683,8 +452,6 @@ class Sketch extends kokomi.Base {
   }
 }
 ```
-
-Demo: https://codesandbox.io/s/kokomi-js-screen-camera-hpx78s?file=/src/app.ts
 
 ### Html
 
@@ -735,6 +502,10 @@ class Sketch extends kokomi.Base {
 }
 ```
 
-Demo: https://codesandbox.io/s/kokomi-js-html-usqwus?file=/src/app.ts
+### Scroller
 
-Sphere Word Cloud Demo: https://codesandbox.io/s/kokomi-js-html-w0qfmr?file=/src/app.ts
+TODO
+
+### ShaderToyElement
+
+See [this](#shader-toy-tag)

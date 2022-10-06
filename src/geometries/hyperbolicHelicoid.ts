@@ -1,6 +1,6 @@
 import { ParametricGeometry } from "three/examples/jsm/geometries/ParametricGeometry.js";
 
-import { hyperbolicHelicoidFunction } from "../maths";
+import { hyperbolicHelicoidFunction } from "../utils/parametric";
 
 class HyperbolicHelicoidGeometry extends ParametricGeometry {
   constructor(slices?: number, stacks?: number) {
