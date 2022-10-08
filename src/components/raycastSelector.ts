@@ -5,6 +5,8 @@ import { Base } from "../base/base";
 
 /**
  * An encapsuled class for `THREE.Raycaster`.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#raycastSelector
  */
 class RaycastSelector extends Component {
   raycaster: THREE.Raycaster;

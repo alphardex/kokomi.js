@@ -4,7 +4,8 @@ import { Component } from "./component";
 import { Base } from "../base/base";
 
 /**
- * An encapsuled class for `THREE.Clock`, you can get `elapsedTime` from it.
+ * An encapsuled class for `THREE.Clock`.
+ * You can get `elapsedTime` and `deltaTime` from it.
  */
 class Clock extends Component {
   clock: THREE.Clock;

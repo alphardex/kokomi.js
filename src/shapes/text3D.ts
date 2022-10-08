@@ -8,6 +8,8 @@ import { CustomMesh, CustomMeshConfig } from "./customMesh";
 
 /**
  * A mesh using `TextGeometry` to render 3D text.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#text3D
  */
 class Text3D extends CustomMesh {
   constructor(

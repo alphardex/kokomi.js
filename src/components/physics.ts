@@ -6,6 +6,8 @@ import { Base } from "../base/base";
 
 /**
  * kokomi.js uses [cannon.js](https://github.com/pmndrs/cannon-es) for physics. Just create mesh and body, and add it to base's physics!
+ *
+ * Demo: https://codesandbox.io/s/kokomi-js-physics-tffxge?file=/src/app.ts
  */
 class Physics extends Component {
   world: CANNON.World;

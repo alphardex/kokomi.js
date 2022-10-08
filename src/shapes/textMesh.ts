@@ -10,6 +10,8 @@ import * as troika_three_text from "troika-three-text";
  * A mesh using SDF to render text.
  *
  * Credit: https://protectwise.github.io/troika/troika-three-text/
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#textMesh
  */
 class TextMesh extends Component {
   mesh: troika_three_text.Text;

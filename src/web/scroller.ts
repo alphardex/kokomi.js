@@ -11,6 +11,8 @@ export interface Scroll {
 
 /**
  * A scroller to detect `wheel` event.
+ *
+ * Demo: https://kokomi-playground.vercel.app/#textureRecursion
  */
 class WheelScroller {
   scroll: Scroll;

@@ -46,6 +46,8 @@ void main(){
 
 /**
  * With this, you can just provide your vertex and fragment shader to make a customized postprocessing effect.
+ *
+ * Demo: https://kokomi-playground.vercel.app/#volumetricLight
  */
 class CustomEffect extends Component {
   composer: STDLIB.EffectComposer;
