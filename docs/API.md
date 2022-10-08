@@ -14,6 +14,8 @@ class Sketch extends kokomi.Base {
 }
 ```
 
+Demo: https://kokomi-js.vercel.app/#base
+
 ## Camera
 
 ### ScreenCamera
