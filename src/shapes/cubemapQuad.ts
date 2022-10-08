@@ -22,7 +22,8 @@ void main()
 `;
 
 /**
- * TODO
+ * Also a screenQuad, but for cubemap.
+ * It acts the same as Shadertoy's CubemapA.
  */
 class CubemapQuad extends ScreenQuad {
   constructor(base: Base, config: Partial<PlaneConfig> = {}) {

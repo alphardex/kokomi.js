@@ -43,7 +43,7 @@ const createSketch = (id = "sketch", fragmentShader: string, uniforms = {}) => {
 };
 
 /**
- * TODO
+ * You can use `<shader-toy></shader-toy>` tag to setup a shadertoy environment in html.
  */
 class ShaderToyElement extends HTMLElement {
   container: HTMLElement | null;

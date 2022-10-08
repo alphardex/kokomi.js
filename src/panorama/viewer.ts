@@ -12,7 +12,7 @@ export interface ViewerConfig {
 }
 
 /**
- * TODO
+ * A viewer for viewing panoramas.
  */
 class Viewer extends Component {
   camera: THREE.PerspectiveCamera;

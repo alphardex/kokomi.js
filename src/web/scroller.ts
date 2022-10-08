@@ -10,7 +10,7 @@ export interface Scroll {
 }
 
 /**
- * TODO
+ * A scroller to detect `wheel` event.
  */
 class WheelScroller {
   scroll: Scroll;

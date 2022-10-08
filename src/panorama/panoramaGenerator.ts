@@ -35,7 +35,7 @@ export interface InfospotConfig {
 }
 
 /**
- * TODO
+ * Generate panoramas with config.
  */
 class PanoramaGenerator extends Component {
   config: PanoramaConfig | null;

@@ -7,7 +7,7 @@ import { Component } from "../components/component";
 import { CustomMesh, CustomMeshConfig } from "./customMesh";
 
 /**
- * TODO
+ * A mesh using `TextGeometry` to render 3D text.
  */
 class Text3D extends CustomMesh {
   constructor(
