@@ -2,6 +2,9 @@ import { ParametricGeometry } from "three/examples/jsm/geometries/ParametricGeom
 
 import { sphubeFunction } from "../utils/parametric";
 
+/**
+ * A [Sphube](https://arxiv.org/pdf/1604.02174.pdf) geometry
+ */
 class SphubeGeometry extends ParametricGeometry {
   constructor(slices?: number, stacks?: number) {
     super(sphubeFunction, slices, stacks);

@@ -21,6 +21,9 @@ void main()
 }
 `;
 
+/**
+ * TODO
+ */
 class CubemapQuad extends ScreenQuad {
   constructor(base: Base, config: Partial<PlaneConfig> = {}) {
     super(base, {

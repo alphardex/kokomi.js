@@ -50,6 +50,9 @@ void main(){
 }
 `;
 
+/**
+ * It's just an encapsuled class for [maku.js](https://github.com/alphardex/maku.js), which is a powerful bridge between HTML and WebGL.
+ */
 class Gallery extends Component {
   elList: HTMLIVCElement[];
   vertexShader: string;

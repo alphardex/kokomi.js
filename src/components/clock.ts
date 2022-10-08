@@ -3,6 +3,9 @@ import * as THREE from "three";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
+/**
+ * An encapsuled class for `THREE.Clock`, you can get `elapsedTime` from it.
+ */
 class Clock extends Component {
   clock: THREE.Clock;
   deltaTime: number;

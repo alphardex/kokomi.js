@@ -14,7 +14,11 @@ export interface PersistenceEffectConfig {
   rotationAngle: number;
 }
 
-// https://tympanus.net/codrops/2021/12/28/adding-a-persistence-effect-to-three-js-scenes/
+/**
+ * A drop-in Persistence Effect
+ *
+ * Credit: https://tympanus.net/codrops/2021/12/28/adding-a-persistence-effect-to-three-js-scenes/
+ */
 class PersistenceEffect extends Component {
   isActive: boolean;
   clearColor: number;

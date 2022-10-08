@@ -11,6 +11,9 @@ export interface ViewerConfig {
   fov: number;
 }
 
+/**
+ * TODO
+ */
 class Viewer extends Component {
   camera: THREE.PerspectiveCamera;
   orbitControls: OrbitControls;

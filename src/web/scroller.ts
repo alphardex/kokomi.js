@@ -9,6 +9,9 @@ export interface Scroll {
   direction: "up" | "down" | "";
 }
 
+/**
+ * TODO
+ */
 class WheelScroller {
   scroll: Scroll;
   constructor() {

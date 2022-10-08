@@ -5,6 +5,10 @@ import { ScreenQuad } from "./screenQuad";
 
 import * as marcher from "marcher.js";
 
+/**
+ * Also a screenQuad, but for Raymarching.
+ * It's used with [marcher.js](https://github.com/alphardex/marcher.js)——a Raymarching code generator library.
+ */
 class RayMarchingQuad extends Component {
   screenQuad: ScreenQuad | null;
   marcher: marcher.Marcher;

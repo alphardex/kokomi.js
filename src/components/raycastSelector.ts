@@ -3,6 +3,9 @@ import * as THREE from "three";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
+/**
+ * An encapsuled class for `THREE.Raycaster`.
+ */
 class RaycastSelector extends Component {
   raycaster: THREE.Raycaster;
   constructor(base: Base) {

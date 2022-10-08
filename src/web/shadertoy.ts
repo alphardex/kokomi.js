@@ -42,6 +42,9 @@ const createSketch = (id = "sketch", fragmentShader: string, uniforms = {}) => {
   return sketch;
 };
 
+/**
+ * TODO
+ */
 class ShaderToyElement extends HTMLElement {
   container: HTMLElement | null;
   sketch: Sketch | null;

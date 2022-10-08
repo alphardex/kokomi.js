@@ -34,6 +34,9 @@ export interface InfospotConfig {
   [key: string]: any;
 }
 
+/**
+ * TODO
+ */
 class PanoramaGenerator extends Component {
   config: PanoramaConfig | null;
   assetManager: AssetManager | null;

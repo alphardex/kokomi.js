@@ -6,6 +6,9 @@ import { Component } from "../components/component";
 
 import { CustomMesh, CustomMeshConfig } from "./customMesh";
 
+/**
+ * TODO
+ */
 class Text3D extends CustomMesh {
   constructor(
     base: Base,

@@ -11,6 +11,9 @@ export interface BoxConfig {
   material: THREE.Material;
 }
 
+/**
+ * A cute box mesh that we can see everywhere
+ */
 class Box extends Component {
   mesh: THREE.Mesh;
   constructor(base: Base, config: Partial<BoxConfig> = {}) {

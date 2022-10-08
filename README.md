@@ -62,6 +62,8 @@ Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starte
 
 See more examples: https://kokomi-playground.vercel.app
 
+## [Documentation](https://kokomi-js.vercel.app/docs)
+
 ## Features
 
 - You can simply extend `kokomi.Base` class to kickstart a simple scene without writing any boilerplate codes.
@@ -92,8 +94,6 @@ Credit: https://www.shadertoy.com/view/XtyXzW
 ### Persistence Effect
 
 ![4](./assets/previews/5.gif)
-
-## [API](./docs/API.md)
 
 ## Author
 

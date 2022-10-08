@@ -1,5 +1,8 @@
 import * as THREE from "three";
 
+/**
+ * A material that produces a glass-like effect.
+ */
 class GlassMaterial extends THREE.MeshPhysicalMaterial {
   constructor(parameters?: THREE.MeshPhysicalMaterialParameters) {
     super({

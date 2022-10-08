@@ -67,6 +67,11 @@ void main(){
 }
 `;
 
+/**
+ * A fullsceen plane with which you can create fullscreen effects such as raymarching.
+ * By default, it has almost all the uniforms that [shadertoy](https://www.shadertoy.com/) has: `iTime`, `iResolution`, `iMouse`, etc
+ * If you just want to run your shadertoy shader locally, you can turn on `shadertoyMode`, which will inject all the shadertoy uniforms into the fragment shader as well as `main()` function for three.js. Thus, you can just copy & paste your shadertoy shader and run!
+ */
 class ScreenQuad extends Component {
   material: THREE.ShaderMaterial;
   mesh: THREE.Mesh;

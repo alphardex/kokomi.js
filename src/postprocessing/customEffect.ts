@@ -44,6 +44,9 @@ void main(){
 }
 `;
 
+/**
+ * With this, you can just provide your vertex and fragment shader to make a customized postprocessing effect.
+ */
 class CustomEffect extends Component {
   composer: STDLIB.EffectComposer;
   customPass: STDLIB.ShaderPass;
