@@ -1,6 +1,11 @@
 import { readdir, writeFile } from "fs/promises";
 
-const BASEPATH = ".";
+import { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const BASEPATH = __dirname;
 
 const IGNOREPATH = ["node_modules"];
 

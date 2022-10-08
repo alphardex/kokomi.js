@@ -6,7 +6,8 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc && rollup -c",
-    "doc": "typedoc src/index.ts"
+    "updateIndex": "node entries/getFilesData.mjs",
+    "doc": "node examples/getFilesData.mjs && typedoc src/index.ts"
   },
   "author": "alphardex",
   "license": "MIT",

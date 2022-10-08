@@ -51,6 +51,12 @@ void main(){
 
 `;
 
+/**
+ * It contains a `THREE.Mesh` object in which you can custom its base material (which is based on [THREE-CustomShaderMaterial](https://github.com/FarazzShaikh/THREE-CustomShaderMaterial)).
+ * Also, it provides all the shadertoy uniforms.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#customMesh
+ */
 class CustomMesh extends Component {
   material: CustomShaderMaterial;
   mesh: THREE.Mesh;
