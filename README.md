@@ -62,7 +62,7 @@ Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starte
 
 See more examples: https://kokomi-playground.vercel.app
 
-## [Documentation](https://kokomi-js.vercel.app/docs/)
+## [API](https://kokomi-js.vercel.app/docs/modules.html)
 
 ## Features
 
