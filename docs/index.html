@@ -47,6 +47,7 @@
 <p>script.ts</p>
 <pre><code class="language-ts"><span class="hl-5">import</span><span class="hl-0"> </span><span class="hl-6">*</span><span class="hl-0"> </span><span class="hl-5">as</span><span class="hl-0"> </span><span class="hl-7">kokomi</span><span class="hl-0"> </span><span class="hl-5">from</span><span class="hl-0"> </span><span class="hl-8">&quot;kokomi.js&quot;</span><span class="hl-0">;</span><br/><br/><span class="hl-6">class</span><span class="hl-0"> </span><span class="hl-9">Sketch</span><span class="hl-0"> </span><span class="hl-6">extends</span><span class="hl-0"> </span><span class="hl-9">kokomi</span><span class="hl-0">.</span><span class="hl-9">Base</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-10">create</span><span class="hl-0">() {</span><br/><span class="hl-0">    </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-7">kokomi</span><span class="hl-0">.</span><span class="hl-10">OrbitControls</span><span class="hl-0">(</span><span class="hl-6">this</span><span class="hl-0">);</span><br/><br/><span class="hl-0">    </span><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-11">box</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-7">kokomi</span><span class="hl-0">.</span><span class="hl-10">Box</span><span class="hl-0">(</span><span class="hl-6">this</span><span class="hl-0">);</span><br/><span class="hl-0">    </span><span class="hl-7">box</span><span class="hl-0">.</span><span class="hl-10">addExisting</span><span class="hl-0">();</span><br/><br/><span class="hl-0">    </span><span class="hl-6">this</span><span class="hl-0">.</span><span class="hl-10">update</span><span class="hl-0">((</span><span class="hl-7">time</span><span class="hl-0">: </span><span class="hl-9">number</span><span class="hl-0">) </span><span class="hl-6">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-7">box</span><span class="hl-0">.</span><span class="hl-10">spin</span><span class="hl-0">(</span><span class="hl-7">time</span><span class="hl-0">);</span><br/><span class="hl-0">    });</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-10">createSketch</span><span class="hl-0"> = () </span><span class="hl-6">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-6">const</span><span class="hl-0"> </span><span class="hl-11">sketch</span><span class="hl-0"> = </span><span class="hl-6">new</span><span class="hl-0"> </span><span class="hl-10">Sketch</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-7">sketch</span><span class="hl-0">.</span><span class="hl-10">create</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-5">return</span><span class="hl-0"> </span><span class="hl-7">sketch</span><span class="hl-0">;</span><br/><span class="hl-0">};</span><br/><br/><span class="hl-10">createSketch</span><span class="hl-0">();</span>
 </code></pre>
+<p><img src="./assets/previews/1.gif" alt="Basic"></p>
 <p>Demo (Also can be used as a template): <a href="https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts">https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts</a></p>
 <p>See more examples: <a href="https://kokomi-playground.vercel.app">https://kokomi-playground.vercel.app</a></p>
 
@@ -68,31 +69,25 @@
   <h2>Previews</h2>
 </a>
 
-<a href="#basic-scene" id="basic-scene" style="color: inherit; text-decoration: none;">
-  <h3>Basic Scene</h3>
-</a>
-<p><img src="./assets/previews/1.gif" alt="1"></p>
-
 <a href="#asset-manage" id="asset-manage" style="color: inherit; text-decoration: none;">
   <h3>Asset Manage</h3>
 </a>
 <p><img src="./assets/previews/2.gif" alt="2"></p>
 
-<a href="#util-geometry" id="util-geometry" style="color: inherit; text-decoration: none;">
-  <h3>Util Geometry</h3>
-</a>
-<p><img src="./assets/previews/3.gif" alt="3"></p>
-
 <a href="#shadertoy-integration" id="shadertoy-integration" style="color: inherit; text-decoration: none;">
   <h3>Shadertoy Integration</h3>
 </a>
-<p><img src="./assets/previews/4.gif" alt="4"></p>
-<p>Credit: <a href="https://www.shadertoy.com/view/XtyXzW">https://www.shadertoy.com/view/XtyXzW</a></p>
+<p><img src="./assets/previews/3.gif" alt="3"></p>
 
 <a href="#persistence-effect" id="persistence-effect" style="color: inherit; text-decoration: none;">
   <h3>Persistence Effect</h3>
 </a>
-<p><img src="./assets/previews/5.gif" alt="4"></p>
+<p><img src="./assets/previews/4.gif" alt="4"></p>
+
+<a href="#render-texture" id="render-texture" style="color: inherit; text-decoration: none;">
+  <h3>Render Texture</h3>
+</a>
+<p><img src="./assets/previews/5.gif" alt="5"></p>
 
 <a href="#author" id="author" style="color: inherit; text-decoration: none;">
   <h2>Author</h2>

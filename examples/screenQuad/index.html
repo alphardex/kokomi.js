@@ -42,7 +42,7 @@ const createSketch = () => {
   sketch.record = () => {
     let capturer = new CCapture({
       format: "gif",
-      workersPath: "../../vendors/",
+      workersPath: "../vendors/",
     });
     let isRecording = false;
     window.addEventListener("keydown", (e) => {

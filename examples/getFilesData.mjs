@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const BASEPATH = __dirname;
 
-const IGNOREPATH = ["node_modules"];
+const IGNOREPATH = ["node_modules", "vendors"];
 
 // https://stackoverflow.com/a/24594123
 const getDirectories = async (source) =>
