@@ -6,5 +6,6 @@ export * from "./math";
 export * from "./misc";
 export * from "./modify";
 export * from "./noise";
+export * from "./parametric";
 export * from "./vector";
 export * from "./web";

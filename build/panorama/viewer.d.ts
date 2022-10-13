@@ -6,6 +6,9 @@ import { BasicPanorama } from "./basicPanorama";
 export interface ViewerConfig {
     fov: number;
 }
+/**
+ * A viewer for viewing panoramas.
+ */
 declare class Viewer extends Component {
     camera: THREE.PerspectiveCamera;
     orbitControls: OrbitControls;

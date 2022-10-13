@@ -1,2 +1,3 @@
 declare const saturate: (value: number) => number;
-export { saturate };
+declare const mapNumberRange: (val: number, inMin: number, inMax: number, outMin: number, outMax: number) => number;
+export { saturate, mapNumberRange };

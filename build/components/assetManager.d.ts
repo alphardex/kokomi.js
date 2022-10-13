@@ -26,6 +26,11 @@ export interface AssetManagerConfig {
     useDracoLoader: boolean;
     dracoDecoderPath: string;
 }
+/**
+ * This class can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js file to config your assets without caring about various loaders.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#assetManager
+ */
 declare class AssetManager extends Component {
     config: AssetManagerConfig;
     emitter: Emitter<any>;

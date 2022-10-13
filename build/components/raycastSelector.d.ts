@@ -1,6 +1,11 @@
 import * as THREE from "three";
 import { Component } from "./component";
 import { Base } from "../base/base";
+/**
+ * An encapsuled class for `THREE.Raycaster`.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#raycastSelector
+ */
 declare class RaycastSelector extends Component {
     raycaster: THREE.Raycaster;
     constructor(base: Base);

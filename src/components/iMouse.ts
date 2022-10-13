@@ -7,8 +7,11 @@ import { Base } from "../base/base";
  * An encapsuled class to get mouse position.
  *
  * mouse: The same as Shadertoy's iMouse
+ *
  * mouseDOM: The DOM position of the mouse
+ *
  * mouseDOMDelta: The DOM position delta of the mouse
+ *
  * mouseScreen: Mesh position following the mouse on the screen
  */
 class IMouse extends Component {

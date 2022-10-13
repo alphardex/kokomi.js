@@ -6,6 +6,11 @@ export interface Scroll {
     delta: number;
     direction: "up" | "down" | "";
 }
+/**
+ * A scroller to detect `wheel` event.
+ *
+ * Demo: https://kokomi-playground.vercel.app/#textureRecursion
+ */
 declare class WheelScroller {
     scroll: Scroll;
     constructor();

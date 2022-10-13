@@ -25,6 +25,9 @@ export interface InfospotConfig {
     className?: string;
     [key: string]: any;
 }
+/**
+ * Generate panoramas with config.
+ */
 declare class PanoramaGenerator extends Component {
     config: PanoramaConfig | null;
     assetManager: AssetManager | null;

@@ -8,6 +8,9 @@ export interface BoxConfig {
     position: THREE.Vector3;
     material: THREE.Material;
 }
+/**
+ * A cute box mesh that we can see everywhere
+ */
 declare class Box extends Component {
     mesh: THREE.Mesh;
     constructor(base: Base, config?: Partial<BoxConfig>);

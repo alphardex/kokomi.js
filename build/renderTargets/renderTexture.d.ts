@@ -9,6 +9,11 @@ export interface RenderTextureConfig {
     rtScene: THREE.Scene;
     rtCamera: THREE.Camera;
 }
+/**
+ * You can render a scene into this texture.
+ *
+ * Demo: https://kokomi-js.vercel.app/examples/#renderTexture
+ */
 declare class RenderTexture extends Component {
     fbo: FBO;
     texture: THREE.Texture;

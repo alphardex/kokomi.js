@@ -9,6 +9,13 @@ export interface PersistenceEffectConfig {
     scaleY: number;
     rotationAngle: number;
 }
+/**
+ * A drop-in Persistence Effect
+ *
+ * Credit: https://tympanus.net/codrops/2021/12/28/adding-a-persistence-effect-to-three-js-scenes/
+ *
+ * Demo: https://kokomi-playground.vercel.app/#starTunnel
+ */
 declare class PersistenceEffect extends Component {
     isActive: boolean;
     clearColor: number;

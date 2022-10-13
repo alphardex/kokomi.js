@@ -8,6 +8,12 @@ export interface HtmlConfig {
     zIndexPropertyName: string;
     occlude: THREE.Object3D[];
 }
+/**
+ * It can help you merge HTML elements into the WebGL world by converting 3D positions to 2D positions.
+ * If element is visible, it will have a `visible` CSS class (can be customized), and for 2D position it will have 3 CSS variables `--x`, `--y` and `--z-index` (can be customized too)
+ *
+ * Demo: https://codesandbox.io/s/kokomi-js-html-w0qfmr?file=/src/components/sphereWordCloud.ts
+ */
 declare class Html extends Component {
     el: HTMLElement;
     position: THREE.Vector3;

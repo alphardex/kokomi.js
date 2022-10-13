@@ -5,7 +5,6 @@ export * from "./controls";
 export * from "./effects";
 export * from "./geometries";
 export * from "./materials";
-export * from "./maths";
 export * from "./panorama";
 export * from "./postprocessing";
 export * from "./renderTargets";

@@ -10,6 +10,11 @@ export interface CustomEffectConfig {
         [uniform: string]: THREE.IUniform<any>;
     };
 }
+/**
+ * With this, you can just provide your vertex and fragment shader to make a customized postprocessing effect.
+ *
+ * Demo: https://kokomi-playground.vercel.app/#volumetricLight
+ */
 declare class CustomEffect extends Component {
     composer: STDLIB.EffectComposer;
     customPass: STDLIB.ShaderPass;
