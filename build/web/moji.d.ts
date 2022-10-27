@@ -1,45 +1,52 @@
 import * as THREE from "three";
-import { MakuGroup, Scroller } from "maku.js";
-import { HTMLIVCElement, MakuConfig } from "maku.js/types/types";
+import { Scroller } from "maku.js";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 import { UniformInjector } from "../components/uniformInjector";
 import { AllMaterialParams } from "../lib/customShaderMaterial/vanilla";
-export interface GalleryConfig {
-    elList: HTMLIVCElement[];
+import { TextMesh } from "../shapes";
+export interface MojiConfig {
+    elList: HTMLElement[];
     vertexShader: string;
     fragmentShader: string;
     uniforms: {
         [uniform: string]: THREE.IUniform<any>;
     };
-    makuConfig: MakuConfig;
+    textMeshConfig: any;
     isScrollPositionSync: boolean;
     scroller: Scroller;
     materialParams: AllMaterialParams;
 }
 /**
- * It's just an encapsuled class for [maku.js](https://github.com/alphardex/maku.js), which is a powerful bridge between HTML and WebGL.
- *
- * Demo: https://kokomi-playground.vercel.app/#imageMouseWave
+ * An encapsuled class to sync `kokomi.TextMesh` with DOM.
  */
-declare class Gallery extends Component {
-    elList: HTMLIVCElement[];
+declare class Moji {
+    el: HTMLElement;
+    textMesh: TextMesh;
+    rect: DOMRect;
+    constructor(el: HTMLElement, textMesh: TextMesh);
+    setPosition(deltaY?: number): void;
+}
+/**
+ * An encapsuled class to sync multiple `kokomi.TextMesh` with DOM.
+ */
+declare class MojiGroup extends Component {
+    elList: HTMLElement[];
     vertexShader: string;
     fragmentShader: string;
     uniforms: {
         [uniform: string]: THREE.IUniform<any>;
     };
-    makuConfig: MakuConfig;
+    textMeshConfig: any;
     isScrollPositionSync: boolean;
-    makuMaterial: THREE.ShaderMaterial | null;
-    makuGroup: MakuGroup | null;
+    textMeshMaterial: THREE.ShaderMaterial | null;
+    mojis: Moji[];
     scroller: Scroller | null;
     uniformInjector: UniformInjector;
     materialParams: AllMaterialParams;
     useSelfScroller: boolean;
-    constructor(base: Base, config?: Partial<GalleryConfig>);
-    addExisting(): Promise<void>;
-    update(time: number): void;
-    checkImagesLoaded(): Promise<unknown>;
+    constructor(base: Base, config?: Partial<MojiConfig>);
+    addExisting(): void;
+    update(): void;
 }
-export { Gallery };
+export { Moji, MojiGroup };

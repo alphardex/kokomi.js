@@ -1,5 +1,7 @@
 import * as THREE from "three";
 
+import { Scroller } from "maku.js";
+
 export interface Scroll {
   current: number;
   target: number;
@@ -8,6 +10,8 @@ export interface Scroll {
   delta: number;
   direction: "up" | "down" | "";
 }
+
+const NormalScroller = Scroller;
 
 /**
  * A scroller to detect `wheel` event.
@@ -47,4 +51,4 @@ class WheelScroller {
   }
 }
 
-export { WheelScroller };
+export { NormalScroller, WheelScroller };

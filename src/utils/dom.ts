@@ -7,4 +7,8 @@ const preloadImages = (sel = "div") => {
   });
 };
 
-export { preloadImages };
+// 延迟
+const sleep = (time: number) =>
+  new Promise((resolve) => setTimeout(resolve, time));
+
+export { preloadImages, sleep };

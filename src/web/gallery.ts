@@ -9,6 +9,7 @@ import { Component } from "../components/component";
 import { preloadImages } from "../utils";
 
 import { UniformInjector } from "../components/uniformInjector";
+import { AllMaterialParams } from "../lib/customShaderMaterial/vanilla";
 
 export interface GalleryConfig {
   elList: HTMLIVCElement[];
@@ -17,6 +18,8 @@ export interface GalleryConfig {
   uniforms: { [uniform: string]: THREE.IUniform<any> };
   makuConfig: MakuConfig;
   isScrollPositionSync: boolean;
+  scroller: Scroller;
+  materialParams: AllMaterialParams;
 }
 
 const defaultVertexShader = `
@@ -66,6 +69,8 @@ class Gallery extends Component {
   makuGroup: MakuGroup | null;
   scroller: Scroller | null;
   uniformInjector: UniformInjector;
+  materialParams: AllMaterialParams;
+  useSelfScroller: boolean;
   constructor(base: Base, config: Partial<GalleryConfig> = {}) {
     super(base);
 
@@ -76,6 +81,8 @@ class Gallery extends Component {
       uniforms = {},
       makuConfig = {},
       isScrollPositionSync = true,
+      scroller = null,
+      materialParams = {},
     } = config;
 
     this.elList = elList;
@@ -87,10 +94,16 @@ class Gallery extends Component {
 
     this.makuMaterial = null;
     this.makuGroup = null;
-    this.scroller = null;
+    this.scroller = scroller;
+    this.materialParams = materialParams;
 
     const uniformInjector = new UniformInjector(base);
     this.uniformInjector = uniformInjector;
+
+    this.useSelfScroller = false;
+    if (!scroller) {
+      this.useSelfScroller = true;
+    }
   }
   async addExisting(): Promise<void> {
     // Load all the images
@@ -112,6 +125,7 @@ class Gallery extends Component {
         ...uniformInjector.shadertoyUniforms,
         ...this.uniforms,
       },
+      ...this.materialParams,
     });
     this.makuMaterial = makuMaterial;
 
@@ -126,25 +140,50 @@ class Gallery extends Component {
     // Sync images positions
     makuGroup.setPositions();
 
-    // Make a scroller
-    const scroller = new Scroller();
-    this.scroller = scroller;
-    scroller.listenForScroll();
+    // scroller listen for scroll
+    if (this.useSelfScroller) {
+      const scroller = new Scroller();
+      this.scroller = scroller;
+      this.scroller.listenForScroll();
+    }
   }
   update(time: number): void {
-    const makuGroup = this.makuGroup;
-    const scroller = this.scroller;
+    const { scroller, makuGroup } = this;
 
     scroller?.syncScroll();
-
-    if (this.isScrollPositionSync) {
-      makuGroup?.setPositions(scroller?.scroll.current);
-    }
 
     makuGroup?.makus.forEach((maku) => {
       const material = maku.mesh.material as THREE.ShaderMaterial;
       const uniforms = material.uniforms;
       this.uniformInjector.injectShadertoyUniforms(uniforms);
+
+      if (this.isScrollPositionSync) {
+        if (maku.el.classList.contains("webgl-fixed")) {
+          // fixed element
+          maku.setPosition(0);
+        } else {
+          // scroll element
+          maku.setPosition(scroller?.scroll.current);
+        }
+      }
+    });
+  }
+  checkImagesLoaded() {
+    return new Promise((resolve) => {
+      this.base.update(() => {
+        if (this.makuGroup) {
+          if (
+            this.makuGroup.makus
+              .map((maku) => {
+                return (maku.mesh.material as THREE.ShaderMaterial).uniforms
+                  .uTexture.value.image?.complete;
+              })
+              .every((item) => item)
+          ) {
+            resolve(true);
+          }
+        }
+      });
     });
   }
 }
