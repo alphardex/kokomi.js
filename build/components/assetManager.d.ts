@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import * as STDLIB from "three-stdlib";
-import { type Emitter } from "mitt";
 import { Component } from "./component";
 import { Base } from "../base/base";
 export declare type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture";
@@ -33,7 +32,6 @@ export interface AssetManagerConfig {
  */
 declare class AssetManager extends Component {
     config: AssetManagerConfig;
-    emitter: Emitter<any>;
     resourceList: ResoureList;
     items: any;
     toLoad: number;

@@ -3,8 +3,6 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-import mitt, { type Emitter } from "mitt";
-
 import gsap from "gsap";
 
 import { Html } from "../web";
@@ -18,7 +16,6 @@ class BasicPanorama extends Component {
   id: string;
   material: THREE.MeshBasicMaterial;
   mesh: THREE.Mesh;
-  emitter: Emitter<any>;
   infospots: Html[];
   isInfospotVisible: boolean;
   active: boolean;
@@ -38,8 +35,6 @@ class BasicPanorama extends Component {
     this.material = material;
     const mesh = new THREE.Mesh(geometry, material);
     this.mesh = mesh;
-
-    this.emitter = mitt();
 
     this.infospots = [];
     this.isInfospotVisible = false;
@@ -66,7 +61,7 @@ class BasicPanorama extends Component {
       };
       const message = `${position.x}, ${position.y}, ${position.z}`;
       console.log(message);
-      this.emitter.emit("click", point);
+      this.emit("click", point);
     });
   }
   show() {

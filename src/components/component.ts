@@ -1,3 +1,5 @@
+import mitt, { type Emitter } from "mitt";
+
 import type { Base } from "../base/base";
 
 /**
@@ -7,9 +9,12 @@ import type { Base } from "../base/base";
  */
 class Component {
   base: Base;
+  emitter: Emitter<any>;
   constructor(base: Base) {
     this.base = base;
     this.base.update((time: number) => this.update(time));
+
+    this.emitter = mitt();
   }
   // 将组件添加至当前场景或替换当前场景中已有的组件
   addExisting() {
@@ -18,6 +23,18 @@ class Component {
   // 动画帧
   update(time: number) {
     1 + 1;
+  }
+  // 监听事件
+  on(type: string, handler: any) {
+    this.emitter.on(type, handler);
+  }
+  // 移除事件
+  off(type: string, handler: any) {
+    this.emitter.off(type, handler);
+  }
+  // 触发事件
+  emit(type: string, event: any = {}) {
+    this.emitter.emit(type, event);
   }
 }
 

@@ -1,5 +1,4 @@
 import * as THREE from "three";
-import mitt, { type Emitter } from "mitt";
 
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
@@ -42,7 +41,6 @@ class PanoramaGenerator extends Component {
   assetManager: AssetManager | null;
   viewer: Viewer | null;
   panoramas: ImagePanorama[];
-  emitter: Emitter<any>;
   isSceneJumpEnabled: boolean;
   constructor(base: Base, config: PanoramaConfig | null = null) {
     super(base);
@@ -51,7 +49,6 @@ class PanoramaGenerator extends Component {
     this.assetManager = null;
     this.viewer = null;
     this.panoramas = [];
-    this.emitter = mitt();
     this.isSceneJumpEnabled = true;
 
     if (config) {
@@ -84,7 +81,7 @@ class PanoramaGenerator extends Component {
     const assetManager = new AssetManager(this.base, resourceList);
     this.assetManager = assetManager;
 
-    this.assetManager.emitter.on("ready", () => {
+    this.assetManager.on("ready", () => {
       const viewer = new Viewer(this.base);
       this.viewer = viewer;
 
@@ -93,7 +90,7 @@ class PanoramaGenerator extends Component {
       // 默认显示第一个全景图
       viewer.setPanorama(this.panoramas[0], 0);
 
-      this.emitter.emit("generate", this);
+      this.emit("generate", this);
     });
   }
   // 根据配置生成所有全景图
@@ -217,12 +214,9 @@ class PanoramaGenerator extends Component {
   // 输出当前场景的信息
   outputCurrentScenePosition() {
     this.viewer?.currentPanorama?.outputPosition();
-    this.viewer?.currentPanorama?.emitter.on(
-      "click",
-      (point: THREE.Vector3) => {
-        this.emitter.emit("click-scene", point);
-      }
-    );
+    this.viewer?.currentPanorama?.on("click", (point: THREE.Vector3) => {
+      this.emit("click-scene", point);
+    });
   }
   // 允许跳转场景
   enableSceneJump() {

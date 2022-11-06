@@ -1,4 +1,3 @@
-import { type Emitter } from "mitt";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 import { AssetManager } from "../components/assetManager";
@@ -33,7 +32,6 @@ declare class PanoramaGenerator extends Component {
     assetManager: AssetManager | null;
     viewer: Viewer | null;
     panoramas: ImagePanorama[];
-    emitter: Emitter<any>;
     isSceneJumpEnabled: boolean;
     constructor(base: Base, config?: PanoramaConfig | null);
     setConfig(config: PanoramaConfig): void;

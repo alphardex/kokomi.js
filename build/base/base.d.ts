@@ -6,6 +6,9 @@ import { Clock } from "../components";
 import { Physics } from "../components";
 import { Resizer } from "../components";
 import { IMouse } from "../components";
+export interface BaseConfig {
+    hello: boolean;
+}
 /**
  * By extending this class, you can kickstart a basic three.js scene easily.
  *
@@ -23,7 +26,7 @@ declare class Base {
     iMouse: IMouse;
     physics: Physics;
     resizer: Resizer;
-    constructor(sel?: string);
+    constructor(sel?: string, config?: Partial<BaseConfig>);
     addEventListeners(): void;
     update(fn: any): void;
     init(): void;

@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
-import { type Emitter } from "mitt";
 import { Html } from "../web";
 export interface BasicPanoramaConfig {
     id: string;
@@ -11,7 +10,6 @@ declare class BasicPanorama extends Component {
     id: string;
     material: THREE.MeshBasicMaterial;
     mesh: THREE.Mesh;
-    emitter: Emitter<any>;
     infospots: Html[];
     isInfospotVisible: boolean;
     active: boolean;

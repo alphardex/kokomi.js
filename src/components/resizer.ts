@@ -21,6 +21,7 @@ class Resizer extends Component {
       base.renderer.setSize(window.innerWidth, window.innerHeight);
       base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     }
+    this.emit("resize");
   }
   listenForResize() {
     window.addEventListener("resize", () => {

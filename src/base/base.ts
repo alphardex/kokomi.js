@@ -7,6 +7,10 @@ import { Physics } from "../components";
 import { Resizer } from "../components";
 import { IMouse } from "../components";
 
+export interface BaseConfig {
+  hello: boolean;
+}
+
 /**
  * By extending this class, you can kickstart a basic three.js scene easily.
  *
@@ -24,7 +28,16 @@ class Base {
   iMouse: IMouse;
   physics: Physics;
   resizer: Resizer;
-  constructor(sel = "#sketch") {
+  constructor(sel = "#sketch", config: Partial<BaseConfig> = {}) {
+    const { hello = true } = config;
+
+    if (hello) {
+      console.log(
+        `%c- powered by kokomi.js -`,
+        `padding: 5px 10px; background: #030A8C; font-size: 11px`
+      );
+    }
+
     const camera = new THREE.PerspectiveCamera(
       70,
       window.innerWidth / window.innerHeight,

@@ -1,6 +1,5 @@
 import * as THREE from "three";
 import * as STDLIB from "three-stdlib";
-import mitt, { type Emitter } from "mitt";
 
 import { Component } from "./component";
 import { Base } from "../base/base";
@@ -50,7 +49,6 @@ export interface AssetManagerConfig {
  */
 class AssetManager extends Component {
   config: AssetManagerConfig;
-  emitter: Emitter<any>;
   resourceList: ResoureList;
   items: any;
   toLoad: number;
@@ -68,9 +66,6 @@ class AssetManager extends Component {
       dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
     } = config;
     this.config = { useDracoLoader, dracoDecoderPath };
-
-    const emitter = mitt();
-    this.emitter = emitter;
 
     this.resourceList = list;
 
@@ -159,7 +154,7 @@ class AssetManager extends Component {
     this.items[resource.name] = file;
     this.loaded += 1;
     if (this.isLoaded) {
-      this.emitter.emit("ready");
+      this.emit("ready");
     }
   }
   // 加载进度

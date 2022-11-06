@@ -25,6 +25,7 @@ class Clock extends Component {
     const deltaTime = newElapsedTime - this.elapsedTime;
     this.deltaTime = deltaTime;
     this.elapsedTime = newElapsedTime;
+    this.emit("tick");
   }
 }
 
