@@ -138,6 +138,33 @@ const getPositionCentroids = (
   return centroidBuffer;
 };
 
+interface CreatePolygonShapeConfig {
+  scale: number;
+}
+
+// 创建多边形形状
+const createPolygonShape = (
+  points: THREE.Vector2[],
+  config: Partial<CreatePolygonShapeConfig> = {}
+) => {
+  const shape = new THREE.Shape();
+
+  const { scale = 1 } = config;
+
+  const firstPoint = points[0];
+  for (let i = 0; i < points.length; i++) {
+    const point = points[i];
+    const x = (point.x - firstPoint.x) * scale;
+    const y = (point.y - firstPoint.y) * -1 * scale;
+    if (i === 0) {
+      shape.moveTo(x, y);
+    } else {
+      shape.lineTo(x, y);
+    }
+  }
+  return shape;
+};
+
 export {
   optimizeModelRender,
   enableRealisticRender,
@@ -148,4 +175,5 @@ export {
   printModel,
   getViewport,
   getPositionCentroids,
+  createPolygonShape,
 };

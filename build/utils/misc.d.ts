@@ -11,4 +11,8 @@ declare const getViewport: (camera: THREE.Camera) => {
     height: number;
 };
 declare const getPositionCentroids: (geometry: THREE.BufferGeometry, attrName?: string, centroidName?: string) => Float32Array;
-export { optimizeModelRender, enableRealisticRender, getEnvmapFromHDRTexture, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, };
+interface CreatePolygonShapeConfig {
+    scale: number;
+}
+declare const createPolygonShape: (points: THREE.Vector2[], config?: Partial<CreatePolygonShapeConfig>) => THREE.Shape;
+export { optimizeModelRender, enableRealisticRender, getEnvmapFromHDRTexture, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, };
