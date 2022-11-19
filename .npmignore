@@ -4,3 +4,5 @@ assets
 node_modules
 docs
 examples
+index.html
+rollup.config.mjs
