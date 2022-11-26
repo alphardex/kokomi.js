@@ -12,10 +12,10 @@ const resourceList = [
 ];
 
 class Fox extends kokomi.Component {
-  constructor(base, gltf) {
+  constructor(base) {
     super(base);
 
-    this.gltf = gltf;
+    this.gltf = this.base.am.items["foxModel"];
 
     const mixer = new THREE.AnimationMixer(this.gltf.scene);
     this.mixer = mixer;
@@ -51,19 +51,15 @@ class Fox extends kokomi.Component {
 }
 
 class Sketch extends kokomi.Base {
-  constructor(sel = "#sketch") {
-    super(sel);
-
-    const assetManager = new kokomi.AssetManager(this, resourceList);
-    this.assetManager = assetManager;
-  }
   create() {
     new kokomi.OrbitControls(this);
 
-    this.camera.position.copy(new THREE.Vector3(6, 4, 3));
+    this.camera.position.set(3, 3, 3);
 
-    this.assetManager.emitter.on("ready", () => {
-      const fox = new Fox(this, this.assetManager.items.foxModel);
+    const am = new kokomi.AssetManager(this, resourceList);
+    this.am = am;
+    this.am.on("ready", () => {
+      const fox = new Fox(this);
       fox.addExisting();
       fox.playAction("idle");
 
