@@ -1,6 +1,7 @@
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
-import * as troika_three_text from "troika-three-text";
+import { Text } from "troika-three-text";
+declare const preloadSDFFont: (url?: string) => Promise<unknown>;
 /**
  * A mesh using SDF to render text.
  *
@@ -9,8 +10,8 @@ import * as troika_three_text from "troika-three-text";
  * Demo: https://kokomi-js.vercel.app/examples/#textMesh
  */
 declare class TextMesh extends Component {
-    mesh: troika_three_text.Text;
+    mesh: Text;
     constructor(base: Base, text?: string);
     addExisting(): void;
 }
-export { TextMesh };
+export { preloadSDFFont, TextMesh };

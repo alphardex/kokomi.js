@@ -1,7 +1,6 @@
 export * from "./cannon";
 export * from "./dom";
 export * from "./gl";
-export * from "./load";
 export * from "./math";
 export * from "./misc";
 export * from "./modify";

@@ -6,6 +6,17 @@ import { Component } from "../components/component";
 
 import { CustomMesh, CustomMeshConfig } from "./customMesh";
 
+const defaultFontUrl =
+  "https://unpkg.com/three@0.77.0/examples/fonts/helvetiker_regular.typeface.json";
+
+const loadFont = (url = defaultFontUrl): Promise<STDLIB.Font> => {
+  return new Promise((resolve) => {
+    new STDLIB.FontLoader().load(url, (font) => {
+      resolve(font);
+    });
+  });
+};
+
 /**
  * A mesh using `TextGeometry` to render 3D text.
  *
@@ -36,4 +47,4 @@ class Text3D extends CustomMesh {
   }
 }
 
-export { Text3D };
+export { loadFont, Text3D };
