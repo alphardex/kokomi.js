@@ -3,10 +3,11 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-import CustomShaderMaterial, {
+import {
+  CustomShaderMaterial,
   AllMaterialParams,
   CSMPatchMap,
-} from "../lib/customShaderMaterial/vanilla";
+} from "../lib/THREE-CustomShaderMaterial";
 
 import { UniformInjector } from "../components/uniformInjector";
 

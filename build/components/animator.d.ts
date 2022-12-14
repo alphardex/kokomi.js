@@ -5,5 +5,6 @@ declare class Animator {
     constructor(base: Base);
     add(fn: any): void;
     update(): void;
+    tick(time?: number): void;
 }
 export { Animator };

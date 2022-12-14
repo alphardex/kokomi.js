@@ -12,15 +12,18 @@ class Animator {
   }
   update() {
     this.base.renderer.setAnimationLoop((time: number) => {
-      this.tasks.forEach((task) => {
-        task(time);
-      });
-      if (this.base.composer) {
-        this.base.composer.render();
-      } else {
-        this.base.renderer.render(this.base.scene, this.base.camera);
-      }
+      this.tick(time);
     });
+  }
+  tick(time = 0) {
+    this.tasks.forEach((task) => {
+      task(time);
+    });
+    if (this.base.composer) {
+      this.base.composer.render();
+    } else {
+      this.base.renderer.render(this.base.scene, this.base.camera);
+    }
   }
 }
 

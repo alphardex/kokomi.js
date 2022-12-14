@@ -4,7 +4,7 @@ import { HTMLIVCElement, MakuConfig } from "maku.js/types/types";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 import { UniformInjector } from "../components/uniformInjector";
-import { AllMaterialParams } from "../lib/customShaderMaterial/vanilla";
+import { AllMaterialParams } from "../lib/THREE-CustomShaderMaterial";
 export interface GalleryConfig {
     elList: HTMLIVCElement[];
     vertexShader: string;

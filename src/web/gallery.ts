@@ -9,7 +9,7 @@ import { Component } from "../components/component";
 import { preloadImages } from "../utils";
 
 import { UniformInjector } from "../components/uniformInjector";
-import { AllMaterialParams } from "../lib/customShaderMaterial/vanilla";
+import { AllMaterialParams } from "../lib/THREE-CustomShaderMaterial";
 
 export interface GalleryConfig {
   elList: HTMLIVCElement[];

@@ -3,7 +3,7 @@ import { Scroller } from "maku.js";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 import { UniformInjector } from "../components/uniformInjector";
-import { AllMaterialParams } from "../lib/customShaderMaterial/vanilla";
+import { AllMaterialParams } from "../lib/THREE-CustomShaderMaterial";
 import { TextMesh } from "../shapes";
 export interface MojiConfig {
     elList: HTMLElement[];

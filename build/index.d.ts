@@ -4,6 +4,7 @@ export * from "./components";
 export * from "./controls";
 export * from "./effects";
 export * from "./geometries";
+export * from "./lib";
 export * from "./materials";
 export * from "./panorama";
 export * from "./postprocessing";

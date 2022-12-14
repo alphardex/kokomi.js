@@ -1,6 +1,8 @@
 import * as THREE from "three";
 
-// Credit: https://github.com/Sean-Bradley/Bender
+/**
+ * Credit: https://github.com/Sean-Bradley/Bender
+ */
 class Bender {
   bend(geometry: THREE.BufferGeometry, axis: string, angle: number) {
     let theta = 0;

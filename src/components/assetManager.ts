@@ -4,6 +4,8 @@ import * as STDLIB from "three-stdlib";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
+import { loadVideoTexture } from "../utils";
+
 export type ResoureType =
   | "gltfModel"
   | "texture"
@@ -14,7 +16,8 @@ export type ResoureType =
   | "objModel"
   | "hdrTexture"
   | "svg"
-  | "exrTexture";
+  | "exrTexture"
+  | "video";
 
 export interface ResourceItem {
   name: string;
@@ -144,6 +147,10 @@ class AssetManager extends Component {
         });
       } else if (resource.type === "exrTexture") {
         this.loaders.exrLoader?.load(resource.path as string, (file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "video") {
+        loadVideoTexture(resource.path as string).then((file) => {
           this.resourceLoaded(resource, file);
         });
       }

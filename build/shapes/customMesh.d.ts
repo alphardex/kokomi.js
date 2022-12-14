@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
-import CustomShaderMaterial, { AllMaterialParams, CSMPatchMap } from "../lib/customShaderMaterial/vanilla";
+import { CustomShaderMaterial, AllMaterialParams, CSMPatchMap } from "../lib/THREE-CustomShaderMaterial";
 import { UniformInjector } from "../components/uniformInjector";
 export interface CustomMeshConfig {
     geometry: THREE.BufferGeometry;

@@ -45,8 +45,10 @@ function isConstructor(
   return true;
 }
 
-export * from "./types";
-export default class CustomShaderMaterial extends Material {
+/**
+ * Credit: https://github.com/FarazzShaikh/THREE-CustomShaderMaterial
+ */
+class CustomShaderMaterial extends Material {
   uniforms: { [key: string]: IUniform<any> };
 
   private _customPatchMap: CSMPatchMap;
@@ -265,3 +267,5 @@ export default class CustomShaderMaterial extends Material {
     return stringify(tokens.slice(index[0], index[1]));
   }
 }
+
+export { CustomShaderMaterial };

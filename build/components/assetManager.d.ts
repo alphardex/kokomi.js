@@ -2,7 +2,7 @@ import * as THREE from "three";
 import * as STDLIB from "three-stdlib";
 import { Component } from "./component";
 import { Base } from "../base/base";
-export declare type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture";
+export declare type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video";
 export interface ResourceItem {
     name: string;
     type: ResoureType;
