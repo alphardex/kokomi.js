@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import * as STDLIB from "three-stdlib";
 
 export interface LoadVideoOptions extends HTMLMediaElement {
   unsuspend: "canplay" | "canplaythrough" | "loadstart" | "loadedmetadata";
@@ -37,4 +38,61 @@ const loadVideoTexture = (
   });
 };
 
-export { loadVideoTexture };
+export interface LoadGLTFConfig {
+  useDraco: boolean | string;
+}
+
+let dracoLoader: STDLIB.DRACOLoader | null = null;
+
+// 加载GLTF模型
+const loadGLTF = (
+  path: string,
+  config: Partial<LoadGLTFConfig> = {}
+): Promise<STDLIB.GLTF | null> => {
+  const { useDraco = true } = config;
+
+  return new Promise((resolve) => {
+    const loader = new STDLIB.GLTFLoader();
+
+    if (useDraco) {
+      dracoLoader = new STDLIB.DRACOLoader();
+      dracoLoader.setDecoderPath(
+        typeof useDraco === "string"
+          ? useDraco
+          : "https://www.gstatic.com/draco/versioned/decoders/1.4.3/"
+      );
+      loader.setDRACOLoader(dracoLoader);
+    }
+
+    loader.load(
+      path,
+      (file) => {
+        resolve(file);
+      },
+      () => {},
+      () => {
+        resolve(null);
+      }
+    );
+  });
+};
+
+// 加载FBX模型
+const loadFBX = (path: string): Promise<THREE.Group | null> => {
+  return new Promise((resolve) => {
+    const loader = new STDLIB.FBXLoader();
+
+    loader.load(
+      path,
+      (file) => {
+        resolve(file);
+      },
+      () => {},
+      () => {
+        resolve(null);
+      }
+    );
+  });
+};
+
+export { loadVideoTexture, loadGLTF, loadFBX };

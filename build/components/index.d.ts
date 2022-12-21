@@ -1,3 +1,4 @@
+export * from "./animationManager";
 export * from "./animator";
 export * from "./assetManager";
 export * from "./clock";
