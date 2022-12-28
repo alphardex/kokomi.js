@@ -5,4 +5,5 @@ declare const polySort: (pointObjs: THREE.Vector2[]) => {
     x: number;
     y: number;
 }[];
-export { saturate, mapNumberRange, polySort };
+declare const sample: (arr: any[]) => any;
+export { saturate, mapNumberRange, polySort, sample };

@@ -30,5 +30,7 @@ declare class Base {
     addEventListeners(): void;
     update(fn: any): void;
     init(): void;
+    render(): void;
+    saveScreenshot(name?: string): Promise<void>;
 }
 export { Base };

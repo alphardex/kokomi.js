@@ -165,6 +165,31 @@ const createPolygonShape = (
   return shape;
 };
 
+// 计算透视相机全屏大小
+const calcPerspectiveScreenSize = (
+  targetZ = 0,
+  camera: THREE.PerspectiveCamera,
+  aspect: number
+) => {
+  let screenWidth = 1;
+  let screenHeight = 1;
+  const fovRadian = THREE.MathUtils.degToRad(camera.fov / 2);
+  screenHeight = (camera.position.z - targetZ) * Math.tan(fovRadian) * 2;
+  screenWidth = screenHeight * aspect;
+  return { width: screenWidth, height: screenHeight };
+};
+
+// 下载文件
+const downloadBlob = (blob: Blob, name: string) => {
+  const a = document.createElement("a");
+  document.body.appendChild(a);
+  a.style.display = "none";
+  const url = window.URL.createObjectURL(blob);
+  a.href = url;
+  a.download = name;
+  a.click();
+};
+
 export {
   optimizeModelRender,
   enableRealisticRender,
@@ -176,4 +201,6 @@ export {
   getViewport,
   getPositionCentroids,
   createPolygonShape,
+  calcPerspectiveScreenSize,
+  downloadBlob,
 };

@@ -6,6 +6,7 @@ import { Clock } from "../components";
 import { Physics } from "../components";
 import { Resizer } from "../components";
 import { IMouse } from "../components";
+import { downloadBlob } from "../utils";
 
 export interface BaseConfig {
   hello: boolean;
@@ -104,6 +105,22 @@ class Base {
     });
 
     this.animator.update();
+  }
+  render() {
+    if (this.composer) {
+      this.composer.render();
+    } else {
+      this.renderer.render(this.scene, this.camera);
+    }
+  }
+  async saveScreenshot(name = `screenshot.png`) {
+    this.render();
+    const blob: Blob | null = await new Promise((resolve) => {
+      this.renderer.domElement.toBlob(resolve, "image/png");
+    });
+    if (blob) {
+      downloadBlob(blob, name);
+    }
   }
 }
 

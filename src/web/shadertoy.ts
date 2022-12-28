@@ -4,7 +4,7 @@ import { Base } from "../base/base";
 
 import { ScreenQuad } from "../shapes";
 
-import { getUniformFromImg, loadTextureFromImg } from "./utils";
+import { getUniformFromImg } from "./utils";
 
 const defaultFragmentShader = `
 void mainImage( out vec4 fragColor, in vec2 fragCoord )

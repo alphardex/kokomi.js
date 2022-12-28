@@ -43,4 +43,6 @@ const polySort = (pointObjs: THREE.Vector2[]) => {
   return pointsResult;
 };
 
-export { saturate, mapNumberRange, polySort };
+const sample = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
+
+export { saturate, mapNumberRange, polySort, sample };

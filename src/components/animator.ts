@@ -19,11 +19,7 @@ class Animator {
     this.tasks.forEach((task) => {
       task(time);
     });
-    if (this.base.composer) {
-      this.base.composer.render();
-    } else {
-      this.base.renderer.render(this.base.scene, this.base.camera);
-    }
+    this.base.render();
   }
 }
 
