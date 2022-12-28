@@ -1,8 +1,8 @@
 {
   "devDependencies": {
-    "@types/three": "^0.144.0",
-    "gsap": "^3.11.1",
-    "kokomi.js": "^1.9.48",
+    "@types/three": "^0.146.0",
+    "gsap": "^3.11.4",
+    "kokomi.js": "^1.9.51",
     "lil-gui": "^0.17.0"
   }
 }

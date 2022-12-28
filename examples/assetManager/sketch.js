@@ -17,36 +17,24 @@ class Fox extends kokomi.Component {
 
     this.gltf = this.base.am.items["foxModel"];
 
-    const mixer = new THREE.AnimationMixer(this.gltf.scene);
-    this.mixer = mixer;
-
-    this.actions = {};
-    this.setActions();
+    this.animations = new kokomi.AnimationManager(
+      this.base,
+      this.gltf.animations,
+      this.gltf.scene
+    );
+    this.currentAction = null;
   }
   addExisting() {
     this.gltf.scene.scale.set(0.02, 0.02, 0.02);
     this.base.scene.add(this.gltf.scene);
   }
-  update(time) {
-    const delta = this.base.clock.deltaTime;
-    this.mixer.update(delta);
-  }
-  setActions() {
-    this.actions.idle = this.mixer.clipAction(this.gltf.animations[0]);
-    this.actions.walk = this.mixer.clipAction(this.gltf.animations[1]);
-    this.actions.run = this.mixer.clipAction(this.gltf.animations[2]);
-  }
-  playAction(name = "idle") {
-    const prevAction = this.actions.current;
-    const nextAction = this.actions[name];
-
-    nextAction.reset();
-    nextAction.play();
-    if (prevAction) {
-      nextAction.crossFadeFrom(prevAction, 1, true);
+  playAction(name) {
+    if (this.currentAction) {
+      this.currentAction.fadeOut(0.5);
     }
-
-    this.actions.current = nextAction;
+    const action = this.animations.actions[name];
+    action.reset().fadeIn(0.5).play();
+    this.currentAction = action;
   }
 }
 
@@ -59,15 +47,15 @@ class Sketch extends kokomi.Base {
     const am = new kokomi.AssetManager(this, resourceList);
     this.am = am;
     this.am.on("ready", () => {
-      const fox = new Fox(this);
-      fox.addExisting();
-      fox.playAction("idle");
-
       const ambiLight = new THREE.AmbientLight(0xffffff, 0.3);
       this.scene.add(ambiLight);
       const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);
       dirLight.position.set(1, 2, 3);
       this.scene.add(dirLight);
+
+      const fox = new Fox(this);
+      fox.addExisting();
+      fox.playAction("Survey");
     });
   }
 }
