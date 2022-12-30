@@ -1,0 +1,230 @@
+<style>
+    a {
+        color: currentColor;
+        text-decoration: none;
+    }
+
+
+    :root {
+        --primary-color: #F3DCCF;
+    }
+
+    body {
+        overflow: visible;
+        overflow-x: hidden;
+    }
+
+    #sketch {
+        position: fixed;
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .loader-screen {
+        background: #293150;
+    }
+
+    @font-face {
+        font-family: 'HYWenHei';
+        src: url("../assets/HYWenHei-85W.ttf");
+    }
+
+    .font-genshin {
+        font-family: 'HYWenHei';
+    }
+
+    .webgl-text {
+        opacity: 0;
+        user-select: none;
+    }
+
+    .webgl-img {
+        opacity: 0;
+    }
+
+    .loading span {
+        animation: blur 1.5s calc(var(--i) / 5 * 1s) alternate infinite;
+    }
+
+    @keyframes blur {
+        to {
+            filter: blur(5px);
+        }
+    }
+
+    .header {
+        --bg-opacity-rate: 0%;
+
+        background: rgba(13, 17, 23, var(--bg-opacity-rate));
+        transition: 0.3s;
+    }
+</style>
+<div class="header fixed z-5 top-0 left-0 w-full">
+    <div class="px-12 py-4 text-white">
+        <div class="flex items-center justify-between">
+            <div class="text-white text-3xl font-genshin">kokomi.js</div>
+            <div class="flex items-center font-genshin">
+                <a target="_blank" href="https://kokomi-js.vercel.app/docs/modules.html">
+                    <div class="p-4">API</div>
+                </a>
+                <a target="_blank" href="https://kokomi-js.vercel.app/examples/">
+                    <div class="p-4">Examples</div>
+                </a>
+                <a target="_blank" href="https://kokomi-playground.vercel.app/">
+                    <div class="p-4">Gallery</div>
+                </a>
+                <a target="_blank" href="https://github.com/alphardex/kokomi.js">
+                    <div class="p-4">Github</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="fixed z-5 top-0 left-0 loader-screen w-screen h-screen transition-all duration-300">
+    <div class="absolute hv-center">
+        <div class="loading text-primary text-3xl tracking-widest">
+            <span style="--i: 0">L</span>
+            <span style="--i: 1">O</span>
+            <span style="--i: 2">A</span>
+            <span style="--i: 3">D</span>
+            <span style="--i: 4">I</span>
+            <span style="--i: 5">N</span>
+            <span style="--i: 6">G</span>
+        </div>
+    </div>
+</div>
+<div class="hero relative w-screen h-screen">
+    <div class="absolute hv-center">
+        <div class="flex flex-col items-end space-y-3">
+            <div class="webgl-text text-primary text-9xl font-genshin" data-webgl-font-url="../assets/HYWenHei-85W.ttf">
+                kokomi.js</div>
+            <div class="webgl-text text-primary">—— A Growing 3D Library
+            </div>
+        </div>
+    </div>
+    <div class="absolute h-center bottom-16">
+        <div class="webgl-text text-primary">Scroll To
+            View More</div>
+    </div>
+</div>
+<div class="relative w-screen h-screen">
+    <div class="absolute v-center left-40">
+        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+            <div class="webgl-text text-4xl text-primary" data-webgl-font-url="../assets/HYWenHei-85W.ttf">What is
+                kokomi.js?
+            </div>
+            <div class="webgl-text text-3xl text-primary">kokomi.js is a three.js-based
+                component
+            </div>
+            <div class="webgl-text text-3xl text-primary">library for 3D development. It
+                has many
+            </div>
+            <div class="webgl-text text-3xl text-primary">useful classes and functions. Also written
+            </div>
+            <div class="webgl-text text-3xl text-primary">in TypeScript for better dev experience.
+            </div>
+        </div>
+    </div>
+    <div class="absolute v-center right-40">
+        <img class="webgl-img block cursor-pointer" style="width: 30rem"
+            src="https://s2.loli.net/2022/12/30/uJAFn4HNG73cRvT.jpg" crossorigin="anonymous" alt="" />
+    </div>
+</div>
+<div class="relative w-screen h-screen">
+    <div class="absolute v-center right-40">
+        <div class="flex flex-col items-start leading-none whitespace-no-wrap space-y-8">
+            <div class="webgl-text text-4xl text-primary" data-webgl-font-url="../assets/HYWenHei-85W.ttf">How to
+                install it?
+            </div>
+            <div class="webgl-text text-3xl text-primary">$ npm i kokomi.js
+            </div>
+            <div class="webgl-text text-3xl text-primary">kokomi.umd.js for CDN is also available.
+            </div>
+            <div class="webgl-text text-3xl text-primary">When using it, you can write this:
+            </div>
+            <div class="webgl-text text-3xl text-primary">import * as kokomi from "kokomi.js";
+            </div>
+        </div>
+    </div>
+    <div class="absolute v-center left-40">
+        <img class="webgl-img block cursor-pointer" style="width: 30rem"
+            src="https://s2.loli.net/2022/12/30/OHWnTidvDEFkUKj.jpg" crossorigin="anonymous" alt="" />
+    </div>
+</div>
+<div class="relative w-screen h-screen">
+    <div class="absolute hv-center">
+        <div class="webgl-text text-6xl text-primary" data-webgl-font-url="../assets/HYWenHei-85W.ttf">Happy coding
+            :)
+        </div>
+    </div>
+</div>
+<script>
+    const makeResponsive = () => {
+        const clamp = (num, lower, upper) =>
+            Math.max(
+                Math.min(Number(num), Math.max(lower, upper)),
+                Math.min(lower, upper)
+            );
+
+        // 基准宽度
+        const baseWidth = 1536;
+
+        // 基准字体大小
+        const baseSize = 16;
+
+        // 最小字体大小
+        const minSize = 10;
+
+        // 设置 rem 函数
+        const setRem = () => {
+            // 当前页面宽度相对于基准宽度的缩放比例
+            const scale = document.documentElement.clientWidth / baseWidth;
+            // 设置目标字体大小
+            const target = baseSize * scale;
+            // 限制字体大小
+            const fontSize = clamp(target, minSize, Infinity);
+            document.documentElement.style.fontSize = `${fontSize}px`;
+        };
+
+        // 执行setRem
+        const doSetRem = () => {
+            setRem();
+            window.addEventListener("resize", setRem);
+        };
+
+        // 还原rem
+        const resetRem = () => {
+            document.documentElement.style.fontSize = `${16}px`;
+            window.removeEventListener("resize", setRem);
+        };
+
+        doSetRem();
+    }
+
+    makeResponsive();
+</script>
+<script>
+    const hero = document.querySelector('.hero');
+    const header = document.querySelector('.header');
+
+    const showHeaderBg = () => {
+        header.style.setProperty('--bg-opacity-rate', '75%');
+    }
+
+    const hideHeaderBg = () => {
+        header.style.setProperty('--bg-opacity-rate', '0%');
+    }
+
+    const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                hideHeaderBg();
+            } else {
+                showHeaderBg();
+            }
+        })
+    })
+    heroObserver.observe(hero);
+</script>
