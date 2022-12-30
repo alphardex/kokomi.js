@@ -148,6 +148,7 @@ class MojiGroup extends Component {
     const mojis = this.elList.map((el, i) => {
       const tm = new TextMesh(this.base, el.innerText.trim());
       tm.mesh.material = textMeshMaterial.clone();
+      tm.container = this.container;
       tm.addExisting();
       const styleFontSize = window
         .getComputedStyle(el, null)

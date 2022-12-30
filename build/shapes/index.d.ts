@@ -4,5 +4,6 @@ export * from "./customMesh";
 export * from "./customPoints";
 export * from "./screenQuad";
 export * from "./rayMarchingQuad";
+export * from "./renderQuad";
 export * from "./text3D";
 export * from "./textMesh";

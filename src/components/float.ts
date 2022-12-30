@@ -36,9 +36,11 @@ class Float extends Component {
 
     const g = new THREE.Group();
     this.g = g;
-    this.base.scene.add(this.g);
 
     this.offset = Math.random() * 114514;
+  }
+  addExisting(): void {
+    this.container.add(this.g);
   }
   add(...object: THREE.Object3D[]) {
     this.g.add(...object);

@@ -95,7 +95,7 @@ class CustomMesh extends Component {
     this.mesh = mesh;
   }
   addExisting(): void {
-    this.base.scene.add(this.mesh);
+    this.container.add(this.mesh);
   }
   update(time: number): void {
     const uniforms = this.material.uniforms;

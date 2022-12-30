@@ -22,7 +22,7 @@ class RayMarchingQuad extends Component {
   }
   render() {
     if (this.screenQuad) {
-      this.base.scene.remove(this.screenQuad.mesh);
+      this.container.remove(this.screenQuad.mesh);
     }
     const screenQuad = new ScreenQuad(this.base, {
       fragmentShader: this.marcher.fragmentShader,

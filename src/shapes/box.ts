@@ -36,7 +36,7 @@ class Box extends Component {
     this.mesh = mesh;
   }
   addExisting(): void {
-    this.base.scene.add(this.mesh);
+    this.container.add(this.mesh);
   }
   spin(time: number, axis: "x" | "y" | "z" = "y", speed = 1) {
     const mesh = this.mesh;

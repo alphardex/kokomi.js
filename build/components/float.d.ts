@@ -18,6 +18,7 @@ declare class Float extends Component {
     floatingRange: [number?, number?];
     offset: number;
     constructor(base: Base, config?: Partial<FloatConfig>);
+    addExisting(): void;
     add(...object: THREE.Object3D[]): void;
     update(time: number): void;
 }

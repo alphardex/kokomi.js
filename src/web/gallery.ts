@@ -133,7 +133,7 @@ class Gallery extends Component {
     const makuGroup = new MakuGroup();
     this.makuGroup = makuGroup;
     const makus = this.elList.map(
-      (el) => new Maku(el, makuMaterial, this.base.scene, this.makuConfig)
+      (el) => new Maku(el, makuMaterial, this.container, this.makuConfig)
     );
     makuGroup.addMultiple(makus);
 

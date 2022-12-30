@@ -40,7 +40,7 @@ class TextMesh extends Component {
     this.mesh.anchorY = "middle";
   }
   addExisting(): void {
-    this.base.scene.add(this.mesh);
+    this.container.add(this.mesh);
   }
 }
 

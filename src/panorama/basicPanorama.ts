@@ -41,10 +41,7 @@ class BasicPanorama extends Component {
     this.active = false;
   }
   addExisting(): void {
-    const { base, mesh } = this;
-    const { scene } = base;
-
-    scene.add(mesh);
+    this.container.add(this.mesh);
   }
   outputPosition() {
     const container = this.base.container || window;

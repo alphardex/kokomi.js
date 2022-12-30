@@ -104,7 +104,7 @@ class CustomPoints extends Component {
     this.points = points;
   }
   addExisting(): void {
-    this.base.scene.add(this.points);
+    this.container.add(this.points);
   }
   update(time: number): void {
     const uniforms = this.material.uniforms;

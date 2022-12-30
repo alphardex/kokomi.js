@@ -15,7 +15,7 @@ class RaycastSelector extends Component {
     this.raycaster = new THREE.Raycaster();
   }
   // 获取点击物
-  getInterSects(targets = this.base.scene.children) {
+  getInterSects(targets = this.container.children) {
     this.raycaster.setFromCamera(
       this.base.interactionManager.mouse,
       this.base.camera
@@ -24,7 +24,7 @@ class RaycastSelector extends Component {
     return intersects;
   }
   // 获取第一个选中物
-  getFirstIntersect(targets = this.base.scene.children) {
+  getFirstIntersect(targets = this.container.children) {
     const intersects = this.getInterSects(targets);
     const intersect = intersects[0];
     if (!intersect || !intersect.face) {
