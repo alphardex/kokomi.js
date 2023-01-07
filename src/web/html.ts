@@ -5,6 +5,10 @@ import { Component } from "../components/component";
 
 import {
   calcObjectPosition,
+  calcTransformFov,
+  epsilon,
+  getCameraCSSMatrix,
+  getObjectCSSMatrix,
   isObjectBehindCamera,
   isObjectVisible,
   objectZIndex,
@@ -15,7 +19,15 @@ export interface HtmlConfig {
   xPropertyName: string;
   yPropertyName: string;
   zIndexPropertyName: string;
+  viewportWidthName: string;
+  viewportHeightName: string;
+  perspectiveName: string;
+  transformOuterName: string;
+  transformInnerName: string;
   occlude: THREE.Object3D[];
+  transform: boolean;
+  distanceFactor: number;
+  group: THREE.Object3D | null;
 }
 
 /**
@@ -31,8 +43,17 @@ class Html extends Component {
   xPropertyName: string;
   yPropertyName: string;
   zIndexPropertyName: string;
+  viewportWidthName: string;
+  viewportHeightName: string;
+  perspectiveName: string;
+  transformOuterName: string;
+  transformInnerName: string;
   raycaster: THREE.Raycaster;
   occlude: THREE.Object3D[];
+  transform: boolean;
+  distanceFactor: number;
+  parentGroup: THREE.Object3D;
+  group: THREE.Object3D;
   visibleToggle: boolean;
   constructor(
     base: Base,
@@ -49,15 +70,34 @@ class Html extends Component {
       xPropertyName = "--x",
       yPropertyName = "--y",
       zIndexPropertyName = "--z-index",
+      viewportWidthName = "--viewport-width",
+      viewportHeightName = "--viewport-height",
+      perspectiveName = "--perspective",
+      transformOuterName = "--transform-outer",
+      transformInnerName = "--transform-inner",
       occlude = [],
+      transform = false,
+      distanceFactor = 0,
+      group = null,
     } = config;
     this.visibleClassName = visibleClassName;
     this.xPropertyName = xPropertyName;
     this.yPropertyName = yPropertyName;
     this.zIndexPropertyName = zIndexPropertyName;
 
+    this.viewportWidthName = viewportWidthName;
+    this.viewportHeightName = viewportHeightName;
+    this.perspectiveName = perspectiveName;
+    this.transformOuterName = transformOuterName;
+    this.transformInnerName = transformInnerName;
+
     this.raycaster = new THREE.Raycaster();
     this.occlude = occlude;
+
+    this.transform = transform;
+    this.distanceFactor = distanceFactor;
+    this.parentGroup = group || new THREE.Group();
+    this.group = new THREE.Group();
 
     this.visibleToggle = true;
   }
@@ -88,6 +128,42 @@ class Html extends Component {
       return !this.isBehindCamera && this.isVisible;
     }
   }
+  get viewportSize() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+  get fov() {
+    return calcTransformFov(this.base.camera);
+  }
+  get perspective() {
+    return (this.base.camera as THREE.OrthographicCamera).isOrthographicCamera
+      ? ""
+      : this.fov;
+  }
+  get transformOuter() {
+    const camera = this.base.camera;
+    const { isOrthographicCamera, top, left, bottom, right } =
+      camera as THREE.OrthographicCamera;
+    const { fov } = this;
+    const widthHalf = window.innerWidth / 2;
+    const heightHalf = window.innerHeight / 2;
+    const cameraMatrix = getCameraCSSMatrix(camera.matrixWorldInverse);
+    const cameraTransform = isOrthographicCamera
+      ? `scale(${fov})translate(${epsilon(-(right + left) / 2)}px,${epsilon(
+          (top + bottom) / 2
+        )}px)`
+      : `translateZ(${fov}px)`;
+    return `${cameraTransform}${cameraMatrix}translate(${widthHalf}px,${heightHalf}px)`;
+  }
+  get transformInner() {
+    const matrix = this.group.matrixWorld;
+    return getObjectCSSMatrix(matrix, 1 / ((this.distanceFactor || 10) / 400));
+  }
+  addExisting() {
+    this.parentGroup.add(this.group);
+  }
   show() {
     this.el?.classList.add(this.visibleClassName);
   }
@@ -107,6 +183,10 @@ class Html extends Component {
     if (this.zIndex) {
       this.setZIndex(this.zIndex);
     }
+
+    if (this.transform) {
+      this.setTransformProperty();
+    }
   }
   makeVisible() {
     this.visibleToggle = true;
@@ -121,6 +201,19 @@ class Html extends Component {
     } else {
       this.hide();
     }
+  }
+  setTransformProperty() {
+    this.el?.style.setProperty(
+      this.viewportWidthName,
+      `${this.viewportSize.width}px`
+    );
+    this.el?.style.setProperty(
+      this.viewportHeightName,
+      `${this.viewportSize.height}px`
+    );
+    this.el?.style.setProperty(this.perspectiveName, `${this.perspective}px`);
+    this.el?.style.setProperty(this.transformOuterName, this.transformOuter);
+    this.el?.style.setProperty(this.transformInnerName, this.transformInner);
   }
 }
 

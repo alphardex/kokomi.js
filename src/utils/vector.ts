@@ -56,9 +56,61 @@ const objectZIndex = (
   return undefined;
 };
 
+const calcTransformFov = (camera: THREE.Camera) => {
+  const heightHalf = window.innerHeight / 2;
+  const fov = camera.projectionMatrix.elements[5] * heightHalf;
+  return fov;
+};
+
+const epsilon = (value: number) => (Math.abs(value) < 1e-10 ? 0 : value);
+
+const getCSSMatrix = (
+  matrix: THREE.Matrix4,
+  multipliers: number[],
+  prepend = ""
+) => {
+  let matrix3d = "matrix3d(";
+  for (let i = 0; i !== 16; i++) {
+    matrix3d +=
+      epsilon(multipliers[i] * matrix.elements[i]) + (i !== 15 ? "," : ")");
+  }
+  return prepend + matrix3d;
+};
+
+const getCameraCSSMatrix = ((multipliers) => {
+  return (matrix: THREE.Matrix4) => getCSSMatrix(matrix, multipliers);
+})([1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, 1, 1, -1, 1, 1]);
+
+const getObjectCSSMatrix = ((scaleMultipliers) => {
+  return (matrix: THREE.Matrix4, factor: number) =>
+    getCSSMatrix(matrix, scaleMultipliers(factor), "translate(-50%,-50%)");
+})((f: number) => [
+  1 / f,
+  1 / f,
+  1 / f,
+  1,
+  -1 / f,
+  -1 / f,
+  -1 / f,
+  -1,
+  1 / f,
+  1 / f,
+  1 / f,
+  1,
+  1,
+  1,
+  1,
+  1,
+]);
+
 export {
   calcObjectPosition,
   isObjectBehindCamera,
   isObjectVisible,
   objectZIndex,
+  calcTransformFov,
+  epsilon,
+  getCSSMatrix,
+  getCameraCSSMatrix,
+  getObjectCSSMatrix,
 };

@@ -6,7 +6,15 @@ export interface HtmlConfig {
     xPropertyName: string;
     yPropertyName: string;
     zIndexPropertyName: string;
+    viewportWidthName: string;
+    viewportHeightName: string;
+    perspectiveName: string;
+    transformOuterName: string;
+    transformInnerName: string;
     occlude: THREE.Object3D[];
+    transform: boolean;
+    distanceFactor: number;
+    group: THREE.Object3D | null;
 }
 /**
  * It can help you merge HTML elements into the WebGL world by converting 3D positions to 2D positions.
@@ -21,8 +29,17 @@ declare class Html extends Component {
     xPropertyName: string;
     yPropertyName: string;
     zIndexPropertyName: string;
+    viewportWidthName: string;
+    viewportHeightName: string;
+    perspectiveName: string;
+    transformOuterName: string;
+    transformInnerName: string;
     raycaster: THREE.Raycaster;
     occlude: THREE.Object3D[];
+    transform: boolean;
+    distanceFactor: number;
+    parentGroup: THREE.Object3D;
+    group: THREE.Object3D;
     visibleToggle: boolean;
     constructor(base: Base, el: HTMLElement, position?: THREE.Vector3, config?: Partial<HtmlConfig>);
     get domPosition(): THREE.Vector2;
@@ -30,6 +47,15 @@ declare class Html extends Component {
     get isBehindCamera(): boolean;
     get isVisible(): boolean;
     get visible(): boolean;
+    get viewportSize(): {
+        width: number;
+        height: number;
+    };
+    get fov(): number;
+    get perspective(): number | "";
+    get transformOuter(): string;
+    get transformInner(): string;
+    addExisting(): void;
     show(): void;
     hide(): void;
     translate({ x, y }: {
@@ -41,5 +67,6 @@ declare class Html extends Component {
     makeVisible(): void;
     makeInvisible(): void;
     update(time: number): void;
+    setTransformProperty(): void;
 }
 export { Html };
