@@ -136,6 +136,7 @@ class PanoramaGenerator extends Component {
               infospot.point.z
             )
           );
+          html.addExisting();
           return html;
         });
         const { panoramas } = this;

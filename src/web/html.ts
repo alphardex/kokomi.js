@@ -164,7 +164,11 @@ class Html extends Component {
     return getObjectCSSMatrix(matrix, 1 / ((this.distanceFactor || 10) / 400));
   }
   addExisting() {
-    this.parentGroup?.add(this.group);
+    if (this.parentGroup) {
+      this.parentGroup.add(this.group);
+    } else {
+      this.container.add(this.group);
+    }
   }
   show() {
     this.el?.classList.add(this.visibleClassName);
