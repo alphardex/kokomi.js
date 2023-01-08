@@ -1,0 +1,11 @@
+import * as THREE from "three";
+declare const calcObjectPosition: (el: THREE.Object3D, camera: THREE.Camera) => THREE.Vector2;
+declare const isObjectBehindCamera: (el: THREE.Object3D, camera: THREE.Camera) => boolean;
+declare const isObjectVisible: (el: THREE.Object3D, camera: THREE.Camera, raycaster: THREE.Raycaster, occlude: THREE.Object3D[]) => boolean;
+declare const objectZIndex: (el: THREE.Object3D, camera: THREE.Camera, zIndexRange?: number[]) => number | undefined;
+declare const calcTransformFov: (camera: THREE.Camera) => number;
+declare const epsilon: (value: number) => number;
+declare const getCSSMatrix: (matrix: THREE.Matrix4, multipliers: number[], prepend?: string) => string;
+declare const getCameraCSSMatrix: (matrix: THREE.Matrix4) => string;
+declare const getObjectCSSMatrix: (matrix: THREE.Matrix4, factor: number) => string;
+export { calcObjectPosition, isObjectBehindCamera, isObjectVisible, objectZIndex, calcTransformFov, epsilon, getCSSMatrix, getCameraCSSMatrix, getObjectCSSMatrix, };
