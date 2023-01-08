@@ -1,31 +1,35 @@
 import * as THREE from "three";
 
-const calcObjectPosition = (objectPos: THREE.Vector3, camera: THREE.Camera) => {
-  const screenPos = objectPos.clone();
-  screenPos.project(camera);
+const v1 = new THREE.Vector3();
+const v2 = new THREE.Vector3();
+const v3 = new THREE.Vector3();
+
+const calcObjectPosition = (el: THREE.Object3D, camera: THREE.Camera) => {
+  const objectPos = v1.setFromMatrixPosition(el.matrixWorld);
+  objectPos.project(camera);
   const widthHalf = window.innerWidth / 2;
   const heightHalf = window.innerHeight / 2;
-  const x = screenPos.x * widthHalf + widthHalf;
-  const y = -(screenPos.y * heightHalf) + heightHalf;
+  const x = objectPos.x * widthHalf + widthHalf;
+  const y = -(objectPos.y * heightHalf) + heightHalf;
   const pos = new THREE.Vector2(x, y);
   return pos;
 };
 
-const isObjectBehindCamera = (
-  objectPos: THREE.Vector3,
-  camera: THREE.Camera
-) => {
-  const deltaCamObj = objectPos.clone().sub(camera.position);
-  const camDir = camera.getWorldDirection(new THREE.Vector3());
+const isObjectBehindCamera = (el: THREE.Object3D, camera: THREE.Camera) => {
+  const objectPos = v1.setFromMatrixPosition(el.matrixWorld);
+  const cameraPos = v2.setFromMatrixPosition(camera.matrixWorld);
+  const deltaCamObj = objectPos.sub(cameraPos);
+  const camDir = camera.getWorldDirection(v3);
   return deltaCamObj.angleTo(camDir) > Math.PI / 2;
 };
 
 const isObjectVisible = (
-  elPos: THREE.Vector3,
+  el: THREE.Object3D,
   camera: THREE.Camera,
   raycaster: THREE.Raycaster,
   occlude: THREE.Object3D[]
 ) => {
+  const elPos = v1.setFromMatrixPosition(el.matrixWorld);
   const screenPos = elPos.clone();
   screenPos.project(camera);
   raycaster.setFromCamera(screenPos, camera);
@@ -39,7 +43,7 @@ const isObjectVisible = (
 };
 
 const objectZIndex = (
-  objectPos: THREE.Vector3,
+  el: THREE.Object3D,
   camera: THREE.Camera,
   zIndexRange = [16777271, 0]
 ) => {
@@ -47,7 +51,8 @@ const objectZIndex = (
     camera instanceof THREE.PerspectiveCamera ||
     camera instanceof THREE.OrthographicCamera
   ) {
-    const cameraPos = camera.position;
+    const objectPos = v1.setFromMatrixPosition(el.matrixWorld);
+    const cameraPos = v2.setFromMatrixPosition(camera.matrixWorld);
     const dist = objectPos.distanceTo(cameraPos);
     const A = (zIndexRange[1] - zIndexRange[0]) / (camera.far - camera.near);
     const B = zIndexRange[1] - A * camera.far;

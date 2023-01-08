@@ -52,7 +52,7 @@ class Html extends Component {
   occlude: THREE.Object3D[];
   transform: boolean;
   distanceFactor: number;
-  parentGroup: THREE.Object3D;
+  parentGroup: THREE.Object3D | null;
   group: THREE.Object3D;
   visibleToggle: boolean;
   constructor(
@@ -96,23 +96,25 @@ class Html extends Component {
 
     this.transform = transform;
     this.distanceFactor = distanceFactor;
-    this.parentGroup = group || new THREE.Group();
+    this.parentGroup = group;
     this.group = new THREE.Group();
+
+    this.group.position.copy(this.position);
 
     this.visibleToggle = true;
   }
   get domPosition() {
-    return calcObjectPosition(this.position, this.base.camera);
+    return calcObjectPosition(this.group, this.base.camera);
   }
   get zIndex() {
-    return objectZIndex(this.position, this.base.camera);
+    return objectZIndex(this.group, this.base.camera);
   }
   get isBehindCamera() {
-    return isObjectBehindCamera(this.position, this.base.camera);
+    return isObjectBehindCamera(this.group, this.base.camera);
   }
   get isVisible() {
     return isObjectVisible(
-      this.position,
+      this.group,
       this.base.camera,
       this.raycaster,
       this.occlude
@@ -162,7 +164,7 @@ class Html extends Component {
     return getObjectCSSMatrix(matrix, 1 / ((this.distanceFactor || 10) / 400));
   }
   addExisting() {
-    this.parentGroup.add(this.group);
+    this.parentGroup?.add(this.group);
   }
   show() {
     this.el?.classList.add(this.visibleClassName);
