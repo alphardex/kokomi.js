@@ -6,6 +6,7 @@ export interface HtmlConfig {
     xPropertyName: string;
     yPropertyName: string;
     zIndexPropertyName: string;
+    scalePropertyName: string;
     viewportWidthName: string;
     viewportHeightName: string;
     perspectiveName: string;
@@ -29,6 +30,7 @@ declare class Html extends Component {
     xPropertyName: string;
     yPropertyName: string;
     zIndexPropertyName: string;
+    scalePropertyName: string;
     viewportWidthName: string;
     viewportHeightName: string;
     perspectiveName: string;
@@ -44,6 +46,7 @@ declare class Html extends Component {
     constructor(base: Base, el: HTMLElement, position?: THREE.Vector3, config?: Partial<HtmlConfig>);
     get domPosition(): THREE.Vector2;
     get zIndex(): number | undefined;
+    get scale(): number;
     get isBehindCamera(): boolean;
     get isVisible(): boolean;
     get visible(): boolean;
@@ -63,6 +66,7 @@ declare class Html extends Component {
         y?: number | undefined;
     }): void;
     setZIndex(zIndex?: number): void;
+    setScale(scale?: number): void;
     syncPosition(): void;
     makeVisible(): void;
     makeInvisible(): void;

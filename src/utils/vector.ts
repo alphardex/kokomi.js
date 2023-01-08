@@ -61,6 +61,21 @@ const objectZIndex = (
   return undefined;
 };
 
+const objectScale = (el: THREE.Object3D, camera: THREE.Camera) => {
+  if (camera instanceof THREE.OrthographicCamera) {
+    return camera.zoom;
+  } else if (camera instanceof THREE.PerspectiveCamera) {
+    const objectPos = v1.setFromMatrixPosition(el.matrixWorld);
+    const cameraPos = v2.setFromMatrixPosition(camera.matrixWorld);
+    const vFOV = (camera.fov * Math.PI) / 180;
+    const dist = objectPos.distanceTo(cameraPos);
+    const scaleFOV = 2 * Math.tan(vFOV / 2) * dist;
+    return 1 / scaleFOV;
+  } else {
+    return 1;
+  }
+};
+
 const calcTransformFov = (camera: THREE.Camera) => {
   const heightHalf = window.innerHeight / 2;
   const fov = camera.projectionMatrix.elements[5] * heightHalf;
@@ -113,6 +128,7 @@ export {
   isObjectBehindCamera,
   isObjectVisible,
   objectZIndex,
+  objectScale,
   calcTransformFov,
   epsilon,
   getCSSMatrix,

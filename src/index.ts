@@ -9,6 +9,7 @@ export * from "./materials";
 export * from "./panorama";
 export * from "./postprocessing";
 export * from "./renderTargets";
+export * from "./shadows";
 export * from "./shapes";
 export * from "./utils";
 export * from "./web";

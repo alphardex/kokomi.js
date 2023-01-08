@@ -12,6 +12,7 @@ import {
   isObjectBehindCamera,
   isObjectVisible,
   objectZIndex,
+  objectScale,
 } from "../utils";
 
 export interface HtmlConfig {
@@ -19,6 +20,7 @@ export interface HtmlConfig {
   xPropertyName: string;
   yPropertyName: string;
   zIndexPropertyName: string;
+  scalePropertyName: string;
   viewportWidthName: string;
   viewportHeightName: string;
   perspectiveName: string;
@@ -43,6 +45,7 @@ class Html extends Component {
   xPropertyName: string;
   yPropertyName: string;
   zIndexPropertyName: string;
+  scalePropertyName: string;
   viewportWidthName: string;
   viewportHeightName: string;
   perspectiveName: string;
@@ -70,6 +73,7 @@ class Html extends Component {
       xPropertyName = "--x",
       yPropertyName = "--y",
       zIndexPropertyName = "--z-index",
+      scalePropertyName = "--scale",
       viewportWidthName = "--viewport-width",
       viewportHeightName = "--viewport-height",
       perspectiveName = "--perspective",
@@ -84,6 +88,8 @@ class Html extends Component {
     this.xPropertyName = xPropertyName;
     this.yPropertyName = yPropertyName;
     this.zIndexPropertyName = zIndexPropertyName;
+
+    this.scalePropertyName = scalePropertyName;
 
     this.viewportWidthName = viewportWidthName;
     this.viewportHeightName = viewportHeightName;
@@ -108,6 +114,11 @@ class Html extends Component {
   }
   get zIndex() {
     return objectZIndex(this.group, this.base.camera);
+  }
+  get scale() {
+    return !this.distanceFactor
+      ? 1
+      : objectScale(this.group, this.base.camera) * this.distanceFactor;
   }
   get isBehindCamera() {
     return isObjectBehindCamera(this.group, this.base.camera);
@@ -183,8 +194,12 @@ class Html extends Component {
   setZIndex(zIndex = 0) {
     this.el?.style.setProperty(this.zIndexPropertyName, `${zIndex}`);
   }
+  setScale(scale = 1) {
+    this.el?.style.setProperty(this.scalePropertyName, `${scale}`);
+  }
   syncPosition() {
     this.translate(this.domPosition);
+    this.setScale(this.scale);
 
     if (this.zIndex) {
       this.setZIndex(this.zIndex);
