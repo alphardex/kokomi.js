@@ -16,7 +16,7 @@ const NormalScroller = Scroller;
 /**
  * A scroller to detect `wheel` event.
  *
- * Demo: https://kokomi-playground.vercel.app/#textureRecursion
+ * Demo: https://kokomi-playground.vercel.app/entries/#textureRecursion
  */
 class WheelScroller {
   scroll: Scroll;

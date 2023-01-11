@@ -3,7 +3,7 @@ import * as THREE from "three";
 /**
  * Credit: https://github.com/DerSchmale/threejs-thin-film-iridescence
  *
- * Demo: https://kokomi-playground.vercel.app/#liquidCrystal
+ * Demo: https://kokomi-playground.vercel.app/entries/#liquidCrystal
  *
  * @classdesc
  * ThinFilmFresnelMap is a lookup texture containing the reflection colour. The texture index value

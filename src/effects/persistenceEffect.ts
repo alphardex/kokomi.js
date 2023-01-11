@@ -19,7 +19,7 @@ export interface PersistenceEffectConfig {
  *
  * Credit: https://tympanus.net/codrops/2021/12/28/adding-a-persistence-effect-to-three-js-scenes/
  *
- * Demo: https://kokomi-playground.vercel.app/#starTunnel
+ * Demo: https://kokomi-playground.vercel.app/entries/#starTunnel
  */
 class PersistenceEffect extends Component {
   isActive: boolean;

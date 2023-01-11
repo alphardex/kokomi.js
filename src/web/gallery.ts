@@ -56,7 +56,7 @@ void main(){
 /**
  * It's just an encapsuled class for [maku.js](https://github.com/alphardex/maku.js), which is a powerful bridge between HTML and WebGL.
  *
- * Demo: https://kokomi-playground.vercel.app/#imageMouseWave
+ * Demo: https://kokomi-playground.vercel.app/entries/#imageMouseWave
  */
 class Gallery extends Component {
   elList: HTMLIVCElement[];
