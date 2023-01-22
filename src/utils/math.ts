@@ -2,16 +2,6 @@ import * as THREE from "three";
 
 const saturate = (value: number) => THREE.MathUtils.clamp(value, 0, 1);
 
-const mapNumberRange = (
-  val: number,
-  inMin: number,
-  inMax: number,
-  outMin: number,
-  outMax: number
-) => {
-  return ((val - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin;
-};
-
 // https://stackoverflow.com/a/59293807
 const polySort = (pointObjs: THREE.Vector2[]) => {
   const squaredPolar = (point: number[], centre: number[]) => {
@@ -45,4 +35,4 @@ const polySort = (pointObjs: THREE.Vector2[]) => {
 
 const sample = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
 
-export { saturate, mapNumberRange, polySort, sample };
+export { saturate, polySort, sample };

@@ -3,8 +3,6 @@ import * as THREE from "three";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 
-import { mapNumberRange } from "../utils/math";
-
 export interface PersistenceEffectConfig {
   clearColor: number;
   fadeFactor: number;
@@ -181,8 +179,8 @@ class PersistenceEffect extends Component {
       framebuffer2.texture;
     renderer.render(resultPlane, orthoCamera);
 
-    const uvScaleX = mapNumberRange(this.scaleX, -1, 1, 1.05, 0.95);
-    const uvScaleY = mapNumberRange(this.scaleY, -1, 1, 1.05, 0.95);
+    const uvScaleX = THREE.MathUtils.mapLinear(this.scaleX, -1, 1, 1.05, 0.95);
+    const uvScaleY = THREE.MathUtils.mapLinear(this.scaleY, -1, 1, 1.05, 0.95);
     const rotation = THREE.MathUtils.degToRad(this.rotationAngle);
     uvMatrix.setUvTransform(0, 0, uvScaleX, uvScaleY, rotation, 0.5, 0.5);
 
