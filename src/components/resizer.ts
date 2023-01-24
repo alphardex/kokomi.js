@@ -4,11 +4,11 @@ import { Component } from "./component";
 import { Base } from "../base/base";
 
 class Resizer extends Component {
-  isEnabled: boolean;
+  enabled: boolean;
   constructor(base: Base) {
     super(base);
 
-    this.isEnabled = true;
+    this.enabled = true;
   }
   get aspect() {
     return window.innerWidth / window.innerHeight;
@@ -25,7 +25,7 @@ class Resizer extends Component {
   }
   listenForResize() {
     window.addEventListener("resize", () => {
-      if (!this.isEnabled) {
+      if (!this.enabled) {
         return;
       }
 
@@ -33,10 +33,10 @@ class Resizer extends Component {
     });
   }
   enable() {
-    this.isEnabled = true;
+    this.enabled = true;
   }
   disable() {
-    this.isEnabled = false;
+    this.enabled = false;
   }
 }
 
