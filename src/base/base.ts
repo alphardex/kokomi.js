@@ -66,8 +66,7 @@ class Base {
     const interactionManager = new InteractionManager(
       this.renderer,
       this.camera,
-      this.renderer.domElement,
-      false
+      this.renderer.domElement
     );
     this.interactionManager = interactionManager;
 
