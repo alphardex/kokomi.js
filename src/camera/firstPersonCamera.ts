@@ -26,7 +26,7 @@ class FirstPersonCamera extends Component {
   forwardSpeed: number;
   leftSpeed: number;
   rotationEnabled: boolean;
-  translationEnaled: boolean;
+  translationEnabled: boolean;
   constructor(base: Base, config: Partial<FirstPersonCameraConfig> = {}) {
     super(base);
 
@@ -51,14 +51,14 @@ class FirstPersonCamera extends Component {
     this.leftSpeed = leftSpeed;
 
     this.rotationEnabled = true;
-    this.translationEnaled = true;
+    this.translationEnabled = true;
   }
   update(time: number): void {
     if (this.rotationEnabled) {
       this.updateRotation();
     }
     this.updateCamera();
-    if (this.translationEnaled) {
+    if (this.translationEnabled) {
       this.updateTranslation();
     }
   }
