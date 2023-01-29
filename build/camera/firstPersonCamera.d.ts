@@ -23,7 +23,7 @@ declare class FirstPersonCamera extends Component {
     forwardSpeed: number;
     leftSpeed: number;
     rotationEnabled: boolean;
-    translationEnaled: boolean;
+    translationEnabled: boolean;
     constructor(base: Base, config?: Partial<FirstPersonCameraConfig>);
     update(time: number): void;
     updateRotation(): void;

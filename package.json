@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.60",
+  "version": "1.9.61",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
