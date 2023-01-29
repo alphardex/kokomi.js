@@ -3,9 +3,9 @@ import type { Base } from "../base/base";
 import { Component } from "../components/component";
 export interface FirstPersonCameraConfig {
     camera: THREE.Camera;
-    translation: THREE.Vector3;
     phiSpeed: number;
     thetaSpeed: number;
+    translation: THREE.Vector3;
     forwardSpeed: number;
     leftSpeed: number;
 }
@@ -15,14 +15,14 @@ export interface FirstPersonCameraConfig {
 declare class FirstPersonCamera extends Component {
     camera: THREE.Camera;
     rotation: THREE.Quaternion;
-    translation: THREE.Vector3;
     phi: number;
     theta: number;
     phiSpeed: number;
     thetaSpeed: number;
+    rotationEnabled: boolean;
+    translation: THREE.Vector3;
     forwardSpeed: number;
     leftSpeed: number;
-    rotationEnabled: boolean;
     translationEnabled: boolean;
     constructor(base: Base, config?: Partial<FirstPersonCameraConfig>);
     update(time: number): void;
