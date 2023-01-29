@@ -72,7 +72,7 @@ class IMouse extends Component {
       );
       this.mouse = iMouseNew;
 
-      const mouseDOM = this.getMouse(
+      const mouseDOM = this.getMouseDOM(
         e.touches[0].clientX,
         e.touches[0].clientY
       );
@@ -91,7 +91,7 @@ class IMouse extends Component {
       );
       this.mouse = iMouseNew;
 
-      const mouseDOM = this.getMouse(
+      const mouseDOM = this.getMouseDOM(
         e.touches[0].clientX,
         e.touches[0].clientY
       );

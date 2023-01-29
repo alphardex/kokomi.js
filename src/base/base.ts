@@ -1,11 +1,14 @@
 import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
-import { Animator } from "../components";
-import { Clock } from "../components";
-import { Physics } from "../components";
-import { Resizer } from "../components";
-import { IMouse } from "../components";
+import {
+  Animator,
+  Clock,
+  Physics,
+  Resizer,
+  IMouse,
+  Keyboard,
+} from "../components";
 import { downloadBlob } from "../utils";
 
 export interface BaseConfig {
@@ -29,6 +32,7 @@ class Base {
   iMouse: IMouse;
   physics: Physics;
   resizer: Resizer;
+  keyboard: Keyboard;
   constructor(sel = "#sketch", config: Partial<BaseConfig> = {}) {
     const { hello = true } = config;
 
@@ -83,6 +87,9 @@ class Base {
 
     const resizer = new Resizer(this);
     this.resizer = resizer;
+
+    const keyboard = new Keyboard();
+    this.keyboard = keyboard;
 
     this.init();
 
