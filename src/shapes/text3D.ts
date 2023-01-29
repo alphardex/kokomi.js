@@ -1,17 +1,20 @@
-import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+import {
+  Font,
+  FontLoader,
+  TextGeometry,
+  TextGeometryParameters,
+} from "three-stdlib";
 
 import type { Base } from "../base/base";
-import { Component } from "../components/component";
 
 import { CustomMesh, CustomMeshConfig } from "./customMesh";
 
 const defaultFontUrl =
   "https://unpkg.com/three@0.77.0/examples/fonts/helvetiker_regular.typeface.json";
 
-const loadFont = (url = defaultFontUrl): Promise<STDLIB.Font> => {
+const loadFont = (url = defaultFontUrl): Promise<Font> => {
   return new Promise((resolve) => {
-    new STDLIB.FontLoader().load(url, (font) => {
+    new FontLoader().load(url, (font) => {
       resolve(font);
     });
   });
@@ -26,8 +29,8 @@ class Text3D extends CustomMesh {
   constructor(
     base: Base,
     text: string,
-    font: STDLIB.Font,
-    textParams: STDLIB.TextGeometryParameters = {
+    font: Font,
+    textParams: TextGeometryParameters = {
       size: 0.5,
       height: 0.2,
       curveSegments: 12,
@@ -41,7 +44,7 @@ class Text3D extends CustomMesh {
     config: Partial<CustomMeshConfig> = {}
   ) {
     super(base, {
-      geometry: new STDLIB.TextGeometry(text, { ...textParams, font }),
+      geometry: new TextGeometry(text, { ...textParams, font }),
       ...config,
     });
   }

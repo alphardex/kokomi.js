@@ -1,5 +1,6 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+
+import { MeshSurfaceSampler } from "three-stdlib";
 
 import { makeBuffer } from "./gl";
 
@@ -51,7 +52,7 @@ const sampleParticlesPositionFromMesh = (
 ) => {
   const material = new THREE.MeshBasicMaterial();
   const mesh = new THREE.Mesh(geometry, material);
-  const sampler = new STDLIB.MeshSurfaceSampler(mesh).build();
+  const sampler = new MeshSurfaceSampler(mesh).build();
   const particlesPosition = new Float32Array(count * 3);
   for (let i = 0; i < count; i++) {
     const position = new THREE.Vector3();

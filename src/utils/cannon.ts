@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import * as CANNON from "cannon-es";
-import * as STDLIB from "three-stdlib";
+
+import { mergeVertices } from "three-stdlib";
 
 // 将three.js的geometry转化为cannon.js的shape
 const convertGeometryToShape = (geometry: THREE.BufferGeometry) => {
@@ -47,7 +48,7 @@ const convertGeometryToShape = (geometry: THREE.BufferGeometry) => {
       let geo = new THREE.BufferGeometry();
       geo.setAttribute("position", geometry.getAttribute("position"));
 
-      geo = STDLIB.mergeVertices(geo);
+      geo = mergeVertices(geo);
 
       const position = geo.attributes.position.array;
       const index = geo.index!.array;

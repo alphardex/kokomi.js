@@ -1,5 +1,14 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+import {
+  DRACOLoader,
+  EXRLoader,
+  FBXLoader,
+  FontLoader,
+  GLTFLoader,
+  OBJLoader,
+  RGBELoader,
+  SVGLoader,
+} from "three-stdlib";
 
 import { Component } from "./component";
 import { Base } from "../base/base";
@@ -28,16 +37,16 @@ export interface ResourceItem {
 export type ResoureList = ResourceItem[];
 
 export interface Loaders {
-  gltfLoader: STDLIB.GLTFLoader;
+  gltfLoader: GLTFLoader;
   textureLoader: THREE.TextureLoader;
   cubeTextureLoader: THREE.CubeTextureLoader;
-  fontLoader: STDLIB.FontLoader;
-  fbxLoader: STDLIB.FBXLoader;
+  fontLoader: FontLoader;
+  fbxLoader: FBXLoader;
   audioLoader: THREE.AudioLoader;
-  objLoader: STDLIB.OBJLoader;
-  hdrTextureLoader: STDLIB.RGBELoader;
-  svgLoader: STDLIB.SVGLoader;
-  exrLoader: STDLIB.EXRLoader;
+  objLoader: OBJLoader;
+  hdrTextureLoader: RGBELoader;
+  svgLoader: SVGLoader;
+  exrLoader: EXRLoader;
 }
 
 export interface AssetManagerConfig {
@@ -86,20 +95,20 @@ class AssetManager extends Component {
   }
   // 设置加载器
   setLoaders() {
-    this.loaders.gltfLoader = new STDLIB.GLTFLoader();
+    this.loaders.gltfLoader = new GLTFLoader();
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
-    this.loaders.fontLoader = new STDLIB.FontLoader();
-    this.loaders.fbxLoader = new STDLIB.FBXLoader();
+    this.loaders.fontLoader = new FontLoader();
+    this.loaders.fbxLoader = new FBXLoader();
     this.loaders.audioLoader = new THREE.AudioLoader();
-    this.loaders.objLoader = new STDLIB.OBJLoader();
-    this.loaders.hdrTextureLoader = new STDLIB.RGBELoader();
-    this.loaders.svgLoader = new STDLIB.SVGLoader();
-    this.loaders.exrLoader = new STDLIB.EXRLoader();
+    this.loaders.objLoader = new OBJLoader();
+    this.loaders.hdrTextureLoader = new RGBELoader();
+    this.loaders.svgLoader = new SVGLoader();
+    this.loaders.exrLoader = new EXRLoader();
   }
   // 设置draco加载器
   setDracoLoader() {
-    const dracoLoader = new STDLIB.DRACOLoader();
+    const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath(this.config.dracoDecoderPath);
     this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
   }

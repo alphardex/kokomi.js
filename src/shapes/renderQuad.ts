@@ -1,8 +1,6 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
 
 import type { Base } from "../base/base";
-import { Component } from "../components/component";
 
 import { CustomMesh, CustomMeshConfig } from "./customMesh";
 

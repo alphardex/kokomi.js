@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+import { GLTF, GLTFLoader, DRACOLoader, FBXLoader } from "three-stdlib";
 
 export interface LoadVideoOptions extends HTMLMediaElement {
   unsuspend: "canplay" | "canplaythrough" | "loadstart" | "loadedmetadata";
@@ -42,20 +42,20 @@ export interface LoadGLTFConfig {
   useDraco: boolean | string;
 }
 
-let dracoLoader: STDLIB.DRACOLoader | null = null;
+let dracoLoader: DRACOLoader | null = null;
 
 // 加载GLTF模型
 const loadGLTF = (
   path: string,
   config: Partial<LoadGLTFConfig> = {}
-): Promise<STDLIB.GLTF | null> => {
+): Promise<GLTF | null> => {
   const { useDraco = true } = config;
 
   return new Promise((resolve) => {
-    const loader = new STDLIB.GLTFLoader();
+    const loader = new GLTFLoader();
 
     if (useDraco) {
-      dracoLoader = new STDLIB.DRACOLoader();
+      dracoLoader = new DRACOLoader();
       dracoLoader.setDecoderPath(
         typeof useDraco === "string"
           ? useDraco
@@ -80,7 +80,7 @@ const loadGLTF = (
 // 加载FBX模型
 const loadFBX = (path: string): Promise<THREE.Group | null> => {
   return new Promise((resolve) => {
-    const loader = new STDLIB.FBXLoader();
+    const loader = new FBXLoader();
 
     loader.load(
       path,

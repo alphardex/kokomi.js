@@ -1,6 +1,5 @@
 import * as THREE from "three";
-
-import * as STDLIB from "three-stdlib";
+import { EffectComposer, RenderPass, ShaderPass } from "three-stdlib";
 
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
@@ -50,8 +49,8 @@ void main(){
  * Demo: https://kokomi-playground.vercel.app/entries/#volumetricLight
  */
 class CustomEffect extends Component {
-  composer: STDLIB.EffectComposer;
-  customPass: STDLIB.ShaderPass;
+  composer: EffectComposer;
+  customPass: ShaderPass;
   uniformInjector: UniformInjector;
   constructor(base: Base, config: Partial<CustomEffectConfig> = {}) {
     super(base);
@@ -62,16 +61,16 @@ class CustomEffect extends Component {
       uniforms = {},
     } = config;
 
-    const composer = new STDLIB.EffectComposer(base.renderer);
+    const composer = new EffectComposer(base.renderer);
     this.composer = composer;
 
-    const renderPass = new STDLIB.RenderPass(base.scene, base.camera);
+    const renderPass = new RenderPass(base.scene, base.camera);
     composer.addPass(renderPass);
 
     const uniformInjector = new UniformInjector(base);
     this.uniformInjector = uniformInjector;
 
-    const customPass = new STDLIB.ShaderPass({
+    const customPass = new ShaderPass({
       vertexShader,
       fragmentShader,
       uniforms: {
