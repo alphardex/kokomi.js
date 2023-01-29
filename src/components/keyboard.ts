@@ -5,8 +5,6 @@ class Keyboard {
   keys: Record<string, boolean>;
   constructor() {
     this.keys = {};
-
-    this.listenForKey();
   }
   listenForKey() {
     window.addEventListener("keydown", (e) => {

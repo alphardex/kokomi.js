@@ -101,6 +101,9 @@ class Base {
 
     // mouse
     this.iMouse.listenForMouse();
+
+    // keyboard
+    this.keyboard.listenForKey();
   }
   update(fn: any) {
     this.animator.add(fn);
