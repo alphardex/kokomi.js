@@ -21,6 +21,7 @@ class FirstPersonCamera extends Component {
   theta: number;
   phiSpeed: number;
   thetaSpeed: number;
+  enabled: boolean;
   constructor(base: Base, config: Partial<FirstPersonCameraConfig> = {}) {
     super(base);
 
@@ -39,8 +40,14 @@ class FirstPersonCamera extends Component {
     this.theta = 0;
     this.phiSpeed = phiSpeed;
     this.thetaSpeed = thetaSpeed;
+
+    this.enabled = true;
   }
   update(time: number): void {
+    if (!this.enabled) {
+      return;
+    }
+
     this.updateRotation();
     this.updateCamera();
     this.updateTranslation();
