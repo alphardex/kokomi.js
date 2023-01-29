@@ -5,9 +5,11 @@ import { Component } from "../components/component";
 
 export interface FirstPersonCameraConfig {
   camera: THREE.Camera;
+  translation: THREE.Vector3;
   phiSpeed: number;
   thetaSpeed: number;
-  translation: THREE.Vector3;
+  forwardSpeed: number;
+  leftSpeed: number;
 }
 
 /**
@@ -21,7 +23,10 @@ class FirstPersonCamera extends Component {
   theta: number;
   phiSpeed: number;
   thetaSpeed: number;
-  enabled: boolean;
+  forwardSpeed: number;
+  leftSpeed: number;
+  rotationEnabled: boolean;
+  translationEnaled: boolean;
   constructor(base: Base, config: Partial<FirstPersonCameraConfig> = {}) {
     super(base);
 
@@ -29,6 +34,8 @@ class FirstPersonCamera extends Component {
       camera = this.base.camera,
       phiSpeed = 8,
       thetaSpeed = 5,
+      forwardSpeed = 1,
+      leftSpeed = 1,
       translation = new THREE.Vector3(0, 2, 0),
     } = config;
 
@@ -40,17 +47,20 @@ class FirstPersonCamera extends Component {
     this.theta = 0;
     this.phiSpeed = phiSpeed;
     this.thetaSpeed = thetaSpeed;
+    this.forwardSpeed = forwardSpeed;
+    this.leftSpeed = leftSpeed;
 
-    this.enabled = true;
+    this.rotationEnabled = true;
+    this.translationEnaled = true;
   }
   update(time: number): void {
-    if (!this.enabled) {
-      return;
+    if (this.rotationEnabled) {
+      this.updateRotation();
     }
-
-    this.updateRotation();
     this.updateCamera();
-    this.updateTranslation();
+    if (this.translationEnaled) {
+      this.updateTranslation();
+    }
   }
   updateRotation() {
     const xh = this.base.iMouse.mouseDOMDelta.x / window.innerWidth;
@@ -89,11 +99,11 @@ class FirstPersonCamera extends Component {
 
     const forward = new THREE.Vector3(0, 0, -1);
     forward.applyQuaternion(qx);
-    forward.multiplyScalar(fv * dt * 10);
+    forward.multiplyScalar(fv * dt * 10 * this.forwardSpeed);
 
     const left = new THREE.Vector3(-1, 0, 0);
     left.applyQuaternion(qx);
-    left.multiplyScalar(sv * dt * 10);
+    left.multiplyScalar(sv * dt * 10 * this.leftSpeed);
 
     this.translation.add(forward);
     this.translation.add(left);
