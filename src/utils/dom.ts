@@ -11,4 +11,10 @@ const preloadImages = (sel = "div") => {
 const sleep = (time: number) =>
   new Promise((resolve) => setTimeout(resolve, time));
 
-export { preloadImages, sleep };
+// 阻止事件默认行为和冒泡
+const preventDefaultAndStopBubble = (e: Event) => {
+  e.preventDefault();
+  e.stopPropagation();
+};
+
+export { preloadImages, sleep, preventDefaultAndStopBubble };

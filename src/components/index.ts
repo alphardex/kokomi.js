@@ -6,6 +6,7 @@ export * from "./component";
 export * from "./float";
 export * from "./GPUComputer";
 export * from "./iMouse";
+export * from "./joystick";
 export * from "./keyboard";
 export * from "./physics";
 export * from "./raycastSelector";

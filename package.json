@@ -21,6 +21,7 @@
     "maku.js": "^1.0.5",
     "marcher.js": "^1.4.3",
     "mitt": "^3.0.0",
+    "nipplejs": "^0.10.0",
     "simplex-noise": "^4.0.1",
     "stats.js": "^0.17.0",
     "three": "^0.149.0",
