@@ -14,7 +14,7 @@ export interface JoystickConfig extends nipplejs.JoystickManagerOptions {}
  */
 class Joystick extends Component {
   manager: nipplejs.JoystickManager;
-  position: THREE.Vector2;
+  data: Partial<nipplejs.JoystickOutputData>;
   constructor(base: Base, config: Partial<JoystickConfig> = {}) {
     super(base);
 
@@ -34,19 +34,19 @@ class Joystick extends Component {
     });
     this.manager = manager;
 
-    this.position = new THREE.Vector2(0, 0);
+    this.data = {};
   }
   listenForGesture() {
     this.manager.on("start", () => {
-      this.emit("move-start", new THREE.Vector2(0, 0));
+      this.emit("move-start", {});
     });
     this.manager.on("move", (_, data) => {
-      this.emit("move", data.vector);
-      this.position.set(data.vector.x, data.vector.y);
+      this.emit("move", data);
+      this.data = data;
     });
     this.manager.on("end", () => {
-      this.emit("move-end", new THREE.Vector2(0, 0));
-      this.position.set(0, 0);
+      this.emit("move-end", {});
+      this.data = {};
     });
   }
 }

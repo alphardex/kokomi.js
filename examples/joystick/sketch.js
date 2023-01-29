@@ -23,8 +23,8 @@ class Sketch extends kokomi.Base {
     js.on("move-start", () => {
       console.log("move start");
     });
-    js.on("move", (p) => {
-      console.log(`move: (${p.x}, ${p.y})`);
+    js.on("move", (e) => {
+      console.log(`move: (${e.vector.x}, ${e.vector.y})`);
     });
     js.on("move-end", () => {
       console.log("move end");
