@@ -1,5 +1,5 @@
 import * as THREE from "three";
-export declare type AllMaterialParams = THREE.MeshPhongMaterialParameters & THREE.MeshPhysicalMaterialParameters & THREE.MeshToonMaterialParameters & THREE.MeshBasicMaterialParameters & THREE.MeshLambertMaterialParameters & THREE.MeshStandardMaterialParameters & THREE.PointsMaterialParameters;
+export type AllMaterialParams = THREE.MeshPhongMaterialParameters & THREE.MeshPhysicalMaterialParameters & THREE.MeshToonMaterialParameters & THREE.MeshBasicMaterialParameters & THREE.MeshLambertMaterialParameters & THREE.MeshStandardMaterialParameters & THREE.PointsMaterialParameters;
 export interface iCSMShader {
     defines: string;
     header: string;
@@ -10,7 +10,7 @@ export interface CSMPatchMap {
         [toReplace: string]: string;
     };
 }
-export declare type CSMBaseMaterial = (new (opts: {
+export type CSMBaseMaterial = (new (opts: {
     [key: string]: any;
 }) => THREE.Material) | THREE.Material;
 export interface _CSMParam {
@@ -23,8 +23,8 @@ export interface _CSMParam {
         [key: string]: THREE.IUniform<any>;
     };
 }
-export declare type iCSMParams = _CSMParam & AllMaterialParams;
-export declare type iCSMUpdateParams = {
+export type iCSMParams = _CSMParam & AllMaterialParams;
+export type iCSMUpdateParams = {
     vertexShader: string;
     fragmentShader: string;
     uniforms: {

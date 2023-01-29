@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+import { EffectComposer, ShaderPass } from "three-stdlib";
 import type { Base } from "../base/base";
 import { Component } from "../components/component";
 import { UniformInjector } from "../components/uniformInjector";
@@ -16,8 +16,8 @@ export interface CustomEffectConfig {
  * Demo: https://kokomi-playground.vercel.app/entries/#volumetricLight
  */
 declare class CustomEffect extends Component {
-    composer: STDLIB.EffectComposer;
-    customPass: STDLIB.ShaderPass;
+    composer: EffectComposer;
+    customPass: ShaderPass;
     uniformInjector: UniformInjector;
     constructor(base: Base, config?: Partial<CustomEffectConfig>);
     addExisting(): void;

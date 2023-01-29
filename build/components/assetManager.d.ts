@@ -1,25 +1,25 @@
 import * as THREE from "three";
-import * as STDLIB from "three-stdlib";
+import { EXRLoader, FBXLoader, FontLoader, GLTFLoader, OBJLoader, RGBELoader, SVGLoader } from "three-stdlib";
 import { Component } from "./component";
 import { Base } from "../base/base";
-export declare type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video";
+export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video";
 export interface ResourceItem {
     name: string;
     type: ResoureType;
     path: string | string[];
 }
-export declare type ResoureList = ResourceItem[];
+export type ResoureList = ResourceItem[];
 export interface Loaders {
-    gltfLoader: STDLIB.GLTFLoader;
+    gltfLoader: GLTFLoader;
     textureLoader: THREE.TextureLoader;
     cubeTextureLoader: THREE.CubeTextureLoader;
-    fontLoader: STDLIB.FontLoader;
-    fbxLoader: STDLIB.FBXLoader;
+    fontLoader: FontLoader;
+    fbxLoader: FBXLoader;
     audioLoader: THREE.AudioLoader;
-    objLoader: STDLIB.OBJLoader;
-    hdrTextureLoader: STDLIB.RGBELoader;
-    svgLoader: STDLIB.SVGLoader;
-    exrLoader: STDLIB.EXRLoader;
+    objLoader: OBJLoader;
+    hdrTextureLoader: RGBELoader;
+    svgLoader: SVGLoader;
+    exrLoader: EXRLoader;
 }
 export interface AssetManagerConfig {
     useDracoLoader: boolean;

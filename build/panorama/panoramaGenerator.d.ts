@@ -8,7 +8,7 @@ export interface Vector3 {
     y: number;
     z: number;
 }
-export declare type PanoramaConfig = SceneConfig[];
+export type PanoramaConfig = SceneConfig[];
 export interface SceneConfig {
     id: string;
     url: string;
