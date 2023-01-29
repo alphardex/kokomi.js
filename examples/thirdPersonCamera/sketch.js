@@ -18,13 +18,13 @@ class Sketch extends kokomi.Base {
     this.camera.lookAt(box.mesh.position);
 
     window.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowUp") {
+      if (this.keyboard.isUpKeyDown) {
         box.mesh.position.z += 0.1;
-      } else if (e.key === "ArrowLeft") {
+      } else if (this.keyboard.isLeftKeyDown) {
         box.mesh.position.x += 0.1;
-      } else if (e.key === "ArrowRight") {
+      } else if (this.keyboard.isRightKeyDown) {
         box.mesh.position.x -= 0.1;
-      } else if (e.key === "ArrowDown") {
+      } else if (this.keyboard.isDownKeyDown) {
         box.mesh.position.z -= 0.1;
       }
     });

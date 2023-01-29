@@ -1,11 +1,11 @@
 import { Scroller } from "maku.js";
 export interface Scroll {
-  current: number;
-  target: number;
-  ease: number;
-  last: number;
-  delta: number;
-  direction: "up" | "down" | "";
+    current: number;
+    target: number;
+    ease: number;
+    last: number;
+    delta: number;
+    direction: "up" | "down" | "";
 }
 declare const NormalScroller: typeof Scroller;
 /**
@@ -14,9 +14,9 @@ declare const NormalScroller: typeof Scroller;
  * Demo: https://kokomi-playground.vercel.app/entries/#textureRecursion
  */
 declare class WheelScroller {
-  scroll: Scroll;
-  constructor();
-  listenForScroll(): void;
-  syncScroll(): void;
+    scroll: Scroll;
+    constructor();
+    listenForScroll(): void;
+    syncScroll(): void;
 }
 export { NormalScroller, WheelScroller };

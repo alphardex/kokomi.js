@@ -1,7 +1,7 @@
 import { Component } from "./component";
 import { Base } from "../base/base";
 declare class Resizer extends Component {
-    isEnabled: boolean;
+    enabled: boolean;
     constructor(base: Base);
     get aspect(): number;
     resize(): void;

@@ -1,11 +1,7 @@
 import * as THREE from "three";
 import { InteractionManager } from "three.interactive";
 import type { EffectComposer } from "three-stdlib";
-import { Animator } from "../components";
-import { Clock } from "../components";
-import { Physics } from "../components";
-import { Resizer } from "../components";
-import { IMouse } from "../components";
+import { Animator, Clock, Physics, Resizer, IMouse, Keyboard } from "../components";
 export interface BaseConfig {
     hello: boolean;
 }
@@ -26,6 +22,7 @@ declare class Base {
     iMouse: IMouse;
     physics: Physics;
     resizer: Resizer;
+    keyboard: Keyboard;
     constructor(sel?: string, config?: Partial<BaseConfig>);
     addEventListeners(): void;
     update(fn: any): void;
