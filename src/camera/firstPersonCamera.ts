@@ -5,9 +5,9 @@ import { Component } from "../components/component";
 
 export interface FirstPersonCameraConfig {
   camera: THREE.Camera;
-  translation: THREE.Vector3;
   phiSpeed: number;
   thetaSpeed: number;
+  translation: THREE.Vector3;
   forwardSpeed: number;
   leftSpeed: number;
 }
@@ -18,23 +18,23 @@ export interface FirstPersonCameraConfig {
 class FirstPersonCamera extends Component {
   camera: THREE.Camera;
   rotation: THREE.Quaternion;
-  translation: THREE.Vector3;
   phi: number;
   theta: number;
   phiSpeed: number;
   thetaSpeed: number;
+  rotationEnabled: boolean;
+  translation: THREE.Vector3;
   forwardSpeed: number;
   leftSpeed: number;
-  rotationEnabled: boolean;
   translationEnabled: boolean;
   constructor(base: Base, config: Partial<FirstPersonCameraConfig> = {}) {
     super(base);
 
     const {
       camera = this.base.camera,
-      translation = new THREE.Vector3(0, 2, 0),
       phiSpeed = 8,
       thetaSpeed = 5,
+      translation = new THREE.Vector3(0, 2, 0),
       forwardSpeed = 1,
       leftSpeed = 1,
     } = config;
@@ -42,15 +42,15 @@ class FirstPersonCamera extends Component {
     this.camera = camera;
 
     this.rotation = new THREE.Quaternion();
-    this.translation = translation;
     this.phi = 0;
     this.theta = 0;
     this.phiSpeed = phiSpeed;
     this.thetaSpeed = thetaSpeed;
+    this.rotationEnabled = true;
+
+    this.translation = translation;
     this.forwardSpeed = forwardSpeed;
     this.leftSpeed = leftSpeed;
-
-    this.rotationEnabled = true;
     this.translationEnabled = true;
   }
   update(time: number): void {
