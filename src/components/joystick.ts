@@ -38,14 +38,14 @@ class Joystick extends Component {
   }
   listenForGesture() {
     this.manager.on("start", () => {
-      this.emit("move-start", {});
+      this.emit("move-start", this.data);
     });
     this.manager.on("move", (_, data) => {
       this.emit("move", data);
       this.data = data;
     });
     this.manager.on("end", () => {
-      this.emit("move-end", {});
+      this.emit("move-end", this.data);
     });
   }
 }
