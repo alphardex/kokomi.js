@@ -46,7 +46,6 @@ class Joystick extends Component {
     });
     this.manager.on("end", () => {
       this.emit("move-end", {});
-      this.data = {};
     });
   }
 }
