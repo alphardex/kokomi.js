@@ -32,11 +32,11 @@ class FirstPersonCamera extends Component {
 
     const {
       camera = this.base.camera,
+      translation = new THREE.Vector3(0, 2, 0),
       phiSpeed = 8,
       thetaSpeed = 5,
       forwardSpeed = 1,
       leftSpeed = 1,
-      translation = new THREE.Vector3(0, 2, 0),
     } = config;
 
     this.camera = camera;
