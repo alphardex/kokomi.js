@@ -7,6 +7,7 @@ class Bender {
   bend(geometry: THREE.BufferGeometry, axis: string, angle: number) {
     let theta = 0;
     if (angle !== 0) {
+      // @ts-ignore
       const v = geometry.attributes.position.array;
       for (let i = 0; i < v.length; i += 3) {
         let x = v[i];

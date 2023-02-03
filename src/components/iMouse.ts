@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
+import { detectDeviceType } from "../utils";
+
 /**
  * An encapsuled class to get mouse position.
  *
@@ -55,6 +57,15 @@ class IMouse extends Component {
     return mouseScreen;
   }
   listenForMouse() {
+    const deviceType = detectDeviceType();
+
+    if (deviceType === "Desktop") {
+      this.listenForDesktop();
+    } else if (deviceType === "Mobile") {
+      this.listenForMobile();
+    }
+  }
+  listenForDesktop() {
     window.addEventListener("mousemove", (e) => {
       const iMouseNew = this.getMouse(e.clientX, e.clientY);
       this.mouse = iMouseNew;
@@ -65,6 +76,8 @@ class IMouse extends Component {
       const mouseScreen = this.getMouseScreen(e.clientX, e.clientY);
       this.mouseScreen = mouseScreen;
     });
+  }
+  listenForMobile() {
     window.addEventListener("touchstart", (e) => {
       const iMouseNew = this.getMouse(
         e.touches[0].clientX,

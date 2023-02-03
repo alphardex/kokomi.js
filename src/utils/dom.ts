@@ -17,4 +17,13 @@ const preventDefaultAndStopBubble = (e: Event) => {
   e.stopPropagation();
 };
 
-export { preloadImages, sleep, preventDefaultAndStopBubble };
+// 获取设备类型
+const detectDeviceType = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  )
+    ? "Mobile"
+    : "Desktop";
+};
+
+export { preloadImages, sleep, preventDefaultAndStopBubble, detectDeviceType };

@@ -50,6 +50,7 @@ const convertGeometryToShape = (geometry: THREE.BufferGeometry) => {
 
       geo = mergeVertices(geo);
 
+      // @ts-ignore
       const position = geo.attributes.position.array;
       const index = geo.index!.array;
 

@@ -25,7 +25,7 @@
     "simplex-noise": "^4.0.1",
     "stats.js": "^0.17.0",
     "three-custom-shader-material": "^4.0.0",
-    "three-stdlib": "^2.21.6",
+    "three-stdlib": "^2.21.8",
     "three.interactive": "^1.5.1",
     "troika-three-text": "^0.47.1"
   },
@@ -36,12 +36,12 @@
     "@types/blueimp-md5": "^2.18.0",
     "@types/imagesloaded": "^4.1.2",
     "@types/stats.js": "^0.17.0",
-    "@types/three": "^0.148.1",
-    "rollup": "^3.11.0",
+    "@types/three": "^0.149.0",
+    "rollup": "^3.12.1",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.5.0",
     "typedoc": "^0.23.24",
-    "typescript": "^4.9.4"
+    "typescript": "^4.9.5"
   },
   "peerDependencies": {
     "three": ">=0.137"
