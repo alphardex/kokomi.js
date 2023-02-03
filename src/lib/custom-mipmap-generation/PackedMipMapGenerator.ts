@@ -6,6 +6,8 @@ import {
   MathUtils,
   WebGLRenderTarget,
   NearestFilter,
+  Texture,
+  WebGLRenderer,
 } from "three";
 import { FullScreenQuad, CopyShader } from "three-stdlib";
 import { clone, MipGenerationShader } from "./MipGenerationShader";
@@ -61,7 +63,12 @@ export class PackedMipMapGenerator {
     this._mipMaterials = mipMaterials;
   }
 
-  update(texture, target, renderer, forcePowerOfTwo = false) {
+  update(
+    texture: Texture,
+    target: WebGLRenderTarget,
+    renderer: WebGLRenderer,
+    forcePowerOfTwo = false
+  ) {
     if (texture.isWebGLRenderTarget) {
       texture = texture.texture;
     }
