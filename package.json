@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.63",
+  "version": "1.9.64",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -8,7 +8,7 @@
     "build": "tsc && rollup -c",
     "updateIndex": "node examples/getFilesData.mjs",
     "doc": "typedoc src/index.ts",
-    "all": "node examples/getFilesData.mjs && typedoc src/index.ts && tsc && rollup -c"
+    "all": "node examples/getFilesData.mjs && tsc && rollup -c && typedoc src/index.ts"
   },
   "author": "alphardex",
   "license": "MIT",

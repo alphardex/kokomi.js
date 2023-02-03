@@ -25,6 +25,8 @@ declare class IMouse extends Component {
     getMouseDOM(x: number, y: number): THREE.Vector2;
     getMouseScreen(x: number, y: number): THREE.Vector2;
     listenForMouse(): void;
+    listenForDesktop(): void;
+    listenForMobile(): void;
     syncMouseDOM(): void;
     judgeIsMouseMoving(): void;
     getMouseDOMDelta(): void;

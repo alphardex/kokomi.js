@@ -1,4 +1,3 @@
-// @ts-nocheck
 import {
   Color,
   Matrix4,
@@ -26,6 +25,12 @@ export interface ReflectorConfig extends ReflectorOptions {
  * 1. Add ignoreObjects.
  */
 class Reflector extends Mesh {
+  ignoreObjects: THREE.Object3D[];
+  isReflector: boolean;
+  camera: PerspectiveCamera;
+  material: THREE.ShaderMaterial;
+  getRenderTarget: () => WebGLRenderTarget;
+  dispose: () => void;
   constructor(
     geometry: THREE.BufferGeometry,
     options: Partial<ReflectorConfig> = {}
@@ -49,6 +54,7 @@ class Reflector extends Mesh {
     const textureWidth = options.textureWidth || 512;
     const textureHeight = options.textureHeight || 512;
     const clipBias = options.clipBias || 0;
+    // @ts-ignore
     const shader = options.shader || Reflector.ReflectorShader;
     const multisample =
       options.multisample !== undefined ? options.multisample : 4;
@@ -121,6 +127,7 @@ class Reflector extends Mesh {
       virtualCamera.up.reflect(normal);
       virtualCamera.lookAt(target);
 
+      // @ts-ignore
       virtualCamera.far = camera.far; // Used in WebGLBackground
 
       virtualCamera.updateMatrixWorld();
@@ -220,6 +227,7 @@ class Reflector extends Mesh {
 
       // Restore viewport
 
+      // @ts-ignore
       const viewport = camera.viewport;
 
       if (viewport !== undefined) {
@@ -244,6 +252,7 @@ class Reflector extends Mesh {
   }
 }
 
+// @ts-ignore
 Reflector.ReflectorShader = {
   uniforms: {
     color: {
