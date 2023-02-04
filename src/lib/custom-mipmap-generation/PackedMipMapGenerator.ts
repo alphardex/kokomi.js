@@ -1,4 +1,3 @@
-// @ts-nocheck
 // Credit: https://github.com/gkjohnson/threejs-sandbox/tree/master/custom-mipmap-generation
 import {
   Color,
@@ -14,7 +13,11 @@ import { clone, MipGenerationShader } from "./MipGenerationShader";
 
 const _originalClearColor = new Color();
 export class PackedMipMapGenerator {
-  constructor(mipmapLogic) {
+  _swapTarget: WebGLRenderTarget;
+  _copyQuad: FullScreenQuad;
+  _mipQuad: FullScreenQuad;
+  _mipMaterials: ShaderMaterial[];
+  constructor(mipmapLogic = "") {
     if (!mipmapLogic) {
       mipmapLogic = /* glsl */ `
 
@@ -29,7 +32,7 @@ export class PackedMipMapGenerator {
     }
 
     const shader = clone(MipGenerationShader);
-    shader.fragmentShader = shader.fragmentShader.replace(
+    shader.fragmentShader = shader.fragmentShader!.replace(
       /<mipmap_logic>/g,
       mipmapLogic
     );
@@ -59,6 +62,7 @@ export class PackedMipMapGenerator {
 
     this._swapTarget = swapTarget;
     this._copyQuad = new FullScreenQuad(new ShaderMaterial(CopyShader));
+    // @ts-ignore
     this._mipQuad = new FullScreenQuad(null);
     this._mipMaterials = mipMaterials;
   }
@@ -69,7 +73,9 @@ export class PackedMipMapGenerator {
     renderer: WebGLRenderer,
     forcePowerOfTwo = false
   ) {
+    // @ts-ignore
     if (texture.isWebGLRenderTarget) {
+      // @ts-ignore
       texture = texture.texture;
     }
 
@@ -113,10 +119,11 @@ export class PackedMipMapGenerator {
     // init the renderer
     renderer.autoClear = false;
     renderer.setClearColor(0);
+    // @ts-ignore
     renderer.setClearAlpha();
 
     // write the first texture to the texture
-    copyQuad.material.uniforms.tDiffuse.value = texture;
+    (copyQuad.material as ShaderMaterial).uniforms.tDiffuse.value = texture;
     copyQuad.camera.setViewOffset(
       width,
       height,

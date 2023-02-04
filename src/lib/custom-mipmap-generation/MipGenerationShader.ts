@@ -1,8 +1,7 @@
-// @ts-nocheck
-import { UniformsUtils, Vector2 } from "three";
+import { ShaderMaterialParameters, UniformsUtils, Vector2 } from "three";
 import { sampleFunctions } from "./mipSampleFunctions";
 
-export function clone(shader) {
+export function clone(shader: ShaderMaterialParameters) {
   const newShader = { ...shader };
   if ("defines" in shader) {
     newShader.defines = { ...shader.defines };
