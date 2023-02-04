@@ -39,7 +39,7 @@ export class PackedMipMapGenerator {
 
     // Save the mip materials such that mip 0 indicates whether or not X is power
     // of two and 1 indicates the same for y to prevent material recompilation.
-    const mipMaterials = new Array(4);
+    const mipMaterials: ShaderMaterial[] = new Array(4);
     mipMaterials[0] = new ShaderMaterial(clone(shader));
     mipMaterials[0].defines.X_IS_EVEN = 0;
     mipMaterials[0].defines.Y_IS_EVEN = 0;
