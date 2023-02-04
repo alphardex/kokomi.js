@@ -12,7 +12,7 @@ export interface PlaneConfig {
   shadertoyMode: boolean;
 }
 
-const defaultVertexShader = `
+const defaultVertexShader = /* glsl */ `
 varying vec2 vUv;
 
 void main(){
@@ -23,7 +23,7 @@ void main(){
 }
 `;
 
-const defaultFragmentShader = `
+const defaultFragmentShader = /* glsl */ `
 uniform float iTime;
 uniform vec3 iResolution;
 uniform vec4 iMouse;
@@ -37,7 +37,7 @@ void main(){
 }
 `;
 
-const shadertoyPrepend = `
+const shadertoyPrepend = /* glsl */ `
 uniform float iGlobalTime;
 uniform float iTime;
 uniform float iTimeDelta;
@@ -59,7 +59,7 @@ uniform samplerCube iChannel3Cube;
 uniform float iChannelTime[4];
 `;
 
-const shadertoyAppend = `
+const shadertoyAppend = /* glsl */ `
 varying vec2 vUv;
 
 void main(){

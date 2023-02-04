@@ -87,7 +87,7 @@ class PersistenceEffect extends Component {
         fadeColor: { value: this.fadeColor },
         uvMatrix: { value: uvMatrix },
       },
-      vertexShader: `
+      vertexShader: /* glsl */ `
         uniform mat3 uvMatrix;
         varying vec2 vUv;
         void main () {
@@ -95,7 +95,7 @@ class PersistenceEffect extends Component {
           vUv = (uvMatrix * vec3(uv, 1.0)).xy;
         }
       `,
-      fragmentShader: `
+      fragmentShader: /* glsl */ `
         uniform sampler2D inputTexture;
         uniform float fadeFactor;
         uniform vec3 fadeColor;

@@ -21,7 +21,7 @@ export interface MojiConfig {
   materialParams: AllMaterialParams;
 }
 
-const defaultVertexShader = `
+const defaultVertexShader = /* glsl */ `
 uniform float iTime;
 uniform vec2 iResolution;
 uniform vec2 iMouse;
@@ -36,7 +36,7 @@ void main(){
 }
 `;
 
-const defaultFragmentShader = `
+const defaultFragmentShader = /* glsl */ `
 uniform float iTime;
 uniform vec2 iResolution;
 uniform vec2 iMouse;

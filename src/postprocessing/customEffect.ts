@@ -12,7 +12,7 @@ export interface CustomEffectConfig {
   uniforms: { [uniform: string]: THREE.IUniform<any> };
 }
 
-const defaultVertexShader = `
+const defaultVertexShader = /* glsl */ `
 uniform float iTime;
 uniform vec2 iResolution;
 uniform vec2 iMouse;
@@ -27,7 +27,7 @@ void main(){
 }
 `;
 
-const defaultFragmentShader = `
+const defaultFragmentShader = /* glsl */ `
 uniform float iTime;
 uniform vec2 iResolution;
 uniform vec2 iMouse;

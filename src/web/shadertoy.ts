@@ -6,7 +6,7 @@ import { ScreenQuad } from "../shapes";
 
 import { getUniformFromImg } from "./utils";
 
-const defaultFragmentShader = `
+const defaultFragmentShader = /* glsl */ `
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1)

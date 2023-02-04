@@ -4,12 +4,12 @@ import type { Base } from "../base/base";
 
 import { PlaneConfig, ScreenQuad } from "./screenQuad";
 
-const cubemapShaderUniforms = `
+const cubemapShaderUniforms = /* glsl */ `
 uniform vec2 unViewport;
 uniform vec3 unCorners[5];
 `;
 
-const cubemapShaderMain = `
+const cubemapShaderMain = /* glsl */ `
 void main()
 {
     vec4 color=vec4(0.,0.,0.,1.);
