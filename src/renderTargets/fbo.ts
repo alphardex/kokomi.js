@@ -25,6 +25,13 @@ class FBO extends Component {
     if (samples) {
       rt.samples = samples;
     }
+
+    this.base.resizer.on("resize", () => {
+      this.rt.setSize(
+        window.innerWidth * window.devicePixelRatio,
+        window.innerHeight * window.devicePixelRatio
+      );
+    });
   }
 }
 
