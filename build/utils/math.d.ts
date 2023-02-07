@@ -5,4 +5,5 @@ declare const polySort: (pointObjs: THREE.Vector2[]) => {
     y: number;
 }[];
 declare const sample: (arr: any[]) => any;
-export { saturate, polySort, sample };
+declare const range: (start: number, end: number, step?: number) => Generator<number, void, unknown>;
+export { saturate, polySort, sample, range };
