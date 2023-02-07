@@ -16,6 +16,7 @@ export interface MeshTransmissionMaterialConfig {
   diffuse: number;
   specular: number;
   fresnel: number;
+  fresnelColor: THREE.Color;
 }
 
 const transmissionVertexShader = /* glsl */ `
@@ -73,6 +74,7 @@ uniform vec3 uLightPosition;
 uniform float uDiffuse;
 uniform float uSpecular;
 uniform float uFresnel;
+uniform vec3 uFresnelColor;
 
 vec3 saturation(vec3 rgb,float adjustment){
     const vec3 W=vec3(.2125,.7154,.0721);
@@ -132,6 +134,7 @@ void main(){
     float s=uSpecular;
     
     float fr=uFresnel;
+    vec3 frCol=uFresnelColor;
     
     for(int i=0;i<SAMPLES;i++){
         float slide=float(i)/float(SAMPLES)*.1;
@@ -178,7 +181,7 @@ void main(){
     col+=vec3(lin);
     
     float F=fresnel2(vEyeVector,vNormal,fr);
-    col+=vec3(F);
+    col+=vec3(F)*frCol;
     
     gl_FragColor=vec4(col,1.);
 }
@@ -213,6 +216,7 @@ class MeshTransmissionMaterial extends Component {
       diffuse = 0.2,
       specular = 15,
       fresnel = 8,
+      fresnelColor = new THREE.Color("#ffffff"),
     } = config;
     this.backside = backside;
     this.background = background;
@@ -257,6 +261,9 @@ class MeshTransmissionMaterial extends Component {
         },
         uFresnel: {
           value: fresnel,
+        },
+        uFresnelColor: {
+          value: fresnelColor,
         },
       },
     });
