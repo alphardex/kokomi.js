@@ -13,6 +13,7 @@ export interface MeshTransmissionMaterialConfig {
     diffuse: number;
     specular: number;
     fresnel: number;
+    fresnelColor: THREE.Color;
 }
 /**
  * Reference: https://blog.maximeheckel.com/posts/refraction-dispersion-and-other-shader-light-effects/
