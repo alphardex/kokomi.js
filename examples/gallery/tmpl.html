@@ -1,0 +1,41 @@
+<style>
+    .webgl-img {
+        opacity: 0;
+    }
+
+    #sketch {
+        position: fixed;
+        z-index: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        background: black;
+    }
+
+    .loading span {
+        animation: blur 1.5s calc(var(--i) / 5 * 1s) alternate infinite;
+    }
+
+    @keyframes blur {
+        to {
+            filter: blur(2px);
+        }
+    }
+</style>
+<div class="fixed z-5 top-0 left-0 loader-screen w-screen h-screen transition-all duration-300 bg-black">
+    <div class="absolute hv-center">
+        <div class="loading text-white text-3xl tracking-widest">
+            <span style="--i: 0">L</span>
+            <span style="--i: 1">O</span>
+            <span style="--i: 2">A</span>
+            <span style="--i: 3">D</span>
+            <span style="--i: 4">I</span>
+            <span style="--i: 5">N</span>
+            <span style="--i: 6">G</span>
+        </div>
+    </div>
+</div>
+<div class="relative z-1 w-screen h-screen overflow-hidden">
+    <img class="webgl-img absolute hv-center w-100 cursor-pointer"
+        src="https://s2.loli.net/2022/09/08/gGY4VloDAeUwWxt.jpg" crossorigin="anonymous" alt="" />
+</div>

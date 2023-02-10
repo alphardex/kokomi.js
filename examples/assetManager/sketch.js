@@ -3,14 +3,6 @@ import * as THREE from "three";
 import gsap from "gsap";
 import * as dat from "lil";
 
-const resourceList = [
-  {
-    name: "foxModel",
-    type: "gltfModel",
-    path: "./Fox.glb",
-  },
-];
-
 class Fox extends kokomi.Component {
   constructor(base) {
     super(base);
@@ -44,9 +36,17 @@ class Sketch extends kokomi.Base {
 
     this.camera.position.set(3, 3, 3);
 
-    const am = new kokomi.AssetManager(this, resourceList);
+    const am = new kokomi.AssetManager(this, [
+      {
+        name: "foxModel",
+        type: "gltfModel",
+        path: "./Fox.glb",
+      },
+    ]);
     this.am = am;
     this.am.on("ready", () => {
+      document.querySelector(".loader-screen").classList.add("hollow");
+
       const ambiLight = new THREE.AmbientLight(0xffffff, 0.3);
       this.scene.add(ambiLight);
       const dirLight = new THREE.DirectionalLight(0xffffff, 1.5);

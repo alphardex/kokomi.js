@@ -1,0 +1,24 @@
+<style>
+    .point {
+        position: absolute;
+        top: 0;
+        left: 0;
+        pointer-events: auto;
+        transform: translate(var(--x), var(--y));
+        z-index: var(--z-index);
+    }
+
+    .point .label {
+        position: absolute;
+        color: white;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        white-space: nowrap;
+    }
+</style>
+<div class="point point-1">
+    <div class="label">This is cube1</div>
+</div>
+<div class="point point-2">
+    <div class="label">This is cube2</div>
+</div>
