@@ -8,7 +8,7 @@ class MyBox extends kokomi.Component {
   constructor(base) {
     super(base);
 
-    const box = new kokomi.Box(base, {
+    const box = new kokomi.Box(this.base, {
       width: 1,
       height: 0.5,
     });
