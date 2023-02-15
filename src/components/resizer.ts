@@ -18,12 +18,12 @@ class Resizer extends Component {
     if (base.camera instanceof THREE.PerspectiveCamera) {
       base.camera.aspect = this.aspect;
       base.camera.updateProjectionMatrix();
+      base.renderer.setSize(window.innerWidth, window.innerHeight);
+      base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
       if (base.composer) {
         base.composer.setSize(window.innerWidth, window.innerHeight);
         base.composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
       }
-      base.renderer.setSize(window.innerWidth, window.innerHeight);
-      base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     }
     this.emit("resize");
   }
