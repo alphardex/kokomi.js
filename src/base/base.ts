@@ -13,6 +13,7 @@ import { downloadBlob } from "../utils";
 
 export interface BaseConfig {
   hello: boolean;
+  gl: THREE.WebGLRendererParameters;
 }
 
 /**
@@ -34,7 +35,7 @@ class Base {
   resizer: Resizer;
   keyboard: Keyboard;
   constructor(sel = "#sketch", config: Partial<BaseConfig> = {}) {
-    const { hello = true } = config;
+    const { hello = true, gl = {} } = config;
 
     if (hello) {
       console.log(
@@ -55,7 +56,11 @@ class Base {
     const scene = new THREE.Scene();
     this.scene = scene;
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true,
+      ...gl,
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     this.renderer = renderer;

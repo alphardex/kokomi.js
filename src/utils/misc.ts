@@ -6,18 +6,32 @@ import { makeBuffer } from "./gl";
 
 // 优化模型渲染
 const optimizeModelRender = (renderer: THREE.WebGLRenderer) => {
-  renderer.physicallyCorrectLights = true;
   renderer.outputEncoding = THREE.sRGBEncoding;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.physicallyCorrectLights = true;
 };
 
 // 开启真实渲染
 const enableRealisticRender = (renderer: THREE.WebGLRenderer) => {
-  renderer.physicallyCorrectLights = true;
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ReinhardToneMapping;
   renderer.toneMappingExposure = 3;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  renderer.physicallyCorrectLights = true;
+};
+
+// 优化色域
+const optimizeColorSpace = () => {
+  if ("ColorManagement" in THREE) {
+    setDeep(THREE, false, ["ColorManagement", "legacyMode"]);
+  }
+};
+
+// 美化渲染
+const beautifyRender = (renderer: THREE.WebGLRenderer) => {
+  optimizeModelRender(renderer);
+  optimizeColorSpace();
 };
 
 // 从hdr贴图中提取envmap
@@ -29,6 +43,16 @@ const getEnvmapFromHDRTexture = (
   pmremGenerator.compileEquirectangularShader();
   const envmap = pmremGenerator.fromEquirectangular(texture).texture;
   pmremGenerator.dispose();
+  return envmap;
+};
+
+// 从场景中提取envmap
+const getEnvmapFromScene = (
+  renderer: THREE.WebGLRenderer,
+  scene: THREE.Scene
+) => {
+  const pmremGenerator = new THREE.PMREMGenerator(renderer);
+  const envmap = pmremGenerator.fromScene(scene).texture;
   return envmap;
 };
 
@@ -193,10 +217,20 @@ const downloadBlob = (blob: Blob, name: string) => {
   a.click();
 };
 
+const setDeep = (obj: any, value: any, keys: string[]) => {
+  const key = keys.pop()!;
+  const target = keys.reduce((acc, key) => acc[key], obj);
+
+  return (target[key] = value);
+};
+
 export {
   optimizeModelRender,
   enableRealisticRender,
+  optimizeColorSpace,
+  beautifyRender,
   getEnvmapFromHDRTexture,
+  getEnvmapFromScene,
   getBaryCoord,
   sampleParticlesPositionFromMesh,
   flatModel,
@@ -206,4 +240,5 @@ export {
   createPolygonShape,
   calcPerspectiveScreenSize,
   downloadBlob,
+  setDeep,
 };

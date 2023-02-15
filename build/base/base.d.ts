@@ -4,6 +4,7 @@ import type { EffectComposer } from "three-stdlib";
 import { Animator, Clock, Physics, Resizer, IMouse, Keyboard } from "../components";
 export interface BaseConfig {
     hello: boolean;
+    gl: THREE.WebGLRendererParameters;
 }
 /**
  * By extending this class, you can kickstart a basic three.js scene easily.

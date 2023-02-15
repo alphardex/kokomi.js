@@ -1,7 +1,10 @@
 import * as THREE from "three";
 declare const optimizeModelRender: (renderer: THREE.WebGLRenderer) => void;
 declare const enableRealisticRender: (renderer: THREE.WebGLRenderer) => void;
+declare const optimizeColorSpace: () => void;
+declare const beautifyRender: (renderer: THREE.WebGLRenderer) => void;
 declare const getEnvmapFromHDRTexture: (renderer: THREE.WebGLRenderer, texture: THREE.Texture) => THREE.Texture;
+declare const getEnvmapFromScene: (renderer: THREE.WebGLRenderer, scene: THREE.Scene) => THREE.Texture;
 declare const getBaryCoord: (bufferGeometry: THREE.BufferGeometry) => void;
 declare const sampleParticlesPositionFromMesh: (geometry: THREE.BufferGeometry, count?: number) => Float32Array;
 declare const flatModel: (model: THREE.Object3D) => THREE.Object3D[];
@@ -20,4 +23,5 @@ declare const calcPerspectiveScreenSize: (targetZ: number | undefined, camera: T
     height: number;
 };
 declare const downloadBlob: (blob: Blob, name: string) => void;
-export { optimizeModelRender, enableRealisticRender, getEnvmapFromHDRTexture, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, };
+declare const setDeep: (obj: any, value: any, keys: string[]) => any;
+export { optimizeModelRender, enableRealisticRender, optimizeColorSpace, beautifyRender, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, setDeep, };

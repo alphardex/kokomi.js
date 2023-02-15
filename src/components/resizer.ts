@@ -24,7 +24,9 @@ class Resizer extends Component {
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     if (composer) {
       composer.setSize(window.innerWidth, window.innerHeight);
-      composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+      if (composer.setPixelRatio) {
+        composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+      }
     }
 
     // camera
