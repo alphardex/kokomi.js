@@ -14,17 +14,23 @@ class Resizer extends Component {
     return window.innerWidth / window.innerHeight;
   }
   resize() {
-    const { base } = this;
-    if (base.camera instanceof THREE.PerspectiveCamera) {
-      base.camera.aspect = this.aspect;
-      base.camera.updateProjectionMatrix();
-      base.renderer.setSize(window.innerWidth, window.innerHeight);
-      base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-      if (base.composer) {
-        base.composer.setSize(window.innerWidth, window.innerHeight);
-        base.composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-      }
+    const { base, aspect } = this;
+    const { renderer, camera, composer } = base;
+
+    // renderer
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
+    if (composer) {
+      composer.setSize(window.innerWidth, window.innerHeight);
+      composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     }
+
+    // camera
+    if (camera instanceof THREE.PerspectiveCamera) {
+      camera.aspect = aspect;
+      camera.updateProjectionMatrix();
+    }
+
     this.emit("resize");
   }
   listenForResize() {
