@@ -182,6 +182,13 @@ class MojiGroup extends Component {
       this.scroller = scroller;
       this.scroller.listenForScroll();
     }
+
+    // handle resize
+    this.base.resizer.on("resize", () => {
+      mojis.forEach((moji) => {
+        moji.rect = moji.el.getBoundingClientRect();
+      });
+    });
   }
   update() {
     const { scroller, mojis } = this;

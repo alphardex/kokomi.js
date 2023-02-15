@@ -3,6 +3,8 @@ import * as THREE from "three";
 import { Component } from "./component";
 import { Base } from "../base/base";
 
+import { OrthographicCamera } from "../camera";
+
 class Resizer extends Component {
   enabled: boolean;
   constructor(base: Base) {
@@ -29,6 +31,17 @@ class Resizer extends Component {
     if (camera instanceof THREE.PerspectiveCamera) {
       camera.aspect = aspect;
       camera.updateProjectionMatrix();
+    } else if (camera instanceof OrthographicCamera) {
+      const { frustum } = camera;
+      if (frustum) {
+        [camera.left, camera.right, camera.top, camera.bottom] = [
+          aspect * frustum * -0.5,
+          aspect * frustum * 0.5,
+          frustum * 0.5,
+          frustum * -0.5,
+        ];
+        camera.updateProjectionMatrix();
+      }
     }
 
     this.emit("resize");

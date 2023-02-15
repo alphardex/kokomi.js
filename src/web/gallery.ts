@@ -146,6 +146,13 @@ class Gallery extends Component {
       this.scroller = scroller;
       this.scroller.listenForScroll();
     }
+
+    // handle resize
+    this.base.resizer.on("resize", () => {
+      makuGroup.makus.forEach((maku) => {
+        maku.rect = maku.el.getBoundingClientRect();
+      });
+    });
   }
   update(time: number): void {
     const { scroller, makuGroup } = this;
