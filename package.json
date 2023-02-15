@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "blueimp-md5": "^2.19.0",
-    "camera-controls": "^2.0.1",
+    "camera-controls": "^2.2.1",
     "cannon-es": "^0.20.0",
     "gsap": "^3.11.4",
     "imagesloaded": "^5.0.0",
@@ -38,10 +38,10 @@
     "@types/stats.js": "^0.17.0",
     "@types/three": "^0.149.0",
     "rimraf": "^4.1.2",
-    "rollup": "^3.12.1",
+    "rollup": "^3.15.0",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.5.0",
-    "typedoc": "^0.23.24",
+    "typedoc": "^0.23.25",
     "typescript": "^4.9.5"
   },
   "peerDependencies": {
