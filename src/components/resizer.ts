@@ -21,10 +21,9 @@ class Resizer extends Component {
       if (base.composer) {
         base.composer.setSize(window.innerWidth, window.innerHeight);
         base.composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-      } else {
-        base.renderer.setSize(window.innerWidth, window.innerHeight);
-        base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
       }
+      base.renderer.setSize(window.innerWidth, window.innerHeight);
+      base.renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     }
     this.emit("resize");
   }
