@@ -224,15 +224,6 @@ const setDeep = (obj: any, value: any, keys: string[]) => {
   return (target[key] = value);
 };
 
-const patchPixiFilter = (fragmentShader: string) =>
-  [
-    /* glsl */ `
-    #define vTextureCoord vUv
-    #define uSampler tDiffuse
-    `,
-    fragmentShader,
-  ].join("\n");
-
 export {
   optimizeModelRender,
   enableRealisticRender,
@@ -250,5 +241,4 @@ export {
   calcPerspectiveScreenSize,
   downloadBlob,
   setDeep,
-  patchPixiFilter,
 };
