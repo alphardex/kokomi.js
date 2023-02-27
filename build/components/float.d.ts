@@ -11,7 +11,7 @@ export interface FloatConfig {
  * A class that can make objects float.
  */
 declare class Float extends Component {
-    g: THREE.Group;
+    group: THREE.Group;
     speed: number;
     rotationIntensity: number;
     floatIntensity: number;

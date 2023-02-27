@@ -1,6 +1,7 @@
 export * from "./animationManager";
 export * from "./animator";
 export * from "./assetManager";
+export * from "./center";
 export * from "./clock";
 export * from "./component";
 export * from "./float";

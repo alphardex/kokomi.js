@@ -24,4 +24,12 @@ declare const calcPerspectiveScreenSize: (targetZ: number | undefined, camera: T
 };
 declare const downloadBlob: (blob: Blob, name: string) => void;
 declare const setDeep: (obj: any, value: any, keys: string[]) => any;
-export { optimizeModelRender, enableRealisticRender, optimizeColorSpace, beautifyRender, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, setDeep, };
+declare const getBound: (object: THREE.Object3D, precise?: boolean) => {
+    boundingBox: THREE.Box3;
+    center: THREE.Vector3;
+    boundingSphere: THREE.Sphere;
+    width: number;
+    height: number;
+    depth: number;
+};
+export { optimizeModelRender, enableRealisticRender, optimizeColorSpace, beautifyRender, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, setDeep, getBound, };
