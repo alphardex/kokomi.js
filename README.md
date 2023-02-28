@@ -42,9 +42,9 @@ style.css
 }
 ```
 
-script.ts
+script.js
 
-```ts
+```js
 import * as kokomi from "kokomi.js";
 
 class Sketch extends kokomi.Base {
@@ -54,7 +54,7 @@ class Sketch extends kokomi.Base {
     const box = new kokomi.Box(this);
     box.addExisting();
 
-    this.update((time: number) => {
+    this.update((time) => {
       box.spin(time);
     });
   }
@@ -106,6 +106,13 @@ See more examples: https://kokomi-playground.vercel.app
 ### Reflector
 
 ![6](./assets/previews/6.gif?v=2)
+
+## Credits
+
+- [three.js](https://github.com/mrdoob/three.js)
+- [drei](https://github.com/pmndrs/drei)
+- Various articles from [codrops](https://tympanus.net/codrops/) and other amazing blogs
+- Various video tutorials from [youtube](https://www.youtube.com/)
 
 ## Author
 
