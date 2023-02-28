@@ -58,7 +58,7 @@ const createSketch = () => {
 createSketch();
 ```
 
-![Basic](./assets/previews/1.gif?v=1)
+![Basic](./assets/previews/1.gif?v=2)
 
 Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
@@ -75,21 +75,21 @@ See more examples: https://kokomi-playground.vercel.app
 
 ## Previews
 
-### Asset Manage
+### Model Showcase
 
-![2](./assets/previews/2.gif?v=1)
+![2](./assets/previews/2.gif?v=2)
 
 ### Shadertoy Integration
 
-![3](./assets/previews/3.gif?v=1)
+![3](./assets/previews/3.gif?v=2)
 
 ### Persistence Effect
 
-![4](./assets/previews/4.gif?v=1)
+![4](./assets/previews/4.gif?v=2)
 
 ### Render Texture
 
-![5](./assets/previews/5.gif?v=1)
+![5](./assets/previews/5.gif?v=2)
 
 ## Author
 
