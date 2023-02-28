@@ -28,7 +28,18 @@ With just several lines, you can make a most basic 3D scene :d
 index.html
 
 ```html
-<div id="sketch" class="bg-black w-screen h-screen overflow-hidden"></div>
+<div id="sketch"></div>
+```
+
+style.css
+
+```css
+#sketch {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
 ```
 
 script.ts
@@ -70,8 +81,9 @@ See more examples: https://kokomi-playground.vercel.app
 
 - You can simply extend `kokomi.Base` class to kickstart a simple scene without writing any boilerplate codes.
 - Either you can write all your three.js code in a single file, or encapsulate your code into individual classes in a large project. By extending `kokomi.Component`, you can make your components keep their own state and animation.
-- `kokomi.AssetManager` can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple json file to config your assets without caring about various loaders.
+- `kokomi.AssetManager` can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js object to config your assets without caring about various loaders.
 - Integrated with [three.interactive](https://github.com/markuslerner/THREE.Interactive), which can handle mouse and touch interactions easily.
+- Many more [useful components](https://kokomi-js.vercel.app/examples/) for you to discover!
 
 ## Previews
 
@@ -90,6 +102,10 @@ See more examples: https://kokomi-playground.vercel.app
 ### Render Texture
 
 ![5](./assets/previews/5.gif?v=2)
+
+### Reflector
+
+![6](./assets/previews/6.gif?v=2)
 
 ## Author
 
