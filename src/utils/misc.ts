@@ -34,6 +34,12 @@ const beautifyRender = (renderer: THREE.WebGLRenderer) => {
   optimizeColorSpace();
 };
 
+// 开启阴影
+const enableShadow = (renderer: THREE.WebGLRenderer) => {
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+};
+
 // 从hdr贴图中提取envmap
 const getEnvmapFromHDRTexture = (
   renderer: THREE.WebGLRenderer,
@@ -251,6 +257,7 @@ export {
   enableRealisticRender,
   optimizeColorSpace,
   beautifyRender,
+  enableShadow,
   getEnvmapFromHDRTexture,
   getEnvmapFromScene,
   getBaryCoord,
