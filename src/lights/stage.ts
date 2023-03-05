@@ -6,7 +6,12 @@ import { Base } from "../base/base";
 import { Center } from "../components/center";
 import { ContactShadows } from "../shadows";
 
-const presets = {
+interface PresetItem {
+  main: number[];
+  fill: number[];
+}
+
+const presets: Record<string, PresetItem> = {
   rembrandt: {
     main: [1, 2, 1],
     fill: [-2, -0.5, -2],
@@ -43,7 +48,7 @@ class Stage extends Component {
   group: THREE.Group;
   center: Center;
   shadow: boolean | "contact";
-  presetData: any;
+  presetData: PresetItem;
   ambientLight: THREE.AmbientLight;
   spotLight: THREE.SpotLight;
   pointLight: THREE.PointLight;
