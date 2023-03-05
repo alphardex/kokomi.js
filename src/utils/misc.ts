@@ -8,7 +8,6 @@ import { makeBuffer } from "./gl";
 const optimizeModelRender = (renderer: THREE.WebGLRenderer) => {
   renderer.outputEncoding = THREE.sRGBEncoding;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.physicallyCorrectLights = true;
 };
 
 // 开启真实渲染
@@ -21,17 +20,9 @@ const enableRealisticRender = (renderer: THREE.WebGLRenderer) => {
   renderer.physicallyCorrectLights = true;
 };
 
-// 优化色域
-const optimizeColorSpace = () => {
-  if ("ColorManagement" in THREE) {
-    setDeep(THREE, false, ["ColorManagement", "legacyMode"]);
-  }
-};
-
 // 美化渲染
 const beautifyRender = (renderer: THREE.WebGLRenderer) => {
   optimizeModelRender(renderer);
-  optimizeColorSpace();
 };
 
 // 开启阴影
@@ -223,13 +214,7 @@ const downloadBlob = (blob: Blob, name: string) => {
   a.click();
 };
 
-const setDeep = (obj: any, value: any, keys: string[]) => {
-  const key = keys.pop()!;
-  const target = keys.reduce((acc, key) => acc[key], obj);
-
-  return (target[key] = value);
-};
-
+// 获取边界
 const getBound = (object: THREE.Object3D, precise = true) => {
   const box3 = new THREE.Box3().setFromObject(object, precise);
 
@@ -255,7 +240,6 @@ const getBound = (object: THREE.Object3D, precise = true) => {
 export {
   optimizeModelRender,
   enableRealisticRender,
-  optimizeColorSpace,
   beautifyRender,
   enableShadow,
   getEnvmapFromHDRTexture,
@@ -269,6 +253,5 @@ export {
   createPolygonShape,
   calcPerspectiveScreenSize,
   downloadBlob,
-  setDeep,
   getBound,
 };
