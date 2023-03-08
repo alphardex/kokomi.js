@@ -5,6 +5,8 @@ import { Base } from "../base/base";
 
 import { OrthographicCamera } from "../camera";
 
+import type { EffectComposer } from "three-stdlib";
+
 class Resizer extends Component {
   enabled: boolean;
   constructor(base: Base) {
@@ -15,21 +17,19 @@ class Resizer extends Component {
   get aspect() {
     return window.innerWidth / window.innerHeight;
   }
-  resize() {
-    const { base, aspect } = this;
-    const { renderer, camera, composer } = base;
-
-    // renderer
+  resizeRenderer(renderer: THREE.WebGLRenderer) {
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-    if (composer) {
-      composer.setSize(window.innerWidth, window.innerHeight);
-      if (composer.setPixelRatio) {
-        composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
-      }
+  }
+  resizeComposer(composer: EffectComposer) {
+    composer.setSize(window.innerWidth, window.innerHeight);
+    if (composer.setPixelRatio) {
+      composer.setPixelRatio(Math.min(2, window.devicePixelRatio));
     }
+  }
+  resizeCamera(camera: THREE.Camera) {
+    const { aspect } = this;
 
-    // camera
     if (camera instanceof THREE.PerspectiveCamera) {
       camera.aspect = aspect;
       camera.updateProjectionMatrix();
@@ -45,6 +45,21 @@ class Resizer extends Component {
         camera.updateProjectionMatrix();
       }
     }
+  }
+  resize() {
+    const { base } = this;
+    const { renderer, camera, composer } = base;
+
+    // renderer
+    this.resizeRenderer(renderer);
+
+    // composer
+    if (composer) {
+      this.resizeComposer(composer);
+    }
+
+    // camera
+    this.resizeCamera(camera);
 
     this.emit("resize");
   }
