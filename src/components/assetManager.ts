@@ -5,6 +5,7 @@ import {
   FBXLoader,
   FontLoader,
   GLTFLoader,
+  KTX2Loader,
   OBJLoader,
   RGBELoader,
   SVGLoader,
@@ -26,7 +27,8 @@ export type ResoureType =
   | "hdrTexture"
   | "svg"
   | "exrTexture"
-  | "video";
+  | "video"
+  | "ktx2Texture";
 
 export interface ResourceItem {
   name: string;
@@ -47,11 +49,13 @@ export interface Loaders {
   hdrTextureLoader: RGBELoader;
   svgLoader: SVGLoader;
   exrLoader: EXRLoader;
+  ktx2Loader: KTX2Loader;
 }
 
 export interface AssetManagerConfig {
   useDracoLoader: boolean;
   dracoDecoderPath: string;
+  ktx2TranscoderPath: string;
 }
 
 /**
@@ -76,8 +80,9 @@ class AssetManager extends Component {
     const {
       useDracoLoader = false,
       dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
+      ktx2TranscoderPath = "https://unpkg.com/three/examples/jsm/libs/basis/",
     } = config;
-    this.config = { useDracoLoader, dracoDecoderPath };
+    this.config = { useDracoLoader, dracoDecoderPath, ktx2TranscoderPath };
 
     this.resourceList = list;
 
@@ -87,9 +92,12 @@ class AssetManager extends Component {
 
     this.loaders = {};
     this.setLoaders();
+
     if (useDracoLoader) {
       this.setDracoLoader();
     }
+
+    this.setKTX2Transcoder();
 
     this.startLoading();
   }
@@ -105,12 +113,17 @@ class AssetManager extends Component {
     this.loaders.hdrTextureLoader = new RGBELoader();
     this.loaders.svgLoader = new SVGLoader();
     this.loaders.exrLoader = new EXRLoader();
+    this.loaders.ktx2Loader = new KTX2Loader();
   }
   // 设置draco加载器
   setDracoLoader() {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath(this.config.dracoDecoderPath);
     this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
+  }
+  // 设置ktx2转码器
+  setKTX2Transcoder() {
+    this.loaders.ktx2Loader?.setTranscoderPath(this.config.ktx2TranscoderPath);
   }
   // 开始加载
   startLoading() {
@@ -160,6 +173,10 @@ class AssetManager extends Component {
         });
       } else if (resource.type === "video") {
         loadVideoTexture(resource.path as string).then((file) => {
+          this.resourceLoaded(resource, file);
+        });
+      } else if (resource.type === "ktx2Texture") {
+        this.loaders.ktx2Loader?.load(resource.path as string, (file) => {
           this.resourceLoaded(resource, file);
         });
       }
