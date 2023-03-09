@@ -97,7 +97,7 @@ class AssetManager extends Component {
       this.setDracoLoader();
     }
 
-    this.setKTX2Transcoder();
+    this.setKTX2Loader();
 
     this.startLoading();
   }
@@ -122,8 +122,14 @@ class AssetManager extends Component {
     this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
   }
   // 设置ktx2转码器
-  setKTX2Transcoder() {
-    this.loaders.ktx2Loader?.setTranscoderPath(this.config.ktx2TranscoderPath);
+  setKTX2Loader() {
+    this.loaders.ktx2Loader
+      ?.setTranscoderPath(this.config.ktx2TranscoderPath)
+      ?.detectSupport(this.base.renderer);
+
+    if (this.loaders.ktx2Loader) {
+      this.loaders.gltfLoader?.setKTX2Loader(this.loaders.ktx2Loader);
+    }
   }
   // 开始加载
   startLoading() {
