@@ -1,4 +1,4 @@
-<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>HyperbolicHelicoidGeometry | kokomi.js</title><meta name="description" content="Documentation for kokomi.js"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>DecalGeometry | kokomi.js</title><meta name="description" content="Documentation for kokomi.js"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script async src="../assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
 <div class="tsd-toolbar-contents container">
 <div class="table-cell" id="tsd-search" data-base="..">
 <div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
@@ -13,20 +13,16 @@
 <div class="tsd-page-title">
 <ul class="tsd-breadcrumb">
 <li><a href="../modules.html">kokomi.js</a></li>
-<li><a href="HyperbolicHelicoidGeometry.html">HyperbolicHelicoidGeometry</a></li></ul>
-<h1>Class HyperbolicHelicoidGeometry</h1></div>
-<section class="tsd-panel tsd-comment">
-<div class="tsd-comment tsd-typography"><p>A <a href="https://mathworld.wolfram.com/HyperbolicHelicoid.html">HyperbolicHelicoid</a> geometry</p>
-<p>Demo: <a href="https://kokomi-js.vercel.app/examples/#hyperbolicHelicoid">https://kokomi-js.vercel.app/examples/#hyperbolicHelicoid</a></p>
-</div></section>
+<li><a href="DecalGeometry.html">DecalGeometry</a></li></ul>
+<h1>Class DecalGeometry</h1></div>
 <section class="tsd-panel tsd-hierarchy">
 <h4>Hierarchy</h4>
 <ul class="tsd-hierarchy">
-<li><span class="tsd-signature-type">ParametricGeometry</span>
+<li><span class="tsd-signature-type">BufferGeometry</span>
 <ul class="tsd-hierarchy">
-<li><span class="target">HyperbolicHelicoidGeometry</span></li></ul></li></ul></section><aside class="tsd-sources">
+<li><span class="target">DecalGeometry</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/8d928bf/src/geometries/hyperbolicHelicoid.ts#L10">src/geometries/hyperbolicHelicoid.ts:10</a></li></ul></aside>
+<li>Defined in node_modules/three-stdlib/geometries/DecalGeometry.d.ts:3</li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -34,87 +30,90 @@
 <div class="tsd-accordion-details">
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Constructors</h3>
-<div class="tsd-index-list"><a href="HyperbolicHelicoidGeometry.html#constructor" class="tsd-index-link tsd-kind-constructor tsd-parent-kind-class"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-512-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-512-text"></path></svg><span>constructor</span></a>
+<div class="tsd-index-list"><a href="DecalGeometry.html#constructor" class="tsd-index-link tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#4D7FFF" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-512-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-512-text"></path></svg><span>constructor</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="HyperbolicHelicoidGeometry.html#attributes" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>attributes</span></a>
-<a href="HyperbolicHelicoidGeometry.html#boundingBox" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>bounding<wbr/>Box</span></a>
-<a href="HyperbolicHelicoidGeometry.html#boundingSphere" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>bounding<wbr/>Sphere</span></a>
-<a href="HyperbolicHelicoidGeometry.html#drawRange" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>draw<wbr/>Range</span></a>
-<a href="HyperbolicHelicoidGeometry.html#drawcalls" class="tsd-index-link deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>drawcalls</span></a>
-<a href="HyperbolicHelicoidGeometry.html#groups" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>groups</span></a>
-<a href="HyperbolicHelicoidGeometry.html#id" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>id</span></a>
-<a href="HyperbolicHelicoidGeometry.html#index" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>index</span></a>
-<a href="HyperbolicHelicoidGeometry.html#isBufferGeometry" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Buffer<wbr/>Geometry</span></a>
-<a href="HyperbolicHelicoidGeometry.html#morphAttributes" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>morph<wbr/>Attributes</span></a>
-<a href="HyperbolicHelicoidGeometry.html#morphTargetsRelative" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>morph<wbr/>Targets<wbr/>Relative</span></a>
-<a href="HyperbolicHelicoidGeometry.html#name" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>name</span></a>
-<a href="HyperbolicHelicoidGeometry.html#offsets" class="tsd-index-link deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>offsets</span></a>
-<a href="HyperbolicHelicoidGeometry.html#parameters" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>parameters</span></a>
-<a href="HyperbolicHelicoidGeometry.html#type" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>type</span></a>
-<a href="HyperbolicHelicoidGeometry.html#userData" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>user<wbr/>Data</span></a>
-<a href="HyperbolicHelicoidGeometry.html#uuid" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>uuid</span></a>
+<div class="tsd-index-list"><a href="DecalGeometry.html#attributes" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-1024-path"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)" id="icon-1024-text"></path></svg><span>attributes</span></a>
+<a href="DecalGeometry.html#boundingBox" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>bounding<wbr/>Box</span></a>
+<a href="DecalGeometry.html#boundingSphere" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>bounding<wbr/>Sphere</span></a>
+<a href="DecalGeometry.html#drawRange" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>draw<wbr/>Range</span></a>
+<a href="DecalGeometry.html#drawcalls" class="tsd-index-link deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>drawcalls</span></a>
+<a href="DecalGeometry.html#groups" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>groups</span></a>
+<a href="DecalGeometry.html#id" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>id</span></a>
+<a href="DecalGeometry.html#index" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>index</span></a>
+<a href="DecalGeometry.html#isBufferGeometry" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>is<wbr/>Buffer<wbr/>Geometry</span></a>
+<a href="DecalGeometry.html#morphAttributes" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>morph<wbr/>Attributes</span></a>
+<a href="DecalGeometry.html#morphTargetsRelative" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>morph<wbr/>Targets<wbr/>Relative</span></a>
+<a href="DecalGeometry.html#name" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>name</span></a>
+<a href="DecalGeometry.html#offsets" class="tsd-index-link deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>offsets</span></a>
+<a href="DecalGeometry.html#type" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>type</span></a>
+<a href="DecalGeometry.html#userData" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>user<wbr/>Data</span></a>
+<a href="DecalGeometry.html#uuid" class="tsd-index-link tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg><span>uuid</span></a>
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Methods</h3>
-<div class="tsd-index-list"><a href="HyperbolicHelicoidGeometry.html#addAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>add<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#addDrawCall" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Draw<wbr/>Call</span></a>
-<a href="HyperbolicHelicoidGeometry.html#addEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Event<wbr/>Listener</span></a>
-<a href="HyperbolicHelicoidGeometry.html#addGroup" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Group</span></a>
-<a href="HyperbolicHelicoidGeometry.html#addIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Index</span></a>
-<a href="HyperbolicHelicoidGeometry.html#applyMatrix4" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>apply<wbr/>Matrix4</span></a>
-<a href="HyperbolicHelicoidGeometry.html#applyQuaternion" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>apply<wbr/>Quaternion</span></a>
-<a href="HyperbolicHelicoidGeometry.html#center" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>center</span></a>
-<a href="HyperbolicHelicoidGeometry.html#clearDrawCalls" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Draw<wbr/>Calls</span></a>
-<a href="HyperbolicHelicoidGeometry.html#clearGroups" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Groups</span></a>
-<a href="HyperbolicHelicoidGeometry.html#clone" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clone</span></a>
-<a href="HyperbolicHelicoidGeometry.html#computeBoundingBox" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Bounding<wbr/>Box</span></a>
-<a href="HyperbolicHelicoidGeometry.html#computeBoundingSphere" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Bounding<wbr/>Sphere</span></a>
-<a href="HyperbolicHelicoidGeometry.html#computeTangents" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Tangents</span></a>
-<a href="HyperbolicHelicoidGeometry.html#computeVertexNormals" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Vertex<wbr/>Normals</span></a>
-<a href="HyperbolicHelicoidGeometry.html#copy" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>copy</span></a>
-<a href="HyperbolicHelicoidGeometry.html#deleteAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>delete<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#dispatchEvent" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>dispatch<wbr/>Event</span></a>
-<a href="HyperbolicHelicoidGeometry.html#dispose" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>dispose</span></a>
-<a href="HyperbolicHelicoidGeometry.html#getAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#getIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Index</span></a>
-<a href="HyperbolicHelicoidGeometry.html#hasAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>has<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#hasEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>has<wbr/>Event<wbr/>Listener</span></a>
-<a href="HyperbolicHelicoidGeometry.html#lookAt" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>look<wbr/>At</span></a>
-<a href="HyperbolicHelicoidGeometry.html#normalizeNormals" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>normalize<wbr/>Normals</span></a>
-<a href="HyperbolicHelicoidGeometry.html#removeAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>remove<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#removeEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>remove<wbr/>Event<wbr/>Listener</span></a>
-<a href="HyperbolicHelicoidGeometry.html#rotateX" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateX</span></a>
-<a href="HyperbolicHelicoidGeometry.html#rotateY" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateY</span></a>
-<a href="HyperbolicHelicoidGeometry.html#rotateZ" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateZ</span></a>
-<a href="HyperbolicHelicoidGeometry.html#scale" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>scale</span></a>
-<a href="HyperbolicHelicoidGeometry.html#setAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Attribute</span></a>
-<a href="HyperbolicHelicoidGeometry.html#setDrawRange" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Draw<wbr/>Range</span></a>
-<a href="HyperbolicHelicoidGeometry.html#setFromPoints" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>From<wbr/>Points</span></a>
-<a href="HyperbolicHelicoidGeometry.html#setIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Index</span></a>
-<a href="HyperbolicHelicoidGeometry.html#toJSON" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>toJSON</span></a>
-<a href="HyperbolicHelicoidGeometry.html#toNonIndexed" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>to<wbr/>Non<wbr/>Indexed</span></a>
-<a href="HyperbolicHelicoidGeometry.html#translate" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>translate</span></a>
+<div class="tsd-index-list"><a href="DecalGeometry.html#addAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="#FF4DB8" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12" id="icon-2048-path"></rect><path d="M9.162 16V7.24H10.578L11.514 10.072C11.602 10.328 11.674 10.584 11.73 10.84C11.794 11.088 11.842 11.28 11.874 11.416C11.906 11.28 11.954 11.088 12.018 10.84C12.082 10.584 12.154 10.324 12.234 10.06L13.122 7.24H14.538V16H13.482V12.82C13.482 12.468 13.49 12.068 13.506 11.62C13.53 11.172 13.558 10.716 13.59 10.252C13.622 9.78 13.654 9.332 13.686 8.908C13.726 8.476 13.762 8.1 13.794 7.78L12.366 12.16H11.334L9.894 7.78C9.934 8.092 9.97 8.456 10.002 8.872C10.042 9.28 10.078 9.716 10.11 10.18C10.142 10.636 10.166 11.092 10.182 11.548C10.206 12.004 10.218 12.428 10.218 12.82V16H9.162Z" fill="var(--color-text)" id="icon-2048-text"></path></svg><span>add<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#addDrawCall" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Draw<wbr/>Call</span></a>
+<a href="DecalGeometry.html#addEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Event<wbr/>Listener</span></a>
+<a href="DecalGeometry.html#addGroup" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Group</span></a>
+<a href="DecalGeometry.html#addIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>add<wbr/>Index</span></a>
+<a href="DecalGeometry.html#applyMatrix4" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>apply<wbr/>Matrix4</span></a>
+<a href="DecalGeometry.html#applyQuaternion" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>apply<wbr/>Quaternion</span></a>
+<a href="DecalGeometry.html#center" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>center</span></a>
+<a href="DecalGeometry.html#clearDrawCalls" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Draw<wbr/>Calls</span></a>
+<a href="DecalGeometry.html#clearGroups" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clear<wbr/>Groups</span></a>
+<a href="DecalGeometry.html#clone" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>clone</span></a>
+<a href="DecalGeometry.html#computeBoundingBox" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Bounding<wbr/>Box</span></a>
+<a href="DecalGeometry.html#computeBoundingSphere" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Bounding<wbr/>Sphere</span></a>
+<a href="DecalGeometry.html#computeTangents" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Tangents</span></a>
+<a href="DecalGeometry.html#computeVertexNormals" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>compute<wbr/>Vertex<wbr/>Normals</span></a>
+<a href="DecalGeometry.html#copy" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>copy</span></a>
+<a href="DecalGeometry.html#deleteAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>delete<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#dispatchEvent" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>dispatch<wbr/>Event</span></a>
+<a href="DecalGeometry.html#dispose" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>dispose</span></a>
+<a href="DecalGeometry.html#getAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#getIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>get<wbr/>Index</span></a>
+<a href="DecalGeometry.html#hasAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>has<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#hasEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>has<wbr/>Event<wbr/>Listener</span></a>
+<a href="DecalGeometry.html#lookAt" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>look<wbr/>At</span></a>
+<a href="DecalGeometry.html#normalizeNormals" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>normalize<wbr/>Normals</span></a>
+<a href="DecalGeometry.html#removeAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>remove<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#removeEventListener" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>remove<wbr/>Event<wbr/>Listener</span></a>
+<a href="DecalGeometry.html#rotateX" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateX</span></a>
+<a href="DecalGeometry.html#rotateY" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateY</span></a>
+<a href="DecalGeometry.html#rotateZ" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>rotateZ</span></a>
+<a href="DecalGeometry.html#scale" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>scale</span></a>
+<a href="DecalGeometry.html#setAttribute" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Attribute</span></a>
+<a href="DecalGeometry.html#setDrawRange" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Draw<wbr/>Range</span></a>
+<a href="DecalGeometry.html#setFromPoints" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>From<wbr/>Points</span></a>
+<a href="DecalGeometry.html#setIndex" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>set<wbr/>Index</span></a>
+<a href="DecalGeometry.html#toJSON" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>toJSON</span></a>
+<a href="DecalGeometry.html#toNonIndexed" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>to<wbr/>Non<wbr/>Indexed</span></a>
+<a href="DecalGeometry.html#translate" class="tsd-index-link tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg><span>translate</span></a>
 </div></section></div></details></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Constructors</h2>
-<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class"><a id="constructor" class="tsd-anchor"></a>
+<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a id="constructor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>constructor</span><a href="#constructor" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none" id="icon-anchor-a"></path><path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" id="icon-anchor-b"></path><path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" id="icon-anchor-c"></path></svg></a></h3>
-<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-<li class="tsd-signature tsd-anchor-link" id="constructor.new_HyperbolicHelicoidGeometry">new <wbr/>Hyperbolic<wbr/>Helicoid<wbr/>Geometry<span class="tsd-signature-symbol">(</span>slices<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, stacks<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><a href="#constructor.new_HyperbolicHelicoidGeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="constructor.new_DecalGeometry">new <wbr/>Decal<wbr/>Geometry<span class="tsd-signature-symbol">(</span>mesh<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Mesh</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span>, position<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span>, orientation<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Euler</span>, size<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><a href="#constructor.new_DecalGeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> slices: <span class="tsd-signature-type">number</span></h5></li>
+<h5>mesh: <span class="tsd-signature-type">Mesh</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Material</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h5></li>
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> stacks: <span class="tsd-signature-type">number</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a></h4><aside class="tsd-sources">
-<p>Overrides ParametricGeometry.constructor</p>
+<h5>position: <span class="tsd-signature-type">Vector3</span></h5></li>
+<li>
+<h5>orientation: <span class="tsd-signature-type">Euler</span></h5></li>
+<li>
+<h5>size: <span class="tsd-signature-type">Vector3</span></h5></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a></h4><aside class="tsd-sources">
+<p>Overrides BufferGeometry.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/8d928bf/src/geometries/hyperbolicHelicoid.ts#L11">src/geometries/hyperbolicHelicoid.ts:11</a></li></ul></aside></li></ul></section></section>
+<li>Defined in node_modules/three-stdlib/geometries/DecalGeometry.d.ts:4</li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="attributes" class="tsd-anchor"></a>
@@ -127,7 +126,7 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-index-signature">
 <h5><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">GLBufferAttribute</span></h5></li></ul></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.attributes</p>
+<p>Inherited from BufferGeometry.attributes</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:50</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="boundingBox" class="tsd-anchor"></a>
@@ -136,7 +135,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>null</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.boundingBox</p>
+<p>Inherited from BufferGeometry.boundingBox</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:74</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="boundingSphere" class="tsd-anchor"></a>
@@ -145,7 +144,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>null</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.boundingSphere</p>
+<p>Inherited from BufferGeometry.boundingSphere</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:79</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="drawRange" class="tsd-anchor"></a>
@@ -160,7 +159,7 @@
 <h5>count<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li>
 <li class="tsd-parameter">
 <h5>start<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li></ul></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.drawRange</p>
+<p>Inherited from BufferGeometry.drawRange</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:84</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="drawcalls" class="tsd-anchor"></a>
@@ -169,7 +168,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Deprecated</h3><p>Use BufferGeometry#groups .groups instead.</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.drawcalls</p>
+<p>Inherited from BufferGeometry.drawcalls</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:166</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="groups" class="tsd-anchor"></a>
@@ -178,7 +177,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>[]</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.groups</p>
+<p>Inherited from BufferGeometry.groups</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:69</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
@@ -186,7 +185,7 @@
 <div class="tsd-signature">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 <div class="tsd-comment tsd-typography"><p>Unique number of this buffergeometry instance</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.id</p>
+<p>Inherited from BufferGeometry.id</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:29</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="index" class="tsd-anchor"></a>
@@ -195,13 +194,13 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>null</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.index</p>
+<p>Inherited from BufferGeometry.index</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:45</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="isBufferGeometry" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Buffer<wbr/>Geometry</span><a href="#isBufferGeometry" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">is<wbr/>Buffer<wbr/>Geometry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.isBufferGeometry</p>
+<p>Inherited from BufferGeometry.isBufferGeometry</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:90</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="morphAttributes" class="tsd-anchor"></a>
@@ -214,7 +213,7 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-index-signature">
 <h5><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.morphAttributes</p>
+<p>Inherited from BufferGeometry.morphAttributes</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:57</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="morphTargetsRelative" class="tsd-anchor"></a>
@@ -223,7 +222,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>false</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.morphTargetsRelative</p>
+<p>Inherited from BufferGeometry.morphTargetsRelative</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:64</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
@@ -232,7 +231,7 @@
 <div class="tsd-comment tsd-typography">
 <h3>Default</h3><p>&#39;&#39;</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.name</p>
+<p>Inherited from BufferGeometry.name</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:35</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="offsets" class="tsd-anchor"></a>
@@ -241,48 +240,18 @@
 <div class="tsd-comment tsd-typography">
 <h3>Deprecated</h3><p>Use BufferGeometry#groups .groups instead.</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.offsets</p>
+<p>Inherited from BufferGeometry.offsets</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:171</li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="parameters" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>parameters</span><a href="#parameters" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
-<div class="tsd-signature">parameters<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>u<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>slices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span>    </span>stacks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
-<div class="tsd-type-declaration">
-<h4>Type declaration</h4>
-<ul class="tsd-parameters">
-<li class="tsd-parameter">
-<h5>func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>u<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
-<ul class="tsd-parameters">
-<li class="tsd-parameter-signature">
-<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property tsd-is-external">
-<li class="tsd-signature" id="parameters.__type-3.func.__type-4.__type-5"><span class="tsd-signature-symbol">(</span>u<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, v<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, dest<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-<li class="tsd-description">
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5>u: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>v: <span class="tsd-signature-type">number</span></h5></li>
-<li>
-<h5>dest: <span class="tsd-signature-type">Vector3</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></li>
-<li class="tsd-parameter">
-<h5>slices<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li>
-<li class="tsd-parameter">
-<h5>stacks<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></h5></li></ul></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.parameters</p>
-<ul>
-<li>Defined in node_modules/@types/three/examples/jsm/geometries/ParametricGeometry.d.ts:11</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 <div class="tsd-comment tsd-typography">
-<h3>Default</h3><p>&#39;ParametricGeometry&#39;</p>
+<h3>Default</h3><p>&#39;BufferGeometry&#39;</p>
 </div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.type</p>
+<p>Inherited from BufferGeometry.type</p>
 <ul>
-<li>Defined in node_modules/@types/three/examples/jsm/geometries/ParametricGeometry.d.ts:9</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:40</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="userData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Data</span><a href="#userData" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">user<wbr/>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[key: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
@@ -293,13 +262,13 @@
 <ul class="tsd-parameters">
 <li class="tsd-parameter-index-signature">
 <h5><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5></li></ul></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.userData</p>
+<p>Inherited from BufferGeometry.userData</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:89</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="uuid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uuid</span><a href="#uuid" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <div class="tsd-signature">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.uuid</p>
+<p>Inherited from BufferGeometry.uuid</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:30</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
@@ -320,7 +289,7 @@
 <li>
 <h5>attribute: <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addAttribute</p>
+<p>Inherited from BufferGeometry.addAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:191</li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="addAttribute.addAttribute-2">add<wbr/>Attribute<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, array<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, itemSize<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#addAttribute.addAttribute-2" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
@@ -335,7 +304,7 @@
 <li>
 <h5>itemSize: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addAttribute</p>
+<p>Inherited from BufferGeometry.addAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:192</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="addDrawCall" class="tsd-anchor"></a>
@@ -356,13 +325,13 @@
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> indexOffset: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addDrawCall</p>
+<p>Inherited from BufferGeometry.addDrawCall</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:181</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Event<wbr/>Listener</span><a href="#addEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="addEventListener.addEventListener-1">add<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addEventListener.addEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="addEventListener.addEventListener-1">add<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#addEventListener.addEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Adds a listener to an event type.</p>
 </div>
@@ -379,11 +348,11 @@
 <div class="tsd-comment tsd-typography"><p>The type of event to listen to.</p>
 </div></li>
 <li>
-<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
+<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
 <div class="tsd-comment tsd-typography"><p>The function that gets called when the event is fired.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addEventListener</p>
+<p>Inherited from BufferGeometry.addEventListener</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:30</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="addGroup" class="tsd-anchor"></a>
@@ -401,7 +370,7 @@
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> materialIndex: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addGroup</p>
+<p>Inherited from BufferGeometry.addGroup</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:105</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="addIndex" class="tsd-anchor"></a>
@@ -418,7 +387,7 @@
 <li>
 <h5>index: <span class="tsd-signature-type">any</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.addIndex</p>
+<p>Inherited from BufferGeometry.addIndex</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:176</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="applyMatrix4" class="tsd-anchor"></a>
@@ -434,7 +403,7 @@
 <li>
 <h5>matrix: <span class="tsd-signature-type">Matrix4</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.applyMatrix4</p>
+<p>Inherited from BufferGeometry.applyMatrix4</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:113</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="applyQuaternion" class="tsd-anchor"></a>
@@ -448,7 +417,7 @@
 <li>
 <h5>q: <span class="tsd-signature-type">Quaternion</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.applyQuaternion</p>
+<p>Inherited from BufferGeometry.applyQuaternion</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:114</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="center" class="tsd-anchor"></a>
@@ -457,7 +426,7 @@
 <li class="tsd-signature tsd-anchor-link" id="center.center-1">center<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><a href="#center.center-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.center</p>
+<p>Inherited from BufferGeometry.center</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:123</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="clearDrawCalls" class="tsd-anchor"></a>
@@ -469,7 +438,7 @@
 <h3>Deprecated</h3><p>Use BufferGeometry#clearGroups .clearGroups() instead.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.clearDrawCalls</p>
+<p>Inherited from BufferGeometry.clearDrawCalls</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:186</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="clearGroups" class="tsd-anchor"></a>
@@ -478,7 +447,7 @@
 <li class="tsd-signature tsd-anchor-link" id="clearGroups.clearGroups-1">clear<wbr/>Groups<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#clearGroups.clearGroups-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.clearGroups</p>
+<p>Inherited from BufferGeometry.clearGroups</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:106</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="clone" class="tsd-anchor"></a>
@@ -487,7 +456,7 @@
 <li class="tsd-signature tsd-anchor-link" id="clone.clone-1">clone<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><a href="#clone.clone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.clone</p>
+<p>Inherited from BufferGeometry.clone</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:154</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="computeBoundingBox" class="tsd-anchor"></a>
@@ -499,7 +468,7 @@
 Bounding boxes aren&#39;t computed by default. They need to be explicitly computed, otherwise they are null.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.computeBoundingBox</p>
+<p>Inherited from BufferGeometry.computeBoundingBox</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:131</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="computeBoundingSphere" class="tsd-anchor"></a>
@@ -511,7 +480,7 @@ Bounding boxes aren&#39;t computed by default. They need to be explicitly comput
 Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly computed, otherwise they are null.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.computeBoundingSphere</p>
+<p>Inherited from BufferGeometry.computeBoundingSphere</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:137</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="computeTangents" class="tsd-anchor"></a>
@@ -522,7 +491,7 @@ Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly
 <div class="tsd-comment tsd-typography"><p>Computes and adds tangent attribute to this geometry.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.computeTangents</p>
+<p>Inherited from BufferGeometry.computeTangents</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:142</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="computeVertexNormals" class="tsd-anchor"></a>
@@ -533,21 +502,21 @@ Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly
 <div class="tsd-comment tsd-typography"><p>Computes vertex normals by averaging face normals.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.computeVertexNormals</p>
+<p>Inherited from BufferGeometry.computeVertexNormals</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:147</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="copy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>copy</span><a href="#copy" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="copy.copy-1">copy<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><a href="#copy.copy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="copy.copy-1">copy<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><a href="#copy.copy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5>source: <span class="tsd-signature-type">BufferGeometry</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.copy</p>
+<h4 class="tsd-returns-title">Returns <a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a></h4><aside class="tsd-sources">
+<p>Inherited from BufferGeometry.copy</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:155</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="deleteAttribute" class="tsd-anchor"></a>
@@ -561,7 +530,7 @@ Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly
 <li>
 <h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.deleteAttribute</p>
+<p>Inherited from BufferGeometry.deleteAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:102</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="dispatchEvent" class="tsd-anchor"></a>
@@ -577,7 +546,7 @@ Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly
 <li>
 <h5>event: <span class="tsd-signature-type">Event</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.dispatchEvent</p>
+<p>Inherited from BufferGeometry.dispatchEvent</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:50</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="dispose" class="tsd-anchor"></a>
@@ -589,7 +558,7 @@ Bounding spheres aren&#39;t&#39; computed by default. They need to be explicitly
 You need to call this when you want the bufferGeometry removed while the application is running.</p>
 </div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.dispose</p>
+<p>Inherited from BufferGeometry.dispose</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:161</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="getAttribute" class="tsd-anchor"></a>
@@ -603,7 +572,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">GLBufferAttribute</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.getAttribute</p>
+<p>Inherited from BufferGeometry.getAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:99</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="getIndex" class="tsd-anchor"></a>
@@ -612,7 +581,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li class="tsd-signature tsd-anchor-link" id="getIndex.getIndex-1">get<wbr/>Index<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BufferAttribute</span><a href="#getIndex.getIndex-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BufferAttribute</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.getIndex</p>
+<p>Inherited from BufferGeometry.getIndex</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:92</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="hasAttribute" class="tsd-anchor"></a>
@@ -626,13 +595,13 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>name: <span class="tsd-signature-type">BuiltinShaderAttributeName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-symbol">{}</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.hasAttribute</p>
+<p>Inherited from BufferGeometry.hasAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:103</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="hasEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Event<wbr/>Listener</span><a href="#hasEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="hasEventListener.hasEventListener-1">has<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#hasEventListener.hasEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="hasEventListener.hasEventListener-1">has<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><a href="#hasEventListener.hasEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Checks if listener is added to an event type.</p>
 </div>
@@ -649,11 +618,11 @@ You need to call this when you want the bufferGeometry removed while the applica
 <div class="tsd-comment tsd-typography"><p>The type of event to listen to.</p>
 </div></li>
 <li>
-<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
+<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
 <div class="tsd-comment tsd-typography"><p>The function that gets called when the event is fired.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.hasEventListener</p>
+<p>Inherited from BufferGeometry.hasEventListener</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:37</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="lookAt" class="tsd-anchor"></a>
@@ -667,7 +636,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>v: <span class="tsd-signature-type">Vector3</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.lookAt</p>
+<p>Inherited from BufferGeometry.lookAt</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:121</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="normalizeNormals" class="tsd-anchor"></a>
@@ -676,7 +645,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li class="tsd-signature tsd-anchor-link" id="normalizeNormals.normalizeNormals-1">normalize<wbr/>Normals<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#normalizeNormals.normalizeNormals-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.normalizeNormals</p>
+<p>Inherited from BufferGeometry.normalizeNormals</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:149</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="removeAttribute" class="tsd-anchor"></a>
@@ -693,13 +662,13 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>name: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.removeAttribute</p>
+<p>Inherited from BufferGeometry.removeAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:197</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="removeEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Event<wbr/>Listener</span><a href="#removeEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="removeEventListener.removeEventListener-1">remove<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#removeEventListener.removeEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="removeEventListener.removeEventListener-1">remove<wbr/>Event<wbr/>Listener<span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#removeEventListener.removeEventListener-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Removes a listener from an event type.</p>
 </div>
@@ -716,11 +685,11 @@ You need to call this when you want the bufferGeometry removed while the applica
 <div class="tsd-comment tsd-typography"><p>The type of the listener that gets removed.</p>
 </div></li>
 <li>
-<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="HyperbolicHelicoidGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">HyperbolicHelicoidGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
+<h5>listener: <span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type" data-tsd-kind="Type parameter">T</span><span class="tsd-signature-symbol">, </span><a href="DecalGeometry.html" class="tsd-signature-type" data-tsd-kind="Class">DecalGeometry</a><span class="tsd-signature-symbol">&gt;</span></h5>
 <div class="tsd-comment tsd-typography"><p>The listener function that gets removed.</p>
 </div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.removeEventListener</p>
+<p>Inherited from BufferGeometry.removeEventListener</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:44</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="rotateX" class="tsd-anchor"></a>
@@ -734,7 +703,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>angle: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.rotateX</p>
+<p>Inherited from BufferGeometry.rotateX</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:116</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="rotateY" class="tsd-anchor"></a>
@@ -748,7 +717,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>angle: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.rotateY</p>
+<p>Inherited from BufferGeometry.rotateY</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:117</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="rotateZ" class="tsd-anchor"></a>
@@ -762,7 +731,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>angle: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.rotateZ</p>
+<p>Inherited from BufferGeometry.rotateZ</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:118</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="scale" class="tsd-anchor"></a>
@@ -780,7 +749,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>z: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.scale</p>
+<p>Inherited from BufferGeometry.scale</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:120</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="setAttribute" class="tsd-anchor"></a>
@@ -796,7 +765,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>attribute: <span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">InterleavedBufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">GLBufferAttribute</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.setAttribute</p>
+<p>Inherited from BufferGeometry.setAttribute</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:95</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="setDrawRange" class="tsd-anchor"></a>
@@ -812,7 +781,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>count: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.setDrawRange</p>
+<p>Inherited from BufferGeometry.setDrawRange</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:108</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="setFromPoints" class="tsd-anchor"></a>
@@ -826,7 +795,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>points: <span class="tsd-signature-type">Vector2</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Vector3</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.setFromPoints</p>
+<p>Inherited from BufferGeometry.setFromPoints</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:125</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="setIndex" class="tsd-anchor"></a>
@@ -840,7 +809,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>index: <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">BufferAttribute</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.setIndex</p>
+<p>Inherited from BufferGeometry.setIndex</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:93</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="toJSON" class="tsd-anchor"></a>
@@ -849,7 +818,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1">toJSON<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.toJSON</p>
+<p>Inherited from BufferGeometry.toJSON</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:153</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="toNonIndexed" class="tsd-anchor"></a>
@@ -858,7 +827,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li class="tsd-signature tsd-anchor-link" id="toNonIndexed.toNonIndexed-1">to<wbr/>Non<wbr/>Indexed<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">BufferGeometry</span><a href="#toNonIndexed.toNonIndexed-1" aria-label="Permalink" class="tsd-anchor-icon"><svg class="icon icon-tabler icon-tabler-link" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-anchor-a"></use><use href="#icon-anchor-b"></use><use href="#icon-anchor-c"></use></svg></a></li>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.toNonIndexed</p>
+<p>Inherited from BufferGeometry.toNonIndexed</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:151</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a id="translate" class="tsd-anchor"></a>
@@ -876,7 +845,7 @@ You need to call this when you want the bufferGeometry removed while the applica
 <li>
 <h5>z: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">BufferGeometry</span></h4><aside class="tsd-sources">
-<p>Inherited from ParametricGeometry.translate</p>
+<p>Inherited from BufferGeometry.translate</p>
 <ul>
 <li>Defined in node_modules/@types/three/src/core/BufferGeometry.d.ts:119</li></ul></aside></li></ul></section></section></div>
 <div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -902,64 +871,63 @@ You need to call this when you want the bufferGeometry removed while the applica
 <ul></ul></li></ul></div></details></nav>
 <nav class="tsd-navigation secondary menu-sticky">
 <ul>
-<li class="current tsd-kind-class"><a href="HyperbolicHelicoidGeometry.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Hyperbolic<wbr/>Helicoid<wbr/>Geometry</span></a>
+<li class="current tsd-kind-class tsd-is-external"><a href="DecalGeometry.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><rect fill="var(--color-icon-background)" stroke="var(--color-ts-class)" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="6" id="icon-128-path"></rect><path d="M11.898 16.1201C11.098 16.1201 10.466 15.8961 10.002 15.4481C9.53803 15.0001 9.30603 14.3841 9.30603 13.6001V9.64012C9.30603 8.85612 9.53803 8.24012 10.002 7.79212C10.466 7.34412 11.098 7.12012 11.898 7.12012C12.682 7.12012 13.306 7.34812 13.77 7.80412C14.234 8.25212 14.466 8.86412 14.466 9.64012H13.386C13.386 9.14412 13.254 8.76412 12.99 8.50012C12.734 8.22812 12.37 8.09212 11.898 8.09212C11.426 8.09212 11.054 8.22412 10.782 8.48812C10.518 8.75212 10.386 9.13212 10.386 9.62812V13.6001C10.386 14.0961 10.518 14.4801 10.782 14.7521C11.054 15.0161 11.426 15.1481 11.898 15.1481C12.37 15.1481 12.734 15.0161 12.99 14.7521C13.254 14.4801 13.386 14.0961 13.386 13.6001H14.466C14.466 14.3761 14.234 14.9921 13.77 15.4481C13.306 15.8961 12.682 16.1201 11.898 16.1201Z" fill="var(--color-text)" id="icon-128-text"></path></svg><span>Decal<wbr/>Geometry</span></a>
 <ul>
-<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="HyperbolicHelicoidGeometry.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg>constructor</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#attributes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>attributes</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#boundingBox" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>bounding<wbr/>Box</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#boundingSphere" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>bounding<wbr/>Sphere</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#drawRange" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>draw<wbr/>Range</a></li>
-<li class="deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#drawcalls" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>drawcalls</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#groups" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>groups</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>id</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#index" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>index</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#isBufferGeometry" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Buffer<wbr/>Geometry</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#morphAttributes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>morph<wbr/>Attributes</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#morphTargetsRelative" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>morph<wbr/>Targets<wbr/>Relative</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#name" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>name</a></li>
-<li class="deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#offsets" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>offsets</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#parameters" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>parameters</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#type" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>type</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#userData" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>user<wbr/>Data</a></li>
-<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#uuid" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>uuid</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#addAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#addDrawCall" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Draw<wbr/>Call</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#addEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Event<wbr/>Listener</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#addGroup" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Group</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#addIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Index</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#applyMatrix4" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>apply<wbr/>Matrix4</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#applyQuaternion" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>apply<wbr/>Quaternion</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#center" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>center</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#clearDrawCalls" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Draw<wbr/>Calls</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#clearGroups" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Groups</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#clone" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clone</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#computeBoundingBox" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Bounding<wbr/>Box</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#computeBoundingSphere" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Bounding<wbr/>Sphere</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#computeTangents" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Tangents</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#computeVertexNormals" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Vertex<wbr/>Normals</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#copy" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>copy</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#deleteAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>delete<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#dispatchEvent" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>dispatch<wbr/>Event</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#dispose" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>dispose</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#getAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#getIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Index</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#hasAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>has<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#hasEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>has<wbr/>Event<wbr/>Listener</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#lookAt" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>look<wbr/>At</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#normalizeNormals" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>normalize<wbr/>Normals</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#removeAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>remove<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#removeEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>remove<wbr/>Event<wbr/>Listener</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#rotateX" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateX</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#rotateY" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateY</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#rotateZ" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateZ</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#scale" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>scale</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#setAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Attribute</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#setDrawRange" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Draw<wbr/>Range</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#setFromPoints" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>From<wbr/>Points</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#setIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Index</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#toJSON" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>toJSON</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#toNonIndexed" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>to<wbr/>Non<wbr/>Indexed</a></li>
-<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="HyperbolicHelicoidGeometry.html#translate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>translate</a></li></ul></li></ul></nav></div></div>
+<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="DecalGeometry.html#constructor" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-512-path"></use><use href="#icon-512-text"></use></svg>constructor</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#attributes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>attributes</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#boundingBox" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>bounding<wbr/>Box</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#boundingSphere" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>bounding<wbr/>Sphere</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#drawRange" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>draw<wbr/>Range</a></li>
+<li class="deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#drawcalls" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>drawcalls</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#groups" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>groups</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#id" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>id</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#index" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>index</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#isBufferGeometry" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>is<wbr/>Buffer<wbr/>Geometry</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#morphAttributes" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>morph<wbr/>Attributes</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#morphTargetsRelative" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>morph<wbr/>Targets<wbr/>Relative</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#name" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>name</a></li>
+<li class="deprecated tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#offsets" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>offsets</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#type" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>type</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#userData" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>user<wbr/>Data</a></li>
+<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#uuid" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-1024-path"></use><use href="#icon-1024-text"></use></svg>uuid</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#addAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#addDrawCall" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Draw<wbr/>Call</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#addEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Event<wbr/>Listener</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#addGroup" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Group</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#addIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>add<wbr/>Index</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#applyMatrix4" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>apply<wbr/>Matrix4</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#applyQuaternion" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>apply<wbr/>Quaternion</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#center" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>center</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#clearDrawCalls" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Draw<wbr/>Calls</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#clearGroups" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clear<wbr/>Groups</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#clone" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>clone</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#computeBoundingBox" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Bounding<wbr/>Box</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#computeBoundingSphere" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Bounding<wbr/>Sphere</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#computeTangents" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Tangents</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#computeVertexNormals" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>compute<wbr/>Vertex<wbr/>Normals</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#copy" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>copy</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#deleteAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>delete<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#dispatchEvent" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>dispatch<wbr/>Event</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#dispose" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>dispose</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#getAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#getIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>get<wbr/>Index</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#hasAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>has<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#hasEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>has<wbr/>Event<wbr/>Listener</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#lookAt" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>look<wbr/>At</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#normalizeNormals" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>normalize<wbr/>Normals</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#removeAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>remove<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#removeEventListener" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>remove<wbr/>Event<wbr/>Listener</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#rotateX" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateX</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#rotateY" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateY</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#rotateZ" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>rotateZ</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#scale" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>scale</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#setAttribute" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Attribute</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#setDrawRange" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Draw<wbr/>Range</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#setFromPoints" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>From<wbr/>Points</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#setIndex" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>set<wbr/>Index</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#toJSON" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>toJSON</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#toNonIndexed" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>to<wbr/>Non<wbr/>Indexed</a></li>
+<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-external"><a href="DecalGeometry.html#translate" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-2048-path"></use><use href="#icon-2048-text"></use></svg>translate</a></li></ul></li></ul></nav></div></div>
 <div class="container tsd-generator">
 <p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
 <div class="overlay"></div><script src="../assets/main.js"></script></body></html>

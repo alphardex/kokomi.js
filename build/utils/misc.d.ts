@@ -1,8 +1,8 @@
 import * as THREE from "three";
 declare const optimizeModelRender: (renderer: THREE.WebGLRenderer) => void;
 declare const enableRealisticRender: (renderer: THREE.WebGLRenderer) => void;
-declare const optimizeColorSpace: () => void;
 declare const beautifyRender: (renderer: THREE.WebGLRenderer) => void;
+declare const enableShadow: (renderer: THREE.WebGLRenderer) => void;
 declare const getEnvmapFromHDRTexture: (renderer: THREE.WebGLRenderer, texture: THREE.Texture) => THREE.Texture;
 declare const getEnvmapFromScene: (renderer: THREE.WebGLRenderer, scene: THREE.Scene) => THREE.Texture;
 declare const getBaryCoord: (bufferGeometry: THREE.BufferGeometry) => void;
@@ -23,7 +23,6 @@ declare const calcPerspectiveScreenSize: (targetZ: number | undefined, camera: T
     height: number;
 };
 declare const downloadBlob: (blob: Blob, name: string) => void;
-declare const setDeep: (obj: any, value: any, keys: string[]) => any;
 declare const getBound: (object: THREE.Object3D, precise?: boolean) => {
     boundingBox: THREE.Box3;
     center: THREE.Vector3;
@@ -32,4 +31,4 @@ declare const getBound: (object: THREE.Object3D, precise?: boolean) => {
     height: number;
     depth: number;
 };
-export { optimizeModelRender, enableRealisticRender, optimizeColorSpace, beautifyRender, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, setDeep, getBound, };
+export { optimizeModelRender, enableRealisticRender, beautifyRender, enableShadow, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, getBound, };

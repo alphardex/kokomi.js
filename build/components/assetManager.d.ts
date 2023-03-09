@@ -1,8 +1,8 @@
 import * as THREE from "three";
-import { EXRLoader, FBXLoader, FontLoader, GLTFLoader, OBJLoader, RGBELoader, SVGLoader } from "three-stdlib";
+import { EXRLoader, FBXLoader, FontLoader, GLTFLoader, KTX2Loader, OBJLoader, RGBELoader, SVGLoader } from "three-stdlib";
 import { Component } from "./component";
 import { Base } from "../base/base";
-export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video";
+export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video" | "ktx2Texture";
 export interface ResourceItem {
     name: string;
     type: ResoureType;
@@ -20,10 +20,12 @@ export interface Loaders {
     hdrTextureLoader: RGBELoader;
     svgLoader: SVGLoader;
     exrLoader: EXRLoader;
+    ktx2Loader: KTX2Loader;
 }
 export interface AssetManagerConfig {
     useDracoLoader: boolean;
     dracoDecoderPath: string;
+    ktx2TranscoderPath: string;
 }
 /**
  * This class can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js file to config your assets without caring about various loaders.
@@ -40,6 +42,7 @@ declare class AssetManager extends Component {
     constructor(base: Base, list: ResoureList, config?: Partial<AssetManagerConfig>);
     setLoaders(): void;
     setDracoLoader(): void;
+    setKTX2Loader(): void;
     startLoading(): void;
     resourceLoaded(resource: ResourceItem, file: any): void;
     get loadProgress(): number;

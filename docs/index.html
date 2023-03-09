@@ -44,14 +44,17 @@
 </a>
 <p>With just several lines, you can make a most basic 3D scene :d</p>
 <p>index.html</p>
-<pre><code class="language-html"><span class="hl-2">&lt;</span><span class="hl-3">div</span><span class="hl-0"> </span><span class="hl-4">id</span><span class="hl-0">=</span><span class="hl-5">&quot;sketch&quot;</span><span class="hl-0"> </span><span class="hl-4">class</span><span class="hl-0">=</span><span class="hl-5">&quot;bg-black w-screen h-screen overflow-hidden&quot;</span><span class="hl-2">&gt;&lt;/</span><span class="hl-3">div</span><span class="hl-2">&gt;</span>
+<pre><code class="language-html"><span class="hl-2">&lt;</span><span class="hl-3">div</span><span class="hl-0"> </span><span class="hl-4">id</span><span class="hl-0">=</span><span class="hl-5">&quot;sketch&quot;</span><span class="hl-2">&gt;&lt;/</span><span class="hl-3">div</span><span class="hl-2">&gt;</span>
 </code></pre>
-<p>script.ts</p>
-<pre><code class="language-ts"><span class="hl-6">import</span><span class="hl-0"> </span><span class="hl-7">*</span><span class="hl-0"> </span><span class="hl-6">as</span><span class="hl-0"> </span><span class="hl-8">kokomi</span><span class="hl-0"> </span><span class="hl-6">from</span><span class="hl-0"> </span><span class="hl-1">&quot;kokomi.js&quot;</span><span class="hl-0">;</span><br/><br/><span class="hl-7">class</span><span class="hl-0"> </span><span class="hl-9">Sketch</span><span class="hl-0"> </span><span class="hl-7">extends</span><span class="hl-0"> </span><span class="hl-9">kokomi</span><span class="hl-0">.</span><span class="hl-9">Base</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-10">create</span><span class="hl-0">() {</span><br/><span class="hl-0">    </span><span class="hl-7">new</span><span class="hl-0"> </span><span class="hl-8">kokomi</span><span class="hl-0">.</span><span class="hl-10">OrbitControls</span><span class="hl-0">(</span><span class="hl-7">this</span><span class="hl-0">);</span><br/><br/><span class="hl-0">    </span><span class="hl-7">const</span><span class="hl-0"> </span><span class="hl-11">box</span><span class="hl-0"> = </span><span class="hl-7">new</span><span class="hl-0"> </span><span class="hl-8">kokomi</span><span class="hl-0">.</span><span class="hl-10">Box</span><span class="hl-0">(</span><span class="hl-7">this</span><span class="hl-0">);</span><br/><span class="hl-0">    </span><span class="hl-8">box</span><span class="hl-0">.</span><span class="hl-10">addExisting</span><span class="hl-0">();</span><br/><br/><span class="hl-0">    </span><span class="hl-7">this</span><span class="hl-0">.</span><span class="hl-10">update</span><span class="hl-0">((</span><span class="hl-8">time</span><span class="hl-0">: </span><span class="hl-9">number</span><span class="hl-0">) </span><span class="hl-7">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-8">box</span><span class="hl-0">.</span><span class="hl-10">spin</span><span class="hl-0">(</span><span class="hl-8">time</span><span class="hl-0">);</span><br/><span class="hl-0">    });</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-7">const</span><span class="hl-0"> </span><span class="hl-10">createSketch</span><span class="hl-0"> = () </span><span class="hl-7">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-7">const</span><span class="hl-0"> </span><span class="hl-11">sketch</span><span class="hl-0"> = </span><span class="hl-7">new</span><span class="hl-0"> </span><span class="hl-10">Sketch</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-8">sketch</span><span class="hl-0">.</span><span class="hl-10">create</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-6">return</span><span class="hl-0"> </span><span class="hl-8">sketch</span><span class="hl-0">;</span><br/><span class="hl-0">};</span><br/><br/><span class="hl-10">createSketch</span><span class="hl-0">();</span>
+<p>style.css</p>
+<pre><code class="language-css"><span class="hl-6">#sketch</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-4">width</span><span class="hl-0">: </span><span class="hl-7">100vw</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-4">height</span><span class="hl-0">: </span><span class="hl-7">100vh</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-4">background</span><span class="hl-0">: </span><span class="hl-8">black</span><span class="hl-0">;</span><br/><span class="hl-0">  </span><span class="hl-4">overflow</span><span class="hl-0">: </span><span class="hl-8">hidden</span><span class="hl-0">;</span><br/><span class="hl-0">}</span>
 </code></pre>
-<p><img src="./assets/previews/1.gif?v=1" alt="Basic"></p>
+<p>script.js</p>
+<pre><code class="language-js"><span class="hl-9">import</span><span class="hl-0"> </span><span class="hl-10">*</span><span class="hl-0"> </span><span class="hl-9">as</span><span class="hl-0"> </span><span class="hl-11">kokomi</span><span class="hl-0"> </span><span class="hl-9">from</span><span class="hl-0"> </span><span class="hl-1">&quot;kokomi.js&quot;</span><span class="hl-0">;</span><br/><br/><span class="hl-10">class</span><span class="hl-0"> </span><span class="hl-12">Sketch</span><span class="hl-0"> </span><span class="hl-10">extends</span><span class="hl-0"> </span><span class="hl-12">kokomi</span><span class="hl-0">.</span><span class="hl-12">Base</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-13">create</span><span class="hl-0">() {</span><br/><span class="hl-0">    </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">kokomi</span><span class="hl-0">.</span><span class="hl-13">OrbitControls</span><span class="hl-0">(</span><span class="hl-10">this</span><span class="hl-0">);</span><br/><br/><span class="hl-0">    </span><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-14">box</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-11">kokomi</span><span class="hl-0">.</span><span class="hl-13">Box</span><span class="hl-0">(</span><span class="hl-10">this</span><span class="hl-0">);</span><br/><span class="hl-0">    </span><span class="hl-11">box</span><span class="hl-0">.</span><span class="hl-13">addExisting</span><span class="hl-0">();</span><br/><br/><span class="hl-0">    </span><span class="hl-10">this</span><span class="hl-0">.</span><span class="hl-13">update</span><span class="hl-0">((</span><span class="hl-11">time</span><span class="hl-0">) </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">      </span><span class="hl-11">box</span><span class="hl-0">.</span><span class="hl-13">spin</span><span class="hl-0">(</span><span class="hl-11">time</span><span class="hl-0">);</span><br/><span class="hl-0">    });</span><br/><span class="hl-0">  }</span><br/><span class="hl-0">}</span><br/><br/><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-13">createSketch</span><span class="hl-0"> = () </span><span class="hl-10">=&gt;</span><span class="hl-0"> {</span><br/><span class="hl-0">  </span><span class="hl-10">const</span><span class="hl-0"> </span><span class="hl-14">sketch</span><span class="hl-0"> = </span><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-13">Sketch</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-11">sketch</span><span class="hl-0">.</span><span class="hl-13">create</span><span class="hl-0">();</span><br/><span class="hl-0">  </span><span class="hl-9">return</span><span class="hl-0"> </span><span class="hl-11">sketch</span><span class="hl-0">;</span><br/><span class="hl-0">};</span><br/><br/><span class="hl-13">createSketch</span><span class="hl-0">();</span>
+</code></pre>
+<p><img src="./assets/previews/1.gif?v=3" alt="Basic"></p>
 <p>Demo (Also can be used as a template): <a href="https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts">https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts</a></p>
-<p>See more examples: <a href="https://kokomi-playground.vercel.app">https://kokomi-playground.vercel.app</a></p>
+<p>See more examples: <a href="https://kokomi-playground.vercel.app/entries/">https://kokomi-playground.vercel.app/entries/</a></p>
 
 <a href="#api" id="api" style="color: inherit; text-decoration: none;">
   <h2><a href="https://kokomi-js.vercel.app/docs/modules.html">API</a></h2>
@@ -63,33 +66,49 @@
 <ul>
 <li>You can simply extend <code>kokomi.Base</code> class to kickstart a simple scene without writing any boilerplate codes.</li>
 <li>Either you can write all your three.js code in a single file, or encapsulate your code into individual classes in a large project. By extending <code>kokomi.Component</code>, you can make your components keep their own state and animation.</li>
-<li><code>kokomi.AssetManager</code> can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple json file to config your assets without caring about various loaders.</li>
+<li><code>kokomi.AssetManager</code> can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js object to config your assets without caring about various loaders.</li>
 <li>Integrated with <a href="https://github.com/markuslerner/THREE.Interactive">three.interactive</a>, which can handle mouse and touch interactions easily.</li>
+<li>Many more <a href="https://kokomi-js.vercel.app/examples/">useful components</a> for you to discover!</li>
 </ul>
 
 <a href="#previews" id="previews" style="color: inherit; text-decoration: none;">
   <h2>Previews</h2>
 </a>
 
-<a href="#asset-manage" id="asset-manage" style="color: inherit; text-decoration: none;">
-  <h3>Asset Manage</h3>
+<a href="#model-showcase" id="model-showcase" style="color: inherit; text-decoration: none;">
+  <h3>Model Showcase</h3>
 </a>
-<p><img src="./assets/previews/2.gif?v=1" alt="2"></p>
+<p><img src="./assets/previews/2.gif?v=3" alt="2"></p>
 
 <a href="#shadertoy-integration" id="shadertoy-integration" style="color: inherit; text-decoration: none;">
   <h3>Shadertoy Integration</h3>
 </a>
-<p><img src="./assets/previews/3.gif?v=1" alt="3"></p>
+<p><img src="./assets/previews/3.gif?v=3" alt="3"></p>
 
 <a href="#persistence-effect" id="persistence-effect" style="color: inherit; text-decoration: none;">
   <h3>Persistence Effect</h3>
 </a>
-<p><img src="./assets/previews/4.gif?v=1" alt="4"></p>
+<p><img src="./assets/previews/4.gif?v=3" alt="4"></p>
 
 <a href="#render-texture" id="render-texture" style="color: inherit; text-decoration: none;">
   <h3>Render Texture</h3>
 </a>
-<p><img src="./assets/previews/5.gif?v=1" alt="5"></p>
+<p><img src="./assets/previews/5.gif?v=3" alt="5"></p>
+
+<a href="#reflector" id="reflector" style="color: inherit; text-decoration: none;">
+  <h3>Reflector</h3>
+</a>
+<p><img src="./assets/previews/6.gif?v=3" alt="6"></p>
+
+<a href="#credits" id="credits" style="color: inherit; text-decoration: none;">
+  <h2>Credits</h2>
+</a>
+<ul>
+<li><a href="https://github.com/mrdoob/three.js">three.js</a></li>
+<li><a href="https://github.com/pmndrs/drei">drei</a></li>
+<li>Various articles from <a href="https://tympanus.net/codrops/">codrops</a> and other amazing blogs</li>
+<li>Various video tutorials from <a href="https://www.youtube.com/">youtube</a></li>
+</ul>
 
 <a href="#author" id="author" style="color: inherit; text-decoration: none;">
   <h2>Author</h2>
@@ -148,6 +167,7 @@
 <li class="tsd-kind-class"><a href="classes/CustomMesh.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Custom<wbr/>Mesh</a></li>
 <li class="tsd-kind-class"><a href="classes/CustomPoints.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Custom<wbr/>Points</a></li>
 <li class="tsd-kind-class"><a href="classes/CustomShaderMaterial.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Custom<wbr/>Shader<wbr/>Material</a></li>
+<li class="tsd-kind-class tsd-is-external"><a href="classes/DecalGeometry.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Decal<wbr/>Geometry</a></li>
 <li class="tsd-kind-class"><a href="classes/FBO.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>FBO</a></li>
 <li class="tsd-kind-class"><a href="classes/FirstPersonCamera.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>First<wbr/>Person<wbr/>Camera</a></li>
 <li class="tsd-kind-class"><a href="classes/Float.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-128-path"></use><use href="#icon-128-text"></use></svg>Float</a></li>
@@ -250,6 +270,7 @@
 <li class="tsd-kind-function"><a href="functions/detectDeviceType.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>detect<wbr/>Device<wbr/>Type</a></li>
 <li class="tsd-kind-function"><a href="functions/downloadBlob.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>download<wbr/>Blob</a></li>
 <li class="tsd-kind-function"><a href="functions/enableRealisticRender.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>enable<wbr/>Realistic<wbr/>Render</a></li>
+<li class="tsd-kind-function"><a href="functions/enableShadow.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>enable<wbr/>Shadow</a></li>
 <li class="tsd-kind-function"><a href="functions/epsilon.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>epsilon</a></li>
 <li class="tsd-kind-function"><a href="functions/expandColor.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>expand<wbr/>Color</a></li>
 <li class="tsd-kind-function"><a href="functions/flatModel.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>flat<wbr/>Model</a></li>
@@ -280,7 +301,6 @@
 <li class="tsd-kind-function"><a href="functions/normalizeVector.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>normalize<wbr/>Vector</a></li>
 <li class="tsd-kind-function"><a href="functions/objectScale.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>object<wbr/>Scale</a></li>
 <li class="tsd-kind-function"><a href="functions/objectZIndex.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>objectZIndex</a></li>
-<li class="tsd-kind-function"><a href="functions/optimizeColorSpace.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>optimize<wbr/>Color<wbr/>Space</a></li>
 <li class="tsd-kind-function"><a href="functions/optimizeModelRender.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>optimize<wbr/>Model<wbr/>Render</a></li>
 <li class="tsd-kind-function"><a href="functions/polySort.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>poly<wbr/>Sort</a></li>
 <li class="tsd-kind-function"><a href="functions/preloadImages.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>preload<wbr/>Images</a></li>
@@ -291,7 +311,6 @@
 <li class="tsd-kind-function"><a href="functions/sample.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>sample</a></li>
 <li class="tsd-kind-function"><a href="functions/sampleParticlesPositionFromMesh.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>sample<wbr/>Particles<wbr/>Position<wbr/>From<wbr/>Mesh</a></li>
 <li class="tsd-kind-function"><a href="functions/saturate.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>saturate</a></li>
-<li class="tsd-kind-function"><a href="functions/setDeep.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>set<wbr/>Deep</a></li>
 <li class="tsd-kind-function"><a href="functions/sleep.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>sleep</a></li>
 <li class="tsd-kind-function"><a href="functions/sphubeFunction.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>sphube<wbr/>Function</a></li>
 <li class="tsd-kind-function"><a href="functions/usePropAsIsOrAsAttribute.html" class="tsd-index-link"><svg class="tsd-kind-icon" width="24" height="24" viewBox="0 0 24 24"><use href="#icon-64-path"></use><use href="#icon-64-text"></use></svg>use<wbr/>Prop<wbr/>As<wbr/>Is<wbr/>Or<wbr/>As<wbr/>Attribute</a></li></ul></nav></div></div>

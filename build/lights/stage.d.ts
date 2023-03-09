@@ -3,6 +3,10 @@ import { Component } from "../components/component";
 import { Base } from "../base/base";
 import { Center } from "../components/center";
 import { ContactShadows } from "../shadows";
+interface PresetItem {
+    main: number[];
+    fill: number[];
+}
 export interface StageConfig {
     preset?: "rembrandt" | "portrait" | "upfront" | "soft" | {
         main: [x: number, y: number, z: number];
@@ -15,7 +19,7 @@ declare class Stage extends Component {
     group: THREE.Group;
     center: Center;
     shadow: boolean | "contact";
-    presetData: any;
+    presetData: PresetItem;
     ambientLight: THREE.AmbientLight;
     spotLight: THREE.SpotLight;
     pointLight: THREE.PointLight;
