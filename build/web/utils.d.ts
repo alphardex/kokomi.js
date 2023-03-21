@@ -3,7 +3,7 @@ declare const loadTextureFromImg: (el: HTMLImageElement | null) => THREE.Texture
 declare const loadCubemapFromImgs: (el: HTMLImageElement | null, els: HTMLImageElement[]) => THREE.CubeTexture | null;
 declare const getUniformFromImg: (el: HTMLImageElement | null, name: string, parent?: HTMLElement | null) => {
     [x: string]: {
-        value: THREE.Texture | THREE.CubeTexture;
+        value: THREE.Texture;
     };
 };
 export { loadTextureFromImg, loadCubemapFromImgs, getUniformFromImg };

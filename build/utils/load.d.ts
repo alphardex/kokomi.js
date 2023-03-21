@@ -10,4 +10,5 @@ export interface LoadGLTFConfig {
 }
 declare const loadGLTF: (path: string, config?: Partial<LoadGLTFConfig>) => Promise<GLTF | null>;
 declare const loadFBX: (path: string) => Promise<THREE.Group | null>;
-export { loadVideoTexture, loadGLTF, loadFBX };
+declare const loadHDR: (path: string) => Promise<THREE.DataTexture | null>;
+export { loadVideoTexture, loadGLTF, loadFBX, loadHDR };

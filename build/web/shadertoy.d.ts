@@ -20,12 +20,12 @@ declare class ShaderToyElement extends HTMLElement {
     get fragShader(): string;
     getTextureUniform(name: string): {
         [x: string]: {
-            value: THREE.Texture | THREE.CubeTexture;
+            value: THREE.Texture;
         };
     };
     get uniforms(): {
         [x: string]: {
-            value: THREE.Texture | THREE.CubeTexture;
+            value: THREE.Texture;
         };
     };
     createContainer(): void;
