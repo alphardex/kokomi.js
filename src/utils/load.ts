@@ -1,5 +1,11 @@
 import * as THREE from "three";
-import { GLTF, GLTFLoader, DRACOLoader, FBXLoader } from "three-stdlib";
+import {
+  GLTF,
+  GLTFLoader,
+  DRACOLoader,
+  FBXLoader,
+  RGBELoader,
+} from "three-stdlib";
 
 export interface LoadVideoOptions extends HTMLMediaElement {
   unsuspend: "canplay" | "canplaythrough" | "loadstart" | "loadedmetadata";
@@ -95,4 +101,22 @@ const loadFBX = (path: string): Promise<THREE.Group | null> => {
   });
 };
 
-export { loadVideoTexture, loadGLTF, loadFBX };
+// 加载HDR
+const loadHDR = (path: string): Promise<THREE.DataTexture | null> => {
+  return new Promise((resolve) => {
+    const loader = new RGBELoader();
+
+    loader.load(
+      path,
+      (file) => {
+        resolve(file);
+      },
+      () => {},
+      () => {
+        resolve(null);
+      }
+    );
+  });
+};
+
+export { loadVideoTexture, loadGLTF, loadFBX, loadHDR };
