@@ -1,5 +1,6 @@
 import * as THREE from "three";
-import { EXRLoader, FBXLoader, FontLoader, GLTFLoader, KTX2Loader, OBJLoader, RGBELoader, SVGLoader } from "three-stdlib";
+import { EXRLoader, FontLoader, GLTFLoader, KTX2Loader, OBJLoader, RGBELoader, SVGLoader } from "three-stdlib";
+import { FBXLoader } from "../lib";
 import { Component } from "./component";
 import { Base } from "../base/base";
 export type ResoureType = "gltfModel" | "texture" | "cubeTexture" | "font" | "fbxModel" | "audio" | "objModel" | "hdrTexture" | "svg" | "exrTexture" | "video" | "ktx2Texture";

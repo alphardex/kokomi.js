@@ -31,4 +31,5 @@ declare const getBound: (object: THREE.Object3D, precise?: boolean) => {
     height: number;
     depth: number;
 };
-export { optimizeModelRender, enableRealisticRender, beautifyRender, enableShadow, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, getBound, };
+declare const smoothNormal: (mesh: THREE.Mesh) => void;
+export { optimizeModelRender, enableRealisticRender, beautifyRender, enableShadow, getEnvmapFromHDRTexture, getEnvmapFromScene, getBaryCoord, sampleParticlesPositionFromMesh, flatModel, printModel, getViewport, getPositionCentroids, createPolygonShape, calcPerspectiveScreenSize, downloadBlob, getBound, smoothNormal, };

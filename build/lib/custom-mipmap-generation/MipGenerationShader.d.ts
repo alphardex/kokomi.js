@@ -25,7 +25,7 @@ export declare function clone(shader: ShaderMaterialParameters): {
     blendEquation?: import("three").BlendingEquation | undefined;
     blendEquationAlpha?: number | undefined;
     blending?: import("three").Blending | undefined;
-    blendSrc?: import("three").BlendingSrcFactor | import("three").BlendingDstFactor | undefined;
+    blendSrc?: import("three").BlendingDstFactor | import("three").BlendingSrcFactor | undefined;
     blendSrcAlpha?: number | undefined;
     clipIntersection?: boolean | undefined;
     clippingPlanes?: import("three").Plane[] | undefined;
