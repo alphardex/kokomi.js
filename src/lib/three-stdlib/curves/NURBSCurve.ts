@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { Curve, Vector3, Vector4 } from "three";
 import * as NURBSUtils from "./NURBSUtils";
 
