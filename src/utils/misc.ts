@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-import { MeshSurfaceSampler } from "three-stdlib";
+import { mergeVertices, MeshSurfaceSampler } from "three-stdlib";
 
 import { makeBuffer } from "./gl";
 
@@ -237,6 +237,12 @@ const getBound = (object: THREE.Object3D, precise = true) => {
   };
 };
 
+// 平滑法线
+const smoothNormal = (mesh: THREE.Mesh) => {
+  mesh.geometry = mergeVertices(mesh.geometry);
+  mesh.geometry.computeVertexNormals();
+};
+
 export {
   optimizeModelRender,
   enableRealisticRender,
@@ -254,4 +260,5 @@ export {
   calcPerspectiveScreenSize,
   downloadBlob,
   getBound,
+  smoothNormal,
 };

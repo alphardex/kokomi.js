@@ -2,7 +2,7 @@ import * as THREE from "three";
 import {
   DRACOLoader,
   EXRLoader,
-  FBXLoader,
+  // FBXLoader,
   FontLoader,
   GLTFLoader,
   KTX2Loader,
@@ -10,6 +10,7 @@ import {
   RGBELoader,
   SVGLoader,
 } from "three-stdlib";
+import { FBXLoader } from "../lib";
 
 import { Component } from "./component";
 import { Base } from "../base/base";
@@ -107,6 +108,7 @@ class AssetManager extends Component {
     this.loaders.textureLoader = new THREE.TextureLoader();
     this.loaders.cubeTextureLoader = new THREE.CubeTextureLoader();
     this.loaders.fontLoader = new FontLoader();
+    // @ts-ignore
     this.loaders.fbxLoader = new FBXLoader();
     this.loaders.audioLoader = new THREE.AudioLoader();
     this.loaders.objLoader = new OBJLoader();
@@ -154,6 +156,7 @@ class AssetManager extends Component {
           this.resourceLoaded(resource, file);
         });
       } else if (resource.type === "fbxModel") {
+        // @ts-ignore
         this.loaders.fbxLoader?.load(resource.path as string, (file) => {
           this.resourceLoaded(resource, file);
         });
