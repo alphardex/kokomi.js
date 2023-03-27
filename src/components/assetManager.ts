@@ -9,7 +9,6 @@ import {
   OBJLoader,
   RGBELoader,
   SVGLoader,
-  MMDLoader,
 } from "three-stdlib";
 import { FBXLoader } from "../lib";
 
@@ -30,8 +29,7 @@ export type ResoureType =
   | "svg"
   | "exrTexture"
   | "video"
-  | "ktx2Texture"
-  | "mmdModel";
+  | "ktx2Texture";
 
 export interface ResourceItem {
   name: string;
@@ -53,7 +51,6 @@ export interface Loaders {
   svgLoader: SVGLoader;
   exrLoader: EXRLoader;
   ktx2Loader: KTX2Loader;
-  mmdLoader: MMDLoader;
 }
 
 export interface AssetManagerConfig {
@@ -119,7 +116,6 @@ class AssetManager extends Component {
     this.loaders.svgLoader = new SVGLoader();
     this.loaders.exrLoader = new EXRLoader();
     this.loaders.ktx2Loader = new KTX2Loader();
-    this.loaders.mmdLoader = new MMDLoader();
   }
   // 设置draco加载器
   setDracoLoader() {
@@ -190,10 +186,6 @@ class AssetManager extends Component {
         });
       } else if (resource.type === "ktx2Texture") {
         this.loaders.ktx2Loader?.load(resource.path as string, (file) => {
-          this.resourceLoaded(resource, file);
-        });
-      } else if (resource.type === "mmdModel") {
-        this.loaders.mmdLoader?.load(resource.path as string, (file) => {
           this.resourceLoaded(resource, file);
         });
       }
