@@ -7,6 +7,7 @@ export interface ThirdPersonCameraConfig {
   camera: THREE.Camera;
   offset: THREE.Vector3;
   lookAt: THREE.Vector3;
+  isQuaternionApplied: boolean;
 }
 
 /**
@@ -20,6 +21,7 @@ class ThirdPersonCamera extends Component {
   offset: THREE.Vector3;
   lookAt: THREE.Vector3;
   enabled: boolean;
+  isQuaternionApplied: boolean;
   constructor(
     base: Base,
     target: THREE.Object3D,
@@ -33,10 +35,12 @@ class ThirdPersonCamera extends Component {
       camera = this.base.camera,
       offset = new THREE.Vector3(0, 0, -2),
       lookAt = target.position.clone(),
+      isQuaternionApplied = false,
     } = config;
     this.camera = camera;
     this.offset = offset;
     this.lookAt = lookAt;
+    this.isQuaternionApplied = isQuaternionApplied;
 
     this.currentPosition = new THREE.Vector3();
     this.currentLookAt = new THREE.Vector3();
@@ -45,13 +49,17 @@ class ThirdPersonCamera extends Component {
   }
   get idealOffset() {
     const offset = this.offset.clone();
-    offset.applyQuaternion(this.target.quaternion);
+    if (this.isQuaternionApplied) {
+      offset.applyQuaternion(this.target.quaternion);
+    }
     offset.add(this.target.position);
     return offset;
   }
   get idealLookAt() {
     const lookAt = this.lookAt.clone();
-    lookAt.applyQuaternion(this.target.quaternion);
+    if (this.isQuaternionApplied) {
+      lookAt.applyQuaternion(this.target.quaternion);
+    }
     lookAt.add(this.target.position);
     return lookAt;
   }
