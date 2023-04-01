@@ -35,7 +35,7 @@ class ThirdPersonCamera extends Component {
       camera = this.base.camera,
       offset = new THREE.Vector3(0, 0, -2),
       lookAt = target.position.clone(),
-      isQuaternionApplied = false,
+      isQuaternionApplied = true,
     } = config;
     this.camera = camera;
     this.offset = offset;
