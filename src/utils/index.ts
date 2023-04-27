@@ -7,4 +7,5 @@ export * from "./misc";
 export * from "./noise";
 export * from "./parametric";
 export * from "./vector";
+export * from "./view";
 export * from "./web";
