@@ -40,6 +40,7 @@ const computeContainerPosition = (
   };
 };
 
+// 应用视图裁剪，用于把画布放在一个div视图容器内
 const applyViewScissor = (base: Base, viewEl: HTMLElement) => {
   const canvasSize = base.renderer.domElement.getBoundingClientRect();
   const rect = viewEl.getBoundingClientRect();
@@ -58,4 +59,13 @@ const applyViewScissor = (base: Base, viewEl: HTMLElement) => {
   }
 };
 
-export { applyViewScissor };
+// 计算视图窗口缩放，用于在div视图容器内HTML元素的缩放
+const computeViewWindowScale = (viewEl: HTMLElement) => {
+  const viewRect = viewEl.getBoundingClientRect();
+  const { width, height } = viewRect;
+  const xScale = width / window.innerWidth;
+  const yScale = height / window.innerHeight;
+  return { xScale, yScale };
+};
+
+export { applyViewScissor, computeViewWindowScale };
