@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-interface OrthographicCameraConfig {
+export interface OrthographicCameraConfig {
   frustum: number;
   near: number;
   far: number;

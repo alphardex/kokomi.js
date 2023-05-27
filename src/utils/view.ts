@@ -2,7 +2,7 @@ import * as THREE from "three";
 
 import type { Base } from "../base/base";
 
-type CanvasSize = {
+export type CanvasSize = {
   top: number;
   left: number;
   height: number;

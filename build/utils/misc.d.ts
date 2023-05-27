@@ -14,7 +14,7 @@ declare const getViewport: (camera: THREE.Camera) => {
     height: number;
 };
 declare const getPositionCentroids: (geometry: THREE.BufferGeometry, attrName?: string, centroidName?: string) => Float32Array;
-interface CreatePolygonShapeConfig {
+export interface CreatePolygonShapeConfig {
     scale: number;
 }
 declare const createPolygonShape: (points: THREE.Vector2[], config?: Partial<CreatePolygonShapeConfig>) => THREE.Shape;

@@ -3,7 +3,7 @@ import { Component } from "../components/component";
 import { Base } from "../base/base";
 import { Center } from "../components/center";
 import { ContactShadows } from "../shadows";
-interface PresetItem {
+export interface PresetItem {
     main: number[];
     fill: number[];
 }

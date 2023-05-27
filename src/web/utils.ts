@@ -1,13 +1,20 @@
 import * as THREE from "three";
 
+export type HTMLAssetElement = HTMLImageElement | HTMLVideoElement;
+
 const handleTextureProp = (
-  el: HTMLImageElement | null,
+  el: HTMLAssetElement | null,
   texture: THREE.Texture
 ) => {
+  const minFilterDefaultValue =
+    el instanceof HTMLVideoElement ? "linear" : "mipmap";
+  const magFilterDefaultValue =
+    el instanceof HTMLVideoElement ? "linear" : "mipmap";
+
   const wrapS = el?.getAttribute("wrap-s") || "repeat";
   const wrapT = el?.getAttribute("wrap-t") || "repeat";
-  const minFilter = el?.getAttribute("min-filter") || "mipmap";
-  const magFilter = el?.getAttribute("mag-filter") || "mipmap";
+  const minFilter = el?.getAttribute("min-filter") || minFilterDefaultValue;
+  const magFilter = el?.getAttribute("mag-filter") || magFilterDefaultValue;
   const wrapMap: Record<string, any> = {
     clamp: THREE.ClampToEdgeWrapping,
     repeat: THREE.RepeatWrapping,
@@ -21,6 +28,15 @@ const handleTextureProp = (
   texture.wrapT = wrapMap[wrapT];
   texture.minFilter = filterMap[minFilter];
   texture.magFilter = filterMap[magFilter];
+
+  if (el instanceof HTMLVideoElement) {
+    const start = el?.getAttribute("autoplay") || "";
+    el?.addEventListener("loadedmetadata", () => {
+      if (start) {
+        texture.image.play();
+      }
+    });
+  }
 };
 
 const loadTextureFromImg = (el: HTMLImageElement | null) => {
@@ -46,8 +62,17 @@ const loadCubemapFromImgs = (
   return texture;
 };
 
-const getUniformFromImg = (
-  el: HTMLImageElement | null,
+const loadTextureFromVideo = (el: HTMLVideoElement | null) => {
+  if (!el) {
+    return null;
+  }
+  const texture = new THREE.VideoTexture(el);
+  handleTextureProp(el, texture);
+  return texture;
+};
+
+const getUniformFromAsset = (
+  el: HTMLAssetElement | null,
   name: string,
   parent: HTMLElement | null = null
 ) => {
@@ -56,16 +81,20 @@ const getUniformFromImg = (
   }
   let texture = null;
   const type = el.getAttribute("type") || "2d";
-  if (type === "2d") {
-    texture = loadTextureFromImg(el);
-  } else if (type === "cube") {
-    const px = parent?.querySelector("[cube=px]") as HTMLImageElement;
-    const nx = parent?.querySelector("[cube=nx]") as HTMLImageElement;
-    const py = parent?.querySelector("[cube=py]") as HTMLImageElement;
-    const ny = parent?.querySelector("[cube=ny]") as HTMLImageElement;
-    const pz = parent?.querySelector("[cube=pz]") as HTMLImageElement;
-    const nz = parent?.querySelector("[cube=nz]") as HTMLImageElement;
-    texture = loadCubemapFromImgs(el, [px, nx, py, ny, pz, nz]);
+  if (el instanceof HTMLImageElement) {
+    if (type === "2d") {
+      texture = loadTextureFromImg(el);
+    } else if (type === "cube") {
+      const px = parent?.querySelector("[cube=px]") as HTMLImageElement;
+      const nx = parent?.querySelector("[cube=nx]") as HTMLImageElement;
+      const py = parent?.querySelector("[cube=py]") as HTMLImageElement;
+      const ny = parent?.querySelector("[cube=ny]") as HTMLImageElement;
+      const pz = parent?.querySelector("[cube=pz]") as HTMLImageElement;
+      const nz = parent?.querySelector("[cube=nz]") as HTMLImageElement;
+      texture = loadCubemapFromImgs(el, [px, nx, py, ny, pz, nz]);
+    }
+  } else if (el instanceof HTMLVideoElement) {
+    texture = loadTextureFromVideo(el);
   }
   const uniformName =
     {
@@ -82,4 +111,4 @@ const getUniformFromImg = (
   return uniform;
 };
 
-export { loadTextureFromImg, loadCubemapFromImgs, getUniformFromImg };
+export { loadTextureFromImg, loadCubemapFromImgs, getUniformFromAsset };

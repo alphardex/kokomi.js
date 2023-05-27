@@ -162,7 +162,7 @@ const getPositionCentroids = (
   return centroidBuffer;
 };
 
-interface CreatePolygonShapeConfig {
+export interface CreatePolygonShapeConfig {
   scale: number;
 }
 
