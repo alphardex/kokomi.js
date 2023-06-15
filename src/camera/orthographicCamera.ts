@@ -12,6 +12,7 @@ export interface OrthographicCameraConfig {
  */
 class OrthographicCamera extends THREE.OrthographicCamera {
   frustum: number;
+  useAspect: boolean;
   constructor(config: Partial<OrthographicCameraConfig> = {}) {
     const aspect = window.innerWidth / window.innerHeight;
 
@@ -29,6 +30,7 @@ class OrthographicCamera extends THREE.OrthographicCamera {
     );
 
     this.frustum = frustum;
+    this.useAspect = useAspect;
   }
 }
 

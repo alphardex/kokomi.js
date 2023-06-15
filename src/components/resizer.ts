@@ -34,11 +34,13 @@ class Resizer extends Component {
       camera.aspect = aspect;
       camera.updateProjectionMatrix();
     } else if (camera instanceof OrthographicCamera) {
-      const { frustum } = camera;
+      const { frustum, useAspect } = camera;
       if (frustum) {
+        const actualAspect = useAspect ? aspect : 1;
+
         [camera.left, camera.right, camera.top, camera.bottom] = [
-          aspect * frustum * -0.5,
-          aspect * frustum * 0.5,
+          actualAspect * frustum * -0.5,
+          actualAspect * frustum * 0.5,
           frustum * 0.5,
           frustum * -0.5,
         ];
