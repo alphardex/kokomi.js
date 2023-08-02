@@ -145,7 +145,7 @@ class Sparkles extends Component {
         ...uj.shadertoyUniforms,
         ...{
           uPixelRatio: {
-            value: Math.min(window.devicePixelRatio, 2),
+            value: this.base.renderer.getPixelRatio(),
           },
         },
       },
