@@ -27,7 +27,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">GlassMaterial</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/materials/glassMaterial.ts#L8">src/materials/glassMaterial.ts:8</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/materials/glassMaterial.ts#L8">src/materials/glassMaterial.ts:8</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -39,9 +39,13 @@
 </div></section>
 <section class="tsd-index-section">
 <h3 class="tsd-index-heading">Properties</h3>
-<div class="tsd-index-list"><a href="GlassMaterial.html#alphaMap" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>alpha<wbr/>Map</span></a>
+<div class="tsd-index-list"><a href="GlassMaterial.html#alphaHash" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><g id="icon-1024"><rect fill="var(--color-icon-background)" stroke="#FF984D" stroke-width="1.5" x="1" y="1" width="22" height="22" rx="12"></rect><path d="M9.354 16V7.24H12.174C12.99 7.24 13.638 7.476 14.118 7.948C14.606 8.412 14.85 9.036 14.85 9.82C14.85 10.604 14.606 11.232 14.118 11.704C13.638 12.168 12.99 12.4 12.174 12.4H10.434V16H9.354ZM10.434 11.428H12.174C12.646 11.428 13.022 11.284 13.302 10.996C13.59 10.7 13.734 10.308 13.734 9.82C13.734 9.324 13.59 8.932 13.302 8.644C13.022 8.356 12.646 8.212 12.174 8.212H10.434V11.428Z" fill="var(--color-text)"></path></g></svg><span>alpha<wbr/>Hash</span></a>
+<a href="GlassMaterial.html#alphaMap" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Map</span></a>
 <a href="GlassMaterial.html#alphaTest" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Test</span></a>
 <a href="GlassMaterial.html#alphaToCoverage" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>To<wbr/>Coverage</span></a>
+<a href="GlassMaterial.html#anisotropy" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy?</span></a>
+<a href="GlassMaterial.html#anisotropyMap" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy<wbr/>Map?</span></a>
+<a href="GlassMaterial.html#anisotropyRotation" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy<wbr/>Rotation?</span></a>
 <a href="GlassMaterial.html#aoMap" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>ao<wbr/>Map</span></a>
 <a href="GlassMaterial.html#aoMapIntensity" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>ao<wbr/>Map<wbr/>Intensity</span></a>
 <a href="GlassMaterial.html#attenuationColor" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>attenuation<wbr/>Color</span></a>
@@ -175,9 +179,15 @@
 <h4 class="tsd-returns-title">Returns <a href="GlassMaterial.html" class="tsd-signature-type tsd-kind-class">GlassMaterial</a></h4><aside class="tsd-sources">
 <p>Overrides THREE.MeshPhysicalMaterial.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/materials/glassMaterial.ts#L9">src/materials/glassMaterial.ts:9</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/materials/glassMaterial.ts#L9">src/materials/glassMaterial.ts:9</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaHash" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>alpha<wbr/>Hash</span><a href="#alphaHash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>Hash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<p>Inherited from THREE.MeshPhysicalMaterial.alphaHash</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:69</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>alpha<wbr/>Map</span><a href="#alphaMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -187,7 +197,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.alphaMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:160</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:159</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaTest" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>alpha<wbr/>Test</span><a href="#alphaTest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>Test</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -199,7 +209,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.alphaTest</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:72</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:75</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaToCoverage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>alpha<wbr/>To<wbr/>Coverage</span><a href="#alphaToCoverage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>To<wbr/>Coverage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -211,7 +221,37 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.alphaToCoverage</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:78</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:81</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="anisotropy" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>anisotropy</span><a href="#anisotropy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">anisotropy</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography">
+<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">0</span>
+</code><button>Copy</button></pre>
+</div><aside class="tsd-sources">
+<p>Inherited from THREE.MeshPhysicalMaterial.anisotropy</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:204</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="anisotropyMap" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>anisotropy<wbr/>Map</span><a href="#anisotropyMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">anisotropy<wbr/>Map</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
+<div class="tsd-comment tsd-typography">
+<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">null</span>
+</code><button>Copy</button></pre>
+</div><aside class="tsd-sources">
+<p>Inherited from THREE.MeshPhysicalMaterial.anisotropyMap</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:214</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="anisotropyRotation" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>anisotropy<wbr/>Rotation</span><a href="#anisotropyRotation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">anisotropy<wbr/>Rotation</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography">
+<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">0</span>
+</code><button>Copy</button></pre>
+</div><aside class="tsd-sources">
+<p>Inherited from THREE.MeshPhysicalMaterial.anisotropyRotation</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:209</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="aoMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ao<wbr/>Map</span><a href="#aoMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ao<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -221,7 +261,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.aoMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:85</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:84</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="aoMapIntensity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ao<wbr/>Map<wbr/>Intensity</span><a href="#aoMapIntensity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ao<wbr/>Map<wbr/>Intensity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -231,7 +271,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.aoMapIntensity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:90</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:89</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="attenuationColor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>attenuation<wbr/>Color</span><a href="#attenuationColor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">attenuation<wbr/>Color</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Color</span></div>
@@ -241,7 +281,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.attenuationColor</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:138</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:154</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="attenuationDistance" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>attenuation<wbr/>Distance</span><a href="#attenuationDistance" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">attenuation<wbr/>Distance</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -251,7 +291,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.attenuationDistance</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:133</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:149</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendDst" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Dst</span><a href="#blendDst" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Dst</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span></div>
@@ -263,7 +303,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendDst</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:84</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:87</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendDstAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Dst<wbr/>Alpha</span><a href="#blendDstAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Dst<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -275,7 +315,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendDstAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:90</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:93</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendEquation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Equation</span><a href="#blendEquation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Equation</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingEquation</span></div>
@@ -287,7 +327,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendEquation</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:96</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:99</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendEquationAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Equation<wbr/>Alpha</span><a href="#blendEquationAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Equation<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -299,10 +339,10 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendEquationAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:102</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:105</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendSrc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Src</span><a href="#blendSrc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">BlendingSrcFactor</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">210</span></div>
 <div class="tsd-comment tsd-typography"><p>Blending source. It&#39;s one of the blending mode constants defined in Three.js. Default is SrcAlphaFactor.</p>
 </div>
 <div class="tsd-comment tsd-typography">
@@ -311,7 +351,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendSrc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:114</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:117</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendSrcAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Src<wbr/>Alpha</span><a href="#blendSrcAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -323,7 +363,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blendSrcAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:120</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:123</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blending" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blending</span><a href="#blending" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blending</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Blending</span></div>
@@ -335,7 +375,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.blending</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:108</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:111</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="bumpMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>bump<wbr/>Map</span><a href="#bumpMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">bump<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -345,7 +385,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.bumpMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:110</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:109</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="bumpScale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>bump<wbr/>Scale</span><a href="#bumpScale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">bump<wbr/>Scale</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -355,7 +395,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.bumpScale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:115</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:114</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoat" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat</span><a href="#clearcoat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -365,7 +405,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoat</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:48</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:64</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoatMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat<wbr/>Map</span><a href="#clearcoatMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -375,7 +415,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoatMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:53</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:69</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoatNormalMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat<wbr/>Normal<wbr/>Map</span><a href="#clearcoatNormalMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat<wbr/>Normal<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -385,7 +425,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoatNormalMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:73</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:89</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoatNormalScale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat<wbr/>Normal<wbr/>Scale</span><a href="#clearcoatNormalScale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat<wbr/>Normal<wbr/>Scale</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector2</span></div>
@@ -395,7 +435,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoatNormalScale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:68</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:84</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoatRoughness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat<wbr/>Roughness</span><a href="#clearcoatRoughness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat<wbr/>Roughness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -405,7 +445,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoatRoughness</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:58</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:74</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clearcoatRoughnessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clearcoat<wbr/>Roughness<wbr/>Map</span><a href="#clearcoatRoughnessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clearcoat<wbr/>Roughness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -415,7 +455,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clearcoatRoughnessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:63</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:79</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clipIntersection" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clip<wbr/>Intersection</span><a href="#clipIntersection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clip<wbr/>Intersection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -427,7 +467,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clipIntersection</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:126</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:129</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clipShadows" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clip<wbr/>Shadows</span><a href="#clipShadows" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clip<wbr/>Shadows</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -439,10 +479,10 @@
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clipShadows</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:141</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:144</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clippingPlanes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clipping<wbr/>Planes</span><a href="#clippingPlanes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">clipping<wbr/>Planes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">clipping<wbr/>Planes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Plane</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>User-defined clipping planes specified as THREE.Plane objects in world space.
 These planes apply to the objects this material is attached to.
 Points in space whose signed distance to the plane is negative are clipped (not rendered).
@@ -454,7 +494,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clippingPlanes</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:135</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:138</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="color" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>color</span><a href="#color" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">color</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Color</span></div>
@@ -464,7 +504,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.color</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:55</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:54</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="colorWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>color<wbr/>Write</span><a href="#colorWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">color<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -476,7 +516,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.colorWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:147</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:150</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="defines" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>defines</span><a href="#defines" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">defines</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
@@ -491,7 +531,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.defines</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:43</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:59</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthFunc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Func</span><a href="#depthFunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Func</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">DepthModes</span></div>
@@ -503,7 +543,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.depthFunc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:160</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:163</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthTest" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Test</span><a href="#depthTest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Test</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -515,7 +555,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.depthTest</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:166</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:169</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Write</span><a href="#depthWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -528,7 +568,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.depthWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:173</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:176</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="displacementBias" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>displacement<wbr/>Bias</span><a href="#displacementBias" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">displacement<wbr/>Bias</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -538,7 +578,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.displacementBias</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:145</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:144</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="displacementMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>displacement<wbr/>Map</span><a href="#displacementMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">displacement<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -548,7 +588,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.displacementMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:135</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:134</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="displacementScale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>displacement<wbr/>Scale</span><a href="#displacementScale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">displacement<wbr/>Scale</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -558,7 +598,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.displacementScale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:140</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:139</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dithering" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dithering</span><a href="#dithering" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dithering</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -570,7 +610,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.dithering</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:296</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:299</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="emissive" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emissive</span><a href="#emissive" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">emissive</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Color</span></div>
@@ -580,7 +620,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.emissive</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:95</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:94</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="emissiveIntensity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emissive<wbr/>Intensity</span><a href="#emissiveIntensity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">emissive<wbr/>Intensity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -590,7 +630,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.emissiveIntensity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:100</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:99</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="emissiveMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>emissive<wbr/>Map</span><a href="#emissiveMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">emissive<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -600,7 +640,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.emissiveMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:105</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:104</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="envMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>env<wbr/>Map</span><a href="#envMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">env<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -610,7 +650,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.envMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:165</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:164</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="envMapIntensity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>env<wbr/>Map<wbr/>Intensity</span><a href="#envMapIntensity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">env<wbr/>Map<wbr/>Intensity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -620,7 +660,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.envMapIntensity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:170</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:169</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="flatShading" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>flat<wbr/>Shading</span><a href="#flatShading" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">flat<wbr/>Shading</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -632,7 +672,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.flatShading</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:196</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:195</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="fog" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>fog</span><a href="#fog" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">fog</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -644,7 +684,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.fog</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:202</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:201</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="forceSinglePass" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>force<wbr/>Single<wbr/>Pass</span><a href="#forceSinglePass" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">force<wbr/>Single<wbr/>Pass</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -654,7 +694,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.forceSinglePass</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:290</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:293</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -663,7 +703,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.id</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:178</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:181</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="ior" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ior</span><a href="#ior" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ior</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -673,7 +713,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.ior</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:83</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:99</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="iridescence" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>iridescence</span><a href="#iridescence" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">iridescence</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -683,7 +723,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.iridescence</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:173</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:189</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="iridescenceIOR" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>iridescenceIOR</span><a href="#iridescenceIOR" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">iridescenceIOR</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -693,7 +733,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.iridescenceIOR</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:168</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:184</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="iridescenceMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>iridescence<wbr/>Map</span><a href="#iridescenceMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">iridescence<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -703,7 +743,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.iridescenceMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:163</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:179</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="iridescenceThicknessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>iridescence<wbr/>Thickness<wbr/>Map</span><a href="#iridescenceThicknessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">iridescence<wbr/>Thickness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -713,17 +753,17 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.iridescenceThicknessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:183</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:199</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="iridescenceThicknessRange" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>iridescence<wbr/>Thickness<wbr/>Range</span><a href="#iridescenceThicknessRange" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">iridescence<wbr/>Thickness<wbr/>Range</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">iridescence<wbr/>Thickness<wbr/>Range</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
 <div class="tsd-comment tsd-typography">
 <h4>Default</h4><pre><code class="language-ts"><span class="hl-0">[</span><span class="hl-7">100</span><span class="hl-0">, </span><span class="hl-7">400</span><span class="hl-0">]</span>
 </code><button>Copy</button></pre>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.iridescenceThicknessRange</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:178</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:194</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isMaterial" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Material</span><a href="#isMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
@@ -733,13 +773,13 @@ You should not change this, as it used internally for optimisation.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.isMaterial</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:236</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:239</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isMeshStandardMaterial" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Mesh<wbr/>Standard<wbr/>Material</span><a href="#isMeshStandardMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Mesh<wbr/>Standard<wbr/>Material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.isMeshStandardMaterial</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:204</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:203</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="lightMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>light<wbr/>Map</span><a href="#lightMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">light<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -749,7 +789,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.lightMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:75</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:74</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="lightMapIntensity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>light<wbr/>Map<wbr/>Intensity</span><a href="#lightMapIntensity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">light<wbr/>Map<wbr/>Intensity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -759,7 +799,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.lightMapIntensity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:80</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:79</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="map" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>map</span><a href="#map" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -769,7 +809,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.map</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:70</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:69</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="metalness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>metalness</span><a href="#metalness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">metalness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -779,7 +819,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.metalness</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:65</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:64</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="metalnessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>metalness<wbr/>Map</span><a href="#metalnessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">metalness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -789,7 +829,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.metalnessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:155</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:154</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -801,7 +841,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.name</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:242</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:245</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="needsUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>needs<wbr/>Update</span><a href="#needsUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">needs<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -814,7 +854,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.needsUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:249</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:252</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="normalMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>normal<wbr/>Map</span><a href="#normalMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">normal<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -824,7 +864,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.normalMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:120</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:119</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="normalMapType" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>normal<wbr/>Map<wbr/>Type</span><a href="#normalMapType" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">normal<wbr/>Map<wbr/>Type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">NormalMapTypes</span></div>
@@ -834,7 +874,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.normalMapType</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:125</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:124</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="normalScale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>normal<wbr/>Scale</span><a href="#normalScale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">normal<wbr/>Scale</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector2</span></div>
@@ -844,7 +884,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.normalScale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:130</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:129</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="opacity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>opacity</span><a href="#opacity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">opacity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -856,7 +896,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.opacity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:255</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:258</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffset" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset</span><a href="#polygonOffset" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -868,7 +908,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.polygonOffset</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:261</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:264</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffsetFactor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset<wbr/>Factor</span><a href="#polygonOffsetFactor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset<wbr/>Factor</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -880,7 +920,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.polygonOffsetFactor</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:267</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:270</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffsetUnits" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset<wbr/>Units</span><a href="#polygonOffsetUnits" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset<wbr/>Units</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -892,7 +932,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.polygonOffsetUnits</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:273</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:276</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="precision" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>precision</span><a href="#precision" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">precision</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;highp&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mediump&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;lowp&quot;</span></div>
@@ -904,7 +944,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.precision</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:279</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:282</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="premultipliedAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premultiplied<wbr/>Alpha</span><a href="#premultipliedAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premultiplied<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -916,7 +956,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.premultipliedAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:285</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:288</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="reflectivity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>reflectivity</span><a href="#reflectivity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">reflectivity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -926,7 +966,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.reflectivity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:78</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:94</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="roughness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>roughness</span><a href="#roughness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">roughness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -936,7 +976,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.roughness</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:60</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:59</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="roughnessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>roughness<wbr/>Map</span><a href="#roughnessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">roughness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -946,7 +986,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.roughnessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:150</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:149</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="shadowSide" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>shadow<wbr/>Side</span><a href="#shadowSide" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">shadow<wbr/>Side</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Side</span></div>
@@ -959,7 +999,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.shadowSide</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:311</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:314</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sheen" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sheen</span><a href="#sheen" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">sheen</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -969,7 +1009,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.sheen</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:88</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:104</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sheenColor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sheen<wbr/>Color</span><a href="#sheenColor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">sheen<wbr/>Color</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Color</span></div>
@@ -979,7 +1019,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.sheenColor</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:93</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:109</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sheenColorMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sheen<wbr/>Color<wbr/>Map</span><a href="#sheenColorMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">sheen<wbr/>Color<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -989,7 +1029,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.sheenColorMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:98</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:114</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sheenRoughness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sheen<wbr/>Roughness</span><a href="#sheenRoughness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">sheen<wbr/>Roughness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -999,7 +1039,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.sheenRoughness</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:103</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:119</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sheenRoughnessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>sheen<wbr/>Roughness<wbr/>Map</span><a href="#sheenRoughnessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">sheen<wbr/>Roughness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -1009,7 +1049,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.sheenRoughnessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:108</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:124</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="side" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>side</span><a href="#side" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">side</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Side</span></div>
@@ -1022,7 +1062,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.side</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:304</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:307</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="specularColor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>specular<wbr/>Color</span><a href="#specularColor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">specular<wbr/>Color</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Color</span></div>
@@ -1032,7 +1072,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.specularColor</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:148</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:164</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="specularColorMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>specular<wbr/>Color<wbr/>Map</span><a href="#specularColorMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">specular<wbr/>Color<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -1042,7 +1082,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.specularColorMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:158</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:174</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="specularIntensity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>specular<wbr/>Intensity</span><a href="#specularIntensity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">specular<wbr/>Intensity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1052,7 +1092,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.specularIntensity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:143</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:159</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="specularIntensityMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>specular<wbr/>Intensity<wbr/>Map</span><a href="#specularIntensityMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">specular<wbr/>Intensity<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -1062,7 +1102,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.specularIntensityMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:153</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:169</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Fail</span><a href="#stencilFail" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Fail</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -1074,7 +1114,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilFail</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:214</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:217</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFunc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Func</span><a href="#stencilFunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Func</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilFunc</span></div>
@@ -1086,7 +1126,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilFunc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:190</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:193</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFuncMask" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Func<wbr/>Mask</span><a href="#stencilFuncMask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Func<wbr/>Mask</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1098,7 +1138,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilFuncMask</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:208</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:211</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilRef" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Ref</span><a href="#stencilRef" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Ref</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1110,7 +1150,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilRef</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:196</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:199</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Write</span><a href="#stencilWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1122,7 +1162,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:184</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:187</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilWriteMask" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Write<wbr/>Mask</span><a href="#stencilWriteMask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Write<wbr/>Mask</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1134,7 +1174,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilWriteMask</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:202</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:205</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilZFail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencilZFail</span><a href="#stencilZFail" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencilZFail</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -1148,7 +1188,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilZFail</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:222</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:225</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilZPass" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencilZPass</span><a href="#stencilZPass" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencilZPass</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -1162,7 +1202,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.stencilZPass</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:230</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:233</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="thickness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>thickness</span><a href="#thickness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">thickness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1172,7 +1212,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.thickness</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:123</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:139</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="thicknessMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>thickness<wbr/>Map</span><a href="#thicknessMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">thickness<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -1182,7 +1222,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.thicknessMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:128</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:144</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toneMapped" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tone<wbr/>Mapped</span><a href="#toneMapped" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">tone<wbr/>Mapped</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1195,7 +1235,7 @@ Default is true.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.toneMapped</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:318</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:321</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="transmission" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>transmission</span><a href="#transmission" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">transmission</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1205,7 +1245,7 @@ Default is true.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.transmission</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:113</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:129</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="transmissionMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>transmission<wbr/>Map</span><a href="#transmissionMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">transmission<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Texture</span></div>
@@ -1215,7 +1255,7 @@ Default is true.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.transmissionMap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:118</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:134</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="transparent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>transparent</span><a href="#transparent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">transparent</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1229,7 +1269,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.transparent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:326</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:329</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -1239,7 +1279,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.type</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:38</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshPhysicalMaterial.d.ts:54</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="userData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Data</span><a href="#userData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">user<wbr/>Data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
@@ -1251,7 +1291,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.userData</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:355</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:358</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="uuid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uuid</span><a href="#uuid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -1260,7 +1300,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.uuid</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:337</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:340</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="version" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1272,7 +1312,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.version</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:361</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:364</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="vertexColors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>vertex<wbr/>Colors</span><a href="#vertexColors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">vertex<wbr/>Colors</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1284,7 +1324,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.vertexColors</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:343</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:346</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="visible" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>visible</span><a href="#visible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">visible</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1296,7 +1336,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.visible</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:349</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:352</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wireframe" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wireframe</span><a href="#wireframe" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wireframe</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -1306,7 +1346,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.wireframe</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:175</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:174</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wireframeLinecap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wireframe<wbr/>Linecap</span><a href="#wireframeLinecap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wireframe<wbr/>Linecap</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -1316,7 +1356,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.wireframeLinecap</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:185</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:184</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wireframeLinejoin" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wireframe<wbr/>Linejoin</span><a href="#wireframeLinejoin" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wireframe<wbr/>Linejoin</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -1326,7 +1366,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.wireframeLinejoin</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:190</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:189</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wireframeLinewidth" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wireframe<wbr/>Linewidth</span><a href="#wireframeLinewidth" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wireframe<wbr/>Linewidth</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -1336,7 +1376,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.wireframeLinewidth</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:180</li></ul></aside></section></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:179</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
@@ -1368,7 +1408,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.addEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:30</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clone" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clone</span><a href="#clone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1380,7 +1420,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.clone</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:366</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:369</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="copy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>copy</span><a href="#copy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1398,7 +1438,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.copy</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:372</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:375</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="customProgramCacheKey" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>custom<wbr/>Program<wbr/>Cache<wbr/>Key</span><a href="#customProgramCacheKey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1410,7 +1450,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.customProgramCacheKey</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:391</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:394</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispatchEvent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispatch<wbr/>Event</span><a href="#dispatchEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1422,12 +1462,15 @@ Default is false.</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5>
+<div class="tsd-comment tsd-typography"><p>The event that gets fired.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.dispatchEvent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:50</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:66</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispose" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispose</span><a href="#dispose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1439,7 +1482,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.dispose</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:377</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:380</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="hasEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Event<wbr/>Listener</span><a href="#hasEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1469,7 +1512,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.hasEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:37</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:53</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onBeforeCompile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Before<wbr/>Compile</span><a href="#onBeforeCompile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1496,7 +1539,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.onBeforeCompile</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:386</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:389</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="removeEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Event<wbr/>Listener</span><a href="#removeEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1526,7 +1569,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.removeEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:44</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:60</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setValues" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Values</span><a href="#setValues" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1540,7 +1583,7 @@ Useful for the modification of built-in materials.</p>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.setValues</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:206</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/MeshStandardMaterial.d.ts:205</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1560,7 +1603,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.MeshPhysicalMaterial.toJSON</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:403</li></ul></aside></li></ul></section></section></div>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:406</li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -1581,9 +1624,13 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-accordion-details">
 <ul>
 <li><a href="#constructor" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-512"></use></svg><span>constructor</span></a></li>
+<li><a href="#alphaHash" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Hash</span></a></li>
 <li><a href="#alphaMap" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Map</span></a></li>
 <li><a href="#alphaTest" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Test</span></a></li>
 <li><a href="#alphaToCoverage" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>To<wbr/>Coverage</span></a></li>
+<li><a href="#anisotropy" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy</span></a></li>
+<li><a href="#anisotropyMap" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy<wbr/>Map</span></a></li>
+<li><a href="#anisotropyRotation" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy<wbr/>Rotation</span></a></li>
 <li><a href="#aoMap" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>ao<wbr/>Map</span></a></li>
 <li><a href="#aoMapIntensity" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>ao<wbr/>Map<wbr/>Intensity</span></a></li>
 <li><a href="#attenuationColor" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>attenuation<wbr/>Color</span></a></li>

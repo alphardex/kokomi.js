@@ -32,6 +32,7 @@ const isObjectVisible = (
   const elPos = v1.setFromMatrixPosition(el.matrixWorld);
   const screenPos = elPos.clone();
   screenPos.project(camera);
+  // @ts-ignore
   raycaster.setFromCamera(screenPos, camera);
   const intersects = raycaster.intersectObjects(occlude, true);
   if (intersects.length) {

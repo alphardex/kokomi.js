@@ -42,6 +42,7 @@ class Reflector extends Mesh {
 
     this.isReflector = true;
 
+    // @ts-ignore
     this.type = "Reflector";
     this.camera = new PerspectiveCamera();
 

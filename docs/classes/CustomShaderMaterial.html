@@ -26,7 +26,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">CustomShaderMaterial</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L51">src/lib/THREE-CustomShaderMaterial/vanilla.ts:51</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L51">src/lib/THREE-CustomShaderMaterial/vanilla.ts:51</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -45,6 +45,7 @@
 <a href="CustomShaderMaterial.html#_instanceID" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_instanceID</span></a>
 <a href="CustomShaderMaterial.html#_type" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_type</span></a>
 <a href="CustomShaderMaterial.html#_vs" class="tsd-index-link tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_vs</span></a>
+<a href="CustomShaderMaterial.html#alphaHash" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Hash</span></a>
 <a href="CustomShaderMaterial.html#alphaTest" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Test</span></a>
 <a href="CustomShaderMaterial.html#alphaToCoverage" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>To<wbr/>Coverage</span></a>
 <a href="CustomShaderMaterial.html#blendDst" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>blend<wbr/>Dst</span></a>
@@ -130,14 +131,14 @@
 <h4 class="tsd-returns-title">Returns <a href="CustomShaderMaterial.html" class="tsd-signature-type tsd-kind-class">CustomShaderMaterial</a></h4><aside class="tsd-sources">
 <p>Overrides Material.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L62">src/lib/THREE-CustomShaderMaterial/vanilla.ts:62</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L62">src/lib/THREE-CustomShaderMaterial/vanilla.ts:62</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_base" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_base</span><a href="#_base" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_base</span><span class="tsd-signature-symbol">:</span> <a href="../types/CSMBaseMaterial.html" class="tsd-signature-type tsd-kind-type-alias">CSMBaseMaterial</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L58">src/lib/THREE-CustomShaderMaterial/vanilla.ts:58</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L58">src/lib/THREE-CustomShaderMaterial/vanilla.ts:58</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_cacheKey" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_cache<wbr/>Key</span><a href="#_cacheKey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_cache<wbr/>Key</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span></div>
@@ -150,32 +151,38 @@
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L57">src/lib/THREE-CustomShaderMaterial/vanilla.ts:57</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L57">src/lib/THREE-CustomShaderMaterial/vanilla.ts:57</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_customPatchMap" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_custom<wbr/>Patch<wbr/>Map</span><a href="#_customPatchMap" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_custom<wbr/>Patch<wbr/>Map</span><span class="tsd-signature-symbol">:</span> <a href="../interfaces/CSMPatchMap.html" class="tsd-signature-type tsd-kind-interface">CSMPatchMap</a></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L54">src/lib/THREE-CustomShaderMaterial/vanilla.ts:54</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L54">src/lib/THREE-CustomShaderMaterial/vanilla.ts:54</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_fs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_fs</span><a href="#_fs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_fs</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L55">src/lib/THREE-CustomShaderMaterial/vanilla.ts:55</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L55">src/lib/THREE-CustomShaderMaterial/vanilla.ts:55</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_instanceID" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_instanceID</span><a href="#_instanceID" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_instanceID</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L59">src/lib/THREE-CustomShaderMaterial/vanilla.ts:59</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L59">src/lib/THREE-CustomShaderMaterial/vanilla.ts:59</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_type</span><a href="#_type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L60">src/lib/THREE-CustomShaderMaterial/vanilla.ts:60</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L60">src/lib/THREE-CustomShaderMaterial/vanilla.ts:60</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_vs" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_vs</span><a href="#_vs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_vs</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L56">src/lib/THREE-CustomShaderMaterial/vanilla.ts:56</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L56">src/lib/THREE-CustomShaderMaterial/vanilla.ts:56</a></li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaHash" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>alpha<wbr/>Hash</span><a href="#alphaHash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>Hash</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
+<p>Inherited from Material.alphaHash</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:69</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaTest" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>alpha<wbr/>Test</span><a href="#alphaTest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>Test</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -187,7 +194,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.alphaTest</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:72</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:75</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="alphaToCoverage" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>alpha<wbr/>To<wbr/>Coverage</span><a href="#alphaToCoverage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">alpha<wbr/>To<wbr/>Coverage</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -199,7 +206,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.alphaToCoverage</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:78</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:81</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendDst" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Dst</span><a href="#blendDst" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Dst</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span></div>
@@ -211,7 +218,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendDst</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:84</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:87</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendDstAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Dst<wbr/>Alpha</span><a href="#blendDstAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Dst<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -223,7 +230,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendDstAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:90</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:93</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendEquation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Equation</span><a href="#blendEquation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Equation</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingEquation</span></div>
@@ -235,7 +242,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendEquation</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:96</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:99</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendEquationAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Equation<wbr/>Alpha</span><a href="#blendEquationAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Equation<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -247,10 +254,10 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendEquationAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:102</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:105</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendSrc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Src</span><a href="#blendSrc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">BlendingSrcFactor</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BlendingDstFactor</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">210</span></div>
 <div class="tsd-comment tsd-typography"><p>Blending source. It&#39;s one of the blending mode constants defined in Three.js. Default is SrcAlphaFactor.</p>
 </div>
 <div class="tsd-comment tsd-typography">
@@ -259,7 +266,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendSrc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:114</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:117</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blendSrcAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blend<wbr/>Src<wbr/>Alpha</span><a href="#blendSrcAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blend<wbr/>Src<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
@@ -271,7 +278,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blendSrcAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:120</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:123</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="blending" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>blending</span><a href="#blending" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">blending</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Blending</span></div>
@@ -283,7 +290,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.blending</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:108</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:111</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clipIntersection" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clip<wbr/>Intersection</span><a href="#clipIntersection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clip<wbr/>Intersection</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -295,7 +302,7 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.clipIntersection</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:126</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:129</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clipShadows" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clip<wbr/>Shadows</span><a href="#clipShadows" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">clip<wbr/>Shadows</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -307,10 +314,10 @@
 </div><aside class="tsd-sources">
 <p>Inherited from Material.clipShadows</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:141</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:144</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clippingPlanes" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clipping<wbr/>Planes</span><a href="#clippingPlanes" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">clipping<wbr/>Planes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">clipping<wbr/>Planes</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Plane</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>User-defined clipping planes specified as THREE.Plane objects in world space.
 These planes apply to the objects this material is attached to.
 Points in space whose signed distance to the plane is negative are clipped (not rendered).
@@ -322,7 +329,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.clippingPlanes</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:135</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:138</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="colorWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>color<wbr/>Write</span><a href="#colorWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">color<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -334,7 +341,7 @@ See the WebGL / clipping /intersection example. Default is null.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.colorWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:147</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:150</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="defines" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>defines</span><a href="#defines" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">defines</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
@@ -352,7 +359,7 @@ The pairs are defined in both vertex and fragment shaders. Default is undefined.
 </div><aside class="tsd-sources">
 <p>Inherited from Material.defines</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:154</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:157</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthFunc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Func</span><a href="#depthFunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Func</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">DepthModes</span></div>
@@ -364,7 +371,7 @@ The pairs are defined in both vertex and fragment shaders. Default is undefined.
 </div><aside class="tsd-sources">
 <p>Inherited from Material.depthFunc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:160</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:163</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthTest" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Test</span><a href="#depthTest" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Test</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -376,7 +383,7 @@ The pairs are defined in both vertex and fragment shaders. Default is undefined.
 </div><aside class="tsd-sources">
 <p>Inherited from Material.depthTest</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:166</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:169</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="depthWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>depth<wbr/>Write</span><a href="#depthWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">depth<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -389,7 +396,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from Material.depthWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:173</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:176</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dithering" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dithering</span><a href="#dithering" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dithering</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -401,7 +408,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from Material.dithering</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:296</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:299</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="forceSinglePass" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>force<wbr/>Single<wbr/>Pass</span><a href="#forceSinglePass" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">force<wbr/>Single<wbr/>Pass</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -411,7 +418,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 </div><aside class="tsd-sources">
 <p>Inherited from Material.forceSinglePass</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:290</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:293</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -420,7 +427,7 @@ When drawing 2D overlays it can be useful to disable the depth writing in order 
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.id</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:178</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:181</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isMaterial" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Material</span><a href="#isMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
@@ -430,7 +437,7 @@ You should not change this, as it used internally for optimisation.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.isMaterial</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:236</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:239</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -442,7 +449,7 @@ You should not change this, as it used internally for optimisation.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.name</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:242</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:245</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="needsUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>needs<wbr/>Update</span><a href="#needsUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">needs<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -455,7 +462,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.needsUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:249</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:252</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="opacity" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>opacity</span><a href="#opacity" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">opacity</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -467,7 +474,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.opacity</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:255</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:258</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffset" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset</span><a href="#polygonOffset" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -479,7 +486,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.polygonOffset</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:261</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:264</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffsetFactor" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset<wbr/>Factor</span><a href="#polygonOffsetFactor" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset<wbr/>Factor</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -491,7 +498,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.polygonOffsetFactor</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:267</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:270</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="polygonOffsetUnits" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>polygon<wbr/>Offset<wbr/>Units</span><a href="#polygonOffsetUnits" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">polygon<wbr/>Offset<wbr/>Units</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -503,7 +510,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.polygonOffsetUnits</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:273</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:276</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="precision" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>precision</span><a href="#precision" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">precision</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;highp&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mediump&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;lowp&quot;</span></div>
@@ -515,7 +522,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.precision</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:279</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:282</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="premultipliedAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premultiplied<wbr/>Alpha</span><a href="#premultipliedAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premultiplied<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -527,7 +534,7 @@ This property is automatically set to true when instancing a new material.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.premultipliedAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:285</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:288</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="shadowSide" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>shadow<wbr/>Side</span><a href="#shadowSide" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">shadow<wbr/>Side</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Side</span></div>
@@ -540,7 +547,7 @@ If <em>null</em>, the value is opposite that of side, above.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.shadowSide</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:311</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:314</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="side" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>side</span><a href="#side" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">side</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Side</span></div>
@@ -553,7 +560,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.side</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:304</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:307</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Fail</span><a href="#stencilFail" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Fail</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -565,7 +572,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilFail</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:214</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:217</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFunc" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Func</span><a href="#stencilFunc" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Func</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilFunc</span></div>
@@ -577,7 +584,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilFunc</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:190</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:193</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilFuncMask" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Func<wbr/>Mask</span><a href="#stencilFuncMask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Func<wbr/>Mask</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -589,7 +596,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilFuncMask</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:208</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:211</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilRef" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Ref</span><a href="#stencilRef" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Ref</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -601,7 +608,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilRef</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:196</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:199</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilWrite" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Write</span><a href="#stencilWrite" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Write</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -613,7 +620,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilWrite</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:184</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:187</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilWriteMask" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencil<wbr/>Write<wbr/>Mask</span><a href="#stencilWriteMask" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencil<wbr/>Write<wbr/>Mask</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -625,7 +632,7 @@ Default is THREE.FrontSide. Other options are THREE.BackSide and THREE.DoubleSid
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilWriteMask</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:202</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:205</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilZFail" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencilZFail</span><a href="#stencilZFail" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencilZFail</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -639,7 +646,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilZFail</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:222</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:225</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="stencilZPass" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>stencilZPass</span><a href="#stencilZPass" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">stencilZPass</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">StencilOp</span></div>
@@ -653,7 +660,7 @@ See the stencil operation constants for all possible values.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.stencilZPass</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:230</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:233</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toneMapped" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>tone<wbr/>Mapped</span><a href="#toneMapped" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">tone<wbr/>Mapped</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -666,7 +673,7 @@ Default is true.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.toneMapped</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:318</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:321</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="transparent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>transparent</span><a href="#transparent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">transparent</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -680,7 +687,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.transparent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:326</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:329</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -692,7 +699,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.type</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:332</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:335</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="uniforms" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uniforms</span><a href="#uniforms" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">uniforms</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">IUniform</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
@@ -702,7 +709,7 @@ Default is false.</p>
 <li class="tsd-parameter-index-signature">
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type ">IUniform</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L52">src/lib/THREE-CustomShaderMaterial/vanilla.ts:52</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L52">src/lib/THREE-CustomShaderMaterial/vanilla.ts:52</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="userData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Data</span><a href="#userData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">user<wbr/>Data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
@@ -714,7 +721,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.userData</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:355</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:358</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="uuid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uuid</span><a href="#uuid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
@@ -723,7 +730,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.uuid</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:337</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:340</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="version" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
@@ -735,7 +742,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.version</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:361</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:364</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="vertexColors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>vertex<wbr/>Colors</span><a href="#vertexColors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">vertex<wbr/>Colors</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -747,7 +754,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.vertexColors</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:343</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:346</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="visible" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>visible</span><a href="#visible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">visible</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
@@ -759,7 +766,7 @@ Default is false.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Material.visible</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:349</li></ul></aside></section></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:352</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
@@ -791,7 +798,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.addEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:30</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="clone" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clone</span><a href="#clone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -800,7 +807,7 @@ Default is false.</p>
 <h4 class="tsd-returns-title">Returns <a href="CustomShaderMaterial.html" class="tsd-signature-type tsd-kind-class">CustomShaderMaterial</a></h4><aside class="tsd-sources">
 <p>Overrides Material.clone</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L136">src/lib/THREE-CustomShaderMaterial/vanilla.ts:136</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L136">src/lib/THREE-CustomShaderMaterial/vanilla.ts:136</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="copy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>copy</span><a href="#copy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -818,7 +825,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.copy</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:372</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:375</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="customProgramCacheKey" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>custom<wbr/>Program<wbr/>Cache<wbr/>Key</span><a href="#customProgramCacheKey" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -830,7 +837,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.customProgramCacheKey</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:391</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:394</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispatchEvent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispatch<wbr/>Event</span><a href="#dispatchEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -842,12 +849,15 @@ Default is false.</p>
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5>
+<div class="tsd-comment tsd-typography"><p>The event that gets fired.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.dispatchEvent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:50</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:66</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispose" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispose</span><a href="#dispose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -859,7 +869,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.dispose</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:377</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:380</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="generateMaterial" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>generate<wbr/>Material</span><a href="#generateMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -872,7 +882,7 @@ Default is false.</p>
 <h5><span class="tsd-kind-parameter">__namedParameters</span>: <span class="tsd-signature-type ">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/iCSMUpdateParams.html" class="tsd-signature-type tsd-kind-type-alias">iCSMUpdateParams</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;cacheKey&quot;</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L156">src/lib/THREE-CustomShaderMaterial/vanilla.ts:156</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L156">src/lib/THREE-CustomShaderMaterial/vanilla.ts:156</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="getMaterialDefine" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>get<wbr/>Material<wbr/>Define</span><a href="#getMaterialDefine" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -880,7 +890,7 @@ Default is false.</p>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L194">src/lib/THREE-CustomShaderMaterial/vanilla.ts:194</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L194">src/lib/THREE-CustomShaderMaterial/vanilla.ts:194</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="getPatchMapForMaterial" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>get<wbr/>Patch<wbr/>Map<wbr/>For<wbr/>Material</span><a href="#getPatchMapForMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -888,7 +898,7 @@ Default is false.</p>
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <a href="../interfaces/CSMPatchMap.html" class="tsd-signature-type tsd-kind-interface">CSMPatchMap</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L198">src/lib/THREE-CustomShaderMaterial/vanilla.ts:198</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L198">src/lib/THREE-CustomShaderMaterial/vanilla.ts:198</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="getShaderFromIndex" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>get<wbr/>Shader<wbr/>From<wbr/>Index</span><a href="#getShaderFromIndex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -903,7 +913,7 @@ Default is false.</p>
 <h5><span class="tsd-kind-parameter">index</span>: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L266">src/lib/THREE-CustomShaderMaterial/vanilla.ts:266</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L266">src/lib/THREE-CustomShaderMaterial/vanilla.ts:266</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="hasEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Event<wbr/>Listener</span><a href="#hasEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -933,7 +943,7 @@ Default is false.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.hasEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:37</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:53</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onBeforeCompile" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Before<wbr/>Compile</span><a href="#onBeforeCompile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -960,7 +970,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.onBeforeCompile</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:386</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:389</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="parseShader" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>parse<wbr/>Shader</span><a href="#parseShader" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -973,7 +983,7 @@ Useful for the modification of built-in materials.</p>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">shader</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/iCSMShader.html" class="tsd-signature-type tsd-kind-interface">iCSMShader</a></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L238">src/lib/THREE-CustomShaderMaterial/vanilla.ts:238</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L238">src/lib/THREE-CustomShaderMaterial/vanilla.ts:238</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="patchShader" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>patch<wbr/>Shader</span><a href="#patchShader" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -988,7 +998,7 @@ Useful for the modification of built-in materials.</p>
 <h5><span class="tsd-kind-parameter">shader</span>: <span class="tsd-signature-type">string</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L208">src/lib/THREE-CustomShaderMaterial/vanilla.ts:208</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L208">src/lib/THREE-CustomShaderMaterial/vanilla.ts:208</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="removeEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Event<wbr/>Listener</span><a href="#removeEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1018,7 +1028,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.removeEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:44</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:60</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setValues" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Values</span><a href="#setValues" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1038,7 +1048,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.setValues</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:397</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:400</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1058,7 +1068,7 @@ Useful for the modification of built-in materials.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Material.toJSON</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:403</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/materials/Material.d.ts:406</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="update" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update</span><a href="#update" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -1071,7 +1081,7 @@ Useful for the modification of built-in materials.</p>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">opts</span>: <span class="tsd-signature-type ">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../types/iCSMUpdateParams.html" class="tsd-signature-type tsd-kind-type-alias">iCSMUpdateParams</a><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L109">src/lib/THREE-CustomShaderMaterial/vanilla.ts:109</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/THREE-CustomShaderMaterial/vanilla.ts#L109">src/lib/THREE-CustomShaderMaterial/vanilla.ts:109</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -1099,6 +1109,7 @@ Useful for the modification of built-in materials.</p>
 <li><a href="#_instanceID" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_instanceID</span></a></li>
 <li><a href="#_type" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_type</span></a></li>
 <li><a href="#_vs" class="tsd-is-private"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_vs</span></a></li>
+<li><a href="#alphaHash" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Hash</span></a></li>
 <li><a href="#alphaTest" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>Test</span></a></li>
 <li><a href="#alphaToCoverage" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>alpha<wbr/>To<wbr/>Coverage</span></a></li>
 <li><a href="#blendDst" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>blend<wbr/>Dst</span></a></li>

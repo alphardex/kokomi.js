@@ -17,7 +17,11 @@ const enableRealisticRender = (renderer: THREE.WebGLRenderer) => {
   renderer.toneMappingExposure = 3;
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-  renderer.physicallyCorrectLights = true;
+  // @ts-ignore
+  if (renderer.physicallyCorrectLights) {
+    // @ts-ignore
+    renderer.physicallyCorrectLights = true;
+  }
 };
 
 // 美化渲染

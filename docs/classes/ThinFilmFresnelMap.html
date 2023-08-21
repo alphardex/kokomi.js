@@ -42,7 +42,7 @@ the fresnel factor in a PBR material.</p>
 <ul class="tsd-hierarchy">
 <li><span class="target">ThinFilmFresnelMap</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L28">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:28</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L28">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:28</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -61,7 +61,9 @@ the fresnel factor in a PBR material.</p>
 <a href="ThinFilmFresnelMap.html#_size" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_size</span></a>
 <a href="ThinFilmFresnelMap.html#anisotropy" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy</span></a>
 <a href="ThinFilmFresnelMap.html#center" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>center</span></a>
-<a href="ThinFilmFresnelMap.html#encoding" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>encoding</span></a>
+<a href="ThinFilmFresnelMap.html#channel" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>channel</span></a>
+<a href="ThinFilmFresnelMap.html#colorSpace" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>color<wbr/>Space</span></a>
+<a href="ThinFilmFresnelMap.html#encoding" class="tsd-index-link deprecated tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>encoding</span></a>
 <a href="ThinFilmFresnelMap.html#flipY" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>flipY</span></a>
 <a href="ThinFilmFresnelMap.html#format" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>format</span></a>
 <a href="ThinFilmFresnelMap.html#generateMipmaps" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>generate<wbr/>Mipmaps</span></a>
@@ -84,7 +86,6 @@ the fresnel factor in a PBR material.</p>
 <a href="ThinFilmFresnelMap.html#repeat" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>repeat</span></a>
 <a href="ThinFilmFresnelMap.html#rotation" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>rotation</span></a>
 <a href="ThinFilmFresnelMap.html#source" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>source</span></a>
-<a href="ThinFilmFresnelMap.html#sourceFile" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>source<wbr/>File</span></a>
 <a href="ThinFilmFresnelMap.html#type" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>type</span></a>
 <a href="ThinFilmFresnelMap.html#unpackAlignment" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>unpack<wbr/>Alignment</span></a>
 <a href="ThinFilmFresnelMap.html#userData" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>user<wbr/>Data</span></a>
@@ -141,218 +142,328 @@ the fresnel factor in a PBR material.</p>
 <h4 class="tsd-returns-title">Returns <a href="ThinFilmFresnelMap.html" class="tsd-signature-type tsd-kind-class">ThinFilmFresnelMap</a></h4><aside class="tsd-sources">
 <p>Overrides THREE.DataTexture.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L34">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:34</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L34">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:34</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member"><a id="_data" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_data</span><a href="#_data" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Uint8Array</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L33">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:33</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L33">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:33</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="_filmThickness" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_film<wbr/>Thickness</span><a href="#_filmThickness" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_film<wbr/>Thickness</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L29">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:29</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L29">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:29</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="_refractiveIndexBase" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_refractive<wbr/>Index<wbr/>Base</span><a href="#_refractiveIndexBase" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_refractive<wbr/>Index<wbr/>Base</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L31">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:31</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L31">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:31</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="_refractiveIndexFilm" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_refractive<wbr/>Index<wbr/>Film</span><a href="#_refractiveIndexFilm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_refractive<wbr/>Index<wbr/>Film</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L30">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:30</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L30">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="_size" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>_size</span><a href="#_size" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">_size</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L32">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:32</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L32">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:32</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="anisotropy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>anisotropy</span><a href="#anisotropy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">anisotropy</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The number of samples taken along the axis through the pixel that has the highest density of texels.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">1</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>A higher value gives a less blurry result than a basic mipmap, at the cost of more Texture samples being used.</p>
+
+<h4>Default</h4><p><em>value of</em> <a href="ThinFilmFresnelMap.html#DEFAULT_ANISOTROPY" class="tsd-kind-property">DEFAULT_ANISOTROPY</a>. That is normally <code>1</code>.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.anisotropy</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:115</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:200</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="center" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>center</span><a href="#center" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">center</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector2</span></div>
+<div class="tsd-comment tsd-typography"><p>The point around which rotation occurs.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Vector2</span><span class="hl-0">( </span><span class="hl-7">0</span><span class="hl-0">, </span><span class="hl-7">0</span><span class="hl-0"> )</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>A value of <code>(0.5, 0.5)</code> corresponds to the center of the texture.</p>
+
+<h4>Default Value</h4><p><code>new THREE.Vector2( 0, 0 )</code>, <em>lower left.</em></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.center</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:152</li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="encoding" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>encoding</span><a href="#encoding" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">encoding</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TextureEncoding</span></div>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:278</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="channel" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>channel</span><a href="#channel" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">channel</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>Lets you select the uv attribute to map the texture to. <code>0</code> for <code>uv</code>, <code>1</code> for <code>uv1</code>, <code>2</code> for <code>uv2</code> and <code>3</code> for
+<code>uv3</code>.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<p>Inherited from THREE.DataTexture.channel</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:147</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="colorSpace" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>color<wbr/>Space</span><a href="#colorSpace" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">color<wbr/>Space</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">ColorSpace</span></div>
+<div class="tsd-comment tsd-typography"><p>The Textures | {@link Texture constants} page for details of other color spaces.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">LinearEncoding</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Textures containing color data should be annotated with SRGBColorSpace THREE.SRGBColorSpace or
+LinearSRGBColorSpace THREE.LinearSRGBColorSpace.</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li>THREE.TextureDataType</li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.NoColorSpace</p>
+</div><aside class="tsd-sources">
+<p>Inherited from THREE.DataTexture.colorSpace</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:349</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="encoding" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span class="deprecated">encoding</span><a href="#encoding" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">encoding</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TextureEncoding</span></div>
+<div class="tsd-comment tsd-typography"><p>The Textures | {@link Texture constants} page for details of other formats.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Values of <a href="ThinFilmFresnelMap.html#encoding" class="tsd-kind-property">encoding</a> !== THREE.LinearEncoding are only supported on <em>map</em>, <em>envMap</em> and <em>emissiveMap</em>.</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li>THREE.TextureDataType</li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.LinearEncoding</p>
+
+<h4>Deprecated</h4><p>Use Texture.colorSpace .colorSpace in three.js r152+.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.encoding</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:182</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:338</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="flipY" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>flipY</span><a href="#flipY" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">flipY</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.flipY</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:40</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:100</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="format" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>format</span><a href="#format" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">format</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">PixelFormat</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">format</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AnyPixelFormat</span></div>
+<div class="tsd-comment tsd-typography"><p>These define how elements of a 2D texture, or texels, are read by shaders.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">DepthFormat</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>All Texture types except THREE.DeepTexture and THREE.CompressedPixelFormat expect the <em>values</em> be THREE.PixelFormat</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li>THREE.PixelFormat</li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.RGBAFormat.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.format</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:55</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:211</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="generateMipmaps" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>generate<wbr/>Mipmaps</span><a href="#generateMipmaps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">generate<wbr/>Mipmaps</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.generateMipmaps</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:45</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:106</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>Unique number for this Texture instance.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.id</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:47</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:96</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="internalFormat" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>internal<wbr/>Format</span><a href="#internalFormat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">internal<wbr/>Format</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">PixelFormatGPU</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">internal<wbr/>Format</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">PixelFormatGPU</span></div>
+<div class="tsd-comment tsd-typography"><p>The GPU Pixel Format allows the developer to specify how the data is going to be stored on the GPU.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Compatible only with WebGL2RenderingContext | WebGL 2 Rendering Context.</p>
+
+<h4>See</h4><p><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></p>
+
+<h4>Default Value</h4><p>The default value is obtained using a combination of <a href="ThinFilmFresnelMap.html#format" class="tsd-kind-property">.format</a> and <a href="ThinFilmFresnelMap.html#type" class="tsd-kind-property">.type</a>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.internalFormat</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:122</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:228</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isDataTexture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Data<wbr/>Texture</span><a href="#isDataTexture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Data<wbr/>Texture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Data<wbr/>Texture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
+<div class="tsd-comment tsd-typography"><p>Read-only flag to check if a given object is of type DataTexture.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This is a <em>constant</em> value</p>
+
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.isDataTexture</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:57</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:75</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isRenderTargetTexture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Render<wbr/>Target<wbr/>Texture</span><a href="#isRenderTargetTexture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Render<wbr/>Target<wbr/>Texture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>Indicates whether a texture belongs to a render target or not</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.isRenderTargetTexture</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:187</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:355</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isTexture" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Texture</span><a href="#isTexture" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Texture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Texture</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
+<div class="tsd-comment tsd-typography"><p>Read-only flag to check if a given object is of type Texture.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This is a <em>constant</em> value</p>
+
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.isTexture</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:205</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:89</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="magFilter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mag<wbr/>Filter</span><a href="#magFilter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">mag<wbr/>Filter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TextureFilter</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">mag<wbr/>Filter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">MagnificationTextureFilter</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">LinearFilter</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p>THREE.NearestFilter</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.magFilter</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:105</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:88</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="mapping" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mapping</span><a href="#mapping" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">mapping</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Mapping</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">mapping</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AnyMapping</span></div>
+<div class="tsd-comment tsd-typography"><p>How the image is applied to the object.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">Texture</span><span class="hl-0">.</span><span class="hl-14">DEFAULT_MAPPING</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>All Texture types except THREE.CubeTexture expect the <em>values</em> be THREE.Mapping</p>
+
+<h4>See</h4><p><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></p>
+
+<h4>Default Value</h4><p><em>value of</em> <a href="ThinFilmFresnelMap.html#DEFAULT_MAPPING" class="tsd-kind-property">DEFAULT_MAPPING</a></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.mapping</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:90</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:141</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix</span><a href="#matrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Matrix3</span></div>
+<div class="tsd-comment tsd-typography"><p>The uv-transform matrix for the texture.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Matrix3</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>When <a href="ThinFilmFresnelMap.html#matrixAutoUpdate" class="tsd-kind-property">.matrixAutoUpdate</a> property is <code>true</code>.
+Will be updated by the renderer from the properties:</p>
+<ul>
+<li><a href="ThinFilmFresnelMap.html#offset" class="tsd-kind-property">.offset</a></li>
+<li><a href="ThinFilmFresnelMap.html#repeat" class="tsd-kind-property">.repeat</a></li>
+<li><a href="ThinFilmFresnelMap.html#rotation" class="tsd-kind-property">.rotation</a></li>
+<li><a href="ThinFilmFresnelMap.html#center" class="tsd-kind-property">.center</a></li>
+</ul>
+
+<h4>See</h4><p><a href="ThinFilmFresnelMap.html#matrixAutoUpdate" class="tsd-kind-property">.matrixAutoUpdate</a></p>
+
+<h4>Default Value</h4><p><code>new THREE.Matrix3()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.matrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:132</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:245</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrixAutoUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix<wbr/>Auto<wbr/>Update</span><a href="#matrixAutoUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix<wbr/>Auto<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>Whether is to update the texture&#39;s uv-transform <a href="ThinFilmFresnelMap.html#matrix" class="tsd-kind-property">.matrix</a>.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">true</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Set this to <code>false</code> if you are specifying the uv-transform <a href="ThinFilmFresnelMap.html#matrix" class="tsd-kind-property">matrix</a> directly.</p>
+
+<h4>See</h4><p><a href="ThinFilmFresnelMap.html#matrix" class="tsd-kind-property">.matrix</a></p>
+
+<h4>Default Value</h4><p><code>true</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.matrixAutoUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:137</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:253</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="minFilter" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>min<wbr/>Filter</span><a href="#minFilter" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">min<wbr/>Filter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TextureFilter</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">min<wbr/>Filter</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">MinificationTextureFilter</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">LinearMipmapLinearFilter</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p>THREE.NearestFilter</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.minFilter</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:110</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:94</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="mipmaps" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>mipmaps</span><a href="#mipmaps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">mipmaps</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>Array of user-specified mipmaps</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">[]</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>[]</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.mipmaps</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:85</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:132</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p>Optional name of the object</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-1">&#39;&#39;</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p><em>(doesn&#39;t need to be unique)</em>.</p>
+
+<h4>Default Value</h4><p><code>&quot;&quot;</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.name</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:53</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:109</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="needsPMREMUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>needsPMREMUpdate</span><a href="#needsPMREMUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">needsPMREMUpdate</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>Indicates whether this texture should be processed by THREE.PMREMGenerator or not.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Only relevant for render target textures.</p>
+
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.needsPMREMUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:192</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:362</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="offset" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>offset</span><a href="#offset" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">offset</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector2</span></div>
+<div class="tsd-comment tsd-typography"><p>How much a single repetition of the texture is offset from the beginning, in each direction <strong>U</strong> and <strong>V</strong>.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Vector2</span><span class="hl-0">( </span><span class="hl-7">0</span><span class="hl-0">, </span><span class="hl-7">0</span><span class="hl-0"> )</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Typical range is <code>0.0</code> to <code>1.0</code>.</p>
+
+<h4>Default Value</h4><p><code>new THREE.Vector2(0, 0)</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.offset</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:142</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:260</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Update</span><a href="#onUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -363,142 +474,213 @@ the fresnel factor in a PBR material.</p>
 <ul class="tsd-signatures tsd-is-external">
 <li class="tsd-signature" id="onUpdate.__type.__type-1"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>A callback function, called when the texture is updated <em>(e.g., when needsUpdate has been set to true and then the texture is used)</em>.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.onUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:207</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:404</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="premultiplyAlpha" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>premultiply<wbr/>Alpha</span><a href="#premultiplyAlpha" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">premultiply<wbr/>Alpha</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+<div class="tsd-comment tsd-typography"><p>If set to <code>true</code>, the alpha channel, if present, is multiplied into the color channels when the texture is uploaded to the GPU.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Note that this property has no effect for <a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageBitmap">ImageBitmap</a>.
+You need to configure on bitmap creation instead. See THREE.ImageBitmapLoader | ImageBitmapLoader.</p>
+
+<h4>See</h4><p>THREE.ImageBitmapLoader | ImageBitmapLoader.</p>
+
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.premultiplyAlpha</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:167</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:302</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="repeat" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>repeat</span><a href="#repeat" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">repeat</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector2</span></div>
+<div class="tsd-comment tsd-typography"><p>How many times the texture is repeated across the surface, in each direction <strong>U</strong> and <strong>V</strong>.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Vector2</span><span class="hl-0">( </span><span class="hl-7">1</span><span class="hl-0">, </span><span class="hl-7">1</span><span class="hl-0"> )</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>If repeat is set greater than <code>1</code> in either direction, the corresponding <em>Wrap</em> parameter should
+also be set to THREE.RepeatWrapping or THREE.MirroredRepeatWrapping to achieve the desired tiling effect.</p>
+
+<h4>See</h4><ul>
+<li><a href="ThinFilmFresnelMap.html#wrapS" class="tsd-kind-property">wrapS</a></li>
+<li><a href="ThinFilmFresnelMap.html#wrapT" class="tsd-kind-property">wrapT</a></li>
+</ul>
+
+<h4>Default Value</h4><p><code>new THREE.Vector2( 1, 1 )</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.repeat</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:147</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:271</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotation</span><a href="#rotation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">rotation</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>How much the texture is rotated around the center point, in radians.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">0</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Positive values are counter-clockwise.</p>
+
+<h4>Default Value</h4><p><code>0</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.rotation</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:157</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:285</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="source" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>source</span><a href="#source" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">source</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Source</span></div>
 <div class="tsd-comment tsd-typography"><p>The data definition of a texture. A reference to the data source can be shared across textures.
-This is often useful in context of spritesheets where multiple textures render the same data but with different texture transformations.</p>
+This is often useful in context of spritesheets where multiple textures render the same data
+but with different Texture transformations.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.source</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:60</li></ul></aside></section>
-<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="sourceFile" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>source<wbr/>File</span><a href="#sourceFile" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">source<wbr/>File</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
-<p>Inherited from THREE.DataTexture.sourceFile</p>
-<ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:54</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:116</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="type" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">TextureDataType</span></div>
+<div class="tsd-comment tsd-typography"><p>This must correspond to the <a href="ThinFilmFresnelMap.html#format" class="tsd-kind-property">.format</a>.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">UnsignedByteType</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>THREE.UnsignedByteType, is the type most used by Texture formats.</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li>THREE.TextureDataType</li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.UnsignedByteType</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.type</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:127</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:220</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="unpackAlignment" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>unpack<wbr/>Alignment</span><a href="#unpackAlignment" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">unpack<wbr/>Alignment</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">1</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>1</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.unpackAlignment</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:50</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:112</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="userData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Data</span><a href="#userData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">user<wbr/>Data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-<div class="tsd-comment tsd-typography"><p>An object that can be used to store custom data about the Material. It should not hold references to functions as these will not be cloned.</p>
+<div class="tsd-comment tsd-typography"><p>An object that can be used to store custom data about the texture.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">{}</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>It should not hold references to functions as these will not be cloned.</p>
+
+<h4>Default Value</h4><p><code>{}</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.userData</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:198</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:369</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="uuid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uuid</span><a href="#uuid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p><a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> of this object instance.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This gets automatically assigned and shouldn&#39;t be edited.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.uuid</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:48</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:102</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="version" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>version</span><a href="#version" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">version</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>This starts at <code>0</code> and counts how many times <a href="ThinFilmFresnelMap.html#needsUpdate" class="tsd-kind-accessor">.needsUpdate</a> is set to <code>true</code>.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">0</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>Expects a <code>Integer</code></p>
+
+<h4>Default Value</h4><p><code>0</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.version</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:203</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:376</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wrapS" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wrapS</span><a href="#wrapS" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wrapS</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Wrapping</span></div>
+<div class="tsd-comment tsd-typography"><p>This defines how the Texture is wrapped <em>horizontally</em> and corresponds to <strong>U</strong> in UV mapping.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">ClampToEdgeWrapping</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>for <strong>WEBGL1</strong> - tiling of images in textures only functions if image dimensions are powers of two
+(2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...) in terms of pixels.
+Individual dimensions need not be equal, but each must be a power of two. This is a limitation of WebGL1, not three.js.
+<strong>WEBGL2</strong> does not have this limitation.</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li><a href="ThinFilmFresnelMap.html#wrapT" class="tsd-kind-property">wrapT</a></li>
+<li><a href="ThinFilmFresnelMap.html#repeat" class="tsd-kind-property">repeat</a></li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.ClampToEdgeWrapping</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.wrapS</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:95</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:160</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="wrapT" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>wrapT</span><a href="#wrapT" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">wrapT</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Wrapping</span></div>
+<div class="tsd-comment tsd-typography"><p>This defines how the Texture is wrapped <em>vertically</em> and corresponds to <strong>V</strong> in UV mapping.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-11">ClampToEdgeWrapping</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>for <strong>WEBGL1</strong> - tiling of images in textures only functions if image dimensions are powers of two
+(2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, ...) in terms of pixels.
+Individual dimensions need not be equal, but each must be a power of two. This is a limitation of WebGL1, not three.js.
+<strong>WEBGL2</strong> does not have this limitation.</p>
+
+<h4>See</h4><ul>
+<li><a href="https://threejs.org/docs/index.html#api/en/constants/Textures">Texture Constants</a></li>
+<li><a href="ThinFilmFresnelMap.html#wrapS" class="tsd-kind-property">wrapS</a></li>
+<li><a href="ThinFilmFresnelMap.html#repeat" class="tsd-kind-property">repeat</a></li>
+</ul>
+
+<h4>Default Value</h4><p>THREE.ClampToEdgeWrapping</p>
 </div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.wrapT</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:100</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:173</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_ANISOTROPY" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>ANISOTROPY</span><a href="#DEFAULT_ANISOTROPY" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>ANISOTROPY</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>ANISOTROPY</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+<div class="tsd-comment tsd-typography"><p>The Global default value for <a href="ThinFilmFresnelMap.html#anisotropy" class="tsd-kind-property">.anisotropy</a>.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>1</code>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.DEFAULT_ANISOTROPY</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:209</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:387</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_IMAGE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>IMAGE</span><a href="#DEFAULT_IMAGE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>IMAGE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>IMAGE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+<div class="tsd-comment tsd-typography"><p>The Global default value for Texture.image | .image.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>null</code>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.DEFAULT_IMAGE</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:210</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:393</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_MAPPING" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>MAPPING</span><a href="#DEFAULT_MAPPING" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>MAPPING</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>MAPPING</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Mapping</span></div>
+<div class="tsd-comment tsd-typography"><p>The Global default value for <a href="ThinFilmFresnelMap.html#mapping" class="tsd-kind-property">.mapping</a>.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p>THREE.UVMapping</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.DEFAULT_MAPPING</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:211</li></ul></aside></section></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:399</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Accessors</h2>
 <section class="tsd-panel tsd-member"><a id="filmThickness" class="tsd-anchor"></a>
@@ -511,7 +693,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L66">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:66</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L66">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:66</a></li></ul></aside></li>
 <li class="tsd-signature" id="filmThickness.filmThickness-2"><span class="tsd-signature-symbol">set</span> filmThickness<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The thickness of the thin film layer in nanometers. Defaults to 380.</p>
@@ -524,41 +706,47 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L69">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:69</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L69">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:69</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="image" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>image</span><a href="#image" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
-<li class="tsd-signature" id="image.image-1"><span class="tsd-signature-symbol">get</span> image<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">ImageData</span></li>
+<li class="tsd-signature" id="image.image-1"><span class="tsd-signature-symbol">get</span> image<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">TextureImageData</span></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">ImageData</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Overridden with a record type holding data, width and height and depth.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">TextureImageData</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.image</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:34</li></ul></aside></li>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:81</li></ul></aside></li>
 <li class="tsd-signature" id="image.image-2"><span class="tsd-signature-symbol">set</span> image<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type ">ImageData</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type ">TextureImageData</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.image</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:35</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/DataTexture.d.ts:82</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="needsUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>needs<wbr/>Update</span><a href="#needsUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature" id="needsUpdate.needsUpdate-1"><span class="tsd-signature-symbol">set</span> needsUpdate<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Set this to <code>true</code> to trigger an update next time the texture is used. Particularly important for setting the wrap mode.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type">boolean</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.needsUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:204</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:381</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="refractiveIndexBase" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>refractive<wbr/>Index<wbr/>Base</span><a href="#refractiveIndexBase" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -569,7 +757,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L90">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:90</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L90">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:90</a></li></ul></aside></li>
 <li class="tsd-signature" id="refractiveIndexBase.refractiveIndexBase-2"><span class="tsd-signature-symbol">set</span> refractiveIndexBase<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The refractive index of the material under the film. Defaults to 3.</p>
@@ -582,7 +770,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L93">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:93</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L93">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:93</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="refractiveIndexFilm" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>refractive<wbr/>Index<wbr/>Film</span><a href="#refractiveIndexFilm" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -593,7 +781,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L78">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:78</a></li></ul></aside></li>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L78">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:78</a></li></ul></aside></li>
 <li class="tsd-signature" id="refractiveIndexFilm.refractiveIndexFilm-2"><span class="tsd-signature-symbol">set</span> refractiveIndexFilm<span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>The refractive index of the thin film. Defaults to 2.</p>
@@ -606,7 +794,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L81">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:81</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L81">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:81</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_fresnelRefl" class="tsd-anchor"></a>
@@ -632,7 +820,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L122">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:122</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L122">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:122</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-private"><a id="_updateData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagPrivate">Private</code> <span>_update<wbr/>Data</span><a href="#_updateData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-private">
@@ -641,7 +829,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L166">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:166</a></li></ul></aside></li></ul></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L166">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:166</a></li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Event<wbr/>Listener</span><a href="#addEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -671,16 +859,21 @@ This is often useful in context of spritesheets where multiple textures render t
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.addEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:30</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clone" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clone</span><a href="#clone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="clone.clone-1"><span class="tsd-kind-call-signature">clone</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="ThinFilmFresnelMap.html" class="tsd-signature-type tsd-kind-class">ThinFilmFresnelMap</a><a href="#clone.clone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <a href="ThinFilmFresnelMap.html" class="tsd-signature-type tsd-kind-class">ThinFilmFresnelMap</a></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Make copy of the texture</p>
+</div>
+<h4 class="tsd-returns-title">Returns <a href="ThinFilmFresnelMap.html" class="tsd-signature-type tsd-kind-class">ThinFilmFresnelMap</a></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note this is not a <strong>&quot;deep copy&quot;</strong>, the image is shared</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.clone</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:213</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:433</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="copy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>copy</span><a href="#copy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -694,7 +887,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <a href="ThinFilmFresnelMap.html" class="tsd-signature-type tsd-kind-class">ThinFilmFresnelMap</a></h4><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.copy</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:214</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:435</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispatchEvent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispatch<wbr/>Event</span><a href="#dispatchEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -706,21 +899,29 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5>
+<div class="tsd-comment tsd-typography"><p>The event that gets fired.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.dispatchEvent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:50</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:66</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispose" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispose</span><a href="#dispose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="dispose.dispose-1"><span class="tsd-kind-call-signature">dispose</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#dispose.dispose-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Frees the GPU-related resources allocated by this instance</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Call this method whenever this instance is no longer used in your app.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.dispose</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:216</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:447</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="hasEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Event<wbr/>Listener</span><a href="#hasEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -750,7 +951,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.hasEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:37</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:53</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="removeEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Event<wbr/>Listener</span><a href="#removeEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -780,44 +981,67 @@ This is often useful in context of spritesheets where multiple textures render t
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.removeEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:44</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:60</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1"><span class="tsd-kind-call-signature">toJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">meta</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1"><span class="tsd-kind-call-signature">toJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">meta</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{}</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Convert the texture to three.js <a href="https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4">JSON Object/Scene format</a>.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">meta</span>: <span class="tsd-signature-type">any</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">meta</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">{}</span></h5>
+<div class="tsd-comment tsd-typography"><p>Optional object containing metadata.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">{}</span></h4>
+<ul class="tsd-parameters"></ul>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.toJSON</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:215</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:441</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="transformUv" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>transform<wbr/>Uv</span><a href="#transformUv" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="transformUv.transformUv-1"><span class="tsd-kind-call-signature">transform<wbr/>Uv</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">uv</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector2</span><a href="#transformUv.transformUv-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Transform the <strong>UV</strong> based on the value of this texture&#39;s
+<a href="ThinFilmFresnelMap.html#offset" class="tsd-kind-property">.offset</a>,
+<a href="ThinFilmFresnelMap.html#repeat" class="tsd-kind-property">.repeat</a>,
+<a href="ThinFilmFresnelMap.html#wrapS" class="tsd-kind-property">.wrapS</a>,
+<a href="ThinFilmFresnelMap.html#wrapT" class="tsd-kind-property">.wrapT</a> and
+<a href="ThinFilmFresnelMap.html#flipY" class="tsd-kind-property">.flipY</a> properties.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">uv</span>: <span class="tsd-signature-type ">Vector2</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector2</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">uv</span>: <span class="tsd-signature-type ">Vector2</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector2</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.transformUv</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:217</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:415</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="updateMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Matrix</span><a href="#updateMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="updateMatrix.updateMatrix-1"><span class="tsd-kind-call-signature">update<wbr/>Matrix</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#updateMatrix.updateMatrix-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Update the texture&#39;s <strong>UV-transform</strong> <a href="ThinFilmFresnelMap.html#matrix" class="tsd-kind-property">.matrix</a> from the texture properties
+<a href="ThinFilmFresnelMap.html#offset" class="tsd-kind-property">.offset</a>,
+<a href="ThinFilmFresnelMap.html#repeat" class="tsd-kind-property">.repeat</a>,
+<a href="ThinFilmFresnelMap.html#rotation" class="tsd-kind-property">.rotation</a> and
+<a href="ThinFilmFresnelMap.html#center" class="tsd-kind-property">.center</a>.</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from THREE.DataTexture.updateMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:218</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/textures/Texture.d.ts:424</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member"><a id="updateSettings" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Settings</span><a href="#updateSettings" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures">
@@ -846,7 +1070,7 @@ This is often useful in context of spritesheets where multiple textures render t
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L108">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:108</a></li></ul></aside></li></ul></section></section></div>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts#L108">src/lib/threejs-thin-film-iridescence/ThinFilmFresnelMap.ts:108</a></li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
@@ -874,6 +1098,8 @@ This is often useful in context of spritesheets where multiple textures render t
 <li><a href="#_size" class=""><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>_size</span></a></li>
 <li><a href="#anisotropy" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>anisotropy</span></a></li>
 <li><a href="#center" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>center</span></a></li>
+<li><a href="#channel" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>channel</span></a></li>
+<li><a href="#colorSpace" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>color<wbr/>Space</span></a></li>
 <li><a href="#encoding" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>encoding</span></a></li>
 <li><a href="#flipY" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>flipY</span></a></li>
 <li><a href="#format" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>format</span></a></li>
@@ -897,7 +1123,6 @@ This is often useful in context of spritesheets where multiple textures render t
 <li><a href="#repeat" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>repeat</span></a></li>
 <li><a href="#rotation" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>rotation</span></a></li>
 <li><a href="#source" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>source</span></a></li>
-<li><a href="#sourceFile" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>source<wbr/>File</span></a></li>
 <li><a href="#type" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>type</span></a></li>
 <li><a href="#unpackAlignment" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>unpack<wbr/>Alignment</span></a></li>
 <li><a href="#userData" class="tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>user<wbr/>Data</span></a></li>

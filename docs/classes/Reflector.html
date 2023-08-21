@@ -29,7 +29,7 @@
 <ul class="tsd-hierarchy">
 <li><span class="target">Reflector</span></li></ul></li></ul></section><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L27">src/lib/three-stdlib/objects/reflector.ts:27</a></li></ul></aside>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L27">src/lib/three-stdlib/objects/reflector.ts:27</a></li></ul></aside>
 <section class="tsd-panel-group tsd-index-group">
 <section class="tsd-panel tsd-index-panel">
 <details class="tsd-index-content tsd-index-accordion" open><summary class="tsd-accordion-summary tsd-index-summary">
@@ -45,8 +45,8 @@
 <a href="Reflector.html#camera" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>camera</span></a>
 <a href="Reflector.html#castShadow" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>cast<wbr/>Shadow</span></a>
 <a href="Reflector.html#children" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>children</span></a>
-<a href="Reflector.html#customDepthMaterial" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>custom<wbr/>Depth<wbr/>Material</span></a>
-<a href="Reflector.html#customDistanceMaterial" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>custom<wbr/>Distance<wbr/>Material</span></a>
+<a href="Reflector.html#customDepthMaterial" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>custom<wbr/>Depth<wbr/>Material?</span></a>
+<a href="Reflector.html#customDistanceMaterial" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>custom<wbr/>Distance<wbr/>Material?</span></a>
 <a href="Reflector.html#dispose" class="tsd-index-link"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>dispose</span></a>
 <a href="Reflector.html#frustumCulled" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>frustum<wbr/>Culled</span></a>
 <a href="Reflector.html#geometry" class="tsd-index-link tsd-is-inherited tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24"><use href="#icon-1024"></use></svg><span>geometry</span></a>
@@ -147,77 +147,79 @@
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span></h5></li>
+<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">NormalBufferAttributes</span><span class="tsd-signature-symbol">&gt;</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">options</span>: <span class="tsd-signature-type ">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/ReflectorConfig.html" class="tsd-signature-type tsd-kind-interface">ReflectorConfig</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = {}</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4><aside class="tsd-sources">
 <p>Overrides Mesh.constructor</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L34">src/lib/three-stdlib/objects/reflector.ts:34</a></li></ul></aside></li></ul></section></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L34">src/lib/three-stdlib/objects/reflector.ts:34</a></li></ul></aside></li></ul></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Properties</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="animations" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>animations</span><a href="#animations" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">animations</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">AnimationClip</span><span class="tsd-signature-symbol">[]</span></div>
-<div class="tsd-comment tsd-typography"><p>Array with animation clips.</p>
+<div class="tsd-comment tsd-typography"><p>Array with object&#39;s animation clips.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">[]</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>[]</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.animations</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:169</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:199</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="camera" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>camera</span><a href="#camera" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">camera</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">PerspectiveCamera</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L30">src/lib/three-stdlib/objects/reflector.ts:30</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L30">src/lib/three-stdlib/objects/reflector.ts:30</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="castShadow" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>cast<wbr/>Shadow</span><a href="#castShadow" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">cast<wbr/>Shadow</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-<div class="tsd-comment tsd-typography"><p>Gets rendered into shadow map.</p>
+<div class="tsd-comment tsd-typography"><p>Whether the object gets rendered into shadow map.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.castShadow</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:142</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:171</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="children" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>children</span><a href="#children" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">children</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
 <div class="tsd-comment tsd-typography"><p>Array with object&#39;s children.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">[]</span>
-</code><button>Copy</button></pre>
+<h4>See</h4><p>THREE.Object3DGroup | Group for info on manually grouping objects.</p>
+
+<h4>Default Value</h4><p><code>[]</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.children</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:51</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:78</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="customDepthMaterial" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>custom<wbr/>Depth<wbr/>Material</span><a href="#customDepthMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">custom<wbr/>Depth<wbr/>Material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Material</span></div>
-<div class="tsd-comment tsd-typography"><p>Custom depth material to be used when rendering to the depth map. Can only be used in context of meshes.
-When shadow-casting with a DirectionalLight or SpotLight, if you are (a) modifying vertex positions in
-the vertex shader, (b) using a displacement map, (c) using an alpha map with alphaTest, or (d) using a
-transparent texture with alphaTest, you must specify a customDepthMaterial for proper shadows.</p>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>custom<wbr/>Depth<wbr/>Material</span><a href="#customDepthMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">custom<wbr/>Depth<wbr/>Material</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Material</span></div>
+<div class="tsd-comment tsd-typography"><p>Custom depth material to be used when rendering to the depth map.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Can only be used in context of meshes.</p>
+
+<h4>Default Value</h4><p><code>undefined</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.customDepthMaterial</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:183</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:215</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="customDistanceMaterial" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>custom<wbr/>Distance<wbr/>Material</span><a href="#customDistanceMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">custom<wbr/>Distance<wbr/>Material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Material</span></div>
-<div class="tsd-comment tsd-typography"><p>Same as customDepthMaterial, but used with PointLight.</p>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>custom<wbr/>Distance<wbr/>Material</span><a href="#customDistanceMaterial" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">custom<wbr/>Distance<wbr/>Material</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type ">Material</span></div>
+<div class="tsd-comment tsd-typography"><p>Same as <a href="OrthographicCamera.html#customDepthMaterial" class="tsd-kind-property">customDepthMaterial</a>, but used with THREE.Object3DPointLight | PointLight.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>undefined</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.customDistanceMaterial</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:188</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:221</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="dispose" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispose</span><a href="#dispose" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">dispose</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -230,196 +232,226 @@ transparent texture with alphaTest, you must specify a customDepthMaterial for p
 <li class="tsd-description">
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L33">src/lib/three-stdlib/objects/reflector.ts:33</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L33">src/lib/three-stdlib/objects/reflector.ts:33</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="frustumCulled" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>frustum<wbr/>Culled</span><a href="#frustumCulled" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">frustum<wbr/>Culled</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>When this is set, it checks every frame if the object is in the frustum of the camera before rendering the object.
-If set to false the object gets rendered every frame even if it is not in the frustum of the camera.</p>
+If set to <code>false</code> the object gets rendered every frame even if it is not in the frustum of the camera.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">true</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>true</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.frustumCulled</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:155</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:184</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="geometry" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>geometry</span><a href="#geometry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">geometry</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BufferGeometry</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">geometry</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">BufferGeometry</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">NormalBufferAttributes</span><span class="tsd-signature-symbol">&gt;</span></div>
+<div class="tsd-comment tsd-typography"><p>An instance of THREE.BufferGeometry | BufferGeometry (or derived classes), defining the object&#39;s structure.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p>THREE.BufferGeometry | <code>new THREE.BufferGeometry()</code>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.geometry</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:14</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:52</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="getRenderTarget" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Render<wbr/>Target</span><a href="#getRenderTarget" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">get<wbr/>Render<wbr/>Target</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">WebGLRenderTarget</span><span class="tsd-signature-symbol">)</span></div>
+<div class="tsd-signature"><span class="tsd-kind-property">get<wbr/>Render<wbr/>Target</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type ">WebGLRenderTarget</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Texture</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span></div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures">
-<li class="tsd-signature" id="getRenderTarget.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">WebGLRenderTarget</span></li>
+<li class="tsd-signature" id="getRenderTarget.__type-2.__type-3"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">WebGLRenderTarget</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Texture</span><span class="tsd-signature-symbol">&gt;</span></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">WebGLRenderTarget</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">WebGLRenderTarget</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Texture</span><span class="tsd-signature-symbol">&gt;</span></h4></li></ul></li></ul></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L32">src/lib/three-stdlib/objects/reflector.ts:32</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L32">src/lib/three-stdlib/objects/reflector.ts:32</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="id" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>id</span><a href="#id" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">id</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-<div class="tsd-comment tsd-typography"><p>Unique number of this object instance.</p>
+<div class="tsd-comment tsd-typography"><p>Unique number for this Object3D instance.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.id</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:26</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:42</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="ignoreObjects" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>ignore<wbr/>Objects</span><a href="#ignoreObjects" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">ignore<wbr/>Objects</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L28">src/lib/three-stdlib/objects/reflector.ts:28</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L28">src/lib/three-stdlib/objects/reflector.ts:28</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isMesh" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Mesh</span><a href="#isMesh" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Mesh</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Mesh</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
+<div class="tsd-comment tsd-typography"><p>Read-only flag to check if a given object is of type Mesh.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This is a <em>constant</em> value</p>
+
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.isMesh</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:18</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:40</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="isObject3D" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>is<wbr/>Object3D</span><a href="#isObject3D" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Object3D</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span></div>
-<div class="tsd-comment tsd-typography"><p>Used to check whether this or derived classes are Object3Ds. Default is true.
-You should not change this, as it is used internally for optimisation.</p>
+<div class="tsd-comment tsd-typography"><p>Flag to check if a given object is of type Object3D.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This is a <em>constant</em> value</p>
+
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.isObject3D</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:194</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:35</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="isReflector" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>is<wbr/>Reflector</span><a href="#isReflector" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">is<wbr/>Reflector</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div><aside class="tsd-sources">
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L29">src/lib/three-stdlib/objects/reflector.ts:29</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L29">src/lib/three-stdlib/objects/reflector.ts:29</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="layers" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>layers</span><a href="#layers" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">layers</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Layers</span></div>
+<div class="tsd-comment tsd-typography"><p>The layer membership of the object.</p>
+</div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Layers</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>The object is only visible if it has at least one layer in common with the THREE.Object3DCamera | Camera in use.</p>
+
+<h4>Default Value</h4><p><code>new THREE.Layers()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.layers</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:130</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:159</li></ul></aside></section>
 <section class="tsd-panel tsd-member"><a id="material" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>material</span><a href="#material" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">material</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">ShaderMaterial</span></div><aside class="tsd-sources">
 <p>Overrides Mesh.material</p>
 <ul>
-<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/5c3ed3f/src/lib/three-stdlib/objects/reflector.ts#L31">src/lib/three-stdlib/objects/reflector.ts:31</a></li></ul></aside></section>
+<li>Defined in <a href="https://github.com/alphardex/kokomi.js/blob/fedbde4/src/lib/three-stdlib/objects/reflector.ts#L31">src/lib/three-stdlib/objects/reflector.ts:31</a></li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix</span><a href="#matrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Matrix4</span></div>
-<div class="tsd-comment tsd-typography"><p>Local transform.</p>
+<div class="tsd-comment tsd-typography"><p>The local transform matrix.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Matrix4</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Matrix4()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.matrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:100</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:124</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrixAutoUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix<wbr/>Auto<wbr/>Update</span><a href="#matrixAutoUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix<wbr/>Auto<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>When this is set, it calculates the matrix of position, (rotation or quaternion) and
-scale every frame and also recalculates the matrixWorld property. Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_AUTO_UPDATE" class="tsd-kind-property">DEFAULT_MATRIX_AUTO_UPDATE</a> (true).</p>
+scale every frame and also recalculates the matrixWorld property.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><a href="OrthographicCamera.html#DEFAULT_MATRIX_AUTO_UPDATE" class="tsd-kind-property">DEFAULT_MATRIX_AUTO_UPDATE</a> - that is <code>(true)</code>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.matrixAutoUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:112</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:138</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrixWorld" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix<wbr/>World</span><a href="#matrixWorld" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix<wbr/>World</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Matrix4</span></div>
-<div class="tsd-comment tsd-typography"><p>The global transform of the object. If the Object3d has no parent, then it&#39;s identical to the local transform.</p>
+<div class="tsd-comment tsd-typography"><p>The global transform of the object.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Matrix4</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>If the Object3D has no parent, then it&#39;s identical to the local transform <a href="OrthographicCamera.html#matrix" class="tsd-kind-property">.matrix</a>.</p>
+
+<h4>Default Value</h4><p><code>new THREE.Matrix4()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.matrixWorld</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:106</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:131</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrixWorldAutoUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix<wbr/>World<wbr/>Auto<wbr/>Update</span><a href="#matrixWorldAutoUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix<wbr/>World<wbr/>Auto<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>If set, then the renderer checks every frame if the object and its children need matrix updates.
-When it isn&#39;t, then you have to maintain all matrices in the object and its children yourself.
-Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" class="tsd-kind-property">DEFAULT_MATRIX_WORLD_AUTO_UPDATE</a> (true).</p>
+When it isn&#39;t, then you have to maintain all matrices in the object and its children yourself.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" class="tsd-kind-property">DEFAULT_MATRIX_WORLD_AUTO_UPDATE</a> - that is <code>(true)</code>.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.matrixWorldAutoUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:119</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:145</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="matrixWorldNeedsUpdate" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>matrix<wbr/>World<wbr/>Needs<wbr/>Update</span><a href="#matrixWorldNeedsUpdate" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">matrix<wbr/>World<wbr/>Needs<wbr/>Update</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>When this is set, it calculates the matrixWorld in that frame and resets this property to false.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.matrixWorldNeedsUpdate</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:125</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:151</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="modelViewMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>model<wbr/>View<wbr/>Matrix</span><a href="#modelViewMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">model<wbr/>View<wbr/>Matrix</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Matrix4</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Matrix4</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Matrix4()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.modelViewMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:89</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:113</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="morphTargetDictionary" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>morph<wbr/>Target<wbr/>Dictionary</span><a href="#morphTargetDictionary" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">morph<wbr/>Target<wbr/>Dictionary</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
+<div class="tsd-comment tsd-typography"><p>A dictionary of morphTargets based on the <code>morphTarget.name</code> property.</p>
+</div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-index-signature">
-<h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul></div><aside class="tsd-sources">
+<h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">number</span></h5></li></ul></div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>undefined</code>, <em>but rebuilt by <a href="Reflector.html#updateMorphTargets" class="tsd-kind-method">.updateMorphTargets()</a>.</em></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.morphTargetDictionary</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:17</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:71</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="morphTargetInfluences" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagOptional">Optional</code> <span>morph<wbr/>Target<wbr/>Influences</span><a href="#morphTargetInfluences" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">morph<wbr/>Target<wbr/>Influences</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">morph<wbr/>Target<wbr/>Influences</span><span class="tsd-signature-symbol">?:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>An array of weights typically from <code>0-1</code> that specify how much of the morph is applied.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>undefined</code>, <em>but reset to a blank array by <a href="Reflector.html#updateMorphTargets" class="tsd-kind-method">.updateMorphTargets()</a>.</em></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.morphTargetInfluences</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:16</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:64</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="name" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>name</span><a href="#name" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">name</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-<div class="tsd-comment tsd-typography"><p>Optional name of the object (doesn&#39;t need to be unique).</p>
+<div class="tsd-comment tsd-typography"><p>Optional name of the object</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-1">&#39;&#39;</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p><em>(doesn&#39;t need to be unique)</em>.</p>
+
+<h4>Default Value</h4><p><code>&quot;&quot;</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.name</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:34</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:55</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="normalMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>normal<wbr/>Matrix</span><a href="#normalMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">normal<wbr/>Matrix</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Matrix3</span></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Matrix3</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Matrix3()</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.normalMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:94</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:118</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onAfterRender" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>After<wbr/>Render</span><a href="#onAfterRender" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>After<wbr/>Render</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">renderer</span>, <span class="tsd-kind-parameter">scene</span>, <span class="tsd-kind-parameter">camera</span>, <span class="tsd-kind-parameter">geometry</span>, <span class="tsd-kind-parameter">material</span>, <span class="tsd-kind-parameter">group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -430,7 +462,7 @@ Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" cl
 <ul class="tsd-signatures tsd-is-external">
 <li class="tsd-signature" id="onAfterRender.__type-5.__type-6"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">renderer</span>, <span class="tsd-kind-parameter">scene</span>, <span class="tsd-kind-parameter">camera</span>, <span class="tsd-kind-parameter">geometry</span>, <span class="tsd-kind-parameter">material</span>, <span class="tsd-kind-parameter">group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Calls after rendering object</p>
+<div class="tsd-comment tsd-typography"><p>An optional callback that is executed immediately after a 3D object is rendered.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -442,16 +474,20 @@ Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" cl
 <li>
 <h5><span class="tsd-kind-parameter">camera</span>: <span class="tsd-signature-type ">Camera</span></h5></li>
 <li>
-<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span></h5></li>
+<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">NormalBufferAttributes</span><span class="tsd-signature-symbol">&gt;</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">material</span>: <span class="tsd-signature-type ">Material</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">group</span>: <span class="tsd-signature-type ">Group</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This function is called with the following parameters: renderer, scene, camera, geometry, material, group.</p>
+
+<h4>Default Value</h4><p><code>() =&gt; {}</code></p>
+</div></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from Mesh.onAfterRender</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:211</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:252</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="onBeforeRender" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>on<wbr/>Before<wbr/>Render</span><a href="#onBeforeRender" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">on<wbr/>Before<wbr/>Render</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">renderer</span>, <span class="tsd-kind-parameter">scene</span>, <span class="tsd-kind-parameter">camera</span>, <span class="tsd-kind-parameter">geometry</span>, <span class="tsd-kind-parameter">material</span>, <span class="tsd-kind-parameter">group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
@@ -462,7 +498,7 @@ Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" cl
 <ul class="tsd-signatures tsd-is-external">
 <li class="tsd-signature" id="onBeforeRender.__type-7.__type-8"><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">renderer</span>, <span class="tsd-kind-parameter">scene</span>, <span class="tsd-kind-parameter">camera</span>, <span class="tsd-kind-parameter">geometry</span>, <span class="tsd-kind-parameter">material</span>, <span class="tsd-kind-parameter">group</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Calls before rendering object</p>
+<div class="tsd-comment tsd-typography"><p>An optional callback that is executed immediately before a 3D object is rendered.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -474,125 +510,126 @@ Default is <a href="OrthographicCamera.html#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" cl
 <li>
 <h5><span class="tsd-kind-parameter">camera</span>: <span class="tsd-signature-type ">Camera</span></h5></li>
 <li>
-<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span></h5></li>
+<h5><span class="tsd-kind-parameter">geometry</span>: <span class="tsd-signature-type ">BufferGeometry</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">NormalBufferAttributes</span><span class="tsd-signature-symbol">&gt;</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">material</span>: <span class="tsd-signature-type ">Material</span></h5></li>
 <li>
 <h5><span class="tsd-kind-parameter">group</span>: <span class="tsd-signature-type ">Group</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div></li></ul></li></ul></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This function is called with the following parameters: renderer, scene, camera, geometry, material, group.</p>
+
+<h4>Default Value</h4><p><code>() =&gt; {}</code></p>
+</div></li></ul></li></ul></div><aside class="tsd-sources">
 <p>Inherited from Mesh.onBeforeRender</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:199</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:233</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="parent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>parent</span><a href="#parent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">parent</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></div>
-<div class="tsd-comment tsd-typography"><p>Object&#39;s parent in the scene graph.</p>
+<div class="tsd-comment tsd-typography"><p>Object&#39;s parent in the <a href="https://en.wikipedia.org/wiki/Scene_graph">scene graph</a>.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">null</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>An object can have at most one parent.</p>
+
+<h4>Default Value</h4><p><code>null</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.parent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:45</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:70</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="position" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>position</span><a href="#position" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">position</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector3</span></div>
 <div class="tsd-comment tsd-typography"><p>Object&#39;s local position.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Vector3</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Vector3()</code> - that is <code>(0, 0, 0)</code>.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.position</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:66</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:90</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="quaternion" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>quaternion</span><a href="#quaternion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">quaternion</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Quaternion</span></div>
-<div class="tsd-comment tsd-typography"><p>Object&#39;s local rotation as a Quaternion.</p>
+<div class="tsd-comment tsd-typography"><p>Object&#39;s local rotation as a THREE.Quaternion | Quaternion.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Quaternion</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Quaternion()</code> - that is <code>(0,  0, 0, 1)</code>.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.quaternion</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:78</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:102</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="receiveShadow" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>receive<wbr/>Shadow</span><a href="#receiveShadow" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">receive<wbr/>Shadow</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-<div class="tsd-comment tsd-typography"><p>Material gets baked in shadow receiving.</p>
+<div class="tsd-comment tsd-typography"><p>Whether the material receives shadows.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">false</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>false</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.receiveShadow</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:148</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:177</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="renderOrder" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>render<wbr/>Order</span><a href="#renderOrder" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">render<wbr/>Order</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
-<div class="tsd-comment tsd-typography"><p>Overrides the default rendering order of scene graph objects, from lowest to highest renderOrder.
-Opaque and transparent objects remain sorted independently though.
-When this property is set for an instance of Group, all descendants objects will be sorted and rendered together.</p>
+<div class="tsd-comment tsd-typography"><p>This value allows the default rendering order of <a href="https://en.wikipedia.org/wiki/Scene_graph">scene graph</a>
+objects to be overridden although opaque and transparent objects remain sorted independently.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-7">0</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>When this property is set for an instance of Group | Group, all descendants objects will be sorted and rendered together.</p>
+
+<h4>Default Value</h4><p><code>0</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.renderOrder</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:163</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:193</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotation" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>rotation</span><a href="#rotation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">rotation</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Euler</span></div>
-<div class="tsd-comment tsd-typography"><p>Object&#39;s local rotation (Euler angles), in radians.</p>
+<div class="tsd-comment tsd-typography"><p>Object&#39;s local rotation (<a href="https://en.wikipedia.org/wiki/Euler_angles">Euler angles</a>), in radians.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Euler</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Euler()</code> - that is <code>(0, 0, 0, Euler.DEFAULT_ORDER)</code>.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotation</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:72</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:96</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="scale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>scale</span><a href="#scale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">scale</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector3</span></div>
-<div class="tsd-comment tsd-typography"><p>Object&#39;s local scale.</p>
+<div class="tsd-comment tsd-typography"><p>The object&#39;s local scale.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">new</span><span class="hl-0"> </span><span class="hl-14">THREE</span><span class="hl-0">.</span><span class="hl-13">Vector3</span><span class="hl-0">()</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>new THREE.Vector3( 1, 1, 1 )</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.scale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:84</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:108</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="type" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagReadonly">Readonly</code> <span>type</span><a href="#type" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>Mesh</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.type</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:19</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:46</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="up" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>up</span><a href="#up" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">up</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector3</span></div>
 <div class="tsd-comment tsd-typography"><p>This is used by the <a href="OrthographicCamera.html#lookAt" class="tsd-kind-method">lookAt</a> method, for example, to determine the orientation of the result.</p>
-<p>Default is <a href="OrthographicCamera.html#DEFAULT_UP" class="tsd-kind-property">DEFAULT_UP</a> - that is, <code>( 0, 1, 0 )</code>.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">{@</span><span class="hl-11">link</span><span class="hl-0"> </span><span class="hl-11">Object3D</span><span class="hl-0">.</span><span class="hl-14">DEFAULT_UP</span><span class="hl-0">}</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><a href="OrthographicCamera.html#DEFAULT_UP" class="tsd-kind-property">Object3D.DEFAULT_UP</a> - that is <code>(0, 1, 0)</code>.</p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.up</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:60</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:84</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="userData" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>user<wbr/>Data</span><a href="#userData" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">user<wbr/>Data</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">{ </span><br/><span>    </span>[<span class="tsd-kind-index-signature">key</span>: <span class="tsd-signature-type">string</span>]<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></div>
-<div class="tsd-comment tsd-typography"><p>An object that can be used to store custom data about the Object3d. It should not hold references to functions as these will not be cloned.</p>
+<div class="tsd-comment tsd-typography"><p>An object that can be used to store custom data about the Object3D.</p>
 </div>
 <div class="tsd-type-declaration">
 <h4>Type declaration</h4>
@@ -600,59 +637,69 @@ When this property is set for an instance of Group, all descendants objects will
 <li class="tsd-parameter-index-signature">
 <h5><span class="tsd-signature-symbol">[</span><span class="tsd-kind-parameter">key</span>: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">any</span></h5></li></ul></div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-0">{}</span>
-</code><button>Copy</button></pre>
+<h4>Remarks</h4><p>It should not hold references to <em>functions</em> as these <strong>will not</strong> be cloned.</p>
+
+<h4>Default</h4><p><code>{}</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.userData</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:175</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:206</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="uuid" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>uuid</span><a href="#uuid" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div><aside class="tsd-sources">
+<div class="tsd-signature"><span class="tsd-kind-property">uuid</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+<div class="tsd-comment tsd-typography"><p><a href="http://en.wikipedia.org/wiki/Universally_unique_identifier">UUID</a> of this object instance.</p>
+</div>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This gets automatically assigned and shouldn&#39;t be edited.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.uuid</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:28</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:48</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="visible" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>visible</span><a href="#visible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">visible</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-<div class="tsd-comment tsd-typography"><p>Object gets rendered if true.</p>
+<div class="tsd-comment tsd-typography"><p>Object gets rendered if <code>true</code>.</p>
 </div>
 <div class="tsd-comment tsd-typography">
-<h4>Default</h4><pre><code class="language-ts"><span class="hl-10">true</span>
-</code><button>Copy</button></pre>
+<h4>Default Value</h4><p><code>true</code></p>
 </div><aside class="tsd-sources">
 <p>Inherited from Mesh.visible</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:136</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:165</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_MATRIX_AUTO_UPDATE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>MATRIX_<wbr/>AUTO_<wbr/>UPDATE</span><a href="#DEFAULT_MATRIX_AUTO_UPDATE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>MATRIX_<wbr/>AUTO_<wbr/>UPDATE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>The default setting for <a href="OrthographicCamera.html#matrixAutoUpdate" class="tsd-kind-property">matrixAutoUpdate</a> for newly created Object3Ds.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.DEFAULT_MATRIX_AUTO_UPDATE</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:231</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:272</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_MATRIX_WORLD_AUTO_UPDATE" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>MATRIX_<wbr/>WORLD_<wbr/>AUTO_<wbr/>UPDATE</span><a href="#DEFAULT_MATRIX_WORLD_AUTO_UPDATE" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>MATRIX_<wbr/>WORLD_<wbr/>AUTO_<wbr/>UPDATE</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 <div class="tsd-comment tsd-typography"><p>The default setting for <a href="OrthographicCamera.html#matrixWorldAutoUpdate" class="tsd-kind-property">matrixWorldAutoUpdate</a> for newly created Object3Ds.</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>true</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.DEFAULT_MATRIX_WORLD_AUTO_UPDATE</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:236</li></ul></aside></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:278</li></ul></aside></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="DEFAULT_UP" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><code class="tsd-tag ts-flagStatic">Static</code> <span>DEFAULT_<wbr/>UP</span><a href="#DEFAULT_UP" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <div class="tsd-signature"><span class="tsd-kind-property">DEFAULT_<wbr/>UP</span><span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type ">Vector3</span></div>
-<div class="tsd-comment tsd-typography"><p>The default <a href="OrthographicCamera.html#up" class="tsd-kind-property">up</a> direction for objects, also used as the default position for DirectionalLight,
-HemisphereLight and Spotlight (which creates lights shining from the top down).</p>
-<p>Set to ( 0, 1, 0 ) by default.</p>
+<div class="tsd-comment tsd-typography"><p>The default <a href="OrthographicCamera.html#up" class="tsd-kind-property">up</a> direction for objects, also used as the default position for THREE.DirectionalLight | DirectionalLight,
+THREE.HemisphereLight | HemisphereLight and THREE.Spotlight | Spotlight (which creates lights shining from the top down).</p>
 </div>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Default Value</h4><p><code>new THREE.Vector3( 0, 1, 0)</code></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.DEFAULT_UP</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:226</li></ul></aside></section></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:266</li></ul></aside></section></section>
 <section class="tsd-panel-group tsd-member-group">
 <h2>Methods</h2>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="add" class="tsd-anchor"></a>
@@ -660,18 +707,26 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="add.add-1"><span class="tsd-kind-call-signature">add</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#add.add-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Adds object as child of this object.</p>
+<div class="tsd-comment tsd-typography"><p>Adds another Object3D as child of this Object3D.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>An arbitrary number of objects may be added</p>
+
+<h4>See</h4><ul>
+<li><a href="OrthographicCamera.html#attach" class="tsd-kind-method">attach</a></li>
+<li>THREE.Group | Group for info on manually grouping objects.</li>
+</ul>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.add</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:357</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:414</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="addEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>add<wbr/>Event<wbr/>Listener</span><a href="#addEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -701,7 +756,7 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.addEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:30</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:46</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="applyMatrix4" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>apply<wbr/>Matrix4</span><a href="#applyMatrix4" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -713,12 +768,13 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">matrix</span>: <span class="tsd-signature-type ">Matrix4</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">matrix</span>: <span class="tsd-signature-type ">Matrix4</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.applyMatrix4</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:241</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:284</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="applyQuaternion" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>apply<wbr/>Quaternion</span><a href="#applyQuaternion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -730,29 +786,35 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">quaternion</span>: <span class="tsd-signature-type ">Quaternion</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">quaternion</span>: <span class="tsd-signature-type ">Quaternion</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.applyQuaternion</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:246</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:290</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="attach" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>attach</span><a href="#attach" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="attach.attach-1"><span class="tsd-kind-call-signature">attach</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#attach.attach-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Adds object as a child of this, while maintaining the object&#39;s world transform.</p>
+<div class="tsd-comment tsd-typography"><p>Adds a Object3D as a child of this, while maintaining the object&#39;s world transform.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note: This method does not support scene graphs having non-uniformly-scaled nodes(s).</p>
+
+<h4>See</h4><p><a href="OrthographicCamera.html#add" class="tsd-kind-method">add</a></p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.attach</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:377</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:440</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clear" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clear</span><a href="#clear" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -764,39 +826,52 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.clear</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:372</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:432</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="clone" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>clone</span><a href="#clone" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="clone.clone-1"><span class="tsd-kind-call-signature">clone</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">recursive</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#clone.clone-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a clone of <code>this</code> object and optionally all descendants.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">recursive</span>: <span class="tsd-signature-type">boolean</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4><aside class="tsd-sources">
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">recursive</span>: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>If true, descendants of the object are also cloned. Default <code>true</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.clone</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:441</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:561</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="copy" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>copy</span><a href="#copy" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="copy.copy-1"><span class="tsd-kind-call-signature">copy</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">source</span>, <span class="tsd-kind-parameter">recursive</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#copy.copy-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Copy the given object into this object</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">source</span>: <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h5></li>
+<h5><span class="tsd-kind-parameter">source</span>: <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h5>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">recursive</span>: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>If true, descendants of the object are also copied. Default <code>true</code></p>
+</div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note: event listeners and user-defined callbacks (<a href="OrthographicCamera.html#onAfterRender" class="tsd-kind-property">.onAfterRender</a> and <a href="OrthographicCamera.html#onBeforeRender" class="tsd-kind-property">.onBeforeRender</a>) are not copied.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.copy</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:448</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:569</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="dispatchEvent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>dispatch<wbr/>Event</span><a href="#dispatchEvent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -808,52 +883,61 @@ HemisphereLight and Spotlight (which creates lights shining from the top down).<
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">event</span>: <span class="tsd-signature-type ">Event</span></h5>
+<div class="tsd-comment tsd-typography"><p>The event that gets fired.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.dispatchEvent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:50</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:66</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getObjectById" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Object<wbr/>By<wbr/>Id</span><a href="#getObjectById" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getObjectById.getObjectById-1"><span class="tsd-kind-call-signature">get<wbr/>Object<wbr/>By<wbr/>Id</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">id</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><a href="#getObjectById.getObjectById-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Searches through the object&#39;s children and returns the first with a matching id.</p>
+<div class="tsd-comment tsd-typography"><p>Searches through an object and its children, starting with the object itself, and returns the first with a matching id.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">id</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>Unique number of the object instance</p>
+<div class="tsd-comment tsd-typography"><p>Unique number of the object instance. Expects a <code>Integer</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note that ids are assigned in chronological order: 1, 2, 3, ..., incrementing by one for each new object.</p>
+
+<h4>See</h4><p>id</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.getObjectById</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:383</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:448</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getObjectByName" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Object<wbr/>By<wbr/>Name</span><a href="#getObjectByName" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getObjectByName.getObjectByName-1"><span class="tsd-kind-call-signature">get<wbr/>Object<wbr/>By<wbr/>Name</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><a href="#getObjectByName.getObjectByName-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Searches through the object&#39;s children and returns the first with a matching name.</p>
+<div class="tsd-comment tsd-typography"><p>Searches through an object and its children, starting with the object itself, and returns the first with a matching name.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>String to match to the children&#39;s Object3d.name property.</p>
+<div class="tsd-comment tsd-typography"><p>String to match to the children&#39;s Object3D.name property.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note that for most objects the name is an empty string by default</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.getObjectByName</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:389</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:456</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getObjectByProperty" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Object<wbr/>By<wbr/>Property</span><a href="#getObjectByProperty" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -879,33 +963,33 @@ and returns the first with a property that matches the value given.</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getObjectByProperty</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:398</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:465</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getObjectsByProperty" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Objects<wbr/>By<wbr/>Property</span><a href="#getObjectsByProperty" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getObjectsByProperty.getObjectsByProperty-1"><span class="tsd-kind-call-signature">get<wbr/>Objects<wbr/>By<wbr/>Property</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">name</span>, <span class="tsd-kind-parameter">value</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><a href="#getObjectsByProperty.getObjectsByProperty-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
 <div class="tsd-comment tsd-typography"><p>Searches through an object and its children, starting with the object itself,
-and returns all the objects with a property that matches the value given.</p>
+and returns the first with a property that matches the value given.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">name</span>: <span class="tsd-signature-type">string</span></h5>
-<div class="tsd-comment tsd-typography"><p>the property name to search for.</p>
+<div class="tsd-comment tsd-typography"><p>The property name to search for.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">value</span>: <span class="tsd-signature-type">any</span></h5>
-<div class="tsd-comment tsd-typography"><p>value of the given property.</p>
+<div class="tsd-comment tsd-typography"><p>Value of the given property.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getObjectsByProperty</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:407</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:473</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getVertexPosition" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>Vertex<wbr/>Position</span><a href="#getVertexPosition" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -918,70 +1002,98 @@ taking into account the current animation state of both morph targets and skinni
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">index</span>: <span class="tsd-signature-type">number</span></h5></li>
+<h5><span class="tsd-kind-parameter">index</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Integer</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getVertexPosition</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:27</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:85</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getWorldDirection" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>World<wbr/>Direction</span><a href="#getWorldDirection" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getWorldDirection.getWorldDirection-1"><span class="tsd-kind-call-signature">get<wbr/>World<wbr/>Direction</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector3</span><a href="#getWorldDirection.getWorldDirection-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a vector representing the direction of object&#39;s positive z-axis in world space.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5>
+<div class="tsd-comment tsd-typography"><p>The result will be copied into this Vector3.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getWorldDirection</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:412</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:497</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getWorldPosition" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>World<wbr/>Position</span><a href="#getWorldPosition" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getWorldPosition.getWorldPosition-1"><span class="tsd-kind-call-signature">get<wbr/>World<wbr/>Position</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector3</span><a href="#getWorldPosition.getWorldPosition-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a vector representing the position of the object in world space.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5>
+<div class="tsd-comment tsd-typography"><p>The result will be copied into this Vector3.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getWorldPosition</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:409</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:479</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getWorldQuaternion" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>World<wbr/>Quaternion</span><a href="#getWorldQuaternion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getWorldQuaternion.getWorldQuaternion-1"><span class="tsd-kind-call-signature">get<wbr/>World<wbr/>Quaternion</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Quaternion</span><a href="#getWorldQuaternion.getWorldQuaternion-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a quaternion representing the rotation of the object in world space.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Quaternion</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Quaternion</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Quaternion</span></h5>
+<div class="tsd-comment tsd-typography"><p>The result will be copied into this Quaternion.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Quaternion</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getWorldQuaternion</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:410</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:485</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="getWorldScale" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>get<wbr/>World<wbr/>Scale</span><a href="#getWorldScale" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="getWorldScale.getWorldScale-1"><span class="tsd-kind-call-signature">get<wbr/>World<wbr/>Scale</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">target</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector3</span><a href="#getWorldScale.getWorldScale-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Returns a vector of the scaling factors applied to the object for each axis in world space.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">target</span>: <span class="tsd-signature-type ">Vector3</span></h5>
+<div class="tsd-comment tsd-typography"><p>The result will be copied into this Vector3.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.getWorldScale</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:411</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:491</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="hasEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>has<wbr/>Event<wbr/>Listener</span><a href="#hasEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1011,97 +1123,127 @@ taking into account the current animation state of both morph targets and skinni
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.hasEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:37</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:53</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="localToWorld" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>local<wbr/>To<wbr/>World</span><a href="#localToWorld" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="localToWorld.localToWorld-1"><span class="tsd-kind-call-signature">local<wbr/>To<wbr/>World</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">vector</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector3</span><a href="#localToWorld.localToWorld-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Updates the vector from local space to world space.</p>
+<div class="tsd-comment tsd-typography"><p>Converts the vector from this object&#39;s local space to world space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">vector</span>: <span class="tsd-signature-type ">Vector3</span></h5>
-<div class="tsd-comment tsd-typography"><p>A local vector.</p>
+<div class="tsd-comment tsd-typography"><p>A vector representing a position in this object&#39;s local space.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.localToWorld</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:337</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:383</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="lookAt" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>look<wbr/>At</span><a href="#lookAt" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="lookAt.lookAt-1"><span class="tsd-kind-call-signature">look<wbr/>At</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">vector</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#lookAt.lookAt-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Optionally, the x, y and z components of the world space position.
-Rotates the object to face a point in world space.
-This method does not support objects having non-uniformly-scaled parent(s).</p>
+<div class="tsd-comment tsd-typography"><p>Rotates the object to face a point in world space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">vector</span>: <span class="tsd-signature-type ">Vector3</span></h5>
-<div class="tsd-comment tsd-typography"><p>A world vector to look at.</p>
+<div class="tsd-comment tsd-typography"><p>A vector representing a position in world space to look at.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This method does not support objects having non-uniformly-scaled parent(s).</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.lookAt</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:351</li></ul></aside></li>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:396</li></ul></aside></li>
 <li class="tsd-signature tsd-anchor-link" id="lookAt.lookAt-2"><span class="tsd-kind-call-signature">look<wbr/>At</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">x</span>, <span class="tsd-kind-parameter">y</span>, <span class="tsd-kind-parameter">z</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#lookAt.lookAt-2" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Rotates the object to face a point in world space.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">x</span>: <span class="tsd-signature-type">number</span></h5></li>
+<h5><span class="tsd-kind-parameter">x</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">y</span>: <span class="tsd-signature-type">number</span></h5></li>
+<h5><span class="tsd-kind-parameter">y</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li>
 <li>
-<h5><span class="tsd-kind-parameter">z</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h5><span class="tsd-kind-parameter">z</span>: <span class="tsd-signature-type">number</span></h5>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>This method does not support objects having non-uniformly-scaled parent(s).</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.lookAt</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:352</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:404</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="raycast" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>raycast</span><a href="#raycast" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="raycast.raycast-1"><span class="tsd-kind-call-signature">raycast</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">raycaster</span>, <span class="tsd-kind-parameter">intersects</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#raycast.raycast-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-parameters">
-<h4 class="tsd-parameters-title">Parameters</h4>
-<ul class="tsd-parameter-list">
-<li>
-<h5><span class="tsd-kind-parameter">raycaster</span>: <span class="tsd-signature-type ">Raycaster</span></h5></li>
-<li>
-<h5><span class="tsd-kind-parameter">intersects</span>: <span class="tsd-signature-type ">Intersection</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
-<p>Inherited from Mesh.raycast</p>
-<ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:29</li></ul></aside></li></ul></section>
-<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="remove" class="tsd-anchor"></a>
-<h3 class="tsd-anchor-link"><span>remove</span><a href="#remove" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
-<ul class="tsd-signatures tsd-is-inherited tsd-is-external">
-<li class="tsd-signature tsd-anchor-link" id="remove.remove-1"><span class="tsd-kind-call-signature">remove</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#remove.remove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
-<li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Removes object as child of this object.</p>
+<div class="tsd-comment tsd-typography"><p>Abstract (empty) method to get intersections between a casted ray and this object</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5></li></ul></div>
+<h5><span class="tsd-kind-parameter">raycaster</span>: <span class="tsd-signature-type ">Raycaster</span></h5>
+<div class="tsd-comment tsd-typography"></div></li>
+<li>
+<h5><span class="tsd-kind-parameter">intersects</span>: <span class="tsd-signature-type ">Intersection</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Subclasses such as THREE.Mesh | Mesh, THREE.Line | Line, and THREE.Points | Points implement this method in order to use raycasting.</p>
+
+<h4>See</h4><p>THREE.Raycaster | Raycaster</p>
+
+<h4>Default Value</h4><p><code>() =&gt; {}</code></p>
+</div><aside class="tsd-sources">
+<p>Inherited from Mesh.raycast</p>
+<ul>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:507</li></ul></aside></li></ul></section>
+<section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="remove" class="tsd-anchor"></a>
+<h3 class="tsd-anchor-link"><span>remove</span><a href="#remove" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
+<ul class="tsd-signatures tsd-is-inherited tsd-is-external">
+<li class="tsd-signature tsd-anchor-link" id="remove.remove-1"><span class="tsd-kind-call-signature">remove</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#remove.remove-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
+<li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Removes a Object3D as child of this Object3D.</p>
+</div>
+<div class="tsd-parameters">
+<h4 class="tsd-parameters-title">Parameters</h4>
+<ul class="tsd-parameter-list">
+<li>
+<h5><code class="tsd-tag ts-flagRest">Rest</code> <span class="tsd-signature-symbol">...</span><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>An arbitrary number of objects may be removed.</p>
+
+<h4>See</h4><p>THREE.Group | Group for info on manually grouping objects.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.remove</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:362</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:422</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="removeEventListener" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>Event<wbr/>Listener</span><a href="#removeEventListener" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1131,7 +1273,7 @@ This method does not support objects having non-uniformly-scaled parent(s).</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.removeEventListener</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:44</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/EventDispatcher.d.ts:60</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="removeFromParent" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>remove<wbr/>From<wbr/>Parent</span><a href="#removeFromParent" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1143,13 +1285,13 @@ This method does not support objects having non-uniformly-scaled parent(s).</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.removeFromParent</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:367</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:427</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotateOnAxis" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotate<wbr/>On<wbr/>Axis</span><a href="#rotateOnAxis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="rotateOnAxis.rotateOnAxis-1"><span class="tsd-kind-call-signature">rotate<wbr/>On<wbr/>Axis</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">axis</span>, <span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#rotateOnAxis.rotateOnAxis-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Rotate an object along an axis in object space. The axis is assumed to be normalized.</p>
+<div class="tsd-comment tsd-typography"><p>Rotate an object along an axis in object space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1161,106 +1303,100 @@ This method does not support objects having non-uniformly-scaled parent(s).</p>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>The angle in radians.</p>
+<div class="tsd-comment tsd-typography"><p>The angle in radians. Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>The axis is assumed to be normalized.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotateOnAxis</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:281</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:324</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotateOnWorldAxis" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotate<wbr/>On<wbr/>World<wbr/>Axis</span><a href="#rotateOnWorldAxis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="rotateOnWorldAxis.rotateOnWorldAxis-1"><span class="tsd-kind-call-signature">rotate<wbr/>On<wbr/>World<wbr/>Axis</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">axis</span>, <span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#rotateOnWorldAxis.rotateOnWorldAxis-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Rotate an object along an axis in world space. The axis is assumed to be normalized. Method Assumes no rotated parent.</p>
+<div class="tsd-comment tsd-typography"><p>Rotate an object along an axis in world space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">axis</span>: <span class="tsd-signature-type ">Vector3</span></h5>
-<div class="tsd-comment tsd-typography"><p>A normalized vector in object space.</p>
+<div class="tsd-comment tsd-typography"><p>A normalized vector in world space.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>The angle in radians.</p>
+<div class="tsd-comment tsd-typography"><p>The angle in radians. Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>The axis is assumed to be normalized</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotateOnWorldAxis</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:288</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:333</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotateX" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotateX</span><a href="#rotateX" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="rotateX.rotateX-1"><span class="tsd-kind-call-signature">rotateX</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#rotateX.rotateX-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Rotates the object around x axis in local space.</p>
+<div class="tsd-comment tsd-typography"><p>Rotates the object around <em>x</em> axis in local space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>the angle to rotate in radians.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotateX</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:294</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:339</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotateY" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotateY</span><a href="#rotateY" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="rotateY.rotateY-1"><span class="tsd-kind-call-signature">rotateY</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#rotateY.rotateY-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Rotates the object around y axis in local space.</p>
+<div class="tsd-comment tsd-typography"><p>Rotates the object around <em>y</em> axis in local space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>the angle to rotate in radians.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotateY</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:300</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:345</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="rotateZ" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>rotateZ</span><a href="#rotateZ" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="rotateZ.rotateZ-1"><span class="tsd-kind-call-signature">rotateZ</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#rotateZ.rotateZ-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Rotates the object around z axis in local space.</p>
+<div class="tsd-comment tsd-typography"><p>Rotates the object around <em>z</em> axis in local space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>the angle to rotate in radians.</p>
-</div>
-<div class="tsd-comment tsd-typography"></div></li></ul></div>
+<h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.rotateZ</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:306</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:351</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setRotationFromAxisAngle" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Rotation<wbr/>From<wbr/>Axis<wbr/>Angle</span><a href="#setRotationFromAxisAngle" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="setRotationFromAxisAngle.setRotationFromAxisAngle-1"><span class="tsd-kind-call-signature">set<wbr/>Rotation<wbr/>From<wbr/>Axis<wbr/>Angle</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">axis</span>, <span class="tsd-kind-parameter">angle</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setRotationFromAxisAngle.setRotationFromAxisAngle-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>axis -- A normalized vector in object space.
-angle -- angle in radians</p>
+<div class="tsd-comment tsd-typography"><p>Calls THREE.Quaternion.setFromAxisAngle | setFromAxisAngle(axis, angle) on the <a href="OrthographicCamera.html#quaternion" class="tsd-kind-property">.quaternion</a>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1272,20 +1408,20 @@ angle -- angle in radians</p>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">angle</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>angle in radians</p>
+<div class="tsd-comment tsd-typography"><p>Angle in radians. Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.setRotationFromAxisAngle</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:254</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:297</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setRotationFromEuler" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Rotation<wbr/>From<wbr/>Euler</span><a href="#setRotationFromEuler" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="setRotationFromEuler.setRotationFromEuler-1"><span class="tsd-kind-call-signature">set<wbr/>Rotation<wbr/>From<wbr/>Euler</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">euler</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setRotationFromEuler.setRotationFromEuler-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Calls setRotationFromEuler(euler) on the .quaternion.</p>
+<div class="tsd-comment tsd-typography"><p>Calls THREE.Quaternion.setFromEuler | setFromEuler(euler) on the <a href="OrthographicCamera.html#quaternion" class="tsd-kind-property">.quaternion</a>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1299,58 +1435,64 @@ angle -- angle in radians</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.setRotationFromEuler</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:260</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:303</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setRotationFromMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Rotation<wbr/>From<wbr/>Matrix</span><a href="#setRotationFromMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="setRotationFromMatrix.setRotationFromMatrix-1"><span class="tsd-kind-call-signature">set<wbr/>Rotation<wbr/>From<wbr/>Matrix</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">m</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setRotationFromMatrix.setRotationFromMatrix-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Calls setFromRotationMatrix(m) on the .quaternion.</p>
-<p>Note that this assumes that the upper 3x3 of m is a pure rotation matrix (i.e, unscaled).</p>
+<div class="tsd-comment tsd-typography"><p>Calls THREE.Quaternion.setFromRotationMatrix | setFromRotationMatrix(m) on the <a href="OrthographicCamera.html#quaternion" class="tsd-kind-property">.quaternion</a>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">m</span>: <span class="tsd-signature-type ">Matrix4</span></h5>
-<div class="tsd-comment tsd-typography"><p>rotate the quaternion by the rotation component of the matrix.</p>
+<div class="tsd-comment tsd-typography"><p>Rotate the quaternion by the rotation component of the matrix.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note that this assumes that the upper 3x3 of m is a pure rotation matrix (i.e, unscaled).</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.setRotationFromMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:268</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:310</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="setRotationFromQuaternion" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>set<wbr/>Rotation<wbr/>From<wbr/>Quaternion</span><a href="#setRotationFromQuaternion" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="setRotationFromQuaternion.setRotationFromQuaternion-1"><span class="tsd-kind-call-signature">set<wbr/>Rotation<wbr/>From<wbr/>Quaternion</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">q</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#setRotationFromQuaternion.setRotationFromQuaternion-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Copy the given quaternion into .quaternion.</p>
+<div class="tsd-comment tsd-typography"><p>Copy the given THREE.Quaternion | Quaternion into <a href="OrthographicCamera.html#quaternion" class="tsd-kind-property">.quaternion</a>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">q</span>: <span class="tsd-signature-type ">Quaternion</span></h5>
-<div class="tsd-comment tsd-typography"><p>normalized Quaternion</p>
+<div class="tsd-comment tsd-typography"><p>Normalized Quaternion.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.setRotationFromQuaternion</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:274</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:316</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="toJSON" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>toJSON</span><a href="#toJSON" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="toJSON.toJSON-1"><span class="tsd-kind-call-signature">toJSON</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">meta</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><a href="#toJSON.toJSON-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Convert the object to three.js <a href="https://github.com/mrdoob/three.js/wiki/JSON-Object-Scene-format-4">JSON Object/Scene format</a>.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">meta</span>: <span class="tsd-signature-symbol">{ </span><br/><span>    </span><span class="tsd-kind-property">geometries</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">images</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">materials</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span>    </span><span class="tsd-kind-property">textures</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span><br/><span class="tsd-signature-symbol">}</span></h5>
+<div class="tsd-comment tsd-typography"><p>Object containing metadata such as materials, textures or images for the object.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter">
 <h5><span class="tsd-kind-property">geometries</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5></li>
@@ -1360,16 +1502,17 @@ angle -- angle in radians</p>
 <h5><span class="tsd-kind-property">materials</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5></li>
 <li class="tsd-parameter">
 <h5><span class="tsd-kind-property">textures</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></h5></li></ul></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.toJSON</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:439</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:555</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="translateOnAxis" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>translate<wbr/>On<wbr/>Axis</span><a href="#translateOnAxis" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="translateOnAxis.translateOnAxis-1"><span class="tsd-kind-call-signature">translate<wbr/>On<wbr/>Axis</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">axis</span>, <span class="tsd-kind-parameter">distance</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#translateOnAxis.translateOnAxis-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Translate an object by distance along an axis in object space. The axis is assumed to be normalized.</p>
+<div class="tsd-comment tsd-typography"><p>Translate an object by distance along an axis in object space</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
@@ -1381,84 +1524,91 @@ angle -- angle in radians</p>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">distance</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>The distance to translate.</p>
+<div class="tsd-comment tsd-typography"><p>The distance to translate. Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
-<div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>The axis is assumed to be normalized.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.translateOnAxis</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:313</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:359</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="translateX" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>translateX</span><a href="#translateX" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="translateX.translateX-1"><span class="tsd-kind-call-signature">translateX</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">distance</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#translateX.translateX-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Translates object along x axis by distance.</p>
+<div class="tsd-comment tsd-typography"><p>Translates object along x axis in object space by distance units.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">distance</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>Distance.</p>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.translateX</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:319</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:365</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="translateY" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>translateY</span><a href="#translateY" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="translateY.translateY-1"><span class="tsd-kind-call-signature">translateY</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">distance</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#translateY.translateY-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Translates object along y axis by distance.</p>
+<div class="tsd-comment tsd-typography"><p>Translates object along <em>y</em> axis in object space by distance units.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">distance</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>Distance.</p>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.translateY</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:325</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:371</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="translateZ" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>translateZ</span><a href="#translateZ" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="translateZ.translateZ-1"><span class="tsd-kind-call-signature">translateZ</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">distance</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a><a href="#translateZ.translateZ-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Translates object along z axis by distance.</p>
+<div class="tsd-comment tsd-typography"><p>Translates object along <em>z</em> axis in object space by distance units.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">distance</span>: <span class="tsd-signature-type">number</span></h5>
-<div class="tsd-comment tsd-typography"><p>Distance.</p>
+<div class="tsd-comment tsd-typography"><p>Expects a <code>Float</code></p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <a href="Reflector.html" class="tsd-signature-type tsd-kind-class">Reflector</a></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.translateZ</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:331</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:377</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="traverse" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>traverse</span><a href="#traverse" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="traverse.traverse-1"><span class="tsd-kind-call-signature">traverse</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">callback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#traverse.traverse-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Executes the callback on this object and all descendants.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">callback</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>A function with as first argument an Object3D object.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-is-external">
@@ -1470,20 +1620,28 @@ angle -- angle in radians</p>
 <li>
 <h5><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4></li></ul></li></ul></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note: Modifying the scene graph inside the callback is discouraged.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.traverse</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:416</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:514</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="traverseAncestors" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>traverse<wbr/>Ancestors</span><a href="#traverseAncestors" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="traverseAncestors.traverseAncestors-1"><span class="tsd-kind-call-signature">traverse<wbr/>Ancestors</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">callback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#traverseAncestors.traverseAncestors-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Executes the callback on all ancestors.</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">callback</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>A function with as first argument an Object3D object.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-is-external">
@@ -1495,20 +1653,28 @@ angle -- angle in radians</p>
 <li>
 <h5><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4></li></ul></li></ul></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Note: Modifying the scene graph inside the callback is discouraged.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.traverseAncestors</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:420</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:529</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="traverseVisible" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>traverse<wbr/>Visible</span><a href="#traverseVisible" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="traverseVisible.traverseVisible-1"><span class="tsd-kind-call-signature">traverse<wbr/>Visible</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">callback</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#traverseVisible.traverseVisible-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
+<div class="tsd-comment tsd-typography"><p>Like traverse, but the callback will only be executed for visible objects</p>
+</div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">callback</span>: <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span></h5>
+<div class="tsd-comment tsd-typography"><p>A function with as first argument an Object3D object.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div>
 <ul class="tsd-parameters">
 <li class="tsd-parameter-signature">
 <ul class="tsd-signatures tsd-is-external">
@@ -1520,10 +1686,13 @@ angle -- angle in radians</p>
 <li>
 <h5><span class="tsd-kind-parameter">object</span>: <span class="tsd-signature-type ">Object3D</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type ">Event</span><span class="tsd-signature-symbol">&gt;</span></h5></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4></li></ul></li></ul></li></ul></div>
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Descendants of invisible objects are not traversed.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.traverseVisible</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:418</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:522</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="updateMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Matrix</span><a href="#updateMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1535,33 +1704,43 @@ angle -- angle in radians</p>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.updateMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:425</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:534</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="updateMatrixWorld" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Matrix<wbr/>World</span><a href="#updateMatrixWorld" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="updateMatrixWorld.updateMatrixWorld-1"><span class="tsd-kind-call-signature">update<wbr/>Matrix<wbr/>World</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">force</span><span class="tsd-signature-symbol">?</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#updateMatrixWorld.updateMatrixWorld-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Updates global transform of the object and its children.</p>
+<div class="tsd-comment tsd-typography"><p>Updates the global transform of the object.
+And will update the object descendants if <a href="OrthographicCamera.html#matrixWorldNeedsUpdate" class="tsd-kind-property">.matrixWorldNeedsUpdate</a> is set to true or if the force parameter is set to <code>true</code>.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
-<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">force</span>: <span class="tsd-signature-type">boolean</span></h5></li></ul></div>
+<h5><code class="tsd-tag ts-flagOptional">Optional</code> <span class="tsd-kind-parameter">force</span>: <span class="tsd-signature-type">boolean</span></h5>
+<div class="tsd-comment tsd-typography"><p>A boolean that can be used to bypass <a href="OrthographicCamera.html#matrixWorldAutoUpdate" class="tsd-kind-property">.matrixWorldAutoUpdate</a>, to recalculate the world matrix of the object and descendants on the current frame.
+Useful if you cannot wait for the renderer to update it on the next frame, assuming <a href="OrthographicCamera.html#matrixWorldAutoUpdate" class="tsd-kind-property">.matrixWorldAutoUpdate</a> set to <code>true</code>.</p>
+</div>
+<div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.updateMatrixWorld</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:430</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:542</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="updateMorphTargets" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>Morph<wbr/>Targets</span><a href="#updateMorphTargets" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="updateMorphTargets.updateMorphTargets-1"><span class="tsd-kind-call-signature">update<wbr/>Morph<wbr/>Targets</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span><a href="#updateMorphTargets.updateMorphTargets-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4><aside class="tsd-sources">
+<div class="tsd-comment tsd-typography"><p>Updates the morphTargets to have no influence on the object</p>
+</div>
+<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+<div class="tsd-comment tsd-typography">
+<h4>Remarks</h4><p>Resets the <a href="Reflector.html#morphTargetInfluences" class="tsd-kind-property">morphTargetInfluences</a> and <a href="Reflector.html#morphTargetDictionary" class="tsd-kind-property">morphTargetDictionary</a> properties.</p>
+</div><aside class="tsd-sources">
 <p>Inherited from Mesh.updateMorphTargets</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:21</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/objects/Mesh.d.ts:77</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="updateWorldMatrix" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>update<wbr/>World<wbr/>Matrix</span><a href="#updateWorldMatrix" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
@@ -1574,39 +1753,39 @@ angle -- angle in radians</p>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">updateParents</span>: <span class="tsd-signature-type">boolean</span></h5>
-<div class="tsd-comment tsd-typography"><p>recursively updates global transform of ancestors.</p>
+<div class="tsd-comment tsd-typography"><p>Recursively updates global transform of ancestors.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li>
 <li>
 <h5><span class="tsd-kind-parameter">updateChildren</span>: <span class="tsd-signature-type">boolean</span></h5>
-<div class="tsd-comment tsd-typography"><p>recursively updates global transform of descendants.</p>
+<div class="tsd-comment tsd-typography"><p>Recursively updates global transform of descendants.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.updateWorldMatrix</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:437</li></ul></aside></li></ul></section>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:549</li></ul></aside></li></ul></section>
 <section class="tsd-panel tsd-member tsd-is-inherited tsd-is-external"><a id="worldToLocal" class="tsd-anchor"></a>
 <h3 class="tsd-anchor-link"><span>world<wbr/>To<wbr/>Local</span><a href="#worldToLocal" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></h3>
 <ul class="tsd-signatures tsd-is-inherited tsd-is-external">
 <li class="tsd-signature tsd-anchor-link" id="worldToLocal.worldToLocal-1"><span class="tsd-kind-call-signature">world<wbr/>To<wbr/>Local</span><span class="tsd-signature-symbol">(</span><span class="tsd-kind-parameter">vector</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type ">Vector3</span><a href="#worldToLocal.worldToLocal-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24"><use href="#icon-anchor"></use></svg></a></li>
 <li class="tsd-description">
-<div class="tsd-comment tsd-typography"><p>Updates the vector from world space to local space.</p>
+<div class="tsd-comment tsd-typography"><p>Converts the vector from world space to this object&#39;s local space.</p>
 </div>
 <div class="tsd-parameters">
 <h4 class="tsd-parameters-title">Parameters</h4>
 <ul class="tsd-parameter-list">
 <li>
 <h5><span class="tsd-kind-parameter">vector</span>: <span class="tsd-signature-type ">Vector3</span></h5>
-<div class="tsd-comment tsd-typography"><p>A world vector.</p>
+<div class="tsd-comment tsd-typography"><p>A vector representing a position in world space.</p>
 </div>
 <div class="tsd-comment tsd-typography"></div></li></ul></div>
 <h4 class="tsd-returns-title">Returns <span class="tsd-signature-type ">Vector3</span></h4>
 <div class="tsd-comment tsd-typography"></div><aside class="tsd-sources">
 <p>Inherited from Mesh.worldToLocal</p>
 <ul>
-<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:343</li></ul></aside></li></ul></section></section></div>
+<li>Defined in node_modules/@types/three/src/core/Object3D.d.ts:389</li></ul></aside></li></ul></section></section></div>
 <div class="col-sidebar">
 <div class="page-menu">
 <div class="tsd-navigation settings">
