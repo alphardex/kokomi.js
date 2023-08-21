@@ -106,6 +106,9 @@ const getUniformFromAsset = (
         [uniformName]: {
           value: texture,
         },
+        [`${uniformName}Resolution`]: {
+          value: new THREE.Vector2(texture.image.width, texture.image.height),
+        },
       }
     : {};
   return uniform;

@@ -121,6 +121,12 @@ class Gallery extends Component {
           uTexture: {
             value: null,
           },
+          uMeshSize: {
+            value: new THREE.Vector2(0, 0),
+          },
+          uMeshPosition: {
+            value: new THREE.Vector2(0, 0),
+          },
         },
         ...uniformInjector.shadertoyUniforms,
         ...this.uniforms,
@@ -163,6 +169,15 @@ class Gallery extends Component {
       const material = maku.mesh.material as THREE.ShaderMaterial;
       const uniforms = material.uniforms;
       this.uniformInjector.injectShadertoyUniforms(uniforms);
+
+      uniforms.uMeshSize.value = new THREE.Vector2(
+        maku.el.clientWidth,
+        maku.el.clientHeight
+      );
+      uniforms.uMeshPosition.value = new THREE.Vector2(
+        maku.mesh.position.x,
+        maku.mesh.position.y
+      );
 
       if (this.isScrollPositionSync) {
         if (maku.el.classList.contains("webgl-fixed")) {
