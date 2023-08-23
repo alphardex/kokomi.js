@@ -210,4 +210,43 @@ class Gallery extends Component {
   }
 }
 
-export { Gallery };
+export interface HorizontalGalleryConfig extends GalleryConfig {
+  gap: number;
+  appendCount: number;
+}
+
+class HorizontalGallery extends Gallery {
+  gap: number;
+  appendCount: number;
+  constructor(base: Base, config: Partial<HorizontalGalleryConfig> = {}) {
+    super(base, { ...config, isScrollPositionSync: false });
+
+    const { gap = 64, appendCount = 3 } = config;
+    this.gap = gap;
+    this.appendCount = appendCount;
+  }
+  sync(current = 0) {
+    const { gap, appendCount } = this;
+
+    if (this.makuGroup) {
+      const imgWidth = this.makuGroup.makus[0].el.clientWidth;
+
+      const itemWidth = imgWidth + gap;
+
+      const totalWidth = itemWidth * this.makuGroup.makus.length;
+
+      this.iterate((maku, i) => {
+        maku.mesh.position.x =
+          ((itemWidth * i - current - 114514 * totalWidth) % totalWidth) +
+          itemWidth * appendCount;
+      });
+    }
+  }
+  iterate(cb: (maku: Maku, i: number) => void) {
+    this.makuGroup?.makus.forEach((maku, i) => {
+      cb(maku, i);
+    });
+  }
+}
+
+export { Gallery, HorizontalGallery };
