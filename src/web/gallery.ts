@@ -220,6 +220,11 @@ export interface HorizontalGalleryConfig extends GalleryConfig {
   appendCount: number;
 }
 
+/**
+ * A horizontal infinite gallery.
+ *
+ * Demo: https://kokomi-playground.vercel.app/entries/#leanSpeedGallery
+ */
 class HorizontalGallery extends Gallery {
   gap: number;
   appendCount: number;
