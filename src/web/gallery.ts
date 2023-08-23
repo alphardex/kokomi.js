@@ -208,6 +208,11 @@ class Gallery extends Component {
       });
     });
   }
+  iterate(cb: (maku: Maku, i: number) => void) {
+    this.makuGroup?.makus.forEach((maku, i) => {
+      cb(maku, i);
+    });
+  }
 }
 
 export interface HorizontalGalleryConfig extends GalleryConfig {
@@ -241,11 +246,6 @@ class HorizontalGallery extends Gallery {
           itemWidth * appendCount;
       });
     }
-  }
-  iterate(cb: (maku: Maku, i: number) => void) {
-    this.makuGroup?.makus.forEach((maku, i) => {
-      cb(maku, i);
-    });
   }
 }
 
