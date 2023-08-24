@@ -1,3 +1,4 @@
+export * from "./drag";
 export * from "./gallery";
 export * from "./html";
 export * from "./moji";
