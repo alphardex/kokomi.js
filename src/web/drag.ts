@@ -9,7 +9,6 @@ export interface DragDetecterConfig {
 
 /**
  * A detecter to detect `drag` event.
- *
  */
 class DragDetecter extends Component {
   isDragging: boolean;
