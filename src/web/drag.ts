@@ -72,7 +72,9 @@ class DragDetecter extends Component {
         return;
       }
 
-      this.emit("drag", this.base.iMouse.mouseDOMDelta);
+      if (this.isDragging) {
+        this.emit("drag", this.base.iMouse.mouseDOMDelta);
+      }
     });
   }
   enable() {
