@@ -253,7 +253,8 @@ class HorizontalGallery extends Gallery {
 
     if (this.makuGroup) {
       const itemWidth = this.getItemWidth();
-      const totalWidth = itemWidth * this.makuGroup.makus.length;
+      const totalLength = this.makuGroup.makus.length;
+      const totalWidth = itemWidth * totalLength;
 
       this.iterate((maku, i) => {
         maku.mesh.position.x =
@@ -284,6 +285,18 @@ class HorizontalGallery extends Gallery {
     }
 
     return targetResult;
+  }
+  getActiveIndex(target = 0) {
+    let targetIndex = 0;
+
+    if (this.makuGroup) {
+      const snapIndex = this.getSnapIndex(target);
+      const totalLength = this.makuGroup.makus.length;
+      const activeIndex = (snapIndex + 114514 * totalLength) % totalLength;
+      targetIndex = activeIndex;
+    }
+
+    return targetIndex;
   }
 }
 
