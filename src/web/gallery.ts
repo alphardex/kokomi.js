@@ -235,14 +235,24 @@ class HorizontalGallery extends Gallery {
     this.gap = gap;
     this.appendCount = appendCount;
   }
-  sync(current = 0) {
-    const { gap, appendCount } = this;
+  getItemWidth() {
+    const { gap } = this;
+
+    let targetWidth = 0;
 
     if (this.makuGroup) {
       const imgWidth = this.makuGroup.makus[0].el.clientWidth;
-
       const itemWidth = imgWidth + gap;
+      targetWidth = itemWidth;
+    }
 
+    return targetWidth;
+  }
+  sync(current = 0) {
+    const { appendCount } = this;
+
+    if (this.makuGroup) {
+      const itemWidth = this.getItemWidth();
       const totalWidth = itemWidth * this.makuGroup.makus.length;
 
       this.iterate((maku, i) => {
@@ -251,6 +261,29 @@ class HorizontalGallery extends Gallery {
           itemWidth * appendCount;
       });
     }
+  }
+  getSnapIndex(target = 0) {
+    let targetIndex = 0;
+
+    if (this.makuGroup) {
+      const itemWidth = this.getItemWidth();
+      const itemIndex = Math.round(target / itemWidth);
+      targetIndex = itemIndex;
+    }
+
+    return targetIndex;
+  }
+  snap(target = 0) {
+    let targetResult = target;
+
+    if (this.makuGroup) {
+      const itemWidth = this.getItemWidth();
+      const snapIndex = this.getSnapIndex(target);
+      const snapTarget = itemWidth * snapIndex;
+      targetResult = snapTarget;
+    }
+
+    return targetResult;
   }
 }
 
