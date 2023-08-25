@@ -20,6 +20,7 @@ const NormalScroller = Scroller;
  */
 class WheelScroller {
   scroll: Scroll;
+  enabled: boolean;
   constructor() {
     this.scroll = {
       current: 0,
@@ -29,10 +30,22 @@ class WheelScroller {
       delta: 0,
       direction: "",
     };
+
+    this.enabled = true;
+  }
+  enable() {
+    this.enabled = true;
+  }
+  disable() {
+    this.enabled = false;
   }
   // 监听滚动
   listenForScroll() {
     window.addEventListener("wheel", (e) => {
+      if (!this.enabled) {
+        return;
+      }
+
       const newScrollY = e.deltaY;
       const scrollYDelta = newScrollY;
       this.scroll.target += scrollYDelta;
