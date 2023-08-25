@@ -17,6 +17,20 @@ class Sketch extends kokomi.Base {
     const wheelScroller = new kokomi.WheelScroller();
     wheelScroller.listenForScroll();
 
+    const dragDetecter = new kokomi.DragDetecter(this);
+    dragDetecter.detectDrag();
+
+    dragDetecter.on("drag", (delta) => {
+      wheelScroller.scroll.target -= delta.x * 2;
+    });
+    dragDetecter.on("dragend", () => {
+      const snapTarget = hg.snap(wheelScroller.scroll.target);
+      gsap.to(wheelScroller.scroll, {
+        target: snapTarget,
+        duration: 0.2,
+      });
+    });
+
     this.update(() => {
       wheelScroller.syncScroll();
       const { current } = wheelScroller.scroll;
