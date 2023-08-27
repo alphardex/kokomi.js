@@ -20,7 +20,6 @@ class Sketch extends kokomi.Base {
 
     const dragDetecter = new kokomi.DragDetecter(this);
     dragDetecter.detectDrag();
-
     dragDetecter.on("drag", (delta) => {
       wheelScroller.scroll.target -= delta[ig.dimensionType] * 2;
     });
