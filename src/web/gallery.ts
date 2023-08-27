@@ -216,88 +216,92 @@ class Gallery extends Component {
 }
 
 export interface HorizontalGalleryConfig extends GalleryConfig {
+  direction: "horizontal" | "vertical";
   gap: number;
   appendCount: number;
 }
 
 /**
- * A horizontal infinite gallery.
+ * An infinite gallery.
  *
  * Demo: https://kokomi-playground.vercel.app/entries/#leanSpeedGallery
  */
-class HorizontalGallery extends Gallery {
+class InfiniteGallery extends Gallery {
+  direction: "horizontal" | "vertical";
   gap: number;
   appendCount: number;
   constructor(base: Base, config: Partial<HorizontalGalleryConfig> = {}) {
     super(base, { ...config, isScrollPositionSync: false });
 
-    const { gap = 64, appendCount = 3 } = config;
+    const { direction = "vertical", gap = 64, appendCount = 3 } = config;
+    this.direction = direction;
     this.gap = gap;
     this.appendCount = appendCount;
   }
-  getItemWidth() {
-    const { gap } = this;
-
-    let targetWidth = 0;
-
+  get lengthType() {
+    return {
+      horizontal: "clientWidth",
+      vertical: "clientHeight",
+    }[this.direction] as "clientWidth" | "clientHeight";
+  }
+  get dimensionType() {
+    return {
+      horizontal: "x",
+      vertical: "y",
+    }[this.direction] as "x" | "y";
+  }
+  getImgLength() {
+    let target = 0;
     if (this.makuGroup) {
-      const imgWidth = this.makuGroup.makus[0].el.clientWidth;
-      const itemWidth = imgWidth + gap;
-      targetWidth = itemWidth;
+      target = this.makuGroup.makus[0].el[this.lengthType];
     }
-
-    return targetWidth;
+    return target;
+  }
+  getItemLength() {
+    const { gap } = this;
+    const imgLength = this.getImgLength();
+    const itemLength = imgLength + gap;
+    return itemLength;
+  }
+  getTotalCount() {
+    let target = 0;
+    if (this.makuGroup) {
+      target = this.makuGroup.makus.length;
+    }
+    return target;
   }
   sync(current = 0) {
     const { appendCount } = this;
 
     if (this.makuGroup) {
-      const itemWidth = this.getItemWidth();
-      const totalLength = this.makuGroup.makus.length;
-      const totalWidth = itemWidth * totalLength;
+      const itemLength = this.getItemLength();
+      const totalCount = this.getTotalCount();
+      const totalLength = itemLength * totalCount;
 
       this.iterate((maku, i) => {
-        maku.mesh.position.x =
-          ((itemWidth * i - current - 114514 * totalWidth) % totalWidth) +
-          itemWidth * appendCount;
+        maku.mesh.position[this.dimensionType] =
+          ((itemLength * i - current - 114514 * totalLength) % totalLength) +
+          itemLength * appendCount;
       });
     }
   }
   getSnapIndex(target = 0) {
-    let targetIndex = 0;
-
-    if (this.makuGroup) {
-      const itemWidth = this.getItemWidth();
-      const itemIndex = Math.round(target / itemWidth);
-      targetIndex = itemIndex;
-    }
-
-    return targetIndex;
+    const itemLength = this.getItemLength();
+    const snapIndex = Math.round(target / itemLength);
+    return snapIndex;
   }
   snap(target = 0) {
-    let targetResult = target;
-
-    if (this.makuGroup) {
-      const itemWidth = this.getItemWidth();
-      const snapIndex = this.getSnapIndex(target);
-      const snapTarget = itemWidth * snapIndex;
-      targetResult = snapTarget;
-    }
-
-    return targetResult;
+    const itemLength = this.getItemLength();
+    const snapIndex = this.getSnapIndex(target);
+    const snapTarget = itemLength * snapIndex;
+    return snapTarget;
   }
   getActiveIndex(target = 0) {
-    let targetIndex = 0;
-
-    if (this.makuGroup) {
-      const snapIndex = this.getSnapIndex(target);
-      const totalLength = this.makuGroup.makus.length;
-      const activeIndex = (snapIndex + 114514 * totalLength) % totalLength;
-      targetIndex = activeIndex;
-    }
-
-    return targetIndex;
+    const snapIndex = this.getSnapIndex(target);
+    const totalCount = this.getTotalCount();
+    const activeIndex = (snapIndex + 114514 * totalCount) % totalCount;
+    return activeIndex;
   }
 }
 
-export { Gallery, HorizontalGallery };
+export { Gallery, InfiniteGallery };
