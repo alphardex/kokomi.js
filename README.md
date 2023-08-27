@@ -107,6 +107,10 @@ See more examples: https://kokomi-playground.vercel.app/entries/
 
 ![6](./assets/previews/6.gif?v=3)
 
+### Infinite Gallery
+
+![7](./assets/previews/7.gif?v=3)
+
 ## Credits
 
 - [three.js](https://github.com/mrdoob/three.js)
