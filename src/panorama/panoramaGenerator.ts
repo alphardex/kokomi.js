@@ -169,6 +169,7 @@ class PanoramaGenerator extends Component {
                   return;
                 }
                 viewer?.setPanorama(targetPanorama);
+                this.emit("jump", infospot.jump);
               };
             }
           } else {
