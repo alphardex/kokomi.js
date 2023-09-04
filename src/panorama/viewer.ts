@@ -51,6 +51,12 @@ class Viewer extends Component {
     if (panorama === this.currentPanorama) {
       return;
     }
+    const otherPanoramas = this.panoramas.filter(
+      (item) => item !== this.currentPanorama
+    );
+    otherPanoramas.forEach((item) => {
+      item.onLeave(0);
+    });
     this.currentPanorama?.onLeave(duration);
     panorama?.onEnter(duration);
     this.currentPanorama = panorama;
