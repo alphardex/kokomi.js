@@ -127,6 +127,9 @@ class Gallery extends Component {
           uMeshPosition: {
             value: new THREE.Vector2(0, 0),
           },
+          uMediaSize: {
+            value: new THREE.Vector2(0, 0),
+          },
         },
         ...uniformInjector.shadertoyUniforms,
         ...this.uniforms,
@@ -178,6 +181,24 @@ class Gallery extends Component {
         maku.mesh.position.x,
         maku.mesh.position.y
       );
+
+      const mediaEl = maku.el;
+      if (mediaEl instanceof HTMLImageElement) {
+        uniforms.uMediaSize.value = new THREE.Vector2(
+          mediaEl.naturalWidth,
+          mediaEl.naturalHeight
+        );
+      } else if (mediaEl instanceof HTMLVideoElement) {
+        uniforms.uMediaSize.value = new THREE.Vector2(
+          mediaEl.videoWidth,
+          mediaEl.videoHeight
+        );
+      } else if (mediaEl instanceof HTMLCanvasElement) {
+        uniforms.uMediaSize.value = new THREE.Vector2(
+          mediaEl.width,
+          mediaEl.height
+        );
+      }
 
       if (this.isScrollPositionSync) {
         if (maku.el.classList.contains("webgl-fixed")) {
