@@ -136,6 +136,23 @@ class Base {
       downloadBlob(blob, name);
     }
   }
+  destroy() {
+    // scene
+    this.scene.traverse((child) => {
+      if (child instanceof THREE.Mesh) {
+        child.geometry?.dispose();
+
+        Object.values(child.material).forEach((value: any) => {
+          if (value && typeof value.dispose === "function") {
+            value.dispose();
+          }
+        });
+      }
+    });
+
+    // renderer
+    this.renderer.dispose();
+  }
 }
 
 export { Base };
