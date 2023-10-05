@@ -4,15 +4,24 @@ import { mergeVertices, MeshSurfaceSampler } from "three-stdlib";
 
 import { makeBuffer } from "./gl";
 
+// 开启sRGB颜色空间
+const enableSRGBColorSpace = (renderer: THREE.WebGLRenderer) => {
+  if (renderer.outputColorSpace) {
+    renderer.outputColorSpace = THREE.SRGBColorSpace;
+  } else {
+    renderer.outputEncoding = THREE.sRGBEncoding;
+  }
+};
+
 // 优化模型渲染
 const optimizeModelRender = (renderer: THREE.WebGLRenderer) => {
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  enableSRGBColorSpace(renderer);
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
 };
 
 // 开启真实渲染
 const enableRealisticRender = (renderer: THREE.WebGLRenderer) => {
-  renderer.outputEncoding = THREE.sRGBEncoding;
+  enableSRGBColorSpace(renderer);
   renderer.toneMapping = THREE.ReinhardToneMapping;
   renderer.toneMappingExposure = 3;
   renderer.shadowMap.enabled = true;
@@ -248,6 +257,7 @@ const smoothNormal = (mesh: THREE.Mesh) => {
 };
 
 export {
+  enableSRGBColorSpace,
   optimizeModelRender,
   enableRealisticRender,
   beautifyRender,
