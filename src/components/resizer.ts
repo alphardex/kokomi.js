@@ -7,12 +7,25 @@ import { OrthographicCamera } from "../camera";
 
 import type { EffectComposer } from "three-stdlib";
 
+export interface ResizerConfig {
+  autoAdaptMobile: boolean;
+}
+
 class Resizer extends Component {
   enabled: boolean;
-  constructor(base: Base) {
+  autoAdaptMobile: boolean;
+  constructor(base: Base, config: Partial<ResizerConfig> = {}) {
     super(base);
 
     this.enabled = true;
+
+    const { autoAdaptMobile = false } = config;
+
+    this.autoAdaptMobile = autoAdaptMobile;
+
+    if (this.autoAdaptMobile) {
+      this.resize();
+    }
   }
   get aspect() {
     return window.innerWidth / window.innerHeight;
@@ -63,6 +76,11 @@ class Resizer extends Component {
     // camera
     this.resizeCamera(camera);
 
+    // mobile
+    if (this.autoAdaptMobile) {
+      this.adaptMobile();
+    }
+
     this.emit("resize");
   }
   listenForResize() {
@@ -79,6 +97,27 @@ class Resizer extends Component {
   }
   disable() {
     this.enabled = false;
+  }
+  adaptMobile() {
+    const { base } = this;
+    const { renderer, camera } = base;
+
+    const width = document.documentElement.clientWidth,
+      height = document.documentElement.clientHeight;
+
+    if (width > height) {
+      renderer.setSize(width, height);
+      if (camera instanceof THREE.PerspectiveCamera) {
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+    } else {
+      renderer.setSize(height, width);
+      if (camera instanceof THREE.PerspectiveCamera) {
+        camera.aspect = height / width;
+        camera.updateProjectionMatrix();
+      }
+    }
   }
 }
 

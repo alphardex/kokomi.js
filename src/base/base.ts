@@ -14,6 +14,7 @@ import { downloadBlob } from "../utils";
 export interface BaseConfig {
   hello: boolean;
   gl: THREE.WebGLRendererParameters;
+  autoAdaptMobile: boolean;
 }
 
 /**
@@ -35,7 +36,7 @@ class Base {
   resizer: Resizer;
   keyboard: Keyboard;
   constructor(sel = "#sketch", config: Partial<BaseConfig> = {}) {
-    const { hello = true, gl = {} } = config;
+    const { hello = true, gl = {}, autoAdaptMobile = false } = config;
 
     if (hello) {
       console.log(
@@ -90,7 +91,9 @@ class Base {
     const physics = new Physics(this);
     this.physics = physics;
 
-    const resizer = new Resizer(this);
+    const resizer = new Resizer(this, {
+      autoAdaptMobile,
+    });
     this.resizer = resizer;
 
     const keyboard = new Keyboard();
