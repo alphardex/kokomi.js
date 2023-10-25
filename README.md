@@ -1,6 +1,8 @@
-<p align="center">
+<div align="center">
   <img src="./assets/logo.jpg" width="200">
-</p>
+  <h1>kokomi.js</h1>
+  <p>A growing three.js helper library.</p>
+</div>
 <p>
   <img alt="Version" src="https://img.shields.io/npm/v/kokomi.js.svg" />
   <a href="https://github.com/alphardex/kokomi.js/blob/main/LICENSE" target="_blank">
@@ -11,9 +13,7 @@
   </a>
 </p>
 
-# kokomi.js
-
-> A growing three.js helper library.
+> Sangonomiya Kokomi, the young Divine Priestess of Watatsumi Island.
 
 ## Install
 
