@@ -73,9 +73,9 @@ createSketch();
 
 Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
-See more examples: https://kokomi-playground.vercel.app/entries/
+See more examples: https://kokomi-js.netlify.app/examples/
 
-## [API](https://kokomi-js.vercel.app/docs/modules.html)
+## [API](https://kokomi-js.netlify.app/docs/modules.html)
 
 ## Features
 
@@ -83,7 +83,7 @@ See more examples: https://kokomi-playground.vercel.app/entries/
 - Either you can write all your three.js code in a single file, or encapsulate your code into individual classes in a large project. By extending `kokomi.Component`, you can make your components keep their own state and animation.
 - `kokomi.AssetManager` can handle the preloads of assets (gltfModel, texture, cubeTexture, font, etc). You can just write a simple js object to config your assets without caring about various loaders.
 - Integrated with [three.interactive](https://github.com/markuslerner/THREE.Interactive), which can handle mouse and touch interactions easily.
-- Many more [useful components](https://kokomi-js.vercel.app/examples/) for you to discover!
+- Many more [useful components](https://kokomi-js.netlify.app/examples/) for you to discover!
 
 ## Previews
 
