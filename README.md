@@ -18,7 +18,7 @@
 ## Install
 
 ```sh
-npm i kokomi.js
+npm i kokomi.js three
 ```
 
 ## Hello world
@@ -71,9 +71,11 @@ createSketch();
 
 ![Basic](./assets/previews/1.gif?v=3)
 
-Demo (Also can be used as a template): https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
+Template: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
 
-See more examples: https://kokomi-js.netlify.app/examples/
+Online Sandbox: https://kokomi-sandbox.netlify.app/
+
+And more examples: https://kokomi-js.netlify.app/examples/
 
 ## [API](https://kokomi-js.netlify.app/docs/modules.html)
 
