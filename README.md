@@ -18,7 +18,13 @@
 ## Install
 
 ```sh
-npm i kokomi.js three
+npm i kokomi.js
+```
+
+Also, make sure to install three.js.
+
+```sh
+npm i three
 ```
 
 ## Hello world
