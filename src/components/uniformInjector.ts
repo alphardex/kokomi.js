@@ -68,6 +68,7 @@ class UniformInjector extends Component {
       new Date().getHours()
     );
     uniforms.iChannelTime.value = [t, t, t, t];
+    uniforms.iFrame.value += 1;
   }
 }
 
