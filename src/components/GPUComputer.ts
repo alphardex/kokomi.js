@@ -52,6 +52,9 @@ class GPUComputer extends Component {
     };
     return variable;
   }
+  setVariableDependencies(variable: Variable, dependencies: Variable[] | null) {
+    this.gpu.setVariableDependencies(variable, dependencies);
+  }
   init() {
     this.gpu.init();
   }
