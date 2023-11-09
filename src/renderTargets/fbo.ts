@@ -7,6 +7,7 @@ export interface FBOConfig {
   width: number;
   height: number;
   samples: number;
+  options: THREE.RenderTargetOptions;
 }
 
 class FBO extends Component {
@@ -18,9 +19,10 @@ class FBO extends Component {
       width = window.innerWidth * window.devicePixelRatio,
       height = window.innerHeight * window.devicePixelRatio,
       samples = 0,
+      options = {},
     } = config;
 
-    const rt = new THREE.WebGLRenderTarget(width, height);
+    const rt = new THREE.WebGLRenderTarget(width, height, options);
     this.rt = rt;
     if (samples) {
       rt.samples = samples;

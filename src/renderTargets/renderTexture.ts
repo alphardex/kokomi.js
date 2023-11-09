@@ -11,6 +11,7 @@ export interface RenderTextureConfig {
   samples: number;
   rtScene: THREE.Scene;
   rtCamera: THREE.Camera;
+  fboOptions: THREE.RenderTargetOptions;
 }
 
 /**
@@ -34,11 +35,12 @@ class RenderTexture extends Component {
         0.01,
         100
       ),
+      fboOptions = {},
     } = config;
     this.rtScene = rtScene;
     this.rtCamera = rtCamera;
 
-    const fbo = new FBO(base, { ...config });
+    const fbo = new FBO(base, { ...config, options: fboOptions });
     this.fbo = fbo;
 
     const texture = fbo.rt.texture;
