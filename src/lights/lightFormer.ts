@@ -38,4 +38,4 @@ class LightFormer extends Component {
   }
 }
 
-export default LightFormer;
+export { LightFormer };
