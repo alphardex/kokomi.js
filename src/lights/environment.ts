@@ -26,7 +26,7 @@ class Environment extends Component {
     const virtualScene = new THREE.Scene();
     this.virtualScene = virtualScene;
   }
-  update(time: number): void {
+  update(): void {
     this.cubeCamera.update(this.base.renderer, this.virtualScene);
   }
   add(obj: THREE.Object3D) {
