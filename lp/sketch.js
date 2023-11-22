@@ -168,6 +168,10 @@ class RippleWave extends kokomi.Component {
 
 class Sketch extends kokomi.Base {
   async create() {
+    THREE.ColorManagement.enabled = false;
+    this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
+    this.renderer.useLegacyLights = true;
+
     const screenCamera = new kokomi.ScreenCamera(this);
     screenCamera.addExisting();
 
