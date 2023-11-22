@@ -15,7 +15,7 @@ class Sketch extends kokomi.Base {
     );
     this.scene.add(sphere);
 
-    const light = new THREE.AmbientLight(0xffffff, 0.8);
+    const light = new THREE.AmbientLight(0xffffff, 0.5);
     this.scene.add(light);
 
     const env = new kokomi.Environment(this);
