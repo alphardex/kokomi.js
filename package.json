@@ -7,8 +7,7 @@
   "scripts": {
     "build": "rimraf dist && tsc && rimraf build && rollup -c",
     "updateIndex": "node examples/getFilesData.mjs",
-    "doc": "rimraf docs && typedoc src/index.ts",
-    "all": "node examples/getFilesData.mjs && rimraf dist && tsc && rimraf build && rollup -c && rimraf docs && typedoc src/index.ts"
+    "all": "node examples/getFilesData.mjs && rimraf dist && tsc && rimraf build && rollup -c"
   },
   "author": "alphardex",
   "license": "MIT",
@@ -41,7 +40,6 @@
     "rollup": "^4.5.1",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.3",
     "typescript": "^5.3.2"
   },
   "peerDependencies": {
