@@ -27,6 +27,8 @@ Also, make sure to install three.js.
 npm i three
 ```
 
+Check the documentation: https://kokomi-docs.netlify.app/
+
 ## Hello world
 
 With just several lines, you can make a most basic 3D scene :d
@@ -77,13 +79,7 @@ createSketch();
 
 ![Basic](./assets/previews/1.gif?v=3)
 
-Template: https://codesandbox.io/s/kokomi-js-starter-tjh29w?file=/src/app.ts
-
 Online Sandbox: https://kokomi-sandbox.netlify.app/
-
-And more examples: https://kokomi-js.netlify.app/examples/
-
-## [API](https://kokomi-js.netlify.app/docs/modules.html)
 
 ## Features
 
