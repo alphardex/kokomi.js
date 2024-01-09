@@ -256,6 +256,25 @@ const smoothNormal = (mesh: THREE.Mesh) => {
   mesh.geometry.computeVertexNormals();
 };
 
+// 修复ShapeGeometry的UV
+// https://discourse.threejs.org/t/how-to-use-uvs-in-shapebuffergeometry/20711/4
+const fixShapeGeometryUV = (mesh: THREE.Mesh) => {
+  const box = new THREE.Box3().setFromObject(mesh);
+  const size = new THREE.Vector3();
+  box.getSize(size);
+  const vec3 = new THREE.Vector3();
+  const attPos = mesh.geometry.attributes.position;
+  const attUv = mesh.geometry.attributes.uv;
+  for (let i = 0; i < attPos.count; i++) {
+    vec3.fromBufferAttribute(attPos, i);
+    attUv.setXY(
+      i,
+      (vec3.x - box.min.x) / size.x,
+      (vec3.y - box.min.y) / size.y
+    );
+  }
+};
+
 export {
   enableSRGBColorSpace,
   optimizeModelRender,
@@ -275,4 +294,5 @@ export {
   downloadBlob,
   getBound,
   smoothNormal,
+  fixShapeGeometryUV,
 };
