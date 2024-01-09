@@ -5,6 +5,7 @@ export * from "./customPoints";
 export * from "./rayMarchingQuad";
 export * from "./renderQuad";
 export * from "./screenQuad";
+export * from "./shapes";
 export * from "./sparkles";
 export * from "./text3D";
 export * from "./textMesh";

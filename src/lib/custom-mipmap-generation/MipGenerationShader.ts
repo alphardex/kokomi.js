@@ -8,7 +8,7 @@ export function clone(shader: ShaderMaterialParameters) {
   }
 
   if ("uniforms" in shader) {
-    newShader.uniforms = UniformsUtils.clone(shader.uniforms);
+    newShader.uniforms = UniformsUtils.clone(shader.uniforms!);
   }
 
   return newShader;
