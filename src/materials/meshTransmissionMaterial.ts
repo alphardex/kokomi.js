@@ -83,7 +83,7 @@ vec3 saturation(vec3 rgb,float adjustment){
 }
 
 #ifndef saturate
-#define saturate clamp(a,0.,1.)
+#define saturate(a) clamp(a,0.,1.)
 #endif
 
 float diffuse(vec3 n,vec3 l){
