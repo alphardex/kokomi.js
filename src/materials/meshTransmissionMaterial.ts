@@ -82,11 +82,8 @@ vec3 saturation(vec3 rgb,float adjustment){
     return mix(intensity,rgb,adjustment);
 }
 
-#ifndef FUNC_SATURATE
-#define FUNC_SATURATE
-float saturate(float a){
-    return clamp(a,0.,1.);
-}
+#ifndef saturate
+#define saturate clamp(a,0.,1.)
 #endif
 
 float diffuse(vec3 n,vec3 l){
