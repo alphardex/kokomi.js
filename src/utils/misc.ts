@@ -250,6 +250,36 @@ const getBound = (object: THREE.Object3D, precise = true) => {
   };
 };
 
+// 获取边界顶点
+const getBoundsVertices = (bounds: THREE.Box3) => {
+  let boundsVertices = [];
+  boundsVertices.push(
+    new THREE.Vector3(bounds.min.x, bounds.min.y, bounds.min.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.min.x, bounds.min.y, bounds.max.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.min.x, bounds.max.y, bounds.min.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.min.x, bounds.max.y, bounds.max.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.max.x, bounds.min.y, bounds.min.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.max.x, bounds.min.y, bounds.max.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.max.x, bounds.max.y, bounds.min.z)
+  );
+  boundsVertices.push(
+    new THREE.Vector3(bounds.max.x, bounds.max.y, bounds.max.z)
+  );
+  return boundsVertices;
+};
+
 // 平滑法线
 const smoothNormal = (mesh: THREE.Mesh) => {
   mesh.geometry = mergeVertices(mesh.geometry);
@@ -293,6 +323,7 @@ export {
   calcPerspectiveScreenSize,
   downloadBlob,
   getBound,
+  getBoundsVertices,
   smoothNormal,
   fixShapeGeometryUV,
 };
