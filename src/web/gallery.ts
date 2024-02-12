@@ -20,6 +20,7 @@ export interface GalleryConfig {
   isScrollPositionSync: boolean;
   scroller: Scroller;
   materialParams: AllMaterialParams;
+  isRectAutoRefreshed: boolean;
 }
 
 const defaultVertexShader = /* glsl */ `
@@ -71,6 +72,7 @@ class Gallery extends Component {
   uniformInjector: UniformInjector;
   materialParams: AllMaterialParams;
   useSelfScroller: boolean;
+  isRectAutoRefreshed: boolean;
   constructor(base: Base, config: Partial<GalleryConfig> = {}) {
     super(base);
 
@@ -83,6 +85,7 @@ class Gallery extends Component {
       isScrollPositionSync = true,
       scroller = null,
       materialParams = {},
+      isRectAutoRefreshed = false,
     } = config;
 
     this.elList = elList;
@@ -91,6 +94,7 @@ class Gallery extends Component {
     this.uniforms = uniforms;
     this.makuConfig = makuConfig;
     this.isScrollPositionSync = isScrollPositionSync;
+    this.isRectAutoRefreshed = isRectAutoRefreshed;
 
     this.makuMaterial = null;
     this.makuGroup = null;
@@ -142,7 +146,11 @@ class Gallery extends Component {
     const makuGroup = new MakuGroup();
     this.makuGroup = makuGroup;
     const makus = this.elList.map(
-      (el) => new Maku(el, makuMaterial, this.container, this.makuConfig)
+      (el) =>
+        new Maku(el, makuMaterial, this.container, {
+          ...this.makuConfig,
+          isRectAutoRefreshed: this.isRectAutoRefreshed,
+        })
     );
     makuGroup.addMultiple(makus);
 
