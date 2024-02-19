@@ -166,6 +166,14 @@ class MojiGroup extends Component {
       tm.mesh.anchorX = (alignMap as any)[styleTextAlign];
       const color = el.dataset["webglTextColor"] || "black";
       tm.mesh.material.uniforms.uTextColor.value = new THREE.Color(color);
+      const font = el.dataset["webglFontUrl"] || "";
+      if (font) {
+        tm.mesh.font = font;
+      }
+      const letterSpacing = this.textMeshConfig.letterSpacing;
+      if (letterSpacing) {
+        tm.mesh.letterSpacing = letterSpacing;
+      }
       const moji = new Moji(el, tm);
       return moji;
     });
