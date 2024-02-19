@@ -133,13 +133,13 @@ class MojiGroup extends Component {
       fragmentShader: this.fragmentShader,
       side: THREE.DoubleSide,
       uniforms: {
-        ...uniformInjector.shadertoyUniforms,
-        ...this.uniforms,
         ...{
           uTextColor: {
             value: new THREE.Color("black"),
           },
         },
+        ...uniformInjector.shadertoyUniforms,
+        ...this.uniforms,
       },
       ...this.materialParams,
     });
