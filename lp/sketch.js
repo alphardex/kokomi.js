@@ -159,7 +159,7 @@ class Sketch extends kokomi.Base {
     scroller.listenForScroll();
 
     // load font
-    await kokomi.preloadSDFFont("../../assets/HYWenHei-85W.ttf");
+    await kokomi.preloadSDFFont("../assets/HYWenHei-85W.ttf");
 
     // scene1
     const rtScene1 = new THREE.Scene();
