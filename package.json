@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.92",
+  "version": "1.9.93",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,7 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "blueimp-md5": "^2.19.0",
-    "camera-controls": "^2.7.4",
+    "camera-controls": "^2.8.3",
     "cannon-es": "^0.20.0",
     "gsap": "^3.12.5",
     "imagesloaded": "^5.0.0",
@@ -38,7 +38,7 @@
     "@types/stats.js": "^0.17.3",
     "@types/three": "^0.161.2",
     "rimraf": "^5.0.5",
-    "rollup": "^4.10.0",
+    "rollup": "^4.12.0",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
     "typedoc": "^0.25.8",
