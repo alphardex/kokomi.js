@@ -1,39 +1,7 @@
 import * as kokomi from "kokomi.js";
 import * as THREE from "three";
 import gsap from "gsap";
-import * as dat from "lil";
-
-class WebGLText extends kokomi.Component {
-  constructor(base, config) {
-    super(base);
-
-    const { scroller, textColor = "white" } = config;
-
-    const mg = new kokomi.MojiGroup(base, {
-      vertexShader,
-      fragmentShader,
-      scroller,
-      elList: [...document.querySelectorAll(".webgl-text")],
-    });
-    this.mg = mg;
-    this.textColor = textColor;
-  }
-  addExisting() {
-    this.mg.container = this.container;
-    this.mg.addExisting();
-
-    this.mg.mojis.forEach((moji) => {
-      moji.textMesh.mesh.letterSpacing = 0.05;
-
-      const color = moji.el.dataset["webglTextColor"] || this.textColor;
-      moji.textMesh.mesh.material.uniforms.uTextColor.value = new THREE.Color(
-        color
-      );
-
-      moji.textMesh.mesh.font = moji.el.dataset["webglFontUrl"] || "";
-    });
-  }
-}
+import * as dat from "lil-gui";
 
 class RippleWave extends kokomi.Component {
   constructor(base, config) {
@@ -168,6 +136,7 @@ class RippleWave extends kokomi.Component {
 
 class Sketch extends kokomi.Base {
   async create() {
+    // 新版three.js的颜色、光照与旧版不兼容，要手动调整
     THREE.ColorManagement.enabled = false;
     this.renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
     this.renderer.useLegacyLights = true;
@@ -190,7 +159,7 @@ class Sketch extends kokomi.Base {
     scroller.listenForScroll();
 
     // load font
-    await kokomi.preloadSDFFont("../assets/HYWenHei-85W.ttf");
+    await kokomi.preloadSDFFont("../../assets/HYWenHei-85W.ttf");
 
     // scene1
     const rtScene1 = new THREE.Scene();
@@ -198,9 +167,13 @@ class Sketch extends kokomi.Base {
 
     rtScene1.background = new THREE.Color("#293150");
 
-    const wt = new WebGLText(this, {
+    const wt = new kokomi.MojiGroup(this, {
       scroller,
-      textColor: "#F3DCCF",
+      vertexShader,
+      fragmentShader,
+      textMeshConfig: {
+        letterSpacing: 0.05,
+      },
     });
     wt.container = rtScene1;
     wt.addExisting();
