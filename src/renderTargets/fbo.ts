@@ -16,24 +16,32 @@ class FBO extends Component {
     super(base);
 
     const {
-      width = window.innerWidth * window.devicePixelRatio,
-      height = window.innerHeight * window.devicePixelRatio,
+      width = this.defaultWidth,
+      height = this.defaultHeight,
       samples = 0,
       options = {},
     } = config;
 
-    const rt = new THREE.WebGLRenderTarget(width, height, options);
+    const rt = new THREE.WebGLRenderTarget(width, height, {
+      minFilter: THREE.LinearFilter,
+      magFilter: THREE.LinearFilter,
+      type: THREE.HalfFloatType,
+      ...options,
+    });
     this.rt = rt;
     if (samples) {
       rt.samples = samples;
     }
 
     this.base.resizer.on("resize", () => {
-      this.rt.setSize(
-        window.innerWidth * window.devicePixelRatio,
-        window.innerHeight * window.devicePixelRatio
-      );
+      this.rt.setSize(width, height);
     });
+  }
+  get defaultWidth() {
+    return window.innerWidth * window.devicePixelRatio;
+  }
+  get defaultHeight() {
+    return window.innerHeight * window.devicePixelRatio;
   }
 }
 

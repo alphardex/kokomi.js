@@ -232,21 +232,13 @@ class Caustics extends Component {
 
     this.group.add(this.causticsPlane);
 
-    const normalFBO = new FBO(this.base, {
-      options: {
-        type: THREE.HalfFloatType,
-      },
-    });
+    const normalFBO = new FBO(this.base);
     this.normalFBO = normalFBO;
 
     const normalCamera = new THREE.PerspectiveCamera(65, 1, 0.1, 1000);
     this.normalCamera = normalCamera;
 
-    const causticsFBO = new FBO(this.base, {
-      options: {
-        type: THREE.HalfFloatType,
-      },
-    });
+    const causticsFBO = new FBO(this.base);
     this.causticsFBO = causticsFBO;
 
     const causticsComputeMaterial = new THREE.ShaderMaterial({
