@@ -11,37 +11,40 @@ export interface FBOConfig {
 }
 
 class FBO extends Component {
+  width?: number;
+  height?: number;
   rt: THREE.WebGLRenderTarget;
   constructor(base: Base, config: Partial<FBOConfig> = {}) {
     super(base);
 
-    const {
-      width = this.defaultWidth,
-      height = this.defaultHeight,
-      samples = 0,
-      options = {},
-    } = config;
+    const { width, height, samples = 0, options = {} } = config;
+    this.width = width;
+    this.height = height;
 
-    const rt = new THREE.WebGLRenderTarget(width, height, {
-      minFilter: THREE.LinearFilter,
-      magFilter: THREE.LinearFilter,
-      type: THREE.HalfFloatType,
-      ...options,
-    });
+    const rt = new THREE.WebGLRenderTarget(
+      this.actualWidth,
+      this.actualHeight,
+      {
+        minFilter: THREE.LinearFilter,
+        magFilter: THREE.LinearFilter,
+        type: THREE.HalfFloatType,
+        ...options,
+      }
+    );
     this.rt = rt;
     if (samples) {
       rt.samples = samples;
     }
 
     this.base.resizer.on("resize", () => {
-      this.rt.setSize(width, height);
+      this.rt.setSize(this.actualWidth, this.actualHeight);
     });
   }
-  get defaultWidth() {
-    return window.innerWidth * window.devicePixelRatio;
+  get actualWidth() {
+    return this.width || window.innerWidth * window.devicePixelRatio;
   }
-  get defaultHeight() {
-    return window.innerHeight * window.devicePixelRatio;
+  get actualHeight() {
+    return this.height || window.innerHeight * window.devicePixelRatio;
   }
 }
 
