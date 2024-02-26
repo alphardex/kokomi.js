@@ -170,6 +170,10 @@ class MojiGroup extends Component {
       if (font) {
         tm.mesh.font = font;
       }
+      const fontWeight = el.dataset["webglFontWeight"] || "";
+      if (fontWeight) {
+        tm.mesh.fontWeight = fontWeight;
+      }
       const letterSpacing = this.textMeshConfig.letterSpacing;
       if (letterSpacing) {
         tm.mesh.letterSpacing = letterSpacing;
