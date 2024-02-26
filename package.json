@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.93",
+  "version": "1.9.94",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -41,7 +41,7 @@
     "rollup": "^4.12.0",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.8",
+    "typedoc": "^0.25.9",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
