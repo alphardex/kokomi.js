@@ -7,6 +7,7 @@ export interface FBOConfig {
   width: number;
   height: number;
   samples: number;
+  depth: boolean;
   options: THREE.RenderTargetOptions;
 }
 
@@ -17,7 +18,7 @@ class FBO extends Component {
   constructor(base: Base, config: Partial<FBOConfig> = {}) {
     super(base);
 
-    const { width, height, samples = 0, options = {} } = config;
+    const { width, height, samples = 0, depth = false, options = {} } = config;
     this.width = width;
     this.height = height;
 
@@ -32,6 +33,15 @@ class FBO extends Component {
       }
     );
     this.rt = rt;
+
+    if (depth) {
+      rt.depthTexture = new THREE.DepthTexture(
+        this.actualWidth,
+        this.actualHeight,
+        THREE.FloatType
+      );
+    }
+
     if (samples) {
       rt.samples = samples;
     }

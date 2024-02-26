@@ -9,6 +9,7 @@ export interface RenderTextureConfig {
   width: number;
   height: number;
   samples: number;
+  depth: boolean;
   rtScene: THREE.Scene;
   rtCamera: THREE.Camera;
   fboOptions: THREE.RenderTargetOptions;
