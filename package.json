@@ -1,6 +1,6 @@
 {
   "name": "kokomi.js",
-  "version": "1.9.94",
+  "version": "1.9.95",
   "description": "A three.js helper library.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -25,7 +25,7 @@
     "simplex-noise": "^4.0.1",
     "stats.js": "^0.17.0",
     "three-custom-shader-material": "^5.4.0",
-    "three-stdlib": "^2.29.4",
+    "three-stdlib": "^2.29.5",
     "three.interactive": "^1.7.0",
     "troika-three-text": "^0.49.0"
   },
@@ -36,12 +36,12 @@
     "@types/blueimp-md5": "^2.18.2",
     "@types/imagesloaded": "^4.1.6",
     "@types/stats.js": "^0.17.3",
-    "@types/three": "^0.161.2",
+    "@types/three": "^0.162.0",
     "rimraf": "^5.0.5",
     "rollup": "^4.12.0",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.2",
-    "typedoc": "^0.25.9",
+    "typedoc": "^0.25.10",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
