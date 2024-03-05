@@ -9,6 +9,7 @@ const enableSRGBColorSpace = (renderer: THREE.WebGLRenderer) => {
   if (renderer.outputColorSpace) {
     renderer.outputColorSpace = THREE.SRGBColorSpace;
   } else {
+    // @ts-ignore
     renderer.outputEncoding = THREE.sRGBEncoding;
   }
 };

@@ -1,3 +1,5 @@
+import * as THREE from "three";
+
 import mitt, { type Emitter } from "mitt";
 
 import type { Base } from "../base/base";

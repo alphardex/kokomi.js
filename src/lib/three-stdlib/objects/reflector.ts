@@ -11,12 +11,14 @@ import {
   WebGLRenderTarget,
   HalfFloatType,
   NoToneMapping,
+  Object3D,
+  BufferGeometry,
 } from "three";
 
 import { ReflectorOptions } from "three-stdlib";
 
 export interface ReflectorConfig extends ReflectorOptions {
-  ignoreObjects: THREE.Object3D[];
+  ignoreObjects: Object3D[];
 }
 
 /**
@@ -24,14 +26,14 @@ export interface ReflectorConfig extends ReflectorOptions {
  * 1. Add ignoreObjects.
  */
 class Reflector extends Mesh {
-  ignoreObjects: THREE.Object3D[];
+  ignoreObjects: Object3D[];
   isReflector: boolean;
   camera: PerspectiveCamera;
-  material: THREE.ShaderMaterial;
+  material: ShaderMaterial;
   getRenderTarget: () => WebGLRenderTarget;
   dispose: () => void;
   constructor(
-    geometry: THREE.BufferGeometry,
+    geometry: BufferGeometry,
     options: Partial<ReflectorConfig> = {}
   ) {
     super(geometry);
@@ -203,6 +205,7 @@ class Reflector extends Mesh {
 
       const currentXrEnabled = renderer.xr.enabled;
       const currentShadowAutoUpdate = renderer.shadowMap.autoUpdate;
+      // @ts-ignore
       const currentOutputEncoding = renderer.outputEncoding;
       const currentToneMapping = renderer.toneMapping;
 
@@ -229,6 +232,7 @@ class Reflector extends Mesh {
 
       renderer.xr.enabled = currentXrEnabled;
       renderer.shadowMap.autoUpdate = currentShadowAutoUpdate;
+      // @ts-ignore
       renderer.outputEncoding = currentOutputEncoding;
       renderer.toneMapping = currentToneMapping;
 

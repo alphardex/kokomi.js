@@ -128,9 +128,6 @@ class ContactShadows extends Component {
       opacity,
       depthWrite,
     });
-    if (planeMaterial.map) {
-      planeMaterial.map.encoding = gl.outputEncoding;
-    }
 
     const mesh = new THREE.Mesh(planeGeometry, planeMaterial);
     this.mesh = mesh;

@@ -33,7 +33,7 @@ const isExactMatch = (str: string, match: string) => {
 
 function isConstructor(
   f: CSMBaseMaterial
-): f is new (opts: { [key: string]: any }) => THREE.Material {
+): f is new (opts: { [key: string]: any }) => Material {
   try {
     // @ts-ignore
     new f();
@@ -68,7 +68,7 @@ class CustomShaderMaterial extends Material {
     cacheKey,
     ...opts
   }: iCSMParams) {
-    let base: THREE.Material;
+    let base: Material;
     if (isConstructor(baseMaterial)) {
       base = new baseMaterial(opts);
     } else {

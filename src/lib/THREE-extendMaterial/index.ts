@@ -546,7 +546,7 @@ Object.defineProperties(extend.CustomMaterial.prototype, {
 // Wrap ES6
 
 // if (!Object.isExtensible(THREE) || parseInt(THREE.REVISION) > 126) {
-class CustomMaterial extends ShaderMaterial {
+class CustomMaterial extends THREE.ShaderMaterial {
   constructor(object) {
     super(object);
 
