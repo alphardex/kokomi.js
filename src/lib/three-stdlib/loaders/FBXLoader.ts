@@ -40,7 +40,6 @@ import {
   Vector3,
   Vector4,
   VectorKeyframeTrack,
-  sRGBEncoding,
 } from "three";
 import * as fflate from "../libs/fflate";
 import { NURBSCurve } from "../curves/NURBSCurve";
@@ -468,18 +467,14 @@ class FBXTreeParser {
     }
 
     if (materialNode.Diffuse) {
-      parameters.color = new Color()
-        .fromArray(materialNode.Diffuse.value)
-        .convertSRGBToLinear();
+      parameters.color = new Color().fromArray(materialNode.Diffuse.value);
     } else if (
       materialNode.DiffuseColor &&
       (materialNode.DiffuseColor.type === "Color" ||
         materialNode.DiffuseColor.type === "ColorRGB")
     ) {
       // The blender exporter exports diffuse here instead of in materialNode.Diffuse
-      parameters.color = new Color()
-        .fromArray(materialNode.DiffuseColor.value)
-        .convertSRGBToLinear();
+      parameters.color = new Color().fromArray(materialNode.DiffuseColor.value);
     }
 
     if (materialNode.DisplacementFactor) {
@@ -487,18 +482,16 @@ class FBXTreeParser {
     }
 
     if (materialNode.Emissive) {
-      parameters.emissive = new Color()
-        .fromArray(materialNode.Emissive.value)
-        .convertSRGBToLinear();
+      parameters.emissive = new Color().fromArray(materialNode.Emissive.value);
     } else if (
       materialNode.EmissiveColor &&
       (materialNode.EmissiveColor.type === "Color" ||
         materialNode.EmissiveColor.type === "ColorRGB")
     ) {
       // The blender exporter exports emissive color here instead of in materialNode.Emissive
-      parameters.emissive = new Color()
-        .fromArray(materialNode.EmissiveColor.value)
-        .convertSRGBToLinear();
+      parameters.emissive = new Color().fromArray(
+        materialNode.EmissiveColor.value
+      );
     }
 
     if (materialNode.EmissiveFactor) {
@@ -524,17 +517,15 @@ class FBXTreeParser {
     }
 
     if (materialNode.Specular) {
-      parameters.specular = new Color()
-        .fromArray(materialNode.Specular.value)
-        .convertSRGBToLinear();
+      parameters.specular = new Color().fromArray(materialNode.Specular.value);
     } else if (
       materialNode.SpecularColor &&
       materialNode.SpecularColor.type === "Color"
     ) {
       // The blender exporter exports specular color here instead of in materialNode.Specular
-      parameters.specular = new Color()
-        .fromArray(materialNode.SpecularColor.value)
-        .convertSRGBToLinear();
+      parameters.specular = new Color().fromArray(
+        materialNode.SpecularColor.value
+      );
     }
 
     const scope = this;
@@ -554,7 +545,9 @@ class FBXTreeParser {
         case "Maya|TEX_color_map":
           parameters.map = scope.getTexture(textureMap, child.ID);
           if (parameters.map !== undefined) {
-            parameters.map.encoding = sRGBEncoding;
+            if ("colorSpace" in parameters.map)
+              parameters.map.colorSpace = "srgb";
+            else parameters.map.encoding = 3001; // sRGBEncoding
           }
 
           break;
@@ -566,7 +559,9 @@ class FBXTreeParser {
         case "EmissiveColor":
           parameters.emissiveMap = scope.getTexture(textureMap, child.ID);
           if (parameters.emissiveMap !== undefined) {
-            parameters.emissiveMap.encoding = sRGBEncoding;
+            if ("colorSpace" in parameters.emissiveMap)
+              parameters.emissiveMap.colorSpace = "srgb";
+            else parameters.emissiveMap.encoding = 3001; // sRGBEncoding
           }
 
           break;
@@ -580,7 +575,10 @@ class FBXTreeParser {
           parameters.envMap = scope.getTexture(textureMap, child.ID);
           if (parameters.envMap !== undefined) {
             parameters.envMap.mapping = EquirectangularReflectionMapping;
-            parameters.envMap.encoding = sRGBEncoding;
+
+            if ("colorSpace" in parameters.envMap)
+              parameters.envMap.colorSpace = "srgb";
+            else parameters.envMap.encoding = 3001; // sRGBEncoding
           }
 
           break;
@@ -588,7 +586,9 @@ class FBXTreeParser {
         case "SpecularColor":
           parameters.specularMap = scope.getTexture(textureMap, child.ID);
           if (parameters.specularMap !== undefined) {
-            parameters.specularMap.encoding = sRGBEncoding;
+            if ("colorSpace" in parameters.specularMap)
+              parameters.specularMap.colorSpace = "srgb";
+            else parameters.specularMap.encoding = 3001; // sRGBEncoding
           }
 
           break;

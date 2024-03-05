@@ -11,7 +11,6 @@ import {
   WebGLRenderTarget,
   HalfFloatType,
   NoToneMapping,
-  LinearEncoding,
 } from "three";
 
 import { ReflectorOptions } from "three-stdlib";
@@ -207,9 +206,18 @@ class Reflector extends Mesh {
       const currentOutputEncoding = renderer.outputEncoding;
       const currentToneMapping = renderer.toneMapping;
 
+      let isSRGB = false;
+      if ("outputColorSpace" in renderer)
+        isSRGB = renderer.outputColorSpace === "srgb";
+      // @ts-ignore
+      else isSRGB = renderer.outputEncoding === 3001; // sRGBEncoding
+
       renderer.xr.enabled = false; // Avoid camera modification
       renderer.shadowMap.autoUpdate = false; // Avoid re-computing shadows
-      renderer.outputEncoding = LinearEncoding;
+      if ("outputColorSpace" in renderer)
+        renderer.outputColorSpace = isSRGB ? "srgb" : "srgb-linear";
+      // @ts-ignore
+      else renderer.outputEncoding = isSRGB ? 3001 : 3000;
       renderer.toneMapping = NoToneMapping;
 
       renderer.setRenderTarget(renderTarget);
