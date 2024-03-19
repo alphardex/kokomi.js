@@ -18,6 +18,7 @@ const handleTextureProp = (
   const wrapMap: Record<string, any> = {
     clamp: THREE.ClampToEdgeWrapping,
     repeat: THREE.RepeatWrapping,
+    mirror: THREE.MirroredRepeatWrapping,
   };
   const filterMap: Record<string, any> = {
     nearest: THREE.NearestFilter,
