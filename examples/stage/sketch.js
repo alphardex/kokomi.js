@@ -17,7 +17,7 @@ class Sketch extends kokomi.Base {
       {
         name: "hdr",
         type: "hdrTexture",
-        path: "https://market-assets.fra1.cdn.digitaloceanspaces.com/market-assets/hdris/venice/venice_sunset_1k.hdr",
+        path: "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/hdris/venice/venice_sunset_1k.hdr",
       },
     ]);
     this.am = am;

@@ -18,6 +18,7 @@ class Sketch extends kokomi.Base {
       document.querySelector(".loader-screen").classList.add("hollow");
 
       const panoramaImage = am.items["panoramaImage"];
+      panoramaImage.colorSpace = THREE.SRGBColorSpace;
       const panorama = new kokomi.ImagePanorama(this, panoramaImage);
       viewer.add(panorama);
     });

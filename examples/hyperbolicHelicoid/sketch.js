@@ -10,7 +10,9 @@ class Sketch extends kokomi.Base {
     new kokomi.OrbitControls(this);
 
     const geometry = new kokomi.HyperbolicHelicoidGeometry(128, 128);
-    const material = new THREE.MeshStandardMaterial();
+    const material = new THREE.MeshStandardMaterial({
+      side: THREE.DoubleSide,
+    });
     const mesh = new THREE.Mesh(geometry, material);
     this.scene.add(mesh);
 

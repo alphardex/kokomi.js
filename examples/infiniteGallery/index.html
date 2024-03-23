@@ -13,11 +13,12 @@
 </style>
 <div id="sketch"></div>
 <div id="tmpl"></div>
-<script src="https://unpkg.com/kokomi.js/build/kokomi.umd.js"></script>
-<script src="https://unpkg.com/three@0.144.0/build/three.min.js"></script>
-<script src="https://unpkg.com/gsap@3.11.1/dist/gsap.min.js"></script>
-<script src="https://unpkg.com/lil-gui@0.17.0/dist/lil-gui.umd.min.js"></script>
-<script src="https://unpkg.com/ccapture.js@1.1.0/build/CCapture.all.min.js"></script>
+<script src="../../build/kokomi.umd.js"></script>
+<script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+<script src="https://unpkg.com/gsap/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/lil-gui/dist/lil-gui.umd.min.js"></script>
+<script src="https://unpkg.com/ccapture.js/build/CCapture.all.min.js"></script>
+<script src="https://unpkg.com/marcher.js/build/marcher.umd.js"></script>
 <script src="./prepare.js"></script>
 <script>
   const joinLine = (arr) => arr.join("\n");
@@ -42,7 +43,7 @@ const createSketch = () => {
   sketch.record = () => {
     let capturer = new CCapture({
       format: "gif",
-      workersPath: "../../vendors/",
+      workersPath: "../vendors/",
     });
     let isRecording = false;
     window.addEventListener("keydown", (e) => {
