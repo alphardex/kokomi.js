@@ -21,11 +21,6 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
 `;
 
 class Sketch extends Base {
-  constructor(sel = "#sketch") {
-    super(sel);
-
-    this.resizer.disable();
-  }
   create(fragmentShader: string, uniforms = {}) {
     const screenQuad = new ScreenQuad(this, {
       shadertoyMode: true,

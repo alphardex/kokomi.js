@@ -288,7 +288,7 @@ class Caustics extends Component {
     const scale = newVertices
       .map((vert) => Math.hypot(vert.x - centerPos.x, vert.z - centerPos.z))
       .reduce((a, b) => Math.max(a, b), 0);
-    this.causticsPlane.scale.setScalar(scale * this.scaleCorrection);
+    this.causticsPlane.scale.multiplyScalar(this.scaleCorrection);
   }
   update() {
     const bound = getBound(this.scene);
