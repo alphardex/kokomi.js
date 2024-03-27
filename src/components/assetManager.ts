@@ -9,6 +9,7 @@ import {
   OBJLoader,
   RGBELoader,
   SVGLoader,
+  MeshoptDecoder,
 } from "three-stdlib";
 import { FBXLoader } from "../lib";
 
@@ -55,6 +56,7 @@ export interface Loaders {
 
 export interface AssetManagerConfig {
   useDracoLoader: boolean;
+  useMeshoptDecoder: boolean;
   dracoDecoderPath: string;
   ktx2TranscoderPath: string;
 }
@@ -80,10 +82,16 @@ class AssetManager extends Component {
 
     const {
       useDracoLoader = false,
+      useMeshoptDecoder = false,
       dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
       ktx2TranscoderPath = "https://unpkg.com/three/examples/jsm/libs/basis/",
     } = config;
-    this.config = { useDracoLoader, dracoDecoderPath, ktx2TranscoderPath };
+    this.config = {
+      useDracoLoader,
+      useMeshoptDecoder,
+      dracoDecoderPath,
+      ktx2TranscoderPath,
+    };
 
     this.resourceList = list;
 
@@ -96,6 +104,10 @@ class AssetManager extends Component {
 
     if (useDracoLoader) {
       this.setDracoLoader();
+    }
+
+    if (useMeshoptDecoder) {
+      this.setMeshoptDecoder();
     }
 
     this.setKTX2Loader();
@@ -122,6 +134,11 @@ class AssetManager extends Component {
     const dracoLoader = new DRACOLoader();
     dracoLoader.setDecoderPath(this.config.dracoDecoderPath);
     this.loaders.gltfLoader?.setDRACOLoader(dracoLoader);
+  }
+  // 设置meshopt解码器
+  setMeshoptDecoder() {
+    const meshoptDecoder = MeshoptDecoder();
+    this.loaders.gltfLoader?.setMeshoptDecoder(meshoptDecoder);
   }
   // 设置ktx2转码器
   setKTX2Loader() {
