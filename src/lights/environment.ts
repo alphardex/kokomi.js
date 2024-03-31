@@ -7,6 +7,9 @@ export interface EnvironmentConfig {
   resolution: number;
   near: number;
   far: number;
+  scene: THREE.Scene;
+  options: THREE.RenderTargetOptions;
+  textureType: THREE.TextureDataType;
 }
 
 class Environment extends Component {
@@ -16,14 +19,21 @@ class Environment extends Component {
   constructor(base: Base, config: Partial<EnvironmentConfig> = {}) {
     super(base);
 
-    const { resolution = 256, near = 1, far = 1000 } = config;
+    const {
+      resolution = 256,
+      near = 1,
+      far = 1000,
+      scene = null,
+      options = {},
+      textureType = THREE.HalfFloatType,
+    } = config;
 
-    const fbo = new THREE.WebGLCubeRenderTarget(resolution);
-    fbo.texture.type = THREE.HalfFloatType;
+    const fbo = new THREE.WebGLCubeRenderTarget(resolution, options);
+    fbo.texture.type = textureType;
     this.fbo = fbo;
     const cubeCamera = new THREE.CubeCamera(near, far, fbo);
     this.cubeCamera = cubeCamera;
-    const virtualScene = new THREE.Scene();
+    const virtualScene = scene || new THREE.Scene();
     this.virtualScene = virtualScene;
   }
   update(): void {
