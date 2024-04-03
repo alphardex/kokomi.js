@@ -10,12 +10,14 @@ export interface EnvironmentConfig {
   scene: THREE.Scene;
   options: THREE.RenderTargetOptions;
   textureType: THREE.TextureDataType;
+  ignoreObjects: THREE.Object3D[];
 }
 
 class Environment extends Component {
   fbo: THREE.WebGLCubeRenderTarget;
   cubeCamera: THREE.CubeCamera;
   virtualScene: THREE.Scene;
+  ignoreObjects: THREE.Object3D[];
   constructor(base: Base, config: Partial<EnvironmentConfig> = {}) {
     super(base);
 
@@ -26,7 +28,10 @@ class Environment extends Component {
       scene = null,
       options = {},
       textureType = THREE.HalfFloatType,
+      ignoreObjects = [],
     } = config;
+
+    this.ignoreObjects = ignoreObjects;
 
     const fbo = new THREE.WebGLCubeRenderTarget(resolution, options);
     fbo.texture.type = textureType;
@@ -37,7 +42,13 @@ class Environment extends Component {
     this.virtualScene = virtualScene;
   }
   update(): void {
+    this.ignoreObjects.forEach((item) => {
+      item.visible = false;
+    });
     this.cubeCamera.update(this.base.renderer, this.virtualScene);
+    this.ignoreObjects.forEach((item) => {
+      item.visible = true;
+    });
   }
   add(obj: THREE.Object3D) {
     this.virtualScene.add(obj);
