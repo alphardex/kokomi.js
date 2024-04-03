@@ -1,6 +1,6 @@
 import * as THREE from "three";
 
-import { mergeVertices, MeshSurfaceSampler } from "three-stdlib";
+import { mergeVertices, MeshSurfaceSampler, GLTFExporter } from "three-stdlib";
 
 import { makeBuffer } from "./gl";
 
@@ -306,6 +306,53 @@ const fixShapeGeometryUV = (mesh: THREE.Mesh) => {
   }
 };
 
+const saveString = (text: string, filename: string) => {
+  downloadBlob(new Blob([text], { type: "text/plain" }), filename);
+};
+
+const saveArrayBuffer = (buffer: ArrayBuffer, filename: string) => {
+  downloadBlob(
+    new Blob([buffer], { type: "application/octet-stream" }),
+    filename
+  );
+};
+
+// ref: https://github.com/mrdoob/three.js/blob/master/examples/misc_exporter_gltf.html
+const exportGLTF = (
+  input: THREE.Object3D | THREE.Object3D[],
+  {
+    filename = "scene",
+    trs = false,
+    onlyVisible = true,
+    binary = false,
+    maxTextureSize = 4096,
+  } = {}
+) => {
+  const gltfExporter = new GLTFExporter();
+
+  gltfExporter.parse(
+    input,
+    (result) => {
+      if (result instanceof ArrayBuffer) {
+        saveArrayBuffer(result, `${filename}.glb`);
+      } else {
+        const output = JSON.stringify(result, null, 2);
+        console.log(output);
+        saveString(output, `${filename}.gltf`);
+      }
+    },
+    (error) => {
+      console.log("An error happened during parsing", error);
+    },
+    {
+      trs,
+      onlyVisible,
+      binary,
+      maxTextureSize,
+    }
+  );
+};
+
 export {
   enableSRGBColorSpace,
   optimizeModelRender,
@@ -327,4 +374,7 @@ export {
   getBoundsVertices,
   smoothNormal,
   fixShapeGeometryUV,
+  saveString,
+  saveArrayBuffer,
+  exportGLTF,
 };
