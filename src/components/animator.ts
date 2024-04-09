@@ -1,9 +1,18 @@
 import type { Base } from "../base/base";
 
+export interface AnimatorConfig {
+  autoRender: boolean;
+}
+
 class Animator {
   base: Base;
   tasks: any[];
-  constructor(base: Base) {
+  autoRender: boolean;
+  constructor(base: Base, config: Partial<AnimatorConfig> = {}) {
+    const { autoRender = true } = config;
+
+    this.autoRender = autoRender;
+
     this.base = base;
     this.tasks = [];
   }
@@ -19,7 +28,10 @@ class Animator {
     this.tasks.forEach((task) => {
       task(time);
     });
-    this.base.render();
+
+    if (this.autoRender) {
+      this.base.render();
+    }
   }
 }
 

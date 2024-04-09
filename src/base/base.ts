@@ -15,6 +15,7 @@ export interface BaseConfig {
   hello: boolean;
   gl: THREE.WebGLRendererParameters;
   autoAdaptMobile: boolean;
+  autoRender: boolean;
 }
 
 /**
@@ -36,7 +37,12 @@ class Base {
   resizer: Resizer;
   keyboard: Keyboard;
   constructor(sel = "#sketch", config: Partial<BaseConfig> = {}) {
-    const { hello = true, gl = {}, autoAdaptMobile = false } = config;
+    const {
+      hello = true,
+      gl = {},
+      autoAdaptMobile = false,
+      autoRender = true,
+    } = config;
 
     if (hello) {
       console.log(
@@ -70,7 +76,9 @@ class Base {
     container?.appendChild(renderer.domElement);
     this.container = container;
 
-    const animator = new Animator(this);
+    const animator = new Animator(this, {
+      autoRender,
+    });
     this.animator = animator;
 
     const interactionManager = new InteractionManager(
