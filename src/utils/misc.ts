@@ -70,7 +70,6 @@ const getEnvmapFromScene = (
 // 获取重心坐标系
 const getBaryCoord = (bufferGeometry: THREE.BufferGeometry) => {
   // https://gist.github.com/mattdesl/e399418558b2b52b58f5edeafea3c16c
-  // @ts-ignore
   const length = bufferGeometry.attributes.position.array.length;
   const count = length / 3;
   const bary = [];
@@ -138,7 +137,6 @@ const getPositionCentroids = (
 ) => {
   const position = geometry.attributes[attrName];
   const posCount = position.count;
-  // @ts-ignore
   const posBuffer = position.array;
 
   const centroidBuffer = makeBuffer(posCount, (val: number) => val);

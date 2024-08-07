@@ -3,6 +3,7 @@ import * as THREE from "three";
 const v1 = new THREE.Vector3();
 const v2 = new THREE.Vector3();
 const v3 = new THREE.Vector3();
+const v4 = new THREE.Vector2();
 
 const calcObjectPosition = (el: THREE.Object3D, camera: THREE.Camera) => {
   const objectPos = v1.setFromMatrixPosition(el.matrixWorld);
@@ -32,8 +33,8 @@ const isObjectVisible = (
   const elPos = v1.setFromMatrixPosition(el.matrixWorld);
   const screenPos = elPos.clone();
   screenPos.project(camera);
-  // @ts-ignore
-  raycaster.setFromCamera(screenPos, camera);
+  v4.set(screenPos.x, screenPos.y);
+  raycaster.setFromCamera(v4, camera);
   const intersects = raycaster.intersectObjects(occlude, true);
   if (intersects.length) {
     const intersectionDistance = intersects[0].distance;

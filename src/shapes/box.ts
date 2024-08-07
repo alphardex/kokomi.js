@@ -12,7 +12,7 @@ export interface BoxConfig {
 }
 
 /**
- * A cute box mesh that we can see everywhere
+ * A cute box mesh that we can see everywhere.
  */
 class Box extends Component {
   mesh: THREE.Mesh;

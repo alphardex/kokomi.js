@@ -1,5 +1,3 @@
-import * as THREE from "three";
-
 import { Component } from "./component";
 import { Base } from "../base/base";
 

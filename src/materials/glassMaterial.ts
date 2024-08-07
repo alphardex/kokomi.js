@@ -10,7 +10,6 @@ class GlassMaterial extends THREE.MeshPhysicalMaterial {
     super({
       roughness: 0.6,
       transmission: 1,
-      // @ts-ignore
       thickness: 1.2, // refraction
       clearcoat: 1,
       clearcoatRoughness: 0.1,

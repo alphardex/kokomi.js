@@ -34,7 +34,7 @@ export interface InfospotConfig {
 }
 
 /**
- * Generate panoramas with config.
+ * Generate panoramas from config.
  */
 class PanoramaGenerator extends Component {
   config: PanoramaConfig | null;
@@ -104,6 +104,7 @@ class PanoramaGenerator extends Component {
     if (!config) {
       return;
     }
+
     const panoramas = config.map((item) => {
       // 全景图本体
       const image = this.assetManager?.items[item.name];
@@ -122,6 +123,7 @@ class PanoramaGenerator extends Component {
     if (!config) {
       return;
     }
+
     config.forEach((item) => {
       // 信息点
       if (item.infospots) {
@@ -154,6 +156,7 @@ class PanoramaGenerator extends Component {
     if (!config) {
       return;
     }
+
     config.forEach((item) => {
       if (item.infospots) {
         item.infospots.forEach((infospot) => {
@@ -194,6 +197,7 @@ class PanoramaGenerator extends Component {
     if (!this.config) {
       return [];
     }
+
     return this.config
       .map((scene) => {
         if (!scene.infospots) {
