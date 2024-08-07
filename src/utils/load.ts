@@ -6,6 +6,7 @@ import {
   FBXLoader,
   RGBELoader,
 } from "three-stdlib";
+import { DEFAULT_DRACO_DECODER_PATH } from "../consts";
 
 export interface LoadVideoOptions extends HTMLMediaElement {
   unsuspend: "canplay" | "canplaythrough" | "loadstart" | "loadedmetadata";
@@ -63,9 +64,7 @@ const loadGLTF = (
     if (useDraco) {
       dracoLoader = new DRACOLoader();
       dracoLoader.setDecoderPath(
-        typeof useDraco === "string"
-          ? useDraco
-          : "https://www.gstatic.com/draco/versioned/decoders/1.4.3/"
+        typeof useDraco === "string" ? useDraco : DEFAULT_DRACO_DECODER_PATH
       );
       loader.setDRACOLoader(dracoLoader);
     }

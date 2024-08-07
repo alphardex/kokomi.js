@@ -17,6 +17,7 @@ import { Component } from "./component";
 import { Base } from "../base/base";
 
 import { loadVideoTexture } from "../utils";
+import { DEFAULT_DRACO_DECODER_PATH } from "../consts";
 
 export type ResoureType =
   | "gltfModel"
@@ -83,7 +84,7 @@ class AssetManager extends Component {
     const {
       useDracoLoader = false,
       useMeshoptDecoder = false,
-      dracoDecoderPath = "https://www.gstatic.com/draco/versioned/decoders/1.4.3/",
+      dracoDecoderPath = DEFAULT_DRACO_DECODER_PATH,
       ktx2TranscoderPath = "https://unpkg.com/three/examples/jsm/libs/basis/",
     } = config;
     this.config = {

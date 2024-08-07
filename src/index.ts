@@ -1,6 +1,7 @@
 export * from "./base";
 export * from "./camera";
 export * from "./components";
+export * from "./consts";
 export * from "./controls";
 export * from "./effects";
 export * from "./geometries";
