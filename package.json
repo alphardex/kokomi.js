@@ -22,10 +22,10 @@
     "marcher.js": "^1.4.3",
     "mitt": "^3.0.1",
     "nipplejs": "^0.10.2",
-    "simplex-noise": "^4.0.1",
+    "simplex-noise": "^4.0.3",
     "stats.js": "^0.17.0",
     "three-custom-shader-material": "^5.4.0",
-    "three-stdlib": "^2.30.3",
+    "three-stdlib": "^2.32.1",
     "three.interactive": "^1.7.0",
     "troika-three-text": "^0.49.1"
   },
@@ -36,13 +36,13 @@
     "@types/blueimp-md5": "^2.18.2",
     "@types/imagesloaded": "^4.1.6",
     "@types/stats.js": "^0.17.3",
-    "@types/three": "^0.165.0",
-    "rimraf": "^5.0.7",
-    "rollup": "^4.18.0",
+    "@types/three": "^0.167.1",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.20.0",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.6.3",
-    "typedoc": "^0.26.0",
-    "typescript": "^5.5.2"
+    "typedoc": "^0.26.5",
+    "typescript": "^5.5.4"
   },
   "peerDependencies": {
     "three": ">=0.137"
