@@ -351,6 +351,20 @@ const exportGLTF = (
   );
 };
 
+// 延迟
+const sleep = (time: number) =>
+  new Promise((resolve) => setTimeout(resolve, time));
+
+// 打乱数组
+const shuffle = ([...arr]) => {
+  let m = arr.length;
+  while (m) {
+    const i = Math.floor(Math.random() * m--);
+    [arr[m], arr[i]] = [arr[i], arr[m]];
+  }
+  return arr;
+};
+
 export {
   enableSRGBColorSpace,
   optimizeModelRender,
@@ -375,4 +389,6 @@ export {
   saveString,
   saveArrayBuffer,
   exportGLTF,
+  sleep,
+  shuffle,
 };

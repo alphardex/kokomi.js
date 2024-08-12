@@ -7,10 +7,6 @@ const preloadImages = (sel = "div") => {
   });
 };
 
-// 延迟
-const sleep = (time: number) =>
-  new Promise((resolve) => setTimeout(resolve, time));
-
 // 阻止事件默认行为和冒泡
 const preventDefaultAndStopBubble = (e: Event) => {
   e.preventDefault();
@@ -26,4 +22,4 @@ const detectDeviceType = () => {
     : "Desktop";
 };
 
-export { preloadImages, sleep, preventDefaultAndStopBubble, detectDeviceType };
+export { preloadImages, preventDefaultAndStopBubble, detectDeviceType };

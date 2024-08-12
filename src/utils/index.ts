@@ -1,4 +1,5 @@
 export * from "./cannon";
+export * from "./canvas";
 export * from "./dom";
 export * from "./gl";
 export * from "./load";
