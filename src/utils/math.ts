@@ -35,6 +35,15 @@ const polySort = (pointObjs: THREE.Vector2[]) => {
 
 const sample = (arr: any[]) => arr[Math.floor(Math.random() * arr.length)];
 
+const sampleSize = ([...arr], n = 1) => {
+  let m = arr.length;
+  while (m) {
+    const i = Math.floor(Math.random() * m--);
+    [arr[m], arr[i]] = [arr[i], arr[m]];
+  }
+  return arr.slice(0, n);
+};
+
 const range = function* (start: number, end: number, step = 1) {
   let i = start;
   while (i < end) {
@@ -43,4 +52,4 @@ const range = function* (start: number, end: number, step = 1) {
   }
 };
 
-export { saturate, polySort, sample, range };
+export { saturate, polySort, sample, sampleSize, range };
