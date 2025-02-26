@@ -9,4 +9,5 @@ export * from "./noise";
 export * from "./parametric";
 export * from "./vector";
 export * from "./view";
+export * from "./voxel";
 export * from "./web";
