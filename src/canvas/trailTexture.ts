@@ -204,6 +204,9 @@ class TrailTextureImpl {
   }
 }
 
+/**
+ * This class can create a trail texture.
+ */
 class TrailTexture extends Component {
   trailTexture: TrailTextureImpl;
   constructor(base: Base, config: Partial<TrailConfig> = {}) {
