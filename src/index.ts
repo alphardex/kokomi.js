@@ -1,5 +1,6 @@
 export * from "./base";
 export * from "./camera";
+export * from "./canvas";
 export * from "./components";
 export * from "./consts";
 export * from "./controls";
