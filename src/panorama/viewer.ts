@@ -36,6 +36,7 @@ class Viewer extends Component {
     this.camera = camera;
 
     const orbitControls = new OrbitControls(base);
+    orbitControls.controls.rotateSpeed = -0.4;
     this.orbitControls = orbitControls;
 
     this.panoramas = [];

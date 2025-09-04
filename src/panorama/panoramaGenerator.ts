@@ -205,11 +205,7 @@ class PanoramaGenerator extends Component {
         }
         const infospots = scene.infospots?.map((infospot) => {
           return {
-            id: infospot.id,
-            name: infospot.name || infospot.id,
-            point: infospot.point,
-            jump: infospot.jump,
-            className: infospot.className,
+            ...infospot,
           };
         });
         return infospots;

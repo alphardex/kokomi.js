@@ -1,3 +1,4 @@
+export * from "./environments/room";
 export * from "./loaders/FBXLoader";
 export * from "./loaders/SVGLoader";
 export * from "./objects/reflector";

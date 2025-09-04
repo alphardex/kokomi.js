@@ -63,6 +63,7 @@ const getEnvmapFromScene = (
   scene: THREE.Scene
 ) => {
   const pmremGenerator = new THREE.PMREMGenerator(renderer);
+  pmremGenerator.compileCubemapShader();
   const envmap = pmremGenerator.fromScene(scene).texture;
   return envmap;
 };
